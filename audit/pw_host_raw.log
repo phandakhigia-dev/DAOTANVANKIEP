@@ -1,0 +1,49 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 581.80 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+
+=======================================================
+  GATE S0: CO-OP 3-PROCESS PROVINCE WORLD LIVE TEST
+  Tiến Trình: HOST | Port: 8990 | Time: 2026-11-05T21:44:04
+=======================================================
+
+[HOST] Đã nạp thành công ProvinceWorld scene.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Host Server khởi chạy thành công trên port 8990 (Cố định time_scale = 1.0, 720s thực/ngày)
+[HOST] Host Server đang lắng nghe trên port 8990 (Cố định 720s thực/ngày)...
+[SessionAuthority] Peer kết nối: 1648983953
+[CoopWorldSync] Đã gửi Full World Snapshot & Authoritative Inventory cho Peer 1648983953.
+[HOST] Nhận diện Client 1: Peer ID 1648983953
+[CoopWorldSync] Đăng ký mới Peer 1648983953 với GUID 'guid_tieu_viem_01' (Ví: 225 LT).
+[ProvinceWorld] Đã spawn Remote Avatar cho Peer 1648983953 tại (662.33, 462.5226)
+[HOST] Đã phát hiện 1 remote avatar(s) trong ProvinceWorld!
+[HOST] Đã chụp screenshot thực tế: G:/Game tự làm/DAO_TAN_VAN_KIEP_ANTIGRAVITY_BLUEPRINT/audit/graphics_after/coop_province_world_host.png
+[SessionAuthority] Peer kết nối: 2078318684
+[CoopWorldSync] Đã gửi Full World Snapshot & Authoritative Inventory cho Peer 2078318684.
+[HOST] Nhận diện Client 2: Peer ID 2078318684
+[CoopWorldSync] Đăng ký mới Peer 2078318684 với GUID 'guid_han_lap_02' (Ví: 225 LT).
+[ProvinceWorld] Đã spawn Remote Avatar cho Peer 2078318684 tại (682.3235, 462.529)
+[CoopWorldSync] Host xác nhận thu hoạch 'bamboo_cavern_chest' cho Peer 1648983953: +50 LT, +{ "item_tay_tuy_dan": 1 }, +50 XP
+[HOST] Rương bamboo_cavern_chest đã được Host xác nhận thẩm quyền! Danh sách thu hoạch: ["bamboo_cavern_chest"]
+[CoopWorldSync] Từ chối claim entity 'bamboo_cavern_chest' tại chunk (32, 30) từ Peer 2078318684 (Đã bị thu hoạch trước đó!)
+[SessionAuthority] Peer ngắt kết nối: 1648983953
+[ProvinceWorld] Đã gỡ bỏ Remote Avatar của Peer 1648983953
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 1648983953 (Giữ nguyên authoritative ledger)
+[HOST] Peer 1648983953 ngắt kết nối (Bảo tồn GUID ledger)
+[SessionAuthority] Peer kết nối: 873455321
+[CoopWorldSync] Đã gửi Full World Snapshot & Authoritative Inventory cho Peer 873455321.
+[CoopWorldSync] Peer 873455321 tái kết nối với GUID 'guid_tieu_viem_01'. Khôi phục ví: 275 LT, 2 vật phẩm.
+[ProvinceWorld] Đã spawn Remote Avatar cho Peer 873455321 tại (682.3235, 462.529)
+[SessionAuthority] Peer ngắt kết nối: 2078318684
+[ProvinceWorld] Đã gỡ bỏ Remote Avatar của Peer 2078318684
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 2078318684 (Giữ nguyên authoritative ledger)
+[HOST] Peer 2078318684 ngắt kết nối (Bảo tồn GUID ledger)
+[SessionAuthority] Peer ngắt kết nối: 873455321
+[ProvinceWorld] Đã gỡ bỏ Remote Avatar của Peer 873455321
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 873455321 (Giữ nguyên authoritative ledger)
+[HOST] Peer 873455321 ngắt kết nối (Bảo tồn GUID ledger)
+[HOST] ★ TẤT CẢ TIÊU CHÍ GATE S0 TRÊN HOST ĐÃ ĐẠT!
+[HOST] 1. Đồng bộ Client avatar trong ProvinceWorld: PASS
+[HOST] 2. Host-authoritative Unique Chest Claim: PASS
+[HOST] 3. Reconnect GUID ledger bảo tồn tài sản: PASS
+[HOST] 4. Time scale 1.0 và 720s/ngày: PASS

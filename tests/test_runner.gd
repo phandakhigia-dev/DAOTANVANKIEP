@@ -80,6 +80,7 @@ func _ready() -> void:
 	# MiniMap & WorldMap Modal Suite
 	var test_map = load("res://tests/unit/test_ui_world_map.gd")
 	var test_ow_mobs = load("res://tests/unit/test_openworld_interactions_and_mobs.gd")
+	var test_gate_s0 = load("res://tests/unit/test_gate_s0_stability.gd")
 	
 	var suites = [
 		test_clock.run_all_tests(),
@@ -112,7 +113,8 @@ func _ready() -> void:
 		test_m4.run_all_tests(),
 		test_m5.run_all_tests(),
 		test_map.run_all_tests(),
-		test_ow_mobs.run_all_tests()
+		test_ow_mobs.run_all_tests(),
+		test_gate_s0.run_all_tests()
 	]
 	
 	for suite in suites:

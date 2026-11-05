@@ -4,6 +4,7 @@ extends Node
 ## Lưu trữ dữ liệu phiên chơi hiện tại độc lập với Scene Tree.
 
 var player_name: String = "Lâm Phong"
+var player_guid: String = ""
 var realm_id: String = "realm_pham_nhan"
 var current_hp: int = 100
 var max_hp: int = 100
@@ -17,6 +18,10 @@ var move_speed: float = 180.0
 var player_hp: int:
 	get: return current_hp
 	set(val): current_hp = val
+
+func _ready() -> void:
+	if player_guid == "":
+		player_guid = "guid_%s_%d" % [player_name.to_snake_case(), randi() % 1000000]
 
 func heal_player(amount: int) -> void:
 	current_hp = mini(current_hp + amount, max_hp)
@@ -77,6 +82,7 @@ var speed: float:
 
 func start_new_game(p_name: String, p_seed: int) -> void:
 	player_name = p_name if p_name.strip_edges() != "" else "Kẻ Vô Danh"
+	player_guid = "guid_%s_%d" % [player_name.to_snake_case(), randi() % 1000000]
 	world_seed = p_seed
 	world_id = "dao_tan_world_01"
 	country_id = "dai_huyen"
@@ -632,6 +638,7 @@ func export_save_dict() -> Dictionary:
 		"clock": GameClock.to_dict(),
 		"player": {
 			"name": player_name,
+			"guid": player_guid,
 			"realm_id": realm_id,
 			"current_hp": current_hp,
 			"max_hp": max_hp,
@@ -697,6 +704,9 @@ func import_save_dict(data: Dictionary) -> bool:
 	
 	var p_data = data.get("player", {})
 	player_name = p_data.get("name", "Kẻ Vô Danh")
+	player_guid = p_data.get("guid", "")
+	if player_guid == "":
+		player_guid = "guid_%s_%d" % [player_name.to_snake_case(), randi() % 1000000]
 	realm_id = p_data.get("realm_id", "realm_pham_nhan")
 	_apply_realm_stats()
 	

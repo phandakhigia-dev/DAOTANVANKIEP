@@ -50,14 +50,33 @@ signal coop_boss_defeated(boss_id: String)
 signal coop_loot_received(item_id: String, count: int, exp: int)
 signal stall_transaction_completed(request_id: String, success: bool, msg: String)
 signal world_simulation_synced(snapshot: Dictionary)
+signal entity_claimed_result(chunk_x: int, chunk_y: int, entity_id: String, success: bool, message: String)
+signal entity_harvested_synced(chunk_x: int, chunk_y: int, entity_id: String)
+signal fast_travel_completed(success: bool, msg: String, target_pos: Vector2)
+
+# P1-03: Persistent mapping guid -> ledger cho tái kết nối (Reconnect Identity)
+# guid: String -> { "wallet": int, "items": Dictionary, "revision": int, "guid": String, "name": String, "pos": Vector2 }
+var guid_to_ledger: Dictionary = {}
+var peer_to_guid: Dictionary = {}
 
 func _ready() -> void:
 	if SessionAuthority:
 		SessionAuthority.peer_joined.connect(_on_peer_joined)
 		SessionAuthority.peer_left.connect(_on_peer_left)
 		SessionAuthority.connection_state_changed.connect(_on_role_changed)
+		if SessionAuthority.has_signal("connected_to_server"):
+			SessionAuthority.connected_to_server.connect(_on_connected_to_server)
+		multiplayer.connected_to_server.connect(_on_connected_to_server)
 	
 	_reset_local_state()
+
+func _on_connected_to_server() -> void:
+	print("[CoopWorldSync] Đã kết nối tới Server, gửi handshake danh tính GUID...")
+	var g = GameSession.player_guid if GameSession else "client_unknown"
+	var n = GameSession.player_name if GameSession else "Đạo Hữu"
+	var w = GameSession.get_item_count("item_linh_thach") if GameSession else 500
+	var items = _extract_session_items()
+	_safe_rpc_id(1, "client_register_identity", [g, n, w, items])
 
 func _reset_local_state() -> void:
 	network_players.clear()
@@ -90,7 +109,11 @@ func _safe_rpc(method_name: String, args: Array = []) -> void:
 		4: rpc(method_name, args[0], args[1], args[2], args[3])
 		5: rpc(method_name, args[0], args[1], args[2], args[3], args[4])
 		6: rpc(method_name, args[0], args[1], args[2], args[3], args[4], args[5])
-		_: push_warning("Quá nhiều tham số cho _safe_rpc")
+		7: rpc(method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6])
+		8: rpc(method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7])
+		9: rpc(method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8])
+		10: rpc(method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9])
+		_: push_warning("Quá nhiều tham số cho _safe_rpc (%d)" % args.size())
 
 func _safe_rpc_id(peer_id: int, method_name: String, args: Array = []) -> void:
 	if not _can_rpc():
@@ -103,7 +126,11 @@ func _safe_rpc_id(peer_id: int, method_name: String, args: Array = []) -> void:
 		4: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3])
 		5: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3], args[4])
 		6: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3], args[4], args[5])
-		_: push_warning("Quá nhiều tham số cho _safe_rpc_id")
+		7: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6])
+		8: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7])
+		9: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8])
+		10: rpc_id(peer_id, method_name, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9])
+		_: push_warning("Quá nhiều tham số cho _safe_rpc_id (%d)" % args.size())
 
 func _process(delta: float) -> void:
 	if not SessionAuthority or not SessionAuthority.is_coop_session():
@@ -131,7 +158,7 @@ func _on_role_changed(role: SessionAuthority.NetworkRole) -> void:
 		_init_host_peer_inventory(1, {
 			"wallet": GameSession.get_item_count("item_linh_thach") if GameSession else 500,
 			"items": _extract_session_items(),
-			"guid": GameSession.player_name if GameSession else "host_1"
+			"guid": GameSession.player_guid if GameSession else "host_1"
 		})
 
 func _extract_session_items() -> Dictionary:
@@ -144,12 +171,21 @@ func _extract_session_items() -> Dictionary:
 	return res
 
 func _init_host_peer_inventory(peer_id: int, initial_data: Dictionary) -> void:
-	host_peer_inventories[peer_id] = {
-		"wallet": initial_data.get("wallet", 500),
-		"items": initial_data.get("items", {}).duplicate(true),
-		"revision": initial_data.get("revision", 1),
-		"guid": initial_data.get("guid", "peer_%d" % peer_id)
-	}
+	var g = initial_data.get("guid", "peer_%d" % peer_id)
+	if g in guid_to_ledger:
+		host_peer_inventories[peer_id] = guid_to_ledger[g]
+		peer_to_guid[peer_id] = g
+	else:
+		var ledger = {
+			"wallet": initial_data.get("wallet", 500),
+			"items": initial_data.get("items", {}).duplicate(true),
+			"revision": initial_data.get("revision", 1),
+			"guid": g,
+			"name": initial_data.get("name", "Đạo Hữu #%d" % peer_id)
+		}
+		guid_to_ledger[g] = ledger
+		host_peer_inventories[peer_id] = ledger
+		peer_to_guid[peer_id] = g
 
 func _on_peer_joined(peer_id: int, player_info: Dictionary) -> void:
 	if not SessionAuthority.is_server_authoritative():
@@ -181,6 +217,7 @@ func _on_peer_joined(peer_id: int, player_info: Dictionary) -> void:
 		"shop": ShopService.to_dict() if ShopService else {},
 		"clock": GameClock.to_dict() if GameClock else {},
 		"world_npcs": GameSession.world_npcs if GameSession else {},
+		"chunk_diffs": GameSession.chunk_diffs if GameSession else {},
 		"sim_revision": latest_sim_revision
 	}
 	_safe_rpc_id(peer_id, "sync_full_world_state", [full_snapshot])
@@ -205,6 +242,51 @@ func _on_peer_left(peer_id: int) -> void:
 	if SessionAuthority.is_server_authoritative():
 		_safe_rpc("sync_player_disconnected", [peer_id])
 	print("[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: %d (Giữ nguyên authoritative ledger)" % peer_id)
+
+
+@rpc("any_peer", "call_remote", "reliable")
+func client_register_identity(guid: String, p_name: String, initial_wallet: int, initial_items: Dictionary) -> void:
+	if not SessionAuthority.is_server_authoritative():
+		return
+	var sender_id = multiplayer.get_remote_sender_id()
+	if sender_id == 0:
+		sender_id = 1
+	if guid == "":
+		guid = "guid_client_%d" % sender_id
+		
+	peer_to_guid[sender_id] = guid
+	
+	if guid in guid_to_ledger:
+		var ledger = guid_to_ledger[guid]
+		host_peer_inventories[sender_id] = ledger
+		if sender_id in network_players:
+			network_players[sender_id]["name"] = ledger.get("name", p_name)
+		print("[CoopWorldSync] Peer %d tái kết nối với GUID '%s'. Khôi phục ví: %d LT, %d vật phẩm." % [
+			sender_id, guid, ledger.get("wallet", 0), ledger.get("items", {}).size()
+		])
+	else:
+		var new_ledger = {
+			"wallet": initial_wallet,
+			"items": initial_items.duplicate(true),
+			"revision": 1,
+			"guid": guid,
+			"name": p_name
+		}
+		guid_to_ledger[guid] = new_ledger
+		host_peer_inventories[sender_id] = new_ledger
+		if sender_id in network_players:
+			network_players[sender_id]["name"] = p_name
+		print("[CoopWorldSync] Đăng ký mới Peer %d với GUID '%s' (Ví: %d LT)." % [sender_id, guid, initial_wallet])
+		
+	var cur_ledger = host_peer_inventories[sender_id]
+	_safe_rpc_id(sender_id, "sync_authoritative_inventory", [
+		"handshake_register",
+		true,
+		"Xác thực danh tính và khôi phục tài sản từ Host",
+		cur_ledger["revision"],
+		cur_ledger["wallet"],
+		cur_ledger["items"]
+	])
 
 # ==============================================================================
 # 1. ĐỒNG BỘ VỊ TRÍ & AVATAR NGƯỜI CHƠI (PLAYER REPLICATION)
@@ -302,6 +384,9 @@ func sync_full_world_state(snapshot: Dictionary) -> void:
 		GameClock.from_dict(snapshot["clock"])
 	if "world_npcs" in snapshot and GameSession:
 		GameSession.world_npcs = snapshot["world_npcs"]
+	if "chunk_diffs" in snapshot and GameSession:
+		for k in snapshot["chunk_diffs"].keys():
+			GameSession.chunk_diffs[k] = snapshot["chunk_diffs"][k]
 	if "sim_revision" in snapshot:
 		latest_sim_revision = snapshot["sim_revision"]
 	print("[CoopWorldSync] Đã tiếp nhận và áp dụng Full World State (kèm NPCs & Revision) từ Host.")
@@ -636,6 +721,189 @@ func sync_stall_inventory_to_all(items: Array, revenue: int) -> void:
 		ShopService.accumulated_revenue = revenue
 	print("[CoopEconomy] Client đã đồng bộ kho sạp hàng mới nhất từ Server.")
 
+
+# ==============================================================================
+# 3.5. THU HOẠCH THẾ GIỚI & RƯƠNG BÁU HOST-AUTHORITATIVE (P0-02 FIXED)
+# ==============================================================================
+
+## Client gửi yêu cầu thu hoạch thực thể/rương thế giới lên Host
+func request_claim_entity(chunk_x: int, chunk_y: int, entity_id: String, reward_items: Dictionary, reward_stones: int, reward_xp: int) -> void:
+	if SessionAuthority.is_server_authoritative():
+		var res = _server_process_entity_claim(1, chunk_x, chunk_y, entity_id, reward_items, reward_stones, reward_xp)
+		entity_claimed_result.emit(chunk_x, chunk_y, entity_id, res["success"], res.get("message", ""))
+	else:
+		_safe_rpc_id(1, "server_receive_entity_claim_request", [chunk_x, chunk_y, entity_id, reward_items, reward_stones, reward_xp])
+
+@rpc("any_peer", "call_remote", "reliable")
+func server_receive_entity_claim_request(chunk_x: int, chunk_y: int, entity_id: String, reward_items: Dictionary, reward_stones: int, reward_xp: int) -> void:
+	if not SessionAuthority.is_server_authoritative():
+		return
+	var sender_id = multiplayer.get_remote_sender_id()
+	if sender_id == 0:
+		sender_id = 1
+	var res = _server_process_entity_claim(sender_id, chunk_x, chunk_y, entity_id, reward_items, reward_stones, reward_xp)
+	if not res.get("success", false):
+		_safe_rpc_id(sender_id, "sync_entity_claim_response", [chunk_x, chunk_y, entity_id, false, res.get("message", "Thất bại"), 0, 0, {}, 0])
+
+func _server_process_entity_claim(sender_id: int, chunk_x: int, chunk_y: int, entity_id: String, reward_items: Dictionary, reward_stones: int, reward_xp: int) -> Dictionary:
+	var key = "%d_%d" % [chunk_x, chunk_y]
+	if not GameSession:
+		return { "success": false, "message": "GameSession không khả dụng" }
+		
+	# 1. Kiểm tra trạng thái thu hoạch trong chunk_diffs của Host (Anti-Race / Single-Claim)
+	if not GameSession.chunk_diffs.has(key):
+		GameSession.chunk_diffs[key] = { "harvested_entities": [] }
+	var harvested = GameSession.chunk_diffs[key].get("harvested_entities", [])
+	if entity_id in harvested:
+		print("[CoopWorldSync] Từ chối claim entity '%s' tại chunk (%d, %d) từ Peer %d (Đã bị thu hoạch trước đó!)" % [
+			entity_id, chunk_x, chunk_y, sender_id
+		])
+		return { "success": false, "message": "Thực thể này đã bị thu hoạch trước đó!" }
+		
+	# 2. Đánh dấu đã thu hoạch ngay lập tức trên Host
+	harvested.append(entity_id)
+	GameSession.chunk_diffs[key]["harvested_entities"] = harvested
+	
+	# 3. Cấp thưởng vào Authoritative Ledger của Peer
+	if not sender_id in host_peer_inventories:
+		_init_host_peer_inventory(sender_id, { "wallet": 0, "items": {}, "guid": "peer_%d" % sender_id })
+		
+	var peer_state = host_peer_inventories[sender_id]
+	peer_state["wallet"] = peer_state.get("wallet", 0) + reward_stones
+	var p_items: Dictionary = peer_state["items"]
+	for it_id in reward_items.keys():
+		p_items[it_id] = p_items.get(it_id, 0) + int(reward_items[it_id])
+	peer_state["revision"] += 1
+	
+	# Nếu sender là Host cục bộ (1), cập nhật GameSession host
+	if sender_id == 1:
+		if reward_stones > 0:
+			GameSession.add_item("item_linh_thach", reward_stones)
+		for it_id in reward_items.keys():
+			GameSession.add_item(it_id, int(reward_items[it_id]))
+		if reward_xp > 0:
+			GameSession.add_cultivation(reward_xp)
+		entity_claimed_result.emit(chunk_x, chunk_y, entity_id, true, "Thu hoạch thành công!")
+	else:
+		_safe_rpc_id(sender_id, "sync_entity_claim_response", [
+			chunk_x, chunk_y, entity_id, true, "Thu hoạch thành công!",
+			peer_state["revision"], peer_state["wallet"], peer_state["items"], reward_xp
+		])
+		
+	# Phát sóng cho mọi người chơi để cập nhật visual (rương biến mất hoặc mở)
+	_safe_rpc("sync_entity_harvested", [chunk_x, chunk_y, entity_id])
+	print("[CoopWorldSync] Host xác nhận thu hoạch '%s' cho Peer %d: +%d LT, +%s, +%d XP" % [
+		entity_id, sender_id, reward_stones, str(reward_items), reward_xp
+	])
+	return { "success": true, "message": "Thu hoạch thành công!" }
+
+@rpc("authority", "call_remote", "reliable")
+func sync_entity_claim_response(chunk_x: int, chunk_y: int, entity_id: String, success: bool, msg: String, revision: int, auth_wallet: int, auth_items: Dictionary, xp: int) -> void:
+	if not success:
+		if EventBus:
+			EventBus.notification_requested.emit(msg, "warning")
+		entity_claimed_result.emit(chunk_x, chunk_y, entity_id, false, msg)
+		return
+		
+	if revision > client_authoritative_revision:
+		client_authoritative_revision = revision
+		_reconcile_client_state(auth_wallet, auth_items)
+		if xp > 0 and GameSession:
+			GameSession.add_cultivation(xp)
+			
+	if EventBus:
+		EventBus.notification_requested.emit(msg, "success")
+	entity_claimed_result.emit(chunk_x, chunk_y, entity_id, true, msg)
+
+@rpc("authority", "call_remote", "reliable")
+func sync_entity_harvested(chunk_x: int, chunk_y: int, entity_id: String) -> void:
+	var key = "%d_%d" % [chunk_x, chunk_y]
+	if GameSession:
+		if not GameSession.chunk_diffs.has(key):
+			GameSession.chunk_diffs[key] = { "harvested_entities": [] }
+		var harvested = GameSession.chunk_diffs[key].get("harvested_entities", [])
+		if not entity_id in harvested:
+			harvested.append(entity_id)
+			GameSession.chunk_diffs[key]["harvested_entities"] = harvested
+	entity_harvested_synced.emit(chunk_x, chunk_y, entity_id)
+
+# ==============================================================================
+# 3.6. DỊCH CHUYỂN NHANH DỊCH TRẠM HOST-AUTHORITATIVE (P0-03 & P0-04 FIXED)
+# ==============================================================================
+
+## Client gửi yêu cầu dịch chuyển trạm lên Host, không tự tua thời gian
+func request_fast_travel(destination_id: String, cost: int, target_pos: Vector2) -> void:
+	if SessionAuthority.is_server_authoritative():
+		_server_process_fast_travel(1, destination_id, cost, target_pos)
+	else:
+		_safe_rpc_id(1, "server_receive_fast_travel_request", [destination_id, cost, target_pos])
+
+@rpc("any_peer", "call_remote", "reliable")
+func server_receive_fast_travel_request(destination_id: String, cost: int, target_pos: Vector2) -> void:
+	if not SessionAuthority.is_server_authoritative():
+		return
+	var sender_id = multiplayer.get_remote_sender_id()
+	if sender_id == 0:
+		sender_id = 1
+	_server_process_fast_travel(sender_id, destination_id, cost, target_pos)
+
+func _server_process_fast_travel(sender_id: int, destination_id: String, cost: int, target_pos: Vector2) -> void:
+	if not sender_id in host_peer_inventories:
+		_init_host_peer_inventory(sender_id, { "wallet": 0, "items": {}, "guid": "peer_%d" % sender_id })
+	var peer_state = host_peer_inventories[sender_id]
+	var cur_wallet = peer_state.get("wallet", 0)
+	if cur_wallet < cost:
+		if sender_id == 1:
+			if EventBus:
+				EventBus.notification_requested.emit("Thiếu Linh Thạch! Cần %d Linh Thạch." % cost, "error")
+		else:
+			_safe_rpc_id(sender_id, "sync_fast_travel_result", [false, "Thiếu Linh Thạch!", Vector2.ZERO])
+		return
+		
+	# Khấu trừ phí trên Authoritative Ledger
+	peer_state["wallet"] = cur_wallet - cost
+	peer_state["revision"] += 1
+	
+	# Cập nhật vị trí được phép dịch chuyển (Bỏ qua Anti-Speed clamp)
+	if sender_id in network_players:
+		network_players[sender_id]["pos"] = target_pos
+		
+	if sender_id == 1:
+		if GameSession:
+			GameSession.remove_item("item_linh_thach", cost)
+		sync_fast_travel_result(true, "Xe ngựa đưa tới điểm hẹn an toàn!", target_pos)
+	else:
+		_safe_rpc_id(sender_id, "sync_fast_travel_result", [true, "Xe ngựa đưa tới điểm hẹn an toàn!", target_pos])
+		_safe_rpc_id(sender_id, "sync_authoritative_inventory", [
+			"fast_travel_%s" % destination_id,
+			true,
+			"Khấu trừ cước phí xe ngựa",
+			peer_state["revision"],
+			peer_state["wallet"],
+			peer_state["items"]
+		])
+
+@rpc("authority", "call_remote", "reliable")
+func sync_fast_travel_result(success: bool, msg: String, target_pos: Vector2) -> void:
+	fast_travel_completed.emit(success, msg, target_pos)
+	if not success:
+		if EventBus:
+			EventBus.notification_requested.emit(msg, "error")
+		return
+		
+	var local_player = _find_local_player()
+	if local_player and is_instance_valid(local_player) and local_player.has_method("teleport_to"):
+		local_player.teleport_to(target_pos)
+	if GameSession:
+		GameSession.world_position = target_pos
+	var tree = get_tree()
+	if tree and tree.current_scene and tree.current_scene.has_node("ChunkStreamer"):
+		var st = tree.current_scene.get_node("ChunkStreamer")
+		if st.has_method("update_streamer_position"):
+			st.update_streamer_position(target_pos)
+	if EventBus:
+		EventBus.notification_requested.emit(msg, "success")
+
 # ==============================================================================
 # 4. MÔ PHỎNG NPC HÀNG THÁNG & SNAPSHOT THẾ GIỚI DIFF (P1-02 FIXED)
 # ==============================================================================
@@ -683,12 +951,15 @@ func client_receive_month_simulation(month: int, year: int, payload: Dictionary)
 func export_coop_state() -> Dictionary:
 	return {
 		"host_peer_inventories": host_peer_inventories.duplicate(true),
+		"guid_to_ledger": guid_to_ledger.duplicate(true),
 		"processed_transactions": processed_transactions.duplicate(true),
 		"coop_boss_state": coop_boss_state.duplicate(true),
 		"latest_sim_revision": latest_sim_revision
 	}
 
 func import_coop_state(data: Dictionary) -> void:
+	if data.has("guid_to_ledger") and data["guid_to_ledger"] is Dictionary:
+		guid_to_ledger = data["guid_to_ledger"].duplicate(true)
 	if data.has("host_peer_inventories") and data["host_peer_inventories"] is Dictionary:
 		host_peer_inventories = data["host_peer_inventories"].duplicate(true)
 	if data.has("processed_transactions") and data["processed_transactions"] is Dictionary:

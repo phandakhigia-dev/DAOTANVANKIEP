@@ -31,11 +31,15 @@ func _apply_ink_style() -> void:
 
 func open_menu() -> void:
 	visible = true
-	get_tree().paused = true
+	if not (SessionAuthority and SessionAuthority.is_coop_session()):
+		if get_tree():
+			get_tree().paused = true
 
 func resume_game() -> void:
 	visible = false
-	get_tree().paused = false
+	if not (SessionAuthority and SessionAuthority.is_coop_session()):
+		if get_tree():
+			get_tree().paused = false
 
 func _on_save_pressed() -> void:
 	SaveService.save_game(1)

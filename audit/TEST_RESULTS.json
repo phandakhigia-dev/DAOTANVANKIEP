@@ -1,12 +1,12 @@
 {
   "project": "ĐẠO TÀN: VẠN KIẾP",
   "engine": "Godot Engine v4.7.2.stable.official.ed1daf0bf",
-  "execution_date": "2026-11-05T21:10:46.787337",
-  "duration_seconds": 2.98917,
+  "execution_date": "2026-11-05T21:45:03.197893",
+  "duration_seconds": 3.163611,
   "exit_code": 0,
-  "total_suites": 31,
-  "total_tests": 216,
-  "total_passed": 216,
+  "total_suites": 32,
+  "total_tests": 221,
+  "total_passed": 221,
   "total_failed": 0,
   "pass_rate_percent": 100.0,
   "suites": [
@@ -306,11 +306,11 @@
       "test_cases": [
         {
           "status": "PASS",
-          "description": "Stress test 500 NPC x 12 tháng: Trung bình 8.20 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
+          "description": "Stress test 500 NPC x 12 tháng: Trung bình 7.33 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
         },
         {
           "status": "PASS",
-          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.70 ms/tháng (Vượt qua thử thách quy mô lớn)"
+          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.54 ms/tháng (Vượt qua thử thách quy mô lớn)"
         },
         {
           "status": "PASS",
@@ -954,6 +954,33 @@
         {
           "status": "PASS",
           "description": "T-OW-05: Điểm cơ duyên thế giới (Thạch Động Cổ, Tế Đàn Xà Cốt, Tàn Kiếm Bia) đồng bộ dữ liệu và thu hoạch tài nguyên chính xác"
+        }
+      ]
+    },
+    {
+      "suite_name": "Sprint Gate S0 — Stability & Co-op Integrity",
+      "tests_passed": 5,
+      "tests_failed": 0,
+      "test_cases": [
+        {
+          "status": "PASS",
+          "description": "T-S0-01: ProvinceWorld Remote Avatar Lifecycle: Spawn chuẩn y_entities, hiển thị nhãn tên, cập nhật lerp và dọn dẹp sạch sẽ"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S0-02: Race condition thu hoạch rương: Đúng 1 peer nhận thưởng (+50 LT, +1 Tẩy Tủy Đan), peer thứ hai bị từ chối an toàn"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S0-03: Fast Travel Co-op: Khấu trừ 25 LT thẩm quyền, cập nhật vị trí không bị kẹt anti-teleport, bảo toàn 720s/ngày (Giờ không bị nhảy)"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S0-04: Reconnect Identity: Tái kết nối với GUID khác peer_id bảo tồn 100% ví (450 LT) và vật phẩm, khôi phục hoàn hảo qua Save/Load"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S0-05: Pause Menu Invariant: Solo dừng scene tree, Co-op mở UI nhưng KHÔNG dừng scene tree (Giữ kết nối & 720s/ngày)"
         }
       ]
     }

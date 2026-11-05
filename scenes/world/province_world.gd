@@ -38,6 +38,7 @@ const LifeGenerator = preload("res://scripts/domain/life_generator.gd")
 
 var current_nearby_action: String = ""
 var spawned_npcs: Array[Node] = []
+var remote_avatars: Dictionary = {}
 var day_night_modulate: CanvasModulate = null
 
 # Zoom camera thế giới mở
@@ -84,6 +85,11 @@ func _ready() -> void:
 	if streamer and streamer.has_method("update_streamer_position"):
 		streamer.update_streamer_position(player.global_position)
 		
+	if CoopWorldSync:
+		CoopWorldSync.remote_player_updated.connect(_on_remote_player_updated)
+		CoopWorldSync.remote_player_removed.connect(_on_remote_player_removed)
+		if CoopWorldSync.has_signal("entity_harvested_synced"):
+			CoopWorldSync.entity_harvested_synced.connect(_on_entity_harvested_synced)
 	_spawn_core_settlement_npcs()
 	_connect_hud_signals()
 	prompt_banner.visible = false
@@ -117,6 +123,7 @@ func _process(delta: float) -> void:
 	
 	_update_header()
 	_update_day_night(delta)
+	_update_remote_avatars(delta)
 
 func _spawn_core_settlement_npcs() -> void:
 	# Spawn 5 NPC cốt lõi tại Thanh Trì Huyện với vị trí quy hoạch rõ ràng, không trùng điểm spawn người chơi
@@ -523,50 +530,67 @@ func _execute_action(action: String) -> void:
 					EventBus.notification_requested.emit("Khai khoáng Tây Sơn: Khai thác được 20 Linh Thạch và khoáng sản quý!", "success")
 
 		"cavern":
-			if GameSession:
-				var chunk_coord = Vector2i(32, 30)
-				if streamer and streamer.is_entity_harvested(chunk_coord, "bamboo_cavern_chest"):
-					if EventBus:
-						EventBus.notification_requested.emit("Rương Thạch Động đã bị thu hoạch, cần chờ cơ duyên luân hồi!", "info")
-				else:
-					if streamer:
-						streamer.mark_entity_harvested(chunk_coord, "bamboo_cavern_chest")
+			var chunk_coord = Vector2i(32, 30)
+			var entity_id = "bamboo_cavern_chest"
+			if streamer and streamer.is_entity_harvested(chunk_coord, entity_id):
+				if EventBus:
+					EventBus.notification_requested.emit("Rương Thạch Động đã bị thu hoạch, cần chờ cơ duyên luân hồi!", "info")
+				return
+				
+			if SessionAuthority and SessionAuthority.is_coop_session():
+				CoopWorldSync.request_claim_entity(
+					chunk_coord.x, chunk_coord.y, entity_id,
+					{ "item_tay_tuy_dan": 1 },
+					50,
+					50
+				)
+			else:
+				if streamer:
+					streamer.mark_entity_harvested(chunk_coord, entity_id)
+				if GameSession:
 					GameSession.add_item("item_tay_tuy_dan", 1)
 					GameSession.add_item("item_linh_thach", 50)
-					if EventBus:
-						EventBus.notification_requested.emit("Khai mở Thạch Động Cổ: Thu hoạch 1x Tẩy Tủy Đan & 50 Linh Thạch!", "success")
+					GameSession.add_cultivation(50)
+				if EventBus:
+					EventBus.notification_requested.emit("Khai mở Thạch Động Cổ: Thu hoạch 1x Tẩy Tủy Đan & 50 Linh Thạch!", "success")
 						
 		"travel_to_long_kinh":
 			if GameSession.get_item_count("item_linh_thach") < 25:
 				if EventBus:
 					EventBus.notification_requested.emit("Thiếu Linh Thạch! Cần 25 Linh Thạch để thuê xe ngựa tới Long Kinh.", "error")
 				return
-			GameSession.remove_item("item_linh_thach", 25)
-			if GameClock:
-				GameClock.advance_hours(4)
 			var target_pos = LONG_KINH_CENTER + Vector2(0, 650)
-			player.teleport_to(target_pos)
-			GameSession.world_position = target_pos
-			if streamer and streamer.has_method("update_streamer_position"):
-				streamer.update_streamer_position(target_pos)
-			if EventBus:
-				EventBus.notification_requested.emit("Ngồi xe ngựa vượt 4 giờ quan lộ, đã đến cổng Nam Kinh Đô Long Kinh!", "success")
+			if SessionAuthority and SessionAuthority.is_coop_session():
+				CoopWorldSync.request_fast_travel("long_kinh", 25, target_pos)
+			else:
+				GameSession.remove_item("item_linh_thach", 25)
+				if GameClock:
+					GameClock.advance_hours(4)
+				player.teleport_to(target_pos)
+				GameSession.world_position = target_pos
+				if streamer and streamer.has_method("update_streamer_position"):
+					streamer.update_streamer_position(target_pos)
+				if EventBus:
+					EventBus.notification_requested.emit("Ngồi xe ngựa vượt 4 giờ quan lộ, đã đến cổng Nam Kinh Đô Long Kinh!", "success")
 				
 		"travel_to_thanh_tri":
 			if GameSession.get_item_count("item_linh_thach") < 10:
 				if EventBus:
 					EventBus.notification_requested.emit("Thiếu Linh Thạch! Cần 10 Linh Thạch để thuê xe ngựa về Thanh Trì.", "error")
 				return
-			GameSession.remove_item("item_linh_thach", 10)
-			if GameClock:
-				GameClock.advance_hours(4)
 			var target_pos = THANH_TRI_CENTER + Vector2(-200, 200)
-			player.teleport_to(target_pos)
-			GameSession.world_position = target_pos
-			if streamer and streamer.has_method("update_streamer_position"):
-				streamer.update_streamer_position(target_pos)
-			if EventBus:
-				EventBus.notification_requested.emit("Xe ngựa trở về Huyện Thành Thanh Trì an toàn!", "success")
+			if SessionAuthority and SessionAuthority.is_coop_session():
+				CoopWorldSync.request_fast_travel("thanh_tri", 10, target_pos)
+			else:
+				GameSession.remove_item("item_linh_thach", 10)
+				if GameClock:
+					GameClock.advance_hours(4)
+				player.teleport_to(target_pos)
+				GameSession.world_position = target_pos
+				if streamer and streamer.has_method("update_streamer_position"):
+					streamer.update_streamer_position(target_pos)
+				if EventBus:
+					EventBus.notification_requested.emit("Xe ngựa trở về Huyện Thành Thanh Trì an toàn!", "success")
 
 func _on_npc_interacted(data: Dictionary) -> void:
 	if not dialogue_modal:
@@ -603,6 +627,84 @@ func _update_day_night(delta: float) -> void:
 	elif h >= 17 and h < 19:
 		target = Color(0.88, 0.70, 0.55, 1.0)
 	day_night_modulate.color = day_night_modulate.color.lerp(target, clamp(delta * 2.0, 0.05, 1.0))
+
+
+# ==============================================================================
+# ĐỒNG BỘ AVATAR NGƯỜI CHƠI CO-OP TRONG PROVINCE WORLD (P0-01 FIXED)
+# ==============================================================================
+
+func _on_remote_player_updated(peer_id: int, data: Dictionary) -> void:
+	var my_id = 1
+	var mp = get_multiplayer() if has_method("get_multiplayer") else null
+	if mp and mp.has_multiplayer_peer() and mp.multiplayer_peer and mp.multiplayer_peer.get_connection_status() == MultiplayerPeer.CONNECTION_CONNECTED:
+		my_id = mp.get_unique_id()
+		
+	if peer_id == my_id:
+		return # Avatar cục bộ do Player điều khiển
+		
+	if not peer_id in remote_avatars or not is_instance_valid(remote_avatars[peer_id]):
+		_spawn_remote_avatar(peer_id, data)
+		
+	if peer_id in remote_avatars and is_instance_valid(remote_avatars[peer_id]):
+		var av = remote_avatars[peer_id]
+		av.set_meta("target_pos", data.get("pos", av.global_position))
+		av.set_meta("anim", data.get("anim", "idle_south"))
+		av.set_meta("facing", data.get("facing", Vector2.DOWN))
+
+func _spawn_remote_avatar(peer_id: int, data: Dictionary) -> void:
+	var swordsman_scene = load("res://wuxia/32/heroes/swordsman/swordsman.tscn")
+	var av = Node2D.new()
+	av.name = "RemotePlayer_%d" % peer_id
+	av.global_position = data.get("pos", THANH_TRI_SPAWN)
+	av.set_meta("target_pos", av.global_position)
+	av.set_meta("anim", "idle_south")
+	av.set_meta("facing", Vector2.DOWN)
+	
+	if swordsman_scene:
+		var spr = swordsman_scene.instantiate()
+		spr.name = "Sprite"
+		spr.modulate = Color(0.7, 0.9, 1.0, 1.0) # Sắc lam phân biệt đồng đạo
+		av.add_child(spr)
+		if spr.sprite_frames.has_animation("idle_south"):
+			spr.play("idle_south")
+			
+	var lbl = Label.new()
+	lbl.name = "NameLabel"
+	lbl.text = "[Đạo Hữu] %s (#%d)" % [data.get("name", "Đồng Đạo"), peer_id]
+	lbl.position = Vector2(-70, -42)
+	lbl.modulate = Color(0.4, 0.9, 1.0)
+	av.add_child(lbl)
+	
+	y_entities.add_child(av)
+	remote_avatars[peer_id] = av
+	print("[ProvinceWorld] Đã spawn Remote Avatar cho Peer %d tại %s" % [peer_id, av.global_position])
+
+func _on_remote_player_removed(peer_id: int) -> void:
+	if peer_id in remote_avatars:
+		var av = remote_avatars[peer_id]
+		if is_instance_valid(av):
+			av.queue_free()
+		remote_avatars.erase(peer_id)
+		print("[ProvinceWorld] Đã gỡ bỏ Remote Avatar của Peer %d" % peer_id)
+
+func _update_remote_avatars(delta: float) -> void:
+	for p_id in remote_avatars.keys():
+		var av = remote_avatars[p_id]
+		if not is_instance_valid(av):
+			continue
+		var target_pos: Vector2 = av.get_meta("target_pos", av.global_position)
+		av.global_position = av.global_position.lerp(target_pos, clampf(delta * 12.0, 0.05, 1.0))
+		
+		var spr = av.get_node_or_null("Sprite")
+		var anim: String = av.get_meta("anim", "idle_south")
+		if spr and spr.has_method("play") and spr.sprite_frames.has_animation(anim):
+			if spr.animation != anim:
+				spr.play(anim)
+
+func _on_entity_harvested_synced(chunk_x: int, chunk_y: int, entity_id: String) -> void:
+	if streamer and streamer.has_method("mark_entity_harvested"):
+		streamer.mark_entity_harvested(Vector2i(chunk_x, chunk_y), entity_id)
+	print("[ProvinceWorld] Đã đồng bộ trạng thái thực thể '%s' bị thu hoạch tại chunk (%d, %d)." % [entity_id, chunk_x, chunk_y])
 
 func _connect_hud_signals() -> void:
 	if EventBus:
