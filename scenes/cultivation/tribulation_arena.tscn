@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bxp3tribarena1" load_steps=3 header_name="TribulationArena"]
+
+[ext_resource type="Script" path="res://scenes/cultivation/tribulation_arena.gd" id="1_arena"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
+bg_color = Color(0.04, 0.02, 0.1, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.6, 1.0, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="TribulationArena" type="Node2D"]
+script = ExtResource("1_arena")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="VBox" type="VBoxContainer" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -300.0
+offset_top = 30.0
+offset_right = 300.0
+offset_bottom = 320.0
+theme_override_constants/separation = 10
+
+[node name="LabelTitle" type="Label" parent="HUD/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.9, 1.0, 1.0)
+theme_override_font_sizes/font_size = 18
+text = "⚡ THIÊN KIẾP LÔI ĐÌNH — TẠO HOÁ THỬ THÁCH ⚡"
+horizontal_alignment = 1
+
+[node name="LabelWave" type="Label" parent="HUD/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.0, 0.85, 0.3, 1.0)
+theme_override_font_sizes/font_size = 15
+text = "Đợt 1/3 — Đang chuẩn bị..."
+horizontal_alignment = 1
+
+[node name="ProgressHP" type="ProgressBar" parent="HUD/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 24)
+max_value = 500.0
+value = 500.0
+
+[node name="LabelHP" type="Label" parent="HUD/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.4, 0.4, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "Khí Huyết: 500 / 500"
+horizontal_alignment = 1
+
+[node name="LabelResist" type="Label" parent="HUD/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1.0, 0.7, 1.0)
+theme_override_font_sizes/font_size = 13
+text = "Không có kháng lôi — cẩn thận!"
+horizontal_alignment = 1
+
+[node name="LabelMsg" type="Label" parent="HUD/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 1.0, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "⚡ Thiên lôi đang tích tụ..."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BtnDodge" type="Button" parent="HUD/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 44)
+text = "⚡ Vận Thân Pháp — Né Tránh Lôi Kích"
+[connection signal="pressed" from="HUD/VBox/BtnDodge" to="." method="_on_btn_dodge_pressed"]

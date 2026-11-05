@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dt3wna0ttuyl0"
+
+[deps]
+
+files=["res://audit/FILE_MANIFEST.FileType.translation", "res://audit/FILE_MANIFEST.SizeBytes.translation", "res://audit/FILE_MANIFEST.SHA256.translation", "res://audit/FILE_MANIFEST.PackageStatus.translation"]
+
+source_file="res://audit/FILE_MANIFEST.csv"
+dest_files=["res://audit/FILE_MANIFEST.FileType.translation", "res://audit/FILE_MANIFEST.SizeBytes.translation", "res://audit/FILE_MANIFEST.SHA256.translation", "res://audit/FILE_MANIFEST.PackageStatus.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,32 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 581.80 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+
+=======================================================
+  CO-OP 3-PROCESS LIVE GAMEPLAY TEST
+  Tiến Trình: CLIENT2 | Port: 8899 | Time: 2026-11-05T10:31:12
+=======================================================
+
+[CLIENT2] Đã nạp thành công WorldMap scene.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Đang kết nối tới host 127.0.0.1:8899 (Cố định time_scale = 1.0)...
+[CLIENT 2] Đã gửi lệnh join_host.
+[SessionAuthority] Kết nối thành công tới Server!
+[SessionAuthority] Peer kết nối: 1
+[CLIENT 2] Kết nối thành công! Peer ID: 739426922
+[SessionAuthority] Peer kết nối: 1325536472
+[CoopWorldSync] Đã tiếp nhận và áp dụng Full World State (kèm NPCs & Revision) từ Host.
+[CLIENT2] Kết quả giao dịch init_join: success=true, msg=Đồng bộ tài sản ban đầu từ Host
+[WorldMap] Đã spawn Remote Avatar cho Peer 1 tại (1600.0, 1280.0)
+[WorldMap] Đã spawn Remote Avatar cho Peer 1325536472 tại (1073.261, 813.4182)
+[CoopEconomy] Client đã đồng bộ kho sạp hàng mới nhất từ Server.
+[CLIENT 2] Gửi request mua món cuối: REQ_RACE_CLI2
+[CLIENT2] Kết quả giao dịch REQ_RACE_CLI2: success=false, msg=Hàng trong sạp đã hết hoặc không đủ số lượng!
+[CLIENT2] Lưu screenshot res://audit/graphics_after/coop_client2_window.png (Kích thước: (1280, 720), Mã lỗi: 0)
+[CLIENT 2] Đã chụp ảnh cửa sổ Client 2 thật: coop_client2_window.png
+[SessionAuthority] Peer ngắt kết nối: 1
+[WorldMap] Đã gỡ bỏ Remote Avatar của Peer 1
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 1 (Giữ nguyên authoritative ledger)
+[SessionAuthority] Server đã đóng hoặc mất kết nối.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[CLIENT 2] Hoàn tất tiến trình Client 2.

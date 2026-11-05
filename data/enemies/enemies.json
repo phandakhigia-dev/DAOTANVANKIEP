@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "enemies": [
+    {
+      "id": "enemy_linh_ho_yeu",
+      "name": "Linh Hồ Hoang Dã",
+      "type": "beast",
+      "max_hp": 45,
+      "hp": 45,
+      "attack": 8,
+      "atk": 8,
+      "defense": 3,
+      "move_speed": 160.0,
+      "speed": 160.0,
+      "exp_reward": 15,
+      "drops": [
+        { "item_id": "item_linh_thach", "chance": 0.8, "min": 2, "max": 6 },
+        { "item_id": "item_linh_thao", "chance": 0.4, "min": 1, "max": 2 }
+      ],
+      "behavior": "melee_chaser",
+      "color": "#d9822b"
+    },
+    {
+      "id": "enemy_bach_xuyen_thu",
+      "name": "Bạch Xuyên Thú",
+      "type": "beast",
+      "max_hp": 55,
+      "hp": 55,
+      "attack": 12,
+      "atk": 12,
+      "defense": 5,
+      "move_speed": 110.0,
+      "speed": 110.0,
+      "exp_reward": 20,
+      "drops": [
+        { "item_id": "item_linh_thach", "chance": 0.9, "min": 4, "max": 8 },
+        { "item_id": "item_hoi_xuan_dan", "chance": 0.25, "min": 1, "max": 1 }
+      ],
+      "behavior": "ranged_spitter",
+      "color": "#4a90e2"
+    },
+    {
+      "id": "enemy_hac_linh_xa",
+      "name": "Hắc Linh Xà",
+      "type": "reptile",
+      "max_hp": 60,
+      "hp": 60,
+      "attack": 10,
+      "atk": 10,
+      "defense": 4,
+      "move_speed": 130.0,
+      "speed": 130.0,
+      "exp_reward": 25,
+      "drops": [
+        { "item_id": "item_linh_thach", "chance": 0.9, "min": 5, "max": 10 },
+        { "item_id": "item_linh_thao", "chance": 0.5, "min": 1, "max": 2 }
+      ],
+      "behavior": "venom_striker",
+      "color": "#7b68ee"
+    },
+    {
+      "id": "boss_xich_kiem_ma_thu",
+      "name": "Xích Kiếm Ma Thứu",
+      "type": "boss",
+      "max_hp": 450,
+      "hp": 450,
+      "attack": 22,
+      "atk": 22,
+      "defense": 10,
+      "move_speed": 120.0,
+      "speed": 95.0,
+      "exp_reward": 150,
+      "zone": "zone_truc_lam",
+      "zone_name": "Rừng Trúc (Vân Lĩnh)",
+      "drops": [
+        { "item_id": "item_tu_khi_dan", "chance": 1.0, "min": 2, "max": 2 },
+        { "item_id": "item_co_kiem_tan_phien", "chance": 1.0, "min": 1, "max": 1 },
+        { "item_id": "item_linh_thach", "chance": 1.0, "min": 40, "max": 70 },
+        { "item_id": "item_hoi_xuan_dan", "chance": 1.0, "min": 1, "max": 2 }
+      ],
+      "behavior": "boss_patterns",
+      "telegraph_type": "circle",
+      "telegraph_delay": 1.2,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "boss_hac_linh_xa_vuong",
+      "name": "Hắc Linh Xà Vương",
+      "type": "boss",
+      "max_hp": 650,
+      "hp": 650,
+      "attack": 28,
+      "atk": 28,
+      "defense": 14,
+      "move_speed": 115.0,
+      "speed": 115.0,
+      "exp_reward": 220,
+      "zone": "zone_dam_lay",
+      "zone_name": "Đầm Lầy Hắc Linh",
+      "drops": [
+        { "item_id": "item_da_huong_thao", "chance": 1.0, "min": 3, "max": 5 },
+        { "item_id": "item_kim_sang_duoc", "chance": 1.0, "min": 1, "max": 2 },
+        { "item_id": "item_linh_thach", "chance": 1.0, "min": 60, "max": 100 }
+      ],
+      "behavior": "cone_poison_spit",
+      "telegraph_type": "cone",
+      "telegraph_delay": 1.3,
+      "color": "#27ae60"
+    },
+    {
+      "id": "boss_huyet_ma_khoi_loi",
+      "name": "Huyết Ma Khôi Lỗi",
+      "type": "boss",
+      "max_hp": 900,
+      "hp": 900,
+      "attack": 35,
+      "atk": 35,
+      "defense": 20,
+      "move_speed": 85.0,
+      "speed": 85.0,
+      "exp_reward": 320,
+      "zone": "zone_u_minh",
+      "zone_name": "U Minh Cổ Mộ",
+      "drops": [
+        { "item_id": "item_huyet_tinh", "chance": 1.0, "min": 1, "max": 2 },
+        { "item_id": "item_huyen_thiet_khoang", "chance": 1.0, "min": 2, "max": 4 },
+        { "item_id": "item_linh_thach", "chance": 1.0, "min": 100, "max": 160 }
+      ],
+      "behavior": "line_blood_dash",
+      "telegraph_type": "line",
+      "telegraph_delay": 1.1,
+      "color": "#c0392b"
+    },
+    {
+      "id": "boss_bach_doc_chu_hoang",
+      "name": "Bách Độc Chu Hoàng",
+      "type": "boss",
+      "max_hp": 750,
+      "hp": 750,
+      "attack": 30,
+      "atk": 30,
+      "defense": 16,
+      "move_speed": 130.0,
+      "speed": 130.0,
+      "exp_reward": 260,
+      "zone": "zone_bach_doc",
+      "zone_name": "Bách Độc Động",
+      "drops": [
+        { "item_id": "item_bach_thao_diep", "chance": 1.0, "min": 4, "max": 6 },
+        { "item_id": "item_thanh_tam_dan", "chance": 1.0, "min": 1, "max": 2 },
+        { "item_id": "item_linh_thach", "chance": 1.0, "min": 80, "max": 120 }
+      ],
+      "behavior": "radial_web_blast",
+      "telegraph_type": "circle",
+      "telegraph_delay": 1.25,
+      "color": "#8e44ad"
+    },
+    {
+      "id": "boss_co_kiem_linh",
+      "name": "Cổ Kiếm Linh",
+      "type": "boss",
+      "max_hp": 1100,
+      "hp": 1100,
+      "attack": 42,
+      "atk": 42,
+      "defense": 22,
+      "move_speed": 140.0,
+      "speed": 140.0,
+      "exp_reward": 450,
+      "zone": "zone_kiem_chung",
+      "zone_name": "Kiếm Chủng Thần Bí",
+      "drops": [
+        { "item_id": "item_tay_tuy_dan", "chance": 1.0, "min": 1, "max": 1 },
+        { "item_id": "item_co_kiem_tan_phien", "chance": 1.0, "min": 2, "max": 3 },
+        { "item_id": "item_linh_thach", "chance": 1.0, "min": 150, "max": 250 }
+      ],
+      "behavior": "cross_sword_formation",
+      "telegraph_type": "cross",
+      "telegraph_delay": 1.4,
+      "color": "#f39c12"
+    }
+  ]
+}

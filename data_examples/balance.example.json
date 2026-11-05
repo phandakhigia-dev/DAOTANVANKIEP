@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "note": "proposed tuning placeholders, not canonical values",
+  "combat": {
+    "player_base_hp": 100,
+    "player_base_mp": 60,
+    "boss_target_duration_seconds": [
+      90,
+      180
+    ],
+    "enemy_melee_damage_range": [
+      6,
+      9
+    ],
+    "damage_defense_constant": 100
+  },
+  "world": {
+    "days_per_month": 30,
+    "npc_alpha_count_goal": 50
+  },
+  "cultivation": {
+    "failure_min_probability": 0.05,
+    "failure_max_probability": 0.85
+  }
+}

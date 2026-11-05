@@ -1,0 +1,23 @@
+{
+  "country_id": "dai_huyen",
+  "country_name": "Đại Huyền Quốc",
+  "dynasty": "Đại Huyền Triều",
+  "emperor": {
+    "name": "Lý Khải Nguyên",
+    "title": "Huyền Thiên Đại Đế",
+    "reign_years": 42,
+    "capital_city_id": "long_kinh"
+  },
+  "capital_province_id": "thin_chau",
+  "provinces_count": 12,
+  "treasury_gold": 10000000,
+  "baseline_tax_rate": 0.05,
+  "six_ministries": [
+    { "id": "lai_bo", "name": "Lại Bộ", "function": "Bổ nhiệm quan lại và khảo khóa quan viên" },
+    { "id": "ho_bo", "name": "Hộ Bộ", "function": "Thuế khóa, quốc khố và điền thổ hộ tịch" },
+    { "id": "le_bo", "name": "Lễ Bộ", "function": "Khoa cử, điển lễ và ngoại giao tông môn" },
+    { "id": "binh_bo", "name": "Binh Bộ", "function": "Quân vụ, phòng tuyến biên ải và chế áp phản loạn" },
+    { "id": "hinh_bo", "name": "Hình Bộ", "function": "Hình luật, đại án và truy nã tà tu ma đạo" },
+    { "id": "cong_bo", "name": "Công Bộ", "function": "Công trình thủy lợi, quan lộ và khoáng trường" }
+  ]
+}

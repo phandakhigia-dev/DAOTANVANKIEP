@@ -1,0 +1,60 @@
+{
+  "province_id": "thin_chau",
+  "system_rules": {
+    "require_discovered": true,
+    "coop_sync_authoritative": true,
+    "block_in_combat": true
+  },
+  "stations": [
+    {
+      "id": "tram_dich_thanh_tri",
+      "name": "Dịch Trạm Thanh Trì Huyện",
+      "settlement_id": "settlement_thanh_tri",
+      "chunk_coord": [32, 32],
+      "world_pos": [66300, 66800],
+      "fare_linh_thach_base": 10,
+      "travel_duration_game_hours": 2,
+      "connected_station_ids": ["tram_dich_long_kinh", "tram_dich_dong_noi", "tram_dich_tay_son", "tram_dich_bac_lam"]
+    },
+    {
+      "id": "tram_dich_long_kinh",
+      "name": "Ngự Mã Dịch Trạm Long Kinh",
+      "settlement_id": "settlement_long_kinh",
+      "chunk_coord": [32, 16],
+      "world_pos": [66560, 34500],
+      "fare_linh_thach_base": 25,
+      "travel_duration_game_hours": 4,
+      "connected_station_ids": ["tram_dich_thanh_tri", "tram_dich_bac_lam"]
+    },
+    {
+      "id": "tram_dich_dong_noi",
+      "name": "Trạm Xe Ngựa Đồng Nội",
+      "settlement_id": "settlement_dong_noi",
+      "chunk_coord": [31, 34],
+      "world_pos": [64500, 70500],
+      "fare_linh_thach_base": 5,
+      "travel_duration_game_hours": 1,
+      "connected_station_ids": ["tram_dich_thanh_tri"]
+    },
+    {
+      "id": "tram_dich_tay_son",
+      "name": "Tiêu Cục Trạm Mỏ Tây Sơn",
+      "settlement_id": "settlement_tay_son",
+      "chunk_coord": [20, 32],
+      "world_pos": [42100, 66560],
+      "fare_linh_thach_base": 15,
+      "travel_duration_game_hours": 3,
+      "connected_station_ids": ["tram_dich_thanh_tri"]
+    },
+    {
+      "id": "tram_dich_bac_lam",
+      "name": "Mã Dịch Bắc Lâm Trang",
+      "settlement_id": "settlement_bac_lam",
+      "chunk_coord": [32, 26],
+      "world_pos": [66560, 54500],
+      "fare_linh_thach_base": 12,
+      "travel_duration_game_hours": 2,
+      "connected_station_ids": ["tram_dich_thanh_tri", "tram_dich_long_kinh"]
+    }
+  ]
+}

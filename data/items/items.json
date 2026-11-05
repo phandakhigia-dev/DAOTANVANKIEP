@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "items": [
+    {
+      "id": "item_linh_thach",
+      "name": "Linh Thạch Hạ Phẩm",
+      "type": "currency",
+      "rarity": "common",
+      "price": 1,
+      "max_stack": 9999,
+      "description": "Đá chứa linh khí mỏng manh, là đơn vị tiền tệ trao đổi phổ biến trong giới tu chân."
+    },
+    {
+      "id": "item_tu_khi_dan",
+      "name": "Tụ Khí Đan",
+      "type": "consumable",
+      "rarity": "rare",
+      "price": 80,
+      "max_stack": 99,
+      "effect": {
+        "type": "breakthrough_aid",
+        "qi_boost": 100,
+        "success_rate_bonus": 0.3
+      },
+      "description": "Linh đan ngưng tụ từ linh dược mộc hệ, vật phẩm then chốt giúp phàm nhân cảm ứng thiên địa đột phá Luyện Khí."
+    },
+    {
+      "id": "item_hoi_xuan_dan",
+      "name": "Hồi Xuân Đan",
+      "type": "consumable",
+      "rarity": "common",
+      "price": 20,
+      "max_stack": 99,
+      "effect": {
+        "type": "heal_hp",
+        "value": 50
+      },
+      "description": "Đan dược trị thương thông dụng, hồi phục 50 điểm Khí Huyết khi sử dụng."
+    },
+    {
+      "id": "item_kim_sang_duoc",
+      "name": "Kim Sàng Dược",
+      "type": "consumable",
+      "rarity": "rare",
+      "price": 45,
+      "max_stack": 99,
+      "effect": {
+        "type": "heal_hp",
+        "value": 120
+      },
+      "description": "Thần dược cầm máu thượng hảo hạng, hồi phục ngay 120 điểm Khí Huyết."
+    },
+    {
+      "id": "item_thanh_tam_dan",
+      "name": "Thanh Tâm Đan",
+      "type": "consumable",
+      "rarity": "rare",
+      "price": 60,
+      "max_stack": 99,
+      "effect": {
+        "type": "restore_mp",
+        "value": 45
+      },
+      "description": "Đan dược tĩnh tâm an thần, kháng độc tố và hồi phục 45 điểm Linh Lực (MP)."
+    },
+    {
+      "id": "item_tay_tuy_dan",
+      "name": "Tẩy Tủy Đan",
+      "type": "consumable",
+      "rarity": "epic",
+      "price": 250,
+      "max_stack": 99,
+      "effect": {
+        "type": "breakthrough_aid",
+        "qi_boost": 250,
+        "success_rate_bonus": 0.4
+      },
+      "description": "Đan dược cực phẩm tẩy rửa kinh mạch và tủy xương, vật phẩm vô giá để đột phá lên Trúc Cơ."
+    },
+    {
+      "id": "item_linh_thao",
+      "name": "Thanh Trì Linh Thảo",
+      "type": "material",
+      "rarity": "common",
+      "price": 15,
+      "max_stack": 99,
+      "description": "Dược thảo hấp thu linh tuyền bên hồ Thanh Trì, nguyên liệu cơ bản để luyện chế Tụ Khí Đan."
+    },
+    {
+      "id": "item_da_huong_thao",
+      "name": "Dạ Hương Thảo",
+      "type": "material",
+      "rarity": "uncommon",
+      "price": 25,
+      "max_stack": 99,
+      "description": "Thảo dược chỉ nở về đêm ở Rừng Trúc, hấp thụ nguyệt hoa, tính hàn, dùng luyện chế đan dược trị thương."
+    },
+    {
+      "id": "item_bach_thao_diep",
+      "name": "Bách Thảo Diệp",
+      "type": "material",
+      "rarity": "uncommon",
+      "price": 30,
+      "max_stack": 99,
+      "description": "Lá cây cổ thụ ngàn năm hái từ Bách Thảo Lĩnh, chứa mộc linh khí tinh thuần giải độc an thần."
+    },
+    {
+      "id": "item_huyet_tinh",
+      "name": "Huyết Ma Tinh Thạch",
+      "type": "material",
+      "rarity": "rare",
+      "price": 65,
+      "max_stack": 99,
+      "description": "Tinh thạch ngưng tụ từ huyết mạch ma thú dưới U Minh Cốc, dùng luyện ma công hoặc chế đan Tẩy Tủy."
+    },
+    {
+      "id": "item_huyen_thiet_khoang",
+      "name": "Huyền Thiết Khoáng",
+      "type": "material",
+      "rarity": "uncommon",
+      "price": 35,
+      "max_stack": 99,
+      "description": "Quặng sắt đen rắn rỏi khai thác dưới chân Vân Lĩnh, nguyên liệu đúc binh khí và pháp bảo hộ thân."
+    },
+    {
+      "id": "item_co_kiem_tan_phien",
+      "name": "Cổ Kiếm Tàn Phiến",
+      "type": "quest_item",
+      "rarity": "rare",
+      "price": 50,
+      "max_stack": 1,
+      "description": "Mảnh kiếm gãy vương lại từ thời Đại Tĩnh Mạch, lưu lại đạo vận sắc bén kỳ dị thu nhặt được từ Ma Thứu."
+    }
+  ]
+}

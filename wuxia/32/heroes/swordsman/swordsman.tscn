@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="SpriteFrames" path="res://wuxia/32/heroes/swordsman/swordsman_frames.tres" id="1_swordsman_frames"]
+
+[node name="swordsman" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = ExtResource("1_swordsman_frames")
+animation = &"idle_south"
+autoplay = "idle_south"
+centered = false
+offset = Vector2(-36, -58)

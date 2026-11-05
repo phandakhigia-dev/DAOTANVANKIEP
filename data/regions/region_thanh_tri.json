@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "region_id": "reg_thanh_tri",
+  "name": "Thanh Trì Bình Nguyên",
+  "description": "Vùng đất khởi đầu trù phú nằm ven dòng sông Thanh Trì, nơi linh khí bắt đầu rục rịch biến chuyển.",
+  "bounds": {
+    "width": 50,
+    "height": 40
+  },
+  "tile_theme": "plains",
+  "pois": [
+    {
+      "id": "poi_thanh_tri_tran",
+      "name": "Thanh Trì Trấn",
+      "type": "town",
+      "x": 25,
+      "y": 20,
+      "description": "Thị trấn sầm uất quy tụ phàm nhân và tu sĩ vãng lai."
+    },
+    {
+      "id": "poi_sen_ho",
+      "name": "Hồ Sen Cổ",
+      "type": "water",
+      "x": 12,
+      "y": 14,
+      "description": "Mặt hồ phẳng lặng ẩn chứa dị tượng linh khí dưới đáy."
+    },
+    {
+      "id": "poi_van_linh_bien",
+      "name": "Vân Lĩnh Rìa",
+      "type": "mountain",
+      "x": 40,
+      "y": 10,
+      "description": "Dãy núi sương mờ hiểm trở nơi Xích Kiếm Ma Thứu thường lượn lờ săn mồi."
+    },
+    {
+      "id": "poi_rung_truc",
+      "name": "Rừng Trúc Vạn Lĩnh",
+      "type": "forest",
+      "x": 10,
+      "y": 30,
+      "description": "Khu rừng trúc bạt ngàn xanh ngát, ẩn chứa Linh Hồ, Bạch Xuyên Thú và Thạch Động Thần Bí."
+    },
+    {
+      "id": "poi_dam_lay_hac_xa",
+      "name": "Đầm Lầy Hắc Xà",
+      "type": "swamp",
+      "x": 16,
+      "y": 36,
+      "description": "Vùng đầm lầy âm u ngập độc thủy và sương tím, sào huyệt của Hắc Linh Xà Vương."
+    },
+    {
+      "id": "poi_co_kiem_trung",
+      "name": "Cổ Kiếm Trũng",
+      "type": "sword_grave",
+      "x": 44,
+      "y": 28,
+      "description": "Bãi phế tích kiếm mộ thượng cổ đầy tàn kiếm găm vào đá, nơi ngự trị của Cổ Kiếm Linh."
+    }
+  ]
+}

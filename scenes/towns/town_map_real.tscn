@@ -1,0 +1,371 @@
+[gd_scene load_steps=32 format=3]
+
+[ext_resource type="Script" path="res://scenes/towns/town_map_real.gd" id="1_town_real"]
+[ext_resource type="TileSet" path="res://wuxia/32/tileset.tres" id="2_tileset"]
+[ext_resource type="PackedScene" path="res://scenes/world/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/well.tscn" id="4_well"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/market_stall.tscn" id="5_stall"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/stone_lantern.tscn" id="6_stone_lantern"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/pole_lantern.tscn" id="7_pole_lantern"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/bench.tscn" id="8_bench"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/rice_sacks.tscn" id="9_rice_sacks"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/barrel.tscn" id="10_barrel"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/baskets.tscn" id="11_baskets"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/chest_closed.tscn" id="12_chest"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/jar_large.tscn" id="13_jar_large"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/water_jar.tscn" id="14_water_jar"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dialogue_modal.tscn" id="15_dlg"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory_panel.tscn" id="16_inv"]
+[ext_resource type="PackedScene" path="res://scenes/ui/character_panel.tscn" id="17_char"]
+[ext_resource type="PackedScene" path="res://scenes/ui/alchemy_modal.tscn" id="18_alc"]
+[ext_resource type="PackedScene" path="res://scenes/ui/player_shop_modal.tscn" id="19_shp"]
+[ext_resource type="PackedScene" path="res://scenes/ui/sect_panel.tscn" id="20_sct"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/gate_tam_quan.tscn" id="21_gate"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/sect_palace_hall.tscn" id="22_sect_hall"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/alchemy_hall.tscn" id="23_alc_hall"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/tavern_inn.tscn" id="24_tavern"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/blacksmith_forge.tscn" id="25_forge"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/market_pavilion.tscn" id="26_market_pavilion"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/courtyard_house.tscn" id="27_house"]
+[ext_resource type="PackedScene" path="res://wuxia/32/buildings/moonlight_pavilion.tscn" id="28_moonlight"]
+[ext_resource type="PackedScene" path="res://wuxia/32/nature/ancient_pine.tscn" id="29_pine"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_south_gate"]
+size = Vector2(160, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_north_gate"]
+size = Vector2(160, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_stall"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_alchemy"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_well"]
+radius = 56.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bench"]
+radius = 56.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud_top"]
+bg_color = Color(0.06, 0.08, 0.1, 0.88)
+border_width_bottom = 2
+border_color = Color(0.78, 0.65, 0.4, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.12, 0.15, 0.18, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.42, 0.28, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prompt"]
+bg_color = Color(0.08, 0.12, 0.15, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.85, 0.4, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="TownMapReal" type="Node2D"]
+texture_filter = 1
+y_sort_enabled = true
+script = ExtResource("1_town_real")
+
+[node name="NightModulate" type="CanvasModulate" parent="."]
+color = Color(1, 1, 1, 1)
+
+[node name="Ground" type="TileMapLayer" parent="."]
+z_index = -2
+tile_set = ExtResource("2_tileset")
+
+[node name="InteractiveAreas" type="Node2D" parent="."]
+
+[node name="SouthGate" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(512, 620)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/SouthGate"]
+shape = SubResource("RectangleShape2D_south_gate")
+
+[node name="NorthGate" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(512, 50)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/NorthGate"]
+shape = SubResource("RectangleShape2D_north_gate")
+
+[node name="PlayerStallArea" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(720, 370)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/PlayerStallArea"]
+shape = SubResource("CircleShape2D_stall")
+
+[node name="AlchemyArea" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(230, 180)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/AlchemyArea"]
+shape = SubResource("CircleShape2D_alchemy")
+
+[node name="WellArea" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(512, 380)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/WellArea"]
+shape = SubResource("CircleShape2D_well")
+
+[node name="BenchArea" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(210, 520)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/BenchArea"]
+shape = SubResource("CircleShape2D_bench")
+
+[node name="SectHallArea" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(800, 180)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/SectHallArea"]
+shape = SubResource("CircleShape2D_stall")
+
+[node name="YEntities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="GateTamQuanNorth" parent="YEntities" instance=ExtResource("21_gate")]
+position = Vector2(512, 90)
+
+[node name="GateTamQuanSouth" parent="YEntities" instance=ExtResource("21_gate")]
+position = Vector2(512, 630)
+
+[node name="SectPalaceHall" parent="YEntities" instance=ExtResource("22_sect_hall")]
+position = Vector2(800, 180)
+
+[node name="AncientPineSectLeft" parent="YEntities" instance=ExtResource("29_pine")]
+position = Vector2(670, 160)
+
+[node name="AncientPineSectRight" parent="YEntities" instance=ExtResource("29_pine")]
+position = Vector2(930, 160)
+
+[node name="AlchemyHall" parent="YEntities" instance=ExtResource("23_alc_hall")]
+position = Vector2(230, 180)
+
+[node name="AncientPineAlchemy" parent="YEntities" instance=ExtResource("29_pine")]
+position = Vector2(130, 160)
+
+[node name="MarketPavilion" parent="YEntities" instance=ExtResource("26_market_pavilion")]
+position = Vector2(830, 360)
+
+[node name="TavernInn" parent="YEntities" instance=ExtResource("24_tavern")]
+position = Vector2(210, 360)
+
+[node name="BlacksmithForge" parent="YEntities" instance=ExtResource("25_forge")]
+position = Vector2(800, 520)
+
+[node name="MoonlightPavilion" parent="YEntities" instance=ExtResource("28_moonlight")]
+position = Vector2(210, 520)
+
+[node name="CourtyardHouse1" parent="YEntities" instance=ExtResource("27_house")]
+position = Vector2(390, 240)
+
+[node name="CourtyardHouse2" parent="YEntities" instance=ExtResource("27_house")]
+position = Vector2(630, 240)
+
+[node name="Player" parent="YEntities" instance=ExtResource("3_player")]
+position = Vector2(512, 570)
+
+[node name="PlayerMarketStall" parent="YEntities" instance=ExtResource("5_stall")]
+position = Vector2(720, 370)
+
+[node name="MerchantStall" parent="YEntities" instance=ExtResource("5_stall")]
+position = Vector2(920, 370)
+
+[node name="Well" parent="YEntities" instance=ExtResource("4_well")]
+position = Vector2(512, 380)
+
+[node name="Bench" parent="YEntities" instance=ExtResource("8_bench")]
+position = Vector2(260, 530)
+
+[node name="Baskets" parent="YEntities" instance=ExtResource("11_baskets")]
+position = Vector2(760, 380)
+
+[node name="RiceSacks" parent="YEntities" instance=ExtResource("9_rice_sacks")]
+position = Vector2(880, 390)
+
+[node name="Barrel" parent="YEntities" instance=ExtResource("10_barrel")]
+position = Vector2(270, 370)
+
+[node name="ChestClosed" parent="YEntities" instance=ExtResource("12_chest")]
+position = Vector2(160, 190)
+
+[node name="JarLarge" parent="YEntities" instance=ExtResource("13_jar_large")]
+position = Vector2(170, 370)
+
+[node name="WaterJar" parent="YEntities" instance=ExtResource("14_water_jar")]
+position = Vector2(540, 390)
+
+[node name="StoneLanternSouth1" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("6_stone_lantern")]
+position = Vector2(430, 600)
+
+[node name="StoneLanternSouth2" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("6_stone_lantern")]
+position = Vector2(594, 600)
+
+[node name="StoneLanternNorth1" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("6_stone_lantern")]
+position = Vector2(430, 80)
+
+[node name="StoneLanternNorth2" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("6_stone_lantern")]
+position = Vector2(594, 80)
+
+[node name="StoneLanternCenter" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("6_stone_lantern")]
+position = Vector2(512, 440)
+
+[node name="PoleLanternMarket" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("7_pole_lantern")]
+position = Vector2(780, 330)
+
+[node name="PoleLanternAlchemy" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("7_pole_lantern")]
+position = Vector2(290, 160)
+
+[node name="PoleLanternSect" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("7_pole_lantern")]
+position = Vector2(730, 160)
+
+[node name="PoleLanternTavern" parent="YEntities" groups=["town_lanterns"] instance=ExtResource("7_pole_lantern")]
+position = Vector2(270, 330)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 25
+
+[node name="TopBar" type="PanelContainer" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud_top")
+
+[node name="Margin" type="MarginContainer" parent="HUD/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 10
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PanelTown" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelTown"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+
+[node name="LabelTownName" type="Label" parent="HUD/TopBar/Margin/HBox/PanelTown/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 18
+text = "★ THANH TRÌ TRẤN ★"
+
+[node name="PanelClock" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelClock"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+
+[node name="LabelClock" type="Label" parent="HUD/TopBar/Margin/HBox/PanelClock/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Giờ Thìn (07:00) • 12 Tu Sĩ & Cư Dân Trong Trấn"
+
+[node name="PanelPlayer" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelPlayer"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/separation = 16
+
+[node name="LabelPlayer" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 15
+text = "Đạo Hữu • Luyện Khí Tầng 1"
+
+[node name="LabelStones" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Linh Thạch: 100"
+
+[node name="PromptBanner" type="PanelContainer" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_prompt")
+
+[node name="Margin" type="MarginContainer" parent="HUD/PromptBanner"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="LabelPrompt" type="Label" parent="HUD/PromptBanner/Margin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.92, 0.6, 1)
+theme_override_font_sizes/font_size = 17
+text = "[E / Enter: Tương tác...]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogueModal" parent="HUD" instance=ExtResource("15_dlg")]
+visible = false
+
+[node name="InventoryPanel" parent="HUD" instance=ExtResource("16_inv")]
+visible = false
+
+[node name="CharacterPanel" parent="HUD" instance=ExtResource("17_char")]
+visible = false
+
+[node name="AlchemyModal" parent="HUD" instance=ExtResource("18_alc")]
+visible = false
+
+[node name="PlayerShopModal" parent="HUD" instance=ExtResource("19_shp")]
+visible = false
+
+[node name="SectPanel" parent="HUD" instance=ExtResource("20_sct")]
+visible = false

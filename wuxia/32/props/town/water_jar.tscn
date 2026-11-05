@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://wuxia/32/props/town/water_jar.png" id="1_water_jar"]
+
+[node name="water_jar" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_water_jar")
+centered = false
+offset = Vector2(-16, -31)

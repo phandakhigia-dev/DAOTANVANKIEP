@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bworldmap001"]
+
+[ext_resource type="Script" path="res://scenes/world/world_map.gd" id="1_world"]
+[ext_resource type="PackedScene" uid="uid://bplayer0001" path="res://scenes/world/player.tscn" id="2_play"]
+[ext_resource type="PackedScene" uid="uid://bhud0001" path="res://scenes/world/hud.tscn" id="3_hud"]
+[ext_resource type="PackedScene" uid="uid://bpause0001" path="res://scenes/world/pause_menu.tscn" id="4_pause"]
+
+[node name="WorldMap" type="Node2D"]
+script = ExtResource("1_world")
+
+[node name="Player" parent="." instance=ExtResource("2_play")]
+position = Vector2(1600, 1280)
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("4_pause")]
+visible = false

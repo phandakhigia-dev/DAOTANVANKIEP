@@ -1,0 +1,304 @@
+[gd_scene load_steps=2 format=3 uid="uid://barena0001"]
+
+[ext_resource type="Script" path="res://scenes/combat/combat_arena.gd" id="1_arena"]
+
+[node name="CombatArena" type="Node2D"]
+script = ExtResource("1_arena")
+
+[node name="HUDCombat" type="CanvasLayer" parent="."]
+
+[node name="BossBarContainer" type="Control" parent="HUDCombat"]
+custom_minimum_size = Vector2(600, 70)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 60.0
+offset_right = 300.0
+offset_bottom = 130.0
+grow_horizontal = 2
+
+[node name="LabelBossName" type="Label" parent="HUDCombat/BossBarContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 24.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95, 0.35, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "XÍCH KIẾM MA THỨU [Lãnh Chúa Vân Lĩnh]"
+horizontal_alignment = 1
+
+[node name="BossHPBar" type="ProgressBar" parent="HUDCombat/BossBarContainer"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+show_percentage = false
+
+[node name="Margin" type="MarginContainer" parent="HUDCombat"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="TopCenter" type="HBoxContainer" parent="HUDCombat/Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="LabelWave" type="Label" parent="HUDCombat/Margin/TopCenter"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 20
+text = "ĐỢT 1/3: LINH HỒ DÒ ĐƯỜNG"
+
+[node name="BottomLeft" type="PanelContainer" parent="HUDCombat/Margin"]
+custom_minimum_size = Vector2(280, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="VBox" type="VBoxContainer" parent="HUDCombat/Margin/BottomLeft"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HPBar" type="ProgressBar" parent="HUDCombat/Margin/BottomLeft/VBox"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="LabelVal" type="Label" parent="HUDCombat/Margin/BottomLeft/VBox/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MPBar" type="ProgressBar" parent="HUDCombat/Margin/BottomLeft/VBox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="LabelVal" type="Label" parent="HUDCombat/Margin/BottomLeft/VBox/MPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomCenter" type="HBoxContainer" parent="HUDCombat/Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="Hotbar" type="HBoxContainer" parent="HUDCombat/Margin/BottomCenter"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SlotBasic" type="Button" parent="HUDCombat/Margin/BottomCenter/Hotbar"]
+custom_minimum_size = Vector2(130, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "LMB: Trảm
+(Sẵn sàng)"
+
+[node name="Slot1" type="Button" parent="HUDCombat/Margin/BottomCenter/Hotbar"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 13
+text = "1/Q: Kiếm Khí
+(Sẵn sàng)"
+
+[node name="Slot2" type="Button" parent="HUDCombat/Margin/BottomCenter/Hotbar"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "2/E: Lôi Quang
+(Sẵn sàng)"
+
+[node name="Slot3" type="Button" parent="HUDCombat/Margin/BottomCenter/Hotbar"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.9, 0.5, 1)
+theme_override_font_sizes/font_size = 13
+text = "3/R: Mộc Trói
+(Sẵn sàng)"
+
+[node name="SlotDash" type="Button" parent="HUDCombat/Margin/BottomCenter/Hotbar"]
+custom_minimum_size = Vector2(130, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.65, 0.4, 1)
+theme_override_font_sizes/font_size = 13
+text = "Space: Lướt
+(Sẵn sàng)"
+
+[node name="OverlayVictory" type="Control" parent="HUDCombat"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="HUDCombat/OverlayVictory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="Panel" type="PanelContainer" parent="HUDCombat/OverlayVictory"]
+custom_minimum_size = Vector2(650, 420)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -210.0
+offset_right = 325.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="HUDCombat/OverlayVictory/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="HUDCombat/OverlayVictory/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelTitle" type="Label" parent="HUDCombat/OverlayVictory/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 26
+text = "★ ĐẠI THẮNG BÍ CẢNH VÂN LĨNH ★"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HUDCombat/OverlayVictory/Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="LabelLoot" type="Label" parent="HUDCombat/OverlayVictory/Panel/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 15
+text = "Phần Thưởng Thu Được:
+• 1x Cổ Kiếm Tàn Phiến (Vật phẩm nhiệm vụ)
+• 2x Tụ Khí Đan
+• 60x Linh Thạch
+• +50 Điểm Tu Vi"
+autowrap_mode = 3
+
+[node name="BtnReturn" type="Button" parent="HUDCombat/OverlayVictory/Panel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "Thu Thập Chiến Lợi Phẩm & Trở Về Thế Giới"
+
+[node name="OverlayDefeat" type="Control" parent="HUDCombat"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="HUDCombat/OverlayDefeat"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="Panel" type="PanelContainer" parent="HUDCombat/OverlayDefeat"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="HUDCombat/OverlayDefeat/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="HUDCombat/OverlayDefeat/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelTitle" type="Label" parent="HUDCombat/OverlayDefeat/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.35, 0.3, 1)
+theme_override_font_sizes/font_size = 24
+text = "TRỌNG THƯƠNG THẤT BẠI"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HUDCombat/OverlayDefeat/Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="LabelDesc" type="Label" parent="HUDCombat/OverlayDefeat/Panel/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 15
+text = "Ngươi bị ma thú kích thương, may mắn dùng ngọc phù độn thổ thoát thân an toàn."
+autowrap_mode = 3
+
+[node name="BtnReturn" type="Button" parent="HUDCombat/OverlayDefeat/Panel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Thoát Khỏi Bí Cảnh & Dưỡng Thương"

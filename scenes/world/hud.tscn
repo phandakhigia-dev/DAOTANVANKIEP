@@ -1,0 +1,211 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhud0001"]
+
+[ext_resource type="Script" path="res://scenes/world/hud.gd" id="1_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory_panel.tscn" id="2_inv"]
+[ext_resource type="PackedScene" path="res://scenes/ui/character_panel.tscn" id="3_char"]
+[ext_resource type="PackedScene" path="res://scenes/ui/social_panel.tscn" id="4_soc"]
+[ext_resource type="PackedScene" path="res://scenes/ui/monthly_summary_modal.tscn" id="5_sum"]
+[ext_resource type="PackedScene" path="res://scenes/ui/coop_menu_modal.tscn" id="6_coop"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxHeader" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+alignment = 1
+
+[node name="PanelPlayer" type="PanelContainer" parent="MarginContainer/HBoxHeader"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/HBoxHeader/PanelPlayer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelPlayerName" type="Label" parent="MarginContainer/HBoxHeader/PanelPlayer/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 18
+text = "Lâm Phong"
+
+[node name="LabelRealm" type="Label" parent="MarginContainer/HBoxHeader/PanelPlayer/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45098, 0.611765, 0.541176, 1)
+theme_override_font_sizes/font_size = 14
+text = "Cảnh giới: Phàm Nhân"
+
+[node name="HPBar" type="ProgressBar" parent="MarginContainer/HBoxHeader/PanelPlayer/VBox"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="LabelHPVal" type="Label" parent="MarginContainer/HBoxHeader/PanelPlayer/VBox/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterButtons" type="HBoxContainer" parent="MarginContainer/HBoxHeader"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/separation = 10
+
+[node name="BtnCharacter" type="Button" parent="MarginContainer/HBoxHeader/CenterButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "[C] Nhân Vật"
+
+[node name="BtnInventory" type="Button" parent="MarginContainer/HBoxHeader/CenterButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "[I] Túi Trữ Vật"
+
+[node name="BtnSocial" type="Button" parent="MarginContainer/HBoxHeader/CenterButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "[J] Nhân Duyên"
+
+[node name="BtnGazette" type="Button" parent="MarginContainer/HBoxHeader/CenterButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "[L] Đại Sự Ký"
+
+[node name="BtnMeditate" type="Button" parent="MarginContainer/HBoxHeader/CenterButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "[X] Tĩnh Tọa"
+
+[node name="BtnCoop" type="Button" parent="MarginContainer/HBoxHeader/CenterButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "[O] Mạng Co-op"
+
+[node name="PanelWorld" type="PanelContainer" parent="MarginContainer/HBoxHeader"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/HBoxHeader/PanelWorld"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="LabelDate" type="Label" parent="MarginContainer/HBoxHeader/PanelWorld/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.78, 0.45, 1)
+theme_override_font_sizes/font_size = 14
+text = "Năm 1 • Tháng 01 • Ngày 01 — 06:00 [Mão]"
+horizontal_alignment = 2
+
+[node name="LabelCoords" type="Label" parent="MarginContainer/HBoxHeader/PanelWorld/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Tọa độ: (25, 20)"
+horizontal_alignment = 2
+
+[node name="LabelSeed" type="Label" parent="MarginContainer/HBoxHeader/PanelWorld/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "Hạt giống thế giới: 1337"
+horizontal_alignment = 2
+
+[node name="BottomBar" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(880, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="LabelHints" type="Label" parent="MarginContainer/BottomBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 13
+text = "[WASD] Di chuyển  •  [E] Tương tác địa danh  •  [C] Nhân vật  •  [I] Túi đồ  •  [J] Nhân duyên  •  [L] Đại sự ký  •  [X] Tĩnh tọa x20  •  [ESC] Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PromptContainer" type="PanelContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(480, 50)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -140.0
+offset_right = 240.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LabelPrompt" type="Label" parent="PromptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 16
+text = "Nhấn [E] hoặc [Enter] để vào Thanh Trì Trấn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ToastContainer" type="PanelContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(360, 48)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 80.0
+offset_right = 180.0
+offset_bottom = 128.0
+grow_horizontal = 2
+
+[node name="LabelToast" type="Label" parent="ToastContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45098, 0.611765, 0.541176, 1)
+theme_override_font_sizes/font_size = 15
+text = "Thông báo hệ thống"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryPanel" parent="." instance=ExtResource("2_inv")]
+visible = false
+
+[node name="CharacterPanel" parent="." instance=ExtResource("3_char")]
+visible = false
+
+[node name="SocialPanel" parent="." instance=ExtResource("4_soc")]
+visible = false
+
+[node name="MonthlySummaryModal" parent="." instance=ExtResource("5_sum")]
+visible = false
+
+[node name="CoopMenuModal" parent="." instance=ExtResource("6_coop")]
+visible = false

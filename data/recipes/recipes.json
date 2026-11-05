@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "recipes": [
+    {
+      "id": "recipe_tu_khi_dan",
+      "name": "Đan Phương: Tụ Khí Đan",
+      "output_item_id": "item_tu_khi_dan",
+      "output_count": 1,
+      "cost_spirit_stones": 10,
+      "materials": [
+        { "item_id": "item_linh_thao", "count": 2 }
+      ],
+      "required_realm": "realm_pham_nhan",
+      "success_rate": 1.0,
+      "description": "Linh đan ngưng tụ từ linh thảo, vật phẩm then chốt giúp cảm ứng thiên địa đột phá Luyện Khí."
+    },
+    {
+      "id": "recipe_hoi_xuan_dan",
+      "name": "Đan Phương: Hồi Xuân Đan",
+      "output_item_id": "item_hoi_xuan_dan",
+      "output_count": 2,
+      "cost_spirit_stones": 10,
+      "materials": [
+        { "item_id": "item_da_huong_thao", "count": 2 }
+      ],
+      "required_realm": "realm_pham_nhan",
+      "success_rate": 1.0,
+      "description": "Đan dược trị thương thông dụng, hồi phục 50 điểm Khí Huyết khi sử dụng."
+    },
+    {
+      "id": "recipe_kim_sang_duoc",
+      "name": "Đan Phương: Kim Sàng Dược",
+      "output_item_id": "item_kim_sang_duoc",
+      "output_count": 1,
+      "cost_spirit_stones": 20,
+      "materials": [
+        { "item_id": "item_da_huong_thao", "count": 2 },
+        { "item_id": "item_bach_thao_diep", "count": 1 }
+      ],
+      "required_realm": "realm_pham_nhan",
+      "success_rate": 0.95,
+      "description": "Thần dược cầm máu thượng hạng, hồi phục ngay 120 điểm Khí Huyết."
+    },
+    {
+      "id": "recipe_thanh_tam_dan",
+      "name": "Đan Phương: Thanh Tâm Đan",
+      "output_item_id": "item_thanh_tam_dan",
+      "output_count": 1,
+      "cost_spirit_stones": 25,
+      "materials": [
+        { "item_id": "item_bach_thao_diep", "count": 2 },
+        { "item_id": "item_linh_thao", "count": 2 }
+      ],
+      "required_realm": "realm_luyen_khi_1",
+      "success_rate": 0.9,
+      "description": "Đan dược tĩnh tâm an thần, kháng độc tố và hồi phục 45 điểm Linh Lực (MP)."
+    },
+    {
+      "id": "recipe_tay_tuy_dan",
+      "name": "Đan Phương: Tẩy Tủy Đan",
+      "output_item_id": "item_tay_tuy_dan",
+      "output_count": 1,
+      "cost_spirit_stones": 80,
+      "materials": [
+        { "item_id": "item_huyet_tinh", "count": 1 },
+        { "item_id": "item_bach_thao_diep", "count": 3 },
+        { "item_id": "item_huyen_thiet_khoang", "count": 1 }
+      ],
+      "required_realm": "realm_luyen_khi_1",
+      "success_rate": 0.85,
+      "description": "Đan dược cực phẩm tẩy rửa kinh mạch và tủy xương, vật phẩm vô giá đột phá Trúc Cơ."
+    }
+  ]
+}

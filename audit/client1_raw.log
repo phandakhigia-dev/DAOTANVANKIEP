@@ -1,0 +1,34 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 581.80 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+
+=======================================================
+  CO-OP 3-PROCESS LIVE GAMEPLAY TEST
+  Tiến Trình: CLIENT1 | Port: 8899 | Time: 2026-11-05T10:31:11
+=======================================================
+
+[CLIENT1] Đã nạp thành công WorldMap scene.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Đang kết nối tới host 127.0.0.1:8899 (Cố định time_scale = 1.0)...
+[CLIENT 1] Đã gửi lệnh join_host.
+[SessionAuthority] Kết nối thành công tới Server!
+[SessionAuthority] Peer kết nối: 1
+[CLIENT 1] Kết nối thành công! Peer ID: 1325536472
+[CoopWorldSync] Đã tiếp nhận và áp dụng Full World State (kèm NPCs & Revision) từ Host.
+[CLIENT1] Kết quả giao dịch init_join: success=true, msg=Đồng bộ tài sản ban đầu từ Host
+[WorldMap] Đã spawn Remote Avatar cho Peer 1 tại (1600.0, 1280.0)
+[SessionAuthority] Peer kết nối: 739426922
+[WorldMap] Đã spawn Remote Avatar cho Peer 739426922 tại (684.6901, 460.0349)
+[CLIENT 1] Gửi request mua món cuối: REQ_RACE_CLI1
+[CoopEconomy] Client đã đồng bộ kho sạp hàng mới nhất từ Server.
+[CLIENT1] Kết quả giao dịch REQ_RACE_CLI1: success=true, msg=Giao dịch thành công!
+[CLIENT1] Lưu screenshot res://audit/graphics_after/coop_client_window.png (Kích thước: (1280, 720), Mã lỗi: 0)
+[CLIENT 1] Đã chụp ảnh cửa sổ Client 1 thật: coop_client_window.png
+[SessionAuthority] Peer ngắt kết nối: 1
+[WorldMap] Đã gỡ bỏ Remote Avatar của Peer 1
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 1 (Giữ nguyên authoritative ledger)
+[SessionAuthority] Server đã đóng hoặc mất kết nối.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[CLIENT 1] Hoàn tất tiến trình Client 1.
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

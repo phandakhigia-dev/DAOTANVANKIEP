@@ -1,0 +1,70 @@
+{
+  "province_id": "thin_chau",
+  "landmarks": [
+    {
+      "id": "poi_bamboo_cavern",
+      "name": "Bí Cảnh Thạch Động Vạn Lĩnh",
+      "category": "dungeon_entrance",
+      "chunk_coord": [32, 30],
+      "world_pos": [66560, 62200],
+      "danger_level": 2,
+      "recommended_realm": "realm_luyen_khi_1",
+      "respawn_cooldown_days": 30,
+      "initial_rewards": [
+        { "item_id": "item_tay_tuy_dan", "quantity": 1 },
+        { "item_id": "item_linh_thach", "quantity": 50 }
+      ]
+    },
+    {
+      "id": "poi_snake_shrine",
+      "name": "Tế Đàn Độc Xà Hắc Trạch",
+      "category": "altar",
+      "chunk_coord": [31, 33],
+      "world_pos": [64512, 68608],
+      "danger_level": 3,
+      "recommended_realm": "realm_luyen_khi_3",
+      "interaction": {
+        "action_type": "sacrifice",
+        "cost_linh_thach": 15,
+        "reward_item": "item_kim_sang_duoc",
+        "reward_quantity": 2
+      }
+    },
+    {
+      "id": "poi_sword_monolith",
+      "name": "Cổ Kiếm Trũng Tàn Đài",
+      "category": "monolith",
+      "chunk_coord": [33, 32],
+      "world_pos": [68608, 66560],
+      "danger_level": 4,
+      "recommended_realm": "realm_luyen_khi_5",
+      "interaction": {
+        "action_type": "comprehension",
+        "cultivation_xp_reward": 50,
+        "reward_item": "item_co_kiem_tan_phien",
+        "reward_quantity": 2
+      }
+    },
+    {
+      "id": "poi_ancient_well_plaza",
+      "name": "Linh Tuyền Giếng Cổ Thanh Trì",
+      "category": "sanctuary",
+      "chunk_coord": [32, 32],
+      "world_pos": [66560, 66560],
+      "danger_level": 0,
+      "interaction": {
+        "action_type": "heal",
+        "heal_amount": 30
+      }
+    },
+    {
+      "id": "poi_royal_gate_south",
+      "name": "Thiên Uy Nam Môn • Long Kinh",
+      "category": "monument",
+      "chunk_coord": [32, 17],
+      "world_pos": [66560, 36000],
+      "danger_level": 1,
+      "description": "Cửa ngõ phía Nam của Kinh Đô Long Kinh, có lính cấm vệ canh giữ cẩn mật."
+    }
+  ]
+}

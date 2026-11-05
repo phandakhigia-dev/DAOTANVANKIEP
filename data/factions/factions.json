@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "factions": [
+    {
+      "id": "sect_thanh_vi",
+      "name": "Thanh Vi Kiếm Tông",
+      "alignment": "righteous_pragmatic",
+      "leader_name": "Thanh Vi Chân Nhân",
+      "description": "Chính đạo tông môn trấn thủ rặng núi Vân Lĩnh, tinh thông Kiếm Pháp và Phù Trận, coi trọng môn quy và tôn ti trật tự.",
+      "treasury": 15000,
+      "territory_ids": ["loc_van_linh", "loc_thanh_tri_tran"],
+      "relations": {
+        "sect_u_minh": -80,
+        "sect_bach_thao": 30,
+        "faction_tan_tu": 10
+      },
+      "services": [
+        { "id": "service_tribute", "name": "Nộp Cống Hiến Trừ Yêu", "reward_contribution": 10 },
+        { "id": "service_study", "name": "Lĩnh Ngộ Kiếm Pháp", "cost_contribution": 30 }
+      ]
+    },
+    {
+      "id": "sect_u_minh",
+      "name": "U Minh Ma Giáo",
+      "alignment": "heretic_ambitious",
+      "leader_name": "U Minh Lão Tổ",
+      "description": "Thế lực ma đạo ẩn náu tại U Minh Huyết Cốc, chuyên luyện Huyết Ma Công và Luyện Thi Chi Thuật, tranh đoạt tài nguyên khốc liệt.",
+      "treasury": 12000,
+      "territory_ids": ["loc_u_minh_coc"],
+      "relations": {
+        "sect_thanh_vi": -80,
+        "sect_bach_thao": -20,
+        "faction_tan_tu": -30
+      },
+      "services": []
+    },
+    {
+      "id": "sect_bach_thao",
+      "name": "Bách Thảo Môn",
+      "alignment": "neutral_peaceful",
+      "leader_name": "Diệp Dược Tôn",
+      "description": "Ẩn thế đan tông ngự tại Bách Thảo Lĩnh, nắm giữ các phương thuốc đan dược cổ truyền và chuỗi cung ứng linh dược toàn Cửu Hoang.",
+      "treasury": 25000,
+      "territory_ids": ["loc_bach_thao_linh"],
+      "relations": {
+        "sect_thanh_vi": 30,
+        "sect_u_minh": -20,
+        "faction_tan_tu": 40
+      },
+      "services": []
+    },
+    {
+      "id": "faction_tan_tu",
+      "name": "Tán Tu Liên Hội",
+      "alignment": "neutral",
+      "leader_name": "Bạch Vô Nhai",
+      "description": "Mạng lưới liên minh lỏng lẻo của các tu sĩ tự do, phường buôn và thợ săn yêu thú vùng biên cương.",
+      "treasury": 8000,
+      "territory_ids": ["loc_thanh_tri_tran"],
+      "relations": {
+        "sect_thanh_vi": 10,
+        "sect_u_minh": -30,
+        "sect_bach_thao": 40
+      },
+      "services": []
+    }
+  ]
+}

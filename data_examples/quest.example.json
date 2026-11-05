@@ -1,0 +1,43 @@
+{
+  "id": "q_first_spirit_vein",
+  "title": "Dị khí bên hồ",
+  "giver_npc_id": "npc_moc_tu_vien",
+  "start_conditions": [
+    {
+      "type": "player_realm_at_least",
+      "tier": 0
+    }
+  ],
+  "steps": [
+    {
+      "id": "speak",
+      "type": "talk_to_npc",
+      "target_id": "npc_moc_tu_vien"
+    },
+    {
+      "id": "investigate",
+      "type": "inspect_poi",
+      "target_id": "poi_cloud_ridge_gate"
+    },
+    {
+      "id": "combat",
+      "type": "win_encounter",
+      "target_id": "enc_first_ambush"
+    },
+    {
+      "id": "return",
+      "type": "talk_to_npc",
+      "target_id": "npc_moc_tu_vien"
+    }
+  ],
+  "reward": {
+    "money": 50,
+    "items": [
+      {
+        "id": "item_spirit_herb",
+        "quantity": 2
+      }
+    ]
+  },
+  "fallback_rule": "town_bulletin_if_giver_unavailable"
+}

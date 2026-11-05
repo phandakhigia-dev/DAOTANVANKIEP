@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=3 uid="uid://shp0001"]
+
+[ext_resource type="Script" path="res://scenes/ui/player_shop_modal.gd" id="1_shp"]
+
+[node name="PlayerShopModal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shp")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(960, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -300.0
+offset_right = 480.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleBox" type="HBoxContainer" parent="PanelContainer/Margin/VBox"]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="PanelContainer/Margin/VBox/TitleBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "CHỢ TÁN TU — QUẢN LÝ SẠP HÀNG KÝ GỬI"
+
+[node name="HeaderBox" type="HBoxContainer" parent="PanelContainer/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelLeaseStatus" type="Label" parent="PanelContainer/Margin/VBox/HeaderBox"]
+layout_mode = 2
+text = "Trạng Thái: Chưa Thuê Sạp"
+
+[node name="BtnLease" type="Button" parent="PanelContainer/Margin/VBox/HeaderBox"]
+custom_minimum_size = Vector2(180, 36)
+layout_mode = 2
+text = "Thuê Sạp (50 LT)"
+
+[node name="LabelRevenue" type="Label" parent="PanelContainer/Margin/VBox/HeaderBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Doanh Thu: 0 LT"
+
+[node name="BtnWithdrawRev" type="Button" parent="PanelContainer/Margin/VBox/HeaderBox"]
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+text = "Rút Doanh Thu"
+
+[node name="ContentHBox" type="HBoxContainer" parent="PanelContainer/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="InvPane" type="VBoxContainer" parent="PanelContainer/Margin/VBox/ContentHBox"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelInv" type="Label" parent="PanelContainer/Margin/VBox/ContentHBox/InvPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Vật Phẩm Trong Túi"
+
+[node name="Scroll" type="ScrollContainer" parent="PanelContainer/Margin/VBox/ContentHBox/InvPane"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/Margin/VBox/ContentHBox/InvPane/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="MiddlePane" type="VBoxContainer" parent="PanelContainer/Margin/VBox/ContentHBox"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="LabelSelectedItem" type="Label" parent="PanelContainer/Margin/VBox/ContentHBox/MiddlePane"]
+layout_mode = 2
+text = "Chưa chọn món"
+autowrap_mode = 2
+
+[node name="LabelCount" type="Label" parent="PanelContainer/Margin/VBox/ContentHBox/MiddlePane"]
+layout_mode = 2
+text = "Số lượng ký gửi:"
+
+[node name="SpinCount" type="SpinBox" parent="PanelContainer/Margin/VBox/ContentHBox/MiddlePane"]
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="LabelPrice" type="Label" parent="PanelContainer/Margin/VBox/ContentHBox/MiddlePane"]
+layout_mode = 2
+text = "Đơn giá (Linh Thạch/món):"
+
+[node name="SpinPrice" type="SpinBox" parent="PanelContainer/Margin/VBox/ContentHBox/MiddlePane"]
+layout_mode = 2
+min_value = 1.0
+max_value = 9999.0
+value = 20.0
+
+[node name="BtnDeposit" type="Button" parent="PanelContainer/Margin/VBox/ContentHBox/MiddlePane"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = "Ký Gửi Vào Sạp ->"
+
+[node name="StallPane" type="VBoxContainer" parent="PanelContainer/Margin/VBox/ContentHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="LabelStall" type="Label" parent="PanelContainer/Margin/VBox/ContentHBox/StallPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Kho Hàng Đang Bày Bán (Escrow)"
+
+[node name="Scroll" type="ScrollContainer" parent="PanelContainer/Margin/VBox/ContentHBox/StallPane"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/Margin/VBox/ContentHBox/StallPane/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="BottomBox" type="HBoxContainer" parent="PanelContainer/Margin/VBox"]
+layout_mode = 2
+alignment = 2
+
+[node name="BtnClose" type="Button" parent="PanelContainer/Margin/VBox/BottomBox"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+text = "Đóng [Esc]"

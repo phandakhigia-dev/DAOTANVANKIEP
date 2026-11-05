@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://wuxia/32/props/town/rice_sacks.png" id="1_rice_sacks"]
+
+[node name="rice_sacks" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_rice_sacks")
+centered = false
+offset = Vector2(-24, -31)

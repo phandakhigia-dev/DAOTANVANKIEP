@@ -1,0 +1,24 @@
+{
+  "id": "npc_moc_tu_vien",
+  "name": "Mạc Tư Viễn",
+  "faction_id": "faction_tan_tu",
+  "home_id": "poi_thanh_tri_town",
+  "realm_tier": 1,
+  "realm_stage": "early",
+  "traits": {
+    "greed": 25,
+    "mercy": 60,
+    "ambition": 40,
+    "caution": 65,
+    "honor": 55
+  },
+  "relationships": {},
+  "goals": [
+    "protect_inn",
+    "learn_rumors"
+  ],
+  "dialogue_tree_id": "dlg_moc_tu_vien_intro",
+  "quest_ids": [
+    "q_first_spirit_vein"
+  ]
+}

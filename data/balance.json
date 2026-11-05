@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "game_version": "0.0.1",
+  "realms": {
+    "realm_pham_nhan": {
+      "id": "realm_pham_nhan",
+      "name": "Phàm Nhân",
+      "stage": 0,
+      "tier": 0,
+      "base_hp": 100,
+      "base_mp": 0,
+      "base_atk": 10,
+      "base_def": 5,
+      "base_speed": 180.0,
+      "breakthrough_requirements": { "qi_needed": 100, "items": [] }
+    },
+    "realm_luyen_khi_1": {
+      "id": "realm_luyen_khi_1",
+      "name": "Luyện Khí Tầng 1",
+      "stage": 1,
+      "tier": 1,
+      "base_hp": 160,
+      "base_mp": 50,
+      "base_atk": 18,
+      "base_def": 10,
+      "base_speed": 190.0,
+      "breakthrough_requirements": { "qi_needed": 300, "items": [] }
+    },
+    "realm_luyen_khi_2": {
+      "id": "realm_luyen_khi_2", "name": "Luyện Khí Tầng 2",
+      "stage": 2, "tier": 1, "base_hp": 185, "base_mp": 60, "base_atk": 22, "base_def": 12, "base_speed": 192.0,
+      "breakthrough_requirements": { "qi_needed": 300, "items": [] }
+    },
+    "realm_luyen_khi_3": {
+      "id": "realm_luyen_khi_3", "name": "Luyện Khí Tầng 3",
+      "stage": 3, "tier": 1, "base_hp": 210, "base_mp": 70, "base_atk": 27, "base_def": 14, "base_speed": 194.0,
+      "breakthrough_requirements": { "qi_needed": 300, "items": [] }
+    },
+    "realm_luyen_khi_4": {
+      "id": "realm_luyen_khi_4", "name": "Luyện Khí Tầng 4",
+      "stage": 4, "tier": 1, "base_hp": 240, "base_mp": 85, "base_atk": 32, "base_def": 17, "base_speed": 196.0,
+      "breakthrough_requirements": { "qi_needed": 400, "items": [] }
+    },
+    "realm_luyen_khi_5": {
+      "id": "realm_luyen_khi_5", "name": "Luyện Khí Tầng 5 (Trung Kỳ)",
+      "stage": 5, "tier": 1, "base_hp": 280, "base_mp": 105, "base_atk": 38, "base_def": 20, "base_speed": 198.0,
+      "breakthrough_requirements": { "qi_needed": 400, "items": [] }
+    },
+    "realm_luyen_khi_6": {
+      "id": "realm_luyen_khi_6", "name": "Luyện Khí Tầng 6",
+      "stage": 6, "tier": 1, "base_hp": 320, "base_mp": 130, "base_atk": 44, "base_def": 23, "base_speed": 200.0,
+      "breakthrough_requirements": { "qi_needed": 500, "items": [] }
+    },
+    "realm_luyen_khi_7": {
+      "id": "realm_luyen_khi_7", "name": "Luyện Khí Tầng 7",
+      "stage": 7, "tier": 1, "base_hp": 370, "base_mp": 160, "base_atk": 52, "base_def": 27, "base_speed": 202.0,
+      "breakthrough_requirements": { "qi_needed": 500, "items": [] }
+    },
+    "realm_luyen_khi_8": {
+      "id": "realm_luyen_khi_8", "name": "Luyện Khí Tầng 8",
+      "stage": 8, "tier": 1, "base_hp": 430, "base_mp": 195, "base_atk": 60, "base_def": 31, "base_speed": 205.0,
+      "breakthrough_requirements": { "qi_needed": 700, "items": [] }
+    },
+    "realm_luyen_khi_9": {
+      "id": "realm_luyen_khi_9", "name": "Luyện Khí Tầng 9 (Viên Mãn)",
+      "stage": 9, "tier": 1, "base_hp": 500, "base_mp": 240, "base_atk": 70, "base_def": 36, "base_speed": 208.0,
+      "breakthrough_requirements": { "qi_needed": 900, "items": ["item_tay_tuy_dan"] }
+    },
+    "realm_truc_co_1": {
+      "id": "realm_truc_co_1", "name": "Trúc Cơ Sơ Kỳ",
+      "stage": 10, "tier": 2, "base_hp": 720, "base_mp": 420, "base_atk": 98, "base_def": 58, "base_speed": 215.0,
+      "breakthrough_requirements": { "qi_needed": 2000, "items": [] }
+    }
+  },
+  "settings_defaults": {
+    "master_volume": 0.8,
+    "music_volume": 0.7,
+    "sfx_volume": 0.8,
+    "fullscreen": false,
+    "resolution": "1920x1080"
+  }
+}

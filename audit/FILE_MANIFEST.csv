@@ -1,0 +1,893 @@
+﻿RelativePath,FileType,SizeBytes,SHA256,PackageStatus
+.gitignore,no_ext,248,a23c57363fa4310b5b1b9c8e3bfc52df3c8e99f1999dd373f9f69bd8c5eb5d93,INCLUDED
+.godot/.gdignore,no_ext,1,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/bootstrap.tscn-folding-f4e2c9f812ce7a74237ab875d8ca03c9.cfg,.cfg,697,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/FILE_MANIFEST.FileType.translation-folding-ecf909b2c4d85ad882bcbf4e567ae90f.cfg,.cfg,49,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/FILE_MANIFEST.PackageStatus.translation-folding-faa66bf141822602c8e1b21c5665aaea.cfg,.cfg,49,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/FILE_MANIFEST.SHA256.translation-folding-3235e12c50485529e00626a54237f476.cfg,.cfg,49,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/FILE_MANIFEST.SizeBytes.translation-folding-8b1eb14d78d64502a1f2ea19565c1136.cfg,.cfg,49,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/filesystem_cache10,no_ext,55571,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/editor/project_metadata.cfg,.cfg,191,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/global_script_class_cache.cfg,.cfg,1909,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/01_main_menu.png-24ec65d4a56b82ea7cacb955adafb24a.ctex,.ctex,17328,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/01_main_menu.png-24ec65d4a56b82ea7cacb955adafb24a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/02_new_game_modal.png-620ee03b9fd92c69a8e1be86de69d8e6.ctex,.ctex,18314,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/02_new_game_modal.png-620ee03b9fd92c69a8e1be86de69d8e6.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/03_settings_modal.png-c3cfe304ed324746fc0de1354ec040e1.ctex,.ctex,15202,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/03_settings_modal.png-c3cfe304ed324746fc0de1354ec040e1.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/04_world_map.png-225ad5565cc5e1a822f6b21610e7dcb4.ctex,.ctex,16034,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/04_world_map.png-225ad5565cc5e1a822f6b21610e7dcb4.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/05_world_paused.png-3dcda1272d99c7b8feb6bbd88001f560.ctex,.ctex,18732,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/05_world_paused.png-3dcda1272d99c7b8feb6bbd88001f560.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/06_main_menu_with_save.png-d851b2a47991d2ff9ba86899089e2557.ctex,.ctex,17328,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/06_main_menu_with_save.png-d851b2a47991d2ff9ba86899089e2557.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/07_town_view.png-7f15fdabbb2b61669a5472f3ed5b9c10.ctex,.ctex,71980,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/07_town_view.png-7f15fdabbb2b61669a5472f3ed5b9c10.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/08_dialogue_modal.png-411f3a0ed9d678be01d9019278ee582b.ctex,.ctex,77094,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/08_dialogue_modal.png-411f3a0ed9d678be01d9019278ee582b.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/09_inventory_panel.png-61baa9f9b00ab6e5ae42d23969b5db50.ctex,.ctex,71998,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/09_inventory_panel.png-61baa9f9b00ab6e5ae42d23969b5db50.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/10_character_panel.png-dfd30f720b211fc84621bb2835988e3f.ctex,.ctex,81276,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/10_character_panel.png-dfd30f720b211fc84621bb2835988e3f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/11_combat_arena.png-bc36805e33ac102266228d8d4cc428da.ctex,.ctex,13080,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/11_combat_arena.png-bc36805e33ac102266228d8d4cc428da.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/12_boss_fight_telegraph.png-9d8d7e8223ee87b7517d504a26359132.ctex,.ctex,18366,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/12_boss_fight_telegraph.png-9d8d7e8223ee87b7517d504a26359132.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/13_combat_victory.png-606c6929a86a2809c1c6f0a5bdf8944d.ctex,.ctex,30622,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/13_combat_victory.png-606c6929a86a2809c1c6f0a5bdf8944d.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/14_hud_realtime_clock.png-66831a041f5360aaf4ae346e7ee46b93.ctex,.ctex,23542,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/14_hud_realtime_clock.png-66831a041f5360aaf4ae346e7ee46b93.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/15_social_panel_all.png-ef947fdf6216a9972d0d128d7bcd378a.ctex,.ctex,81992,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/15_social_panel_all.png-ef947fdf6216a9972d0d128d7bcd378a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/16_social_panel_sect.png-2d59d38c2abec97bd01b55812a6426fc.ctex,.ctex,76692,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/16_social_panel_sect.png-2d59d38c2abec97bd01b55812a6426fc.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/17_monthly_summary_breakthrough.png-154654829eddaf226e101144ab778c02.ctex,.ctex,29274,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/17_monthly_summary_breakthrough.png-154654829eddaf226e101144ab778c02.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/18_monthly_summary_market.png-cec3a261c56a8b0d7f869ac0c356c916.ctex,.ctex,42168,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/18_monthly_summary_market.png-cec3a261c56a8b0d7f869ac0c356c916.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/19_town_view_dynamic_routine.png-5e90084e0c397babd7f5b55ac2d844be.ctex,.ctex,81432,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/19_town_view_dynamic_routine.png-5e90084e0c397babd7f5b55ac2d844be.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/20_alchemy_modal_crafting.png-7de003e35cb5c02f4078f7004d80319f.ctex,.ctex,86982,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/20_alchemy_modal_crafting.png-7de003e35cb5c02f4078f7004d80319f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/21_player_stall_escrow.png-8dd8ff1e408e1ede7c62cb4d70111870.ctex,.ctex,76802,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/21_player_stall_escrow.png-8dd8ff1e408e1ede7c62cb4d70111870.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/22_combat_boss_hac_linh_xa_vuong.png-3f61d1d1c1a474eaa2ac3ae55913616b.ctex,.ctex,18188,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/22_combat_boss_hac_linh_xa_vuong.png-3f61d1d1c1a474eaa2ac3ae55913616b.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/23_combat_boss_co_kiem_linh.png-1a725f07d118592e10ab4e53970a61f7.ctex,.ctex,17152,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/23_combat_boss_co_kiem_linh.png-1a725f07d118592e10ab4e53970a61f7.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/25_living_town_real_map.png-7d91b899e81b91962bac3ae983282c32.ctex,.ctex,40074,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/25_living_town_real_map.png-7d91b899e81b91962bac3ae983282c32.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/26_procedural_npc_dialogue_depth.png-6b165451e465a4badd54cb8ea7a3be0c.ctex,.ctex,98374,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/26_procedural_npc_dialogue_depth.png-6b165451e465a4badd54cb8ea7a3be0c.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/27_town_night_lanterns.png-b88e26de298630a1ed354005e560e305.ctex,.ctex,37820,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/27_town_night_lanterns.png-b88e26de298630a1ed354005e560e305.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/28_bamboo_forest_biome.png-d1220fcadb7fa807ba7ae5b5c1812e87.ctex,.ctex,23042,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/28_bamboo_forest_biome.png-d1220fcadb7fa807ba7ae5b5c1812e87.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/29_snake_swamp_biome.png-5fae4ad66680dc3548c8972ee751ce61.ctex,.ctex,17506,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/29_snake_swamp_biome.png-5fae4ad66680dc3548c8972ee751ce61.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/30_sword_grave_biome.png-6c074b63a933d60c20bc96cc2cf9af6a.ctex,.ctex,17184,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/30_sword_grave_biome.png-6c074b63a933d60c20bc96cc2cf9af6a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/31_sect_hall_thanh_vi.png-00a64c2fb017631c5be6f51ba1232a79.ctex,.ctex,17912,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/31_sect_hall_thanh_vi.png-00a64c2fb017631c5be6f51ba1232a79.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/32_tang_kinh_cac_skills.png-2c200e3e45cfc183e48b6d4212b8a2aa.ctex,.ctex,37048,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/32_tang_kinh_cac_skills.png-2c200e3e45cfc183e48b6d4212b8a2aa.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/33_tribulation_lightning.png-3130f14b4c1a397097cb4a99a20dcaac.ctex,.ctex,16112,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/33_tribulation_lightning.png-3130f14b4c1a397097cb4a99a20dcaac.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/34_sect_rank_promotion.png-1a190a36a36f9f0c6d3f5eaf3123662a.ctex,.ctex,25898,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/34_sect_rank_promotion.png-1a190a36a36f9f0c6d3f5eaf3123662a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/35_vfx_sword_slash_combat.png-03c0817ae720c557608bb5856ad2e92f.ctex,.ctex,600,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/35_vfx_sword_slash_combat.png-03c0817ae720c557608bb5856ad2e92f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/36_vfx_cultivation_aura_breakthrough.png-6264e7a33f5c20849668ccacb919c19b.ctex,.ctex,666,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/36_vfx_cultivation_aura_breakthrough.png-6264e7a33f5c20849668ccacb919c19b.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/37_vfx_bamboo_leaves_ambience.png-488afee59b9fb48f0f0c697a7fad35e3.ctex,.ctex,16956,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/37_vfx_bamboo_leaves_ambience.png-488afee59b9fb48f0f0c697a7fad35e3.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/38_vfx_tribulation_lightning_impact.png-ae259c0d8401e029e91162db3575972d.ctex,.ctex,15074,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/38_vfx_tribulation_lightning_impact.png-ae259c0d8401e029e91162db3575972d.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/39_dialogue_branching_choices.png-3f906bc7d6ad0935b1c9332025dcf1c3.ctex,.ctex,131476,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/39_dialogue_branching_choices.png-3f906bc7d6ad0935b1c9332025dcf1c3.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/40_dialogue_world_shaping_consequence.png-da11b5b6e2cf3136e40282e0ecb57ee3.ctex,.ctex,118218,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/40_dialogue_world_shaping_consequence.png-da11b5b6e2cf3136e40282e0ecb57ee3.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/41_procedural_npc_branching_dilemma.png-6013d47ae47eaf46e300f68395bbc8a2.ctex,.ctex,123318,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/41_procedural_npc_branching_dilemma.png-6013d47ae47eaf46e300f68395bbc8a2.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/alchemy_hall.png-747b35442e9a987a659c4ae0191b230d.ctex,.ctex,956,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/alchemy_hall.png-747b35442e9a987a659c4ae0191b230d.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/ancient_pine.png-375eb1436237514c8cc4d5c68b64ef41.ctex,.ctex,866,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/ancient_pine.png-375eb1436237514c8cc4d5c68b64ef41.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/attack_sheet.png-102da79ac6a98294cd09119c266f4247.ctex,.ctex,13880,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/attack_sheet.png-102da79ac6a98294cd09119c266f4247.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/attack_sheet.png-22b382fef39882056d959dbfd7d5e944.ctex,.ctex,21070,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/attack_sheet.png-22b382fef39882056d959dbfd7d5e944.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/bamboo_cluster.png-c34dcb9c87396aff6e9a70a1e499cf99.ctex,.ctex,910,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/bamboo_cluster.png-c34dcb9c87396aff6e9a70a1e499cf99.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/barrel.png-83fa9496a60eaef38a82c04d53ef0bc2.ctex,.ctex,312,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/barrel.png-83fa9496a60eaef38a82c04d53ef0bc2.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/baskets.png-41b3c09fcc4556f264e79bddcec1210e.ctex,.ctex,588,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/baskets.png-41b3c09fcc4556f264e79bddcec1210e.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/bench.png-665e17270987d5cfdf23c884b29c1b7d.ctex,.ctex,322,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/bench.png-665e17270987d5cfdf23c884b29c1b7d.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/blacksmith_forge.png-ad2ada0c018591eb7cf20026ccf8859f.ctex,.ctex,962,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/blacksmith_forge.png-ad2ada0c018591eb7cf20026ccf8859f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/cavern_entrance.png-00dd529ef6cb9debadff1955e8f2685f.ctex,.ctex,482,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/cavern_entrance.png-00dd529ef6cb9debadff1955e8f2685f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/chest_closed.png-704343513ef921ea8ddb90aea4cefcfc.ctex,.ctex,302,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/chest_closed.png-704343513ef921ea8ddb90aea4cefcfc.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/combat.png-cb51ba9f66b60ff74671e4aac2828da7.ctex,.ctex,13340,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/combat.png-cb51ba9f66b60ff74671e4aac2828da7.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/combat_vfx.png-57e7cfee6aee82eff9ac983a0346fb80.ctex,.ctex,14390,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/combat_vfx.png-57e7cfee6aee82eff9ac983a0346fb80.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/combo_sheet.png-8318a3d4dccbb4a3123bbd95bcfca8ff.ctex,.ctex,34482,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/combo_sheet.png-8318a3d4dccbb4a3123bbd95bcfca8ff.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_client2_window.png-cf212b754139e71f54a878a38e2da2f8.ctex,.ctex,32742,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_client2_window.png-cf212b754139e71f54a878a38e2da2f8.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_client_window.png-b71a6772d33ffe9f14faaf3899f10ded.ctex,.ctex,32930,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_client_window.png-b71a6772d33ffe9f14faaf3899f10ded.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_host_window.png-0eb53e729f7821c2168dd7ef55e445ee.ctex,.ctex,32524,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_host_window.png-0eb53e729f7821c2168dd7ef55e445ee.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_two_players.png-eb34529290d64af5bb593bb0ecffff7a.ctex,.ctex,27126,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/coop_two_players.png-eb34529290d64af5bb593bb0ecffff7a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/copper_coin.png-260e4379f71d14d999c2ab83981eec38.ctex,.ctex,264,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/copper_coin.png-260e4379f71d14d999c2ab83981eec38.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/courtyard_house.png-c705819a19b35b79d01830ef2495cc6b.ctex,.ctex,712,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/courtyard_house.png-c705819a19b35b79d01830ef2495cc6b.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/cultivation_aura.png-eec3e1919adfcf13a11681595b521393.ctex,.ctex,14944,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/cultivation_aura.png-eec3e1919adfcf13a11681595b521393.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/dao_broad.png-507e401ee95b759be54312804472c403.ctex,.ctex,326,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/dao_broad.png-507e401ee95b759be54312804472c403.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/death_sheet.png-2068402e260cb6c1c4d38932b618669c.ctex,.ctex,16486,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/death_sheet.png-2068402e260cb6c1c4d38932b618669c.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/FILE_MANIFEST.csv-ef89caa56cfdab1eea56507530b28fe5.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/gate_tam_quan.png-e913b4d4726d549a5f7934d580433f7c.ctex,.ctex,1244,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/gate_tam_quan.png-e913b4d4726d549a5f7934d580433f7c.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/gourd_wine.png-f73b36925bac600a2626e69ccdeaed8c.ctex,.ctex,384,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/gourd_wine.png-f73b36925bac600a2626e69ccdeaed8c.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/home_objects_House%20Objects%201%20Revised_1.png-d7810137ca3a04373987339d569a4b15.ctex,.ctex,2866,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/home_objects_House%20Objects%201%20Revised_1.png-d7810137ca3a04373987339d569a4b15.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/home_objects_House%20Objects%201.png-e52c3f1174277f16c312e879cafa4b90.ctex,.ctex,1354,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/home_objects_House%20Objects%201.png-e52c3f1174277f16c312e879cafa4b90.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/hurt_sheet.png-d9f90d1b24eaff129de496dcd62d5a24.ctex,.ctex,11660,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/hurt_sheet.png-d9f90d1b24eaff129de496dcd62d5a24.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/idle_sheet.png-bbd303f32475b5584b595e268700e6af.ctex,.ctex,6406,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/idle_sheet.png-bbd303f32475b5584b595e268700e6af.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/idle_sheet.png-ecd81940811d08b6b379290b0dae5bf3.ctex,.ctex,8934,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/idle_sheet.png-ecd81940811d08b6b379290b0dae5bf3.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/japanese_buildings_jpisotbs.png-727ac73549f9b3e0946373858f9c9e4b.ctex,.ctex,7188,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/japanese_buildings_jpisotbs.png-727ac73549f9b3e0946373858f9c9e4b.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/jar_large.png-9abc7e2f41a2fe1130c3ba5dc037b233.ctex,.ctex,314,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/jar_large.png-9abc7e2f41a2fe1130c3ba5dc037b233.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/jar_small.png-0d45e477c4e867398658e56c024cd9f5.ctex,.ctex,268,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/jar_small.png-0d45e477c4e867398658e56c024cd9f5.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/jian_plain.png-3ea1c2cda5420aad36ebb81b6a817df5.ctex,.ctex,362,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/jian_plain.png-3ea1c2cda5420aad36ebb81b6a817df5.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/light_l.png-69a683dc99d2c80c60e749b373e0e02a.ctex,.ctex,3968,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/light_l.png-69a683dc99d2c80c60e749b373e0e02a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/light_m.png-c09911e9456a91af61561e9bbba93fa7.ctex,.ctex,2036,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/light_m.png-c09911e9456a91af61561e9bbba93fa7.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/light_s.png-134c7640bf2ac9fab3fe170d2b334aba.ctex,.ctex,1020,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/light_s.png-134c7640bf2ac9fab3fe170d2b334aba.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/manual_blue.png-04f043005c0650634f02a93a2369b0a5.ctex,.ctex,300,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/manual_blue.png-04f043005c0650634f02a93a2369b0a5.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/market_pavilion.png-fe58bbee5bac659faacef93ee05798c8.ctex,.ctex,948,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/market_pavilion.png-fe58bbee5bac659faacef93ee05798c8.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/market_stall.png-7625086243f08fa96ae89c1d2ab6e1ee.ctex,.ctex,776,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/market_stall.png-7625086243f08fa96ae89c1d2ab6e1ee.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/moonlight_pavilion.png-ef6556296273803f889d07246c8430f1.ctex,.ctex,722,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/moonlight_pavilion.png-ef6556296273803f889d07246c8430f1.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/outdoor_32x32_tileset32x32_0.png-255c858048bdacc4d7f64ff9d806e723.ctex,.ctex,7860,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/outdoor_32x32_tileset32x32_0.png-255c858048bdacc4d7f64ff9d806e723.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/outdoor_32x32_tileset_prev.jpg-d083937bfd389b2ecae5864c99a44b01.ctex,.ctex,677646,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/outdoor_32x32_tileset_prev.jpg-d083937bfd389b2ecae5864c99a44b01.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/palette.png-902406b8bc4c8c9c3cd0a13ed068ac9d.ctex,.ctex,930,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/palette.png-902406b8bc4c8c9c3cd0a13ed068ac9d.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pastoral_overworld_pastoral-mockup.png-063d0d01f10a80e5ef593be78cc49d8f.ctex,.ctex,10020,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pastoral_overworld_pastoral-mockup.png-063d0d01f10a80e5ef593be78cc49d8f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pastoral_overworld_pastoral-tileset-db32.png-fdaec3110b2f759c7d6743e0750a22df.ctex,.ctex,5840,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pastoral_overworld_pastoral-tileset-db32.png-fdaec3110b2f759c7d6743e0750a22df.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pill_red.png-7faa4353af30015cf3d163f5c6046481.ctex,.ctex,380,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pill_red.png-7faa4353af30015cf3d163f5c6046481.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/poison.png-e9e73af4eef2b53cf192c77c16b8bac9.ctex,.ctex,294,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/poison.png-e9e73af4eef2b53cf192c77c16b8bac9.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pole_lantern.png-464ee2e2757bf11130062a580faf6050.ctex,.ctex,488,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/pole_lantern.png-464ee2e2757bf11130062a580faf6050.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/qinggong_sheet.png-353643f3c45c5d6289e6eb8bcdb881d5.ctex,.ctex,33724,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/qinggong_sheet.png-353643f3c45c5d6289e6eb8bcdb881d5.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/rice_sacks.png-ef69890eb3b9ab1976a0efc065dd9323.ctex,.ctex,482,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/rice_sacks.png-ef69890eb3b9ab1976a0efc065dd9323.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/robe_white.png-9c922e19e10e27c432a9b99a722283ce.ctex,.ctex,382,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/robe_white.png-9c922e19e10e27c432a9b99a722283ce.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/sect_palace_hall.png-032f0a3505e5a752c0e84735b04dfdf0.ctex,.ctex,1448,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/sect_palace_hall.png-032f0a3505e5a752c0e84735b04dfdf0.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/steamed_bun.png-96a85143874025988ab5be25cc7baf38.ctex,.ctex,386,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/steamed_bun.png-96a85143874025988ab5be25cc7baf38.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/stone_lantern.png-9e83e29219f61f7fe2c1371fa2ca6077.ctex,.ctex,590,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/stone_lantern.png-9e83e29219f61f7fe2c1371fa2ca6077.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/swamp_shrine.png-6d47e36955e288ee0487858f4d154bea.ctex,.ctex,398,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/swamp_shrine.png-6d47e36955e288ee0487858f4d154bea.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/sword_monolith.png-8f01f361a31e6757740a8b4a2e0e7331.ctex,.ctex,458,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/sword_monolith.png-8f01f361a31e6757740a8b4a2e0e7331.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/talisman_yellow.png-d32e5dc47a0fdc53fa949b49929e9e00.ctex,.ctex,344,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/talisman_yellow.png-d32e5dc47a0fdc53fa949b49929e9e00.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/tavern_inn.png-b60e441485693bfe96cf9bfdc913b513.ctex,.ctex,1306,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/tavern_inn.png-b60e441485693bfe96cf9bfdc913b513.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/terrain.png-1f8c3cc96baf13f88072a0acd1295072.ctex,.ctex,3084,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/terrain.png-1f8c3cc96baf13f88072a0acd1295072.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/town.png-17860e0dbf704aefc0fb9e01c5310f62.ctex,.ctex,37724,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/town.png-17860e0dbf704aefc0fb9e01c5310f62.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/ui_shop.png-828cf06781169fa74a7bf14f275834eb.ctex,.ctex,80392,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/ui_shop.png-828cf06781169fa74a7bf14f275834eb.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/walk_sheet.png-024dcc6f131e657057928304fba52615.ctex,.ctex,11894,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/walk_sheet.png-024dcc6f131e657057928304fba52615.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/walk_sheet.png-29849e06ecc1344a8d90487ce2cd753f.ctex,.ctex,10284,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/walk_sheet.png-29849e06ecc1344a8d90487ce2cd753f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/water_jar.png-d978f53d7897e886f8d9dacb4b26088e.ctex,.ctex,386,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/water_jar.png-d978f53d7897e886f8d9dacb4b26088e.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/well.png-a252a5c50f0b0914fa1af27a0eba020f.ctex,.ctex,948,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/well.png-a252a5c50f0b0914fa1af27a0eba020f.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_bamboo_forest.png-9a6c018e510048ba4069ffac54d7c29a.ctex,.ctex,242,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_bamboo_forest.png-9a6c018e510048ba4069ffac54d7c29a.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_combat_peak.png-a42745429a5b1cf0c32dc858234146d2.ctex,.ctex,312,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_combat_peak.png-a42745429a5b1cf0c32dc858234146d2.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_snake_swamp.png-13b87d9b1f8db2a9c345e8fb000315c2.ctex,.ctex,268,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_snake_swamp.png-13b87d9b1f8db2a9c345e8fb000315c2.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_sword_grave.png-3402901bd5b5d443a92e308412c9e255.ctex,.ctex,308,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_sword_grave.png-3402901bd5b5d443a92e308412c9e255.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_thanh_tri_tran.png-e24e1a0b6e9343970b02965b383a8236.ctex,.ctex,336,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/wm_thanh_tri_tran.png-e24e1a0b6e9343970b02965b383a8236.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/world_day.png-99ad65c4b531713ac52f00fb7728396e.ctex,.ctex,24820,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/world_day.png-99ad65c4b531713ac52f00fb7728396e.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/world_night.png-28e078ceb233e01061d588c2b4f8d27b.ctex,.ctex,24972,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/imported/world_night.png-28e078ceb233e01061d588c2b4f8d27b.md5,.md5,91,N/A,EXCLUDED: Directory '.godot' in exclusion list
+.godot/uid_cache.bin,.bin,13353,N/A,EXCLUDED: Directory '.godot' in exclusion list
+AGENTS.md,.md,2793,6f4115a55002a619abcc404c35c15995c32e34e56501f2e019f5c15b1e81bbf6,INCLUDED
+assets/free_resources/CREDITS_FREE_ASSETS.txt,.txt,1088,17b0ed8723ccd4fcf89dbf6e477aa0c0e65d101afaca38de2983227b55a92bde,INCLUDED
+assets/free_resources/home_objects_House%20Objects%201%20Revised_1.png,.png,6103,e1ba391f0dfac8b5ebd085a901826ee3da570373f7da9150aa5f0e77003b5272,INCLUDED
+assets/free_resources/home_objects_House%20Objects%201%20Revised_1.png.import,.import,1057,70d5f397257c835056694cb35ec68bae2f2da1adf46eba0cf7dfc92741ccc0e8,INCLUDED
+assets/free_resources/home_objects_House%20Objects%201.png,.png,2847,b009587f7c7f495628270dcb8bef693ca604c351596939980c8d673905d5049b,INCLUDED
+assets/free_resources/home_objects_House%20Objects%201.png.import,.import,1022,6be8990dc047738b3a25f9b9e6f465afa97328322cc9344ad6983354a2b748a2,INCLUDED
+assets/free_resources/japanese_buildings_jpisotbs.png,.png,18038,0cb8b11879ca203983867bf79380168c41495907b2b4dcffd357e247edb21cf2,INCLUDED
+assets/free_resources/japanese_buildings_jpisotbs.png.import,.import,1006,0e0ea7f3b755d13b96e43962c7f1db1fbba75749f3eb6ae99064c6fe9a47a482,INCLUDED
+assets/free_resources/oriental_roof_tiles_roof_tiles.gif,.gif,14337,5920ea442ec1df134b5416177efe627703ded2a9076b0e6f6b73153c096ec511,INCLUDED
+assets/free_resources/oriental_roof_tiles_roof_tiles_0.gif,.gif,14337,5920ea442ec1df134b5416177efe627703ded2a9076b0e6f6b73153c096ec511,INCLUDED
+assets/free_resources/outdoor_32x32_tileset32x32_0.png,.png,16486,b31638dca4d584703a1724256523bab82460261b4b19f0467012be5274de753b,INCLUDED
+assets/free_resources/outdoor_32x32_tileset32x32_0.png.import,.import,1009,f10cabe80b7dabadda60418598e80fb8aaae97ca622e1118dfe21331e70d4fbf,INCLUDED
+assets/free_resources/outdoor_32x32_tileset_prev.jpg,.jpg,423747,e0e41fe7c5c9713b01e436d123d8b36774a7472fd687c50156844810340fac1d,INCLUDED
+assets/free_resources/outdoor_32x32_tileset_prev.jpg.import,.import,1004,cb23d46a4ff2e1ddf811523fb39b218a4e5e36744c2600d4df4b5e74e826a3b2,INCLUDED
+assets/free_resources/pastoral_overworld_pastoral-mockup.png,.png,41158,e62235257107ebae299724ec0c5ab957752bc3f48658b95685f9f5dc1602094c,INCLUDED
+assets/free_resources/pastoral_overworld_pastoral-mockup.png.import,.import,1027,836ad78e511cf0c354300c40fef3f5377283a1fea8f1b0c73e6f29b43a5cb5d2,INCLUDED
+assets/free_resources/pastoral_overworld_pastoral-tileset-db32.png,.png,18169,3d862d895198e418b98f55824c52e27ec8bb3d6b34505d46f74e2af9e1244daf,INCLUDED
+assets/free_resources/pastoral_overworld_pastoral-tileset-db32.png.import,.import,1046,d046a5a2fb5f58c4370a29b52af6e9ee55608514c5f0e335f79bfbd136a885fe,INCLUDED
+assets/palette.hex,.hex,344,359a750ede15c274de05bb1ba7a5330eefab21a9baae69a4c7d576a316aa9e7d,INCLUDED
+assets/palette.png,.png,1701,63d02a90a16a2071cc0f6018faf95ffa369dcc0336081c77a0bf8ba66cea3005,INCLUDED
+assets/palette.png.import,.import,932,b69d7437afd97413f69da35e9f4eaff5ccb5190a4c151cf9e4050baecee05e06,INCLUDED
+assets/sprites/icons/armour/robe_white.png,.png,484,5a08f81f6cd139bba2eb3876fd5613a640e21a2af51f296c33b2a392f38f146c,INCLUDED
+assets/sprites/icons/armour/robe_white.png.import,.import,962,1aff8f4e6259aaf4f34924c0eda3f43cce2e2665ff596c06a55bb1ba0e9cb96d,INCLUDED
+assets/sprites/icons/elixirs/gourd_wine.png,.png,537,c117a2a844fee9e2400faa3dcbfc81365fe0f29e4b839b4f02402f72704d987c,INCLUDED
+assets/sprites/icons/elixirs/gourd_wine.png.import,.import,962,0bedda4bfb68412c67ea5c318ea4337f72e6247f46b0f6886b652157546053ac,INCLUDED
+assets/sprites/icons/elixirs/pill_red.png,.png,578,15f277d2e32b26d06d8457b7996a8bce22a4acd8f9bb82f8a2d8aa6c7f7ecaf0,INCLUDED
+assets/sprites/icons/elixirs/pill_red.png.import,.import,957,ebc78873526c10c641b663b9827da6014dcf28b49f3093cd7182d77e6ed25cab,INCLUDED
+assets/sprites/icons/food/steamed_bun.png,.png,606,d3ba8796160c68f9b93b4ad76ff2d28121d3619ba11459152945cf6c6fcd17c7,INCLUDED
+assets/sprites/icons/food/steamed_bun.png.import,.import,963,155c8786655c2a24747c11997ebc596d9383f5b9e123a5ce58b6a30b88fa9684,INCLUDED
+assets/sprites/icons/icons.json,.json,2483,49637a2da16d2386d064b08ee82cca59ded7d96669f6c930b2d4be1285207d73,INCLUDED
+assets/sprites/icons/manuals/manual_blue.png,.png,431,33a69807977d17d55cd64264f492b224777b1e003135bb16bfbc615af380eb4f,INCLUDED
+assets/sprites/icons/manuals/manual_blue.png.import,.import,966,8d206054f49fc45ab303afe3ac4c26d6306dbcf3b493403522851a22c69ad176,INCLUDED
+assets/sprites/icons/materials/copper_coin.png,.png,354,c186053f4323f2bf0f4d2217be49af49b0e0f871f725f13fd9d8ab32b8100af5,INCLUDED
+assets/sprites/icons/materials/copper_coin.png.import,.import,968,30cd220ea8d8391dcc0b31b9fef1635c7c66ed66224396d213c8feacd6a83740,INCLUDED
+assets/sprites/icons/status/poison.png,.png,451,4f832b836d549a75ec1da80b3a0e25f6de85d9b7b536dec270ae73a545d765bd,INCLUDED
+assets/sprites/icons/status/poison.png.import,.import,950,3c8e17a43691a1c36f113a6df383e743352449b8a05c4df5f7a37ef7a57bc48c,INCLUDED
+assets/sprites/icons/talismans/talisman_yellow.png,.png,530,84edf4684cc64aa952789b26e1017ee4d01449e74a3ab139186dbdccd0f2f760,INCLUDED
+assets/sprites/icons/talismans/talisman_yellow.png.import,.import,980,a30d71171985c7cfd93c325d057a415c205e3b888f1a0375cc9e10a9b602739b,INCLUDED
+assets/sprites/icons/weapons/dao_broad.png,.png,462,a055cb62a715b7600d84e2501ff696979434bf2394afe87f395a96c3bb63475c,INCLUDED
+assets/sprites/icons/weapons/dao_broad.png.import,.import,960,7512b9bdae29acb658993777a383dbb387d90ecc73c061e622241f0209601065,INCLUDED
+assets/sprites/icons/weapons/jian_plain.png,.png,560,32f31b2fce529540389566001781a16de0ec1b3d7ee0c841c1e3e3480f55a7c7,INCLUDED
+assets/sprites/icons/weapons/jian_plain.png.import,.import,963,ec4ee2f7f01854a81c0fdc0ad4c72d480c0e9a8d5f746bb56c18aa9441acc1a5,INCLUDED
+audit/client1_raw.log,.log,2245,59c352238976d1824167d9a6df74e8b89a6e8c202819dac9efa6958c3162228d,INCLUDED
+audit/client2_raw.log,.log,2154,e607b4ca13a99a7379aafa866bb1655b3139198368e26e3960a33550007933cc,INCLUDED
+audit/coop_client_raw.log,.log,2808,c6fcf7719a8111f757dca9c7b9122d4165c4e4841dddf8d850c5da9af731ba15,INCLUDED
+audit/coop_host_raw.log,.log,7901,c3aec791e00a941c15ca499d72cd44bff245e09d139253eb0c66fe894da20546,INCLUDED
+audit/crop_move_frame_0_idle.png,.png,340,41575b9c7614ff437dc8eb291bd3643469d8a91c7080c3e48419009fc5ed9ab2,INCLUDED
+audit/crop_move_frame_10.png,.png,5653,e28067df39a7fd6eb22b6f348dc445509e51e5ae0c5f2b6b1d1d9fbda260e81e,INCLUDED
+audit/crop_move_frame_15.png,.png,6033,92d69989f063432caed6b52332e9a0ef99e0070e6f5f9cd40d6a51a4e4eb309b,INCLUDED
+audit/crop_move_frame_20.png,.png,6147,18b4d511753efba17363e3c4d52ad539a06480f5cf9a1a9b9249ea6154299701,INCLUDED
+audit/crop_move_frame_25.png,.png,6153,53cf1358ad817989981d98a316cc3b4f6dc93323049d25c360be970a45729555,INCLUDED
+audit/crop_test_fixed_0.png,.png,340,41575b9c7614ff437dc8eb291bd3643469d8a91c7080c3e48419009fc5ed9ab2,INCLUDED
+audit/crop_test_fixed_10.png,.png,5754,cc056be2e1e28f9d14be452129ac9b9aa3df7f15c3d068d6e61779dd2b509200,INCLUDED
+audit/crop_test_fixed_15.png,.png,6077,47444e5bf74b079be1b76767b8dca86bfa795d25aa24a9b91fe9c42aa9457d0e,INCLUDED
+audit/crop_test_fixed_20.png,.png,6188,650fbb9f780922533acd5294fb3a1b0dd62cbee267d9e46602674a78fe235e52,INCLUDED
+audit/crop_test_fixed_25.png,.png,6870,3e1af2e4ff5a19fc82035ec4d32d0b360b9da2802ce0b803a1340755b339daa9,INCLUDED
+audit/crop_test_no_smooth_0.png,.png,340,41575b9c7614ff437dc8eb291bd3643469d8a91c7080c3e48419009fc5ed9ab2,INCLUDED
+audit/crop_test_no_smooth_10.png,.png,5568,0bf498d08ae9ac56c6090b63d1f62e5d5f5ce3911b3a4376d056724e018d9718,INCLUDED
+audit/crop_test_no_smooth_15.png,.png,6148,3f7b8f4ae9c4a921117cf38119bdb15b569529fdd1d186d76ce907cbc2774634,INCLUDED
+audit/crop_test_no_smooth_20.png,.png,6201,8a58b09c3ca825459c88f2bf60834d8a1af6e9a0031c123e7b3d3a48d25e8622,INCLUDED
+audit/crop_test_no_smooth_25.png,.png,6665,deefe1e588ae1b8da178c352d6b61e1d44d452e38f0968454d82b810df99c9aa,INCLUDED
+audit/FILE_MANIFEST.csv.import,.import,643,85aa1b5ffa6c90e97cadc874cdf4d12e634df2cb5b6b5aca17021c0e21252070,INCLUDED
+audit/FILE_MANIFEST.FileType.translation,.translation,18569,56a5f41ebfa2573ae07610e548a14372e7044bb9ea6db43a279b66f5526f41d4,INCLUDED
+audit/FILE_MANIFEST.PackageStatus.translation,.translation,24914,025c181b8bb9dee79c5fbd89baf712782492ac2898185f70b955927562237216,INCLUDED
+audit/FILE_MANIFEST.SHA256.translation,.translation,44051,9f7c624e2217d9ded4970ba860dbe500d4d8e70f3ed0c6afb9daf7c6f52f42af,INCLUDED
+audit/FILE_MANIFEST.SizeBytes.translation,.translation,18226,d3771ab4bc57b428872ab0c27979783e74e734985e5c1a96d9caf322366f75c3,INCLUDED
+audit/FILES_CHANGED.md,.md,4909,c0f5f02a8f3b208bf994ece9175b2102508b29c5b422785e4e3e235384f91d66,INCLUDED
+audit/FIX_IMPLEMENTATION.md,.md,8476,85367afcd6cd674f5f1173b0509248ff4d6df7fb460fa3013191e66dbed86d1c,INCLUDED
+audit/FIX_RESULTS_V2.md,.md,9350,4956aab58923eaf89630938e76455f7442964e7618287bf7dd950fceaa8f4526,INCLUDED
+audit/graphics_after/bamboo_forest.png,.png,44464,3fb4bd68cf22853154f1586cb4c89a511dd6529d9efcd52b2353d0c58c4313b6,INCLUDED
+audit/graphics_after/combat.png,.png,28937,65ed48011cdfa6cdc61d28f8986a14db145aa5cf1b80cb17042ccc147584e111,INCLUDED
+audit/graphics_after/combat.png.import,.import,943,16935070ee4f602f456a0cd78f3b045c466f8f9cf70df5a0c397a0cfc9ac2be8,INCLUDED
+audit/graphics_after/combat_vfx.png,.png,31444,ebb09c86cb33453abefbebdd153c7481ca7ad8bb1ca2be1ed173ae08a5f0722f,INCLUDED
+audit/graphics_after/combat_vfx.png.import,.import,955,906639bdc9c12b9550bbbd60002c2b6ad5e199afd3308750b773a3177582f3f6,INCLUDED
+audit/graphics_after/coop_client2_window.png,.png,65442,83c8ea7b9d83ac504598d74385fe71d64b9347d19bf5c4a1c917f91d4693cfe7,INCLUDED
+audit/graphics_after/coop_client2_window.png.import,.import,982,261cf965d83566f42f99c65fddeb46b58acbc5bfe33e048b2fc2387a02f8b9b4,INCLUDED
+audit/graphics_after/coop_client_window.png,.png,65722,917b75795ff4504a7616ff91eabf50d3eb30d652da3be044628e2d7c57bf0934,INCLUDED
+audit/graphics_after/coop_client_window.png.import,.import,979,e316a2658b6ca930212fd3c1f582edbc781d3a74762d4e4557c9b5d7cfcf7e77,INCLUDED
+audit/graphics_after/coop_host_window.png,.png,64828,5d762ecb179c93e20af5c832d54f98ba08a74c71d041a8a2c8dc6a0b0203b42f,INCLUDED
+audit/graphics_after/coop_host_window.png.import,.import,973,c7635c5b17a0c4ba18b6885c2eccc6e94dde6ec1ca4be315e36911411ab91746,INCLUDED
+audit/graphics_after/coop_two_players.png,.png,57300,90a73397646ee77fa57cccafae2acd007ee1d78ce841c42a4904ff99ada02ac7,INCLUDED
+audit/graphics_after/coop_two_players.png.import,.import,973,77e21b9dce321fc56e28bc5f6ea2275803f0aa2e14a520abc0fd964af03303ae,INCLUDED
+audit/graphics_after/cultivation_aura.png,.png,29032,89034c52437f85b0d4d2f5491dc9f842dd4db7866121a208f9ea643b24013637,INCLUDED
+audit/graphics_after/cultivation_aura.png.import,.import,973,aefcf1bfd3796b665536246947f0494640c7a8de5ae063f2c765aa09a2502e79,INCLUDED
+audit/graphics_after/snake_swamp.png,.png,23878,e93b3a4cf9c1c3bd0d0a2e757551cff9ef4a67e52bcc1192989c99a21fb70f70,INCLUDED
+audit/graphics_after/sword_grave.png,.png,24851,c9b98073cd03d336673abce7307d8c7d8bc4021dc0f6add2be1d46de185c022e,INCLUDED
+audit/graphics_after/thin_chau_bamboo_forest.png,.png,33819,1b8af749f404d90f74c35139330d63bd113888feffb049662accc0fcb1169c9d,INCLUDED
+audit/graphics_after/thin_chau_long_kinh.png,.png,26075,41ccb3e60a3479c14286f4a7307f317d98dfaaaed88e7669f87af33f580ef519,INCLUDED
+audit/graphics_after/thin_chau_minimap_hud.png,.png,61002,e9332909ad960177db8e7a77c104143f2f0cb092d9844f62f3fb036a661e6142,INCLUDED
+audit/graphics_after/thin_chau_snake_swamp.png,.png,25922,4401374f0224f280d0a060ddeee5c4d6b771995483360721fd2abf202ec59689,INCLUDED
+audit/graphics_after/thin_chau_sword_grave.png,.png,44318,fa248486732d19ad071bfa2bdb4cc8c55d331794a9d800105f3d25ac7332cafe,INCLUDED
+audit/graphics_after/thin_chau_tay_son_mine.png,.png,21953,5cabb781d3efa0db9a0b1e58d8d4f39b66cef1c365cf350f23df8ca7ff3b5057,INCLUDED
+audit/graphics_after/thin_chau_thanh_tri.png,.png,61153,d135c4847ce24e5046195c638df76fcde23a70b1a5bbcfbad9317676aa5eb70f,INCLUDED
+audit/graphics_after/thin_chau_world_map_modal.png,.png,78409,0af9e8858d1352ff595fb98f0a2e8bc0716627ee8417d5500b0d33f84d7a641c,INCLUDED
+audit/graphics_after/thin_chau_world_map_zoomed.png,.png,81343,763e099d48d89b57bdd0c0114a6e2881f820762ae0b0e7c93968a3ad7911aec0,INCLUDED
+audit/graphics_after/town.png,.png,96080,967e2d649cc944054d95b9a358579737c3d10c009c7e2036c052690422646349,INCLUDED
+audit/graphics_after/town.png.import,.import,936,07c2080a7749b5d735c8ce481fdd3b8d3498dba760cbf6d9becf41f6079dc942,INCLUDED
+audit/graphics_after/ui_shop.png,.png,148818,2aeb1a5d8ce009755b4aec37a30534a528f46488ed516db49c71ceaa5536f2d3,INCLUDED
+audit/graphics_after/ui_shop.png.import,.import,945,9b2b6350d4ac562fcdc3b85dd55a355f872f7d520125751a73060a8c2f543b0a,INCLUDED
+audit/graphics_after/world_day.png,.png,53730,b6d038ec0918ba60ef54007c00974f6258e02808cd882d4e7e9f1922b6a258ea,INCLUDED
+audit/graphics_after/world_day.png.import,.import,952,2a39f0948519c967978d6e30c7718df2673d0298a71197ec18ebe102311dfa79,INCLUDED
+audit/graphics_after/world_night.png,.png,53762,fac822c6fd319ae8e7f202f30a2aed83379dcaad2863415d7f867c686bbc0d27,INCLUDED
+audit/graphics_after/world_night.png.import,.import,958,eb724c3287b694e4f012e1f25de37c75624fd0e4bb9f74ded9c0c80f8f431b24,INCLUDED
+audit/GRAPHICS_AFTER_REPORT.md,.md,4033,022a4b9e4aa9d5e3276fe5cdd25155ce508ca91ee336ad6c6bfc06c784e4e219,INCLUDED
+audit/host_raw.log,.log,1974,5803831a43d302ce0b253c37ec3a76c7f88ed60887bcbedd9c7dc4786fc2af3b,INCLUDED
+audit/KNOWN_ISSUES.md,.md,6136,2de9d0b1059bf11309b5968a7ea075386cf9a6b25799e70b3d3ea20c8cae219e,INCLUDED
+audit/move_frame_0_idle.png,.png,3666,2538976d9f4540eb768613e68e9f682d764bd78e794a5f928f266c2cd13d5fe3,INCLUDED
+audit/move_frame_10.png,.png,60075,4189117df52e8c3c07be887590a4e5ef599bf2e4bab4a6c60a7bb46383729ea3,INCLUDED
+audit/move_frame_15.png,.png,53652,620fac6e8d1f14877e75384d9c5479bd3f1ce5bc55d25d848fa0b9c1b6e44a25,INCLUDED
+audit/move_frame_20.png,.png,53404,c60db5afef3dff3f59c2ea170eddf82e542a24245d6c715ade1acbc1e1d49870,INCLUDED
+audit/move_frame_25.png,.png,54188,3caeab23a89d4347bff122aed9523342d835c34ca1fedc133d11892857d7027a,INCLUDED
+audit/MULTIPLAYER_TIME_AUDIT.md,.md,12234,ae3f7d0bb9cbcf6156536b3b8204bf333ac95745f29f69d83494b7544237b0f9,INCLUDED
+audit/PHASE4_ASSET_STATUS.md,.md,6982,4d7f929ad40e9b68fd80baac3b03aca85452aa1cba2ea15989def292f3ced9d0,INCLUDED
+audit/REGRESSION_LOG_RAW.txt,.txt,32088,fd952160504ba83cbc199869db7f6da0104e5d73919d6cd3b9e7147dc8c0bed4,INCLUDED
+audit/regression_raw.log,.log,26797,328d1d3856dae116274d411873074744e287ad37aaed0aee3f3a9a42c974e77c,INCLUDED
+audit/REMAINING_ISSUES.md,.md,4376,8a4c32f6cb74e1967c26283ecf43596cb16e347a37aaa8ea6eb6117cb8793b55,INCLUDED
+audit/test_fixed_0.png,.png,3666,2538976d9f4540eb768613e68e9f682d764bd78e794a5f928f266c2cd13d5fe3,INCLUDED
+audit/test_fixed_10.png,.png,52022,83722efd170749c09fcab43645f9529d0b01c605e2484849fe5e5a4e49d65801,INCLUDED
+audit/test_fixed_15.png,.png,52383,4c94167f142c934c381acdf916437315c88286b02d28cf50ac55053c4a1b68be,INCLUDED
+audit/test_fixed_20.png,.png,52534,4cb71f0a22e6140adb5bbd5eba4370784786785109183f887f23f39883478261,INCLUDED
+audit/test_fixed_25.png,.png,52654,d26f52603997c32d30e8d7b5e8f8395d7de966b1b38fe63958cc548d7e5043ff,INCLUDED
+audit/test_no_smooth_0.png,.png,3666,2538976d9f4540eb768613e68e9f682d764bd78e794a5f928f266c2cd13d5fe3,INCLUDED
+audit/test_no_smooth_10.png,.png,59994,a54a1c9719f1f53cb7be7f17ab739e1febea56d8decd2c709b18e1936ab72d13,INCLUDED
+audit/test_no_smooth_15.png,.png,53923,393cb765ef6c49844151660dcc2b1d8384d5e8b98ce69437a698d6b0969efc25,INCLUDED
+audit/test_no_smooth_20.png,.png,54068,4a928b8efc2b4b013628818a2976b810ecaa1fafc6d323d95e3796d8bdae245f,INCLUDED
+audit/test_no_smooth_25.png,.png,54112,b1473eb57d5c96e49978d3f04f275fd9e621916acc5efa385c0642edb819937d,INCLUDED
+audit/TEST_RESULTS.json,.json,36323,fd7af1022ba65d70c6fce8e7800070689bbfdae1787b2f1d72d509d8326ba280,INCLUDED
+audit/TEST_RESULTS.md,.md,5752,14764476330b860f90b7d73f578c828596b3993d549de7ad2dca900bcecebcb5,INCLUDED
+audit/TEST_THREE_PEERS_RACE.md,.md,2086,870baa391aa7814e65d20014540471938101431e38f78361d0e716e13b1fa016,INCLUDED
+audit/TEST_TWO_PEERS.md,.md,13735,fb4907386769ca4561d8afd96d771a728f72cd5093e0e9078fceb9af3fd92a1e,INCLUDED
+audit/thin_chau_player_clean.png,.png,47250,fc850b0411fd1ef6ea6bdf11fc413c4ce1675fcb8988fd6cabfe5f0e9c811a95,INCLUDED
+audit/V3_FIX_RESULTS.md,.md,7576,335039f6d853f676b6a80d44ec6bb8e00cd9bc13c32ec9fbf8e10ff55ab1f4df,INCLUDED
+audit/V3_REMAINING_ISSUES.md,.md,5553,22ac869f1d00b9d684c7bbdbba8305908c11a42bec973d6c5f7b61e33b1b0ae1,INCLUDED
+audit/V3_TEST_MATRIX.md,.md,7944,f6c4a802f1fc34175a453ea1c39bae1115afa7b35666ae5e9c98d8300aa89e8f,INCLUDED
+audit_exports/BACKUP_BEFORE_S0_FIX_20261104.zip,.zip,3877502,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_FULL_SOURCE_AUDIT_20261104.zip,.zip,3877502,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_FULL_SOURCE_AUDIT_20261104_GRAPHICS_UPGRADED.zip,.zip,3908652,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_FULL_SOURCE_AUDIT_20261104_S0_FIXED.zip,.zip,3902239,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_FULL_SOURCE_AUDIT_AFTER_V2_FIX_20261105.zip,.zip,4373445,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_FULL_SOURCE_AUDIT_AFTER_V3_FIX_20261105.zip,.zip,5172660,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_MINIMAP_WORLDMAP_AUDIT_V5_20261105.zip,.zip,5642536,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+audit_exports/DAO_TAN_VAN_KIEP_THAP_NHI_TINH_AUDIT_V4_20261105.zip,.zip,5392301,N/A,EXCLUDED: Directory 'audit_exports' in exclusion list
+data/balance.json,.json,3445,7e82079cdd4ff8af61732ed1d070f434716a9015d67ad2a8da4953e622af8cc2,INCLUDED
+data/enemies/enemies.json,.json,5401,9cb85f36dea1da468f031bf853a60f7551ad7fbb98df8f9c81d678b2b204d83c,INCLUDED
+data/factions/factions.json,.json,2448,e720b9e357cc910a1ac740071101e15e8c88a908c0425520bce2775774549004,INCLUDED
+data/items/items.json,.json,4390,3ae7feec86a90088e1ff3a3c346cf2d0544de92c852b084b6ed0fb82adf82145,INCLUDED
+data/npcs/npcs.json,.json,37917,98528e55f6a9d05286a3e4603d9663467077f7942930cee6f6c91fafb16a64fd,INCLUDED
+data/quests/quests.json,.json,1843,3f079074814dad19d9eb7310cd648c5c1e2defa13c5c6820490d6d177f3dace3,INCLUDED
+data/recipes/recipes.json,.json,2683,eeaca1d1cc7d9799b136be74b8e6893c0e7d13db9aebf6ce9fb1a0f7b40004c7,INCLUDED
+data/regions/region_thanh_tri.json,.json,1875,815850c5a152e2a6dcc816a90cac960c86da0af682423416ec8366182c005328,INCLUDED
+data/sects/sects.json,.json,6002,e6d2d0073cb3174ecf8a5243d217f56ab2e2428b1e208cefe82848cffd93026d,INCLUDED
+data/skills/skills.json,.json,4214,e1e5483888cd0e7fe82b0aa782e3d5445bd031f78bbb691577b65e3e3863864e,INCLUDED
+data/world/countries/dai_huyen/country.json,.json,1122,bee9399757aae434ad90c3bc43609681b6c330972e0c22579ee604d1129e7d9b,INCLUDED
+data/world/countries/dai_huyen/court_rules.json,.json,1399,8e810f71d4af3a8e6ff19bdd0faa2d51ed0da6d929ddaf7257f0f8a3f764651b,INCLUDED
+data/world/provinces/dan_chau.json,.json,372,28eb227eb9581615798c8c69daaf52d8f471a5c5249ece85fe1e1009aff7731d,INCLUDED
+data/world/provinces/dau_chau.json,.json,396,edf0035acdfdbeeea46f68bbd5f9dadcf355bbc8b4d6beb3e1a4c8795ff45b35,INCLUDED
+data/world/provinces/hoi_chau.json,.json,395,83feba766e2be0bad2ee3d2331537259821342a32b8bacb2d3045127ebd03728,INCLUDED
+data/world/provinces/mao_chau.json,.json,373,d98db1b076eacae299ea91f7b5699cc58a0251cd56e2c77a2c0f6fd3b43531ee,INCLUDED
+data/world/provinces/mui_chau.json,.json,376,dd65a4c30ec2bd9a774bcec3d7a9fcbc52dc28426f83c9ab004cbc57a8dead6a,INCLUDED
+data/world/provinces/ngo_chau.json,.json,391,91e0dbe78c9edce1142ee59e08f0dd86de3c2f34a93258f3624447cfcc60e21b,INCLUDED
+data/world/provinces/suu_chau.json,.json,377,4ca9d098a550d0659c289beaa4906c2c1cad253fdcdc44520db7c920ed42673d,INCLUDED
+data/world/provinces/than_chau.json,.json,389,184b6682cc128ec448083d5b6d196122fbe33653448096ef47c77fc213b3eb82,INCLUDED
+data/world/provinces/thin_chau/fast_travel_stations.json,.json,1962,c5a1e258bcf9bfc3367b2f99cd68817951fb0f182e9d53abc6d5485a65e064e0,INCLUDED
+data/world/provinces/thin_chau/landmarks.json,.json,2054,eca5595b9f21b9ba743c2d62049ef658a6eea4877a9cbade87dc83e38680a801,INCLUDED
+data/world/provinces/thin_chau/province.json,.json,3498,286c10161460c88c24c5383fdf750b8d1b6fc247fd634be601189c689c5c2215,INCLUDED
+data/world/provinces/thin_chau/roads_rivers.json,.json,1319,f93a23753861d891fe057218d38435cde7a62eee8f8ab72a8fcaf8b1eb7d1c21,INCLUDED
+data/world/provinces/thin_chau/settlements.json,.json,4276,b42dd07bcf4a1b5d2657b3fdd31d513c2c43ceedfb789d0628f135811db99869,INCLUDED
+data/world/provinces/tuat_chau.json,.json,397,ba4f2c8f6072ee96f7514aabd88e27d386c02003b32c6f7f3392f197f83b5aa5,INCLUDED
+data/world/provinces/ty_chau.json,.json,367,779cf0e0c3af8b5dec293672312270eb3dc5587df02aa449210c4cbca1c3d206,INCLUDED
+data/world/provinces/ty_ran_chau.json,.json,395,b0cd22b66fbaf1478d3b5be3ff5585e5ed1085217fbadec2350b5576430dd2d8,INCLUDED
+data/world/world_registry.json,.json,2234,d030c21cfc82fff558f67287df61b2e0360012c435941da2bcf824b7cee29bfe,INCLUDED
+data_examples/balance.example.json,.json,492,3824626e46a69a62ac2808d756694d0c2abb8caab4ca3e7928d210923fc98cb7,INCLUDED
+data_examples/npc.example.json,.json,456,901e071d82fc2e82c6f2d2d97574f81df2da052fec217ddb29cb228359a88e5d,INCLUDED
+data_examples/quest.example.json,.json,820,a1878d0b4225af1f51ac2689b54b955939f20bf939e8a3212b47ecd8356705ee,INCLUDED
+data_examples/region.example.json,.json,256,fcc3e8db2bc5880a65a286a0351f283489655c1ba32aaedaca03cffdccf77feb,INCLUDED
+data_examples/save.example.json,.json,532,e34c235efa517f89d07baf57b42d9f7956a4b23aee3b236a48d98f944e985311,INCLUDED
+data_examples/skill.example.json,.json,395,27368e9a94d176312c811c75f1b3bcae5d6fc2910b6c9f37f79cee8953fc355e,INCLUDED
+docs/01_RESEARCH.md,.md,4055,23c5112d4c9901791f62e019ecc740c4d006460c6fe55dedb01e7b93ee08ea77,INCLUDED
+docs/02_GAME_VISION_GDD.md,.md,5992,cecbee073d126c9dd6d8684baa4949808955efe2b877556211e1670ae13b0efb,INCLUDED
+docs/03_WORLD_LORE.md,.md,5299,2f6d8be48c326da564ef5527c94e21c9e0a07cde1d2af501f68f0c231e20091a,INCLUDED
+docs/04_CULTIVATION_COMBAT.md,.md,5984,c65851b762f738cd08515b91769a468cde617a3b46e0435115625c10b38a316f,INCLUDED
+docs/05_NPC_FACTION_SIMULATION.md,.md,4759,7fd8b7dc681d73e145c3988b835d20144766ce15898f3cab7dc036d46addc6dd,INCLUDED
+docs/06_TECH_ARCHITECTURE.md,.md,5330,76cac593e07eaab6898a44871787740aeb14149deb5658e7823e4bd25bfe0074,INCLUDED
+docs/07_ROADMAP_TESTS.md,.md,4151,23c3f2756f0c2cf5d38c1851a32964d5742dbb63549cd4215b82952c855323e8,INCLUDED
+docs/08_UI_ART_SOUND.md,.md,2648,ba805b49bbe4adae109d4e02c158e1ae345953dd830f559618d5cb511496c999,INCLUDED
+docs/09_DECISIONS_AND_RISKS.md,.md,2357,cb492873217743cab426fb7ab6cb3fd9f5f3399b93ed3adf4284c1940f4f8a42,INCLUDED
+docs/10_COOP_SOCIAL_ECONOMY_DYNASTY.md,.md,68188,048f24dd5361a32c1495c7aa2b1ece5beb8647ddf0e61d87d5ea87f8101a5c75,INCLUDED
+docs/11_WUXIA_ART_DESIGN_SYSTEM.md,.md,10797,29f9ad86a8b391f641f8c43cb0fc2afa2c55e1baaa58fbdd370f6333f1de7088,INCLUDED
+docs/CHANGELOG.md,.md,3058,98dd59d50b7afc94add02fa2e6e3765daf8b15bebf2bac6a1faa919d8760d574,INCLUDED
+docs/COOP_EXPANSION_AUDIT.md,.md,5618,194ecd890c0c12103e475f914f7ec16c69f9db07a46d4b7bdc831e6dca294632,INCLUDED
+docs/COOP_EXPANSION_PLAN.md,.md,4796,36d2491a497aad5706969ee53902fce2be77885ff1079aa5b1b62a4826a2ae46,INCLUDED
+docs/DAO_TAN_VAN_KIEP_GAME_DESIGN_AND_ARCHITECTURE_DOCUMENT.md,.md,18282,b9594e02bc3b890ad2e9f18333ce904fe9f773b39df43245e3a33cfc24bbee31,INCLUDED
+docs/IMPLEMENTATION_STATUS.md,.md,3260,9a81202753aedef10f303770f8916a8072abaa42e3d7ed26a446fa7d6d5a9b08,INCLUDED
+docs/KNOWN_ISSUES.md,.md,916,2617d43a97edebdcf5619e038f6d373fa071236eb80872dcec94c142dd74bbec,INCLUDED
+docs/MAP_RESTRUCTURE_IMPACT.md,.md,5684,3507d72a9d5415763ebbec790534610cf77779af76306f0f768c4d0ac68a58c2,INCLUDED
+docs/MIGRATION_REPORT.md,.md,3734,f9de99a15216385d6f829a3fc98285a264edbc5f46953fa2a7ce4744cb70a476,INCLUDED
+docs/references/TALE_OF_IMMORTAL_ANALYSIS.md,.md,11284,aae75e7cc3629a2ad32c1be925a4518ba9895e0706b890df19aaee9b2ee43724,INCLUDED
+docs/references/TIEN_NGHICH_INTEGRATION_SPEC.md,.md,12242,3402a128b096e437b8ae058db6909bfc177893acda346883171f855480dc55a9,INCLUDED
+docs/TEST_REPORTS/PHASE_00.md,.md,9872,cfaf4c59c632d9a0e008d8569b82ced5295aae6a125d32a8e2aa53af226a5224,INCLUDED
+docs/TEST_REPORTS/PHASE_01.md,.md,8108,8ca7c149ed7c4c006efb0eae341bcf450694efa8a7eba0b4ee5893f865291971,INCLUDED
+docs/TEST_REPORTS/PHASE_02.md,.md,6606,ae99a750b90b6d0afcfe2d6ab39dd87be0e2f808ea95d224b701f2dd714cc307,INCLUDED
+docs/TEST_REPORTS/PHASE_03.md,.md,7286,a12afb11677fadde59821bd4131e6c21725be958b2a5937c1bdc9b056ff07ee7,INCLUDED
+docs/TEST_REPORTS/screenshots/01_main_menu.png,.png,37864,06673814d291946b0efa277e8957f828f8526c17ae0f1769a8cb70e01e82b95c,INCLUDED
+docs/TEST_REPORTS/screenshots/01_main_menu.png.import,.import,970,435b3a31b017b83484ffa034ba1a97e0fccaf4ff3de912eef5664434ec86a4b7,INCLUDED
+docs/TEST_REPORTS/screenshots/02_new_game_modal.png,.png,40715,5fe280f97c3df93c3dce78b7b49de88a7ccc6e665636c5cfc3efc55f04dc9463,INCLUDED
+docs/TEST_REPORTS/screenshots/02_new_game_modal.png.import,.import,985,cc9679dd9a327c38c5f95688896fee0fd0312acc55197693b19e4f3a940377ce,INCLUDED
+docs/TEST_REPORTS/screenshots/03_settings_modal.png,.png,35465,20621edfe38acfd6d90a3a68c4ed7d6ae203a2a4971e6b466026a321e3e8b1c3,INCLUDED
+docs/TEST_REPORTS/screenshots/03_settings_modal.png.import,.import,985,e5d22aff20bd33df8415d86f7a5e003c9509c3aa19ffa44d296100f31d51c259,INCLUDED
+docs/TEST_REPORTS/screenshots/04_world_map.png,.png,34527,cd7ec0193be01fab25a62c9b8859744b8f9f3fb622aa4453fee1af91214dcc78,INCLUDED
+docs/TEST_REPORTS/screenshots/04_world_map.png.import,.import,970,f8a490bb0c2060e92e8a020a97cd7cf1d0e0609c7406ac46561414cae6a8871c,INCLUDED
+docs/TEST_REPORTS/screenshots/05_world_paused.png,.png,41907,a5def5fd266c01a980e4a714466f70688a06eed6ee34cd2e087876ded5bc1486,INCLUDED
+docs/TEST_REPORTS/screenshots/05_world_paused.png.import,.import,979,1b92173d61138743343fd15b9fee2b6426078f818871789ee77dc7307e3e17f3,INCLUDED
+docs/TEST_REPORTS/screenshots/06_main_menu_with_save.png,.png,37864,06673814d291946b0efa277e8957f828f8526c17ae0f1769a8cb70e01e82b95c,INCLUDED
+docs/TEST_REPORTS/screenshots/06_main_menu_with_save.png.import,.import,1000,4a566af204a066dad1e7ac85c119826293cc191268858189ae8741b8c81206c9,INCLUDED
+docs/TEST_REPORTS/screenshots/07_town_view.png,.png,138585,24d8c6235e36e7c6262ed38aca29d6d1e08a80680fc9c05ec722e776acb0c4ec,INCLUDED
+docs/TEST_REPORTS/screenshots/07_town_view.png.import,.import,969,6efedc420a0232a8d3a202ed4c4ec5e754eb48d2ea6534234434ec3c2b53b21e,INCLUDED
+docs/TEST_REPORTS/screenshots/08_dialogue_modal.png,.png,143313,2bad2eefba9cff520f09ddf33bda0b4ee114c6fa4026b81557e17d65e66d1f4e,INCLUDED
+docs/TEST_REPORTS/screenshots/08_dialogue_modal.png.import,.import,984,7913cd885647b504106d7963236377a945827338660dd62c1a0bd424212bafe6,INCLUDED
+docs/TEST_REPORTS/screenshots/09_inventory_panel.png,.png,135684,096e0ad21ab57d49ac5696b40828dd814484015fc2d103872837f8f4f0461aaf,INCLUDED
+docs/TEST_REPORTS/screenshots/09_inventory_panel.png.import,.import,988,a09d85e4fc8149eb3553145c240e43cd223f64ba7141b216352f679d778e5970,INCLUDED
+docs/TEST_REPORTS/screenshots/10_character_panel.png,.png,152020,d21db46943545546b632c268d8f4d0d6597568b899358ea3068ab63e5bbec380,INCLUDED
+docs/TEST_REPORTS/screenshots/10_character_panel.png.import,.import,988,3c5191aa1fd172147bd88cde541034b82414a1196c97596dcccf0ba7a92bc47b,INCLUDED
+docs/TEST_REPORTS/screenshots/11_combat_arena.png,.png,28331,f56fe6a10e647f8aaf2f7bfc331cba040ea6a4919fff5e8712d012584988a031,INCLUDED
+docs/TEST_REPORTS/screenshots/11_combat_arena.png.import,.import,979,095104567294630306eaa386f9ec2f1b975f9b2c8abf403469340a4817cf4a31,INCLUDED
+docs/TEST_REPORTS/screenshots/12_boss_fight_telegraph.png,.png,36398,98d0e6a86fb6a94682fb3f82e0b8ab7ecf21aa234a44a5f2bdd67a91bf1d40cb,INCLUDED
+docs/TEST_REPORTS/screenshots/12_boss_fight_telegraph.png.import,.import,1003,9cbe595ca151a76a388f33fc5fee8e5cafc0b7047c60629e6c970a798d5df244,INCLUDED
+docs/TEST_REPORTS/screenshots/13_combat_victory.png,.png,66605,a25992e5b856c661d110c779ef0cac7ffa40bd27a7ac2479cd9a2a59bd906a63,INCLUDED
+docs/TEST_REPORTS/screenshots/13_combat_victory.png.import,.import,985,15c78d863fe5d2961be020edda7ffe34958b938ce1130432debbe86d6f5ccded,INCLUDED
+docs/TEST_REPORTS/screenshots/14_hud_realtime_clock.png,.png,50381,e88410e51bc0cea6bd3fad96e3e2398d7ab9c8c9702af0e6a630d90aaf9f8ebe,INCLUDED
+docs/TEST_REPORTS/screenshots/14_hud_realtime_clock.png.import,.import,997,7b8075fc12223910fd37720e95dd8524808b03b34a165110ccb24d57c58df425,INCLUDED
+docs/TEST_REPORTS/screenshots/15_social_panel_all.png,.png,160382,20991beefe4d769b31577283794886382c1e7aa1dd7bc354d50c781e0bd10a5a,INCLUDED
+docs/TEST_REPORTS/screenshots/15_social_panel_all.png.import,.import,991,19101709681e157b67c90ed6824254b8524f508c48087a236a5b8484aefd9bec,INCLUDED
+docs/TEST_REPORTS/screenshots/16_social_panel_sect.png,.png,149613,f333e0afc4b5211e63ee9423ea15e9e6462e3a57a4d85d811867416b6edbbc24,INCLUDED
+docs/TEST_REPORTS/screenshots/16_social_panel_sect.png.import,.import,993,cf59a3d163170f5429b120ecd23295011710865bbea4d71ba9ce1e96287cffe4,INCLUDED
+docs/TEST_REPORTS/screenshots/17_monthly_summary_breakthrough.png,.png,58765,9cba1e74ec4bce4d5cd8c14e4a7f1c3382d609721ffde25b7f8c1f28c5f72bdd,INCLUDED
+docs/TEST_REPORTS/screenshots/17_monthly_summary_breakthrough.png.import,.import,1027,847bbe397081b86fe9cf9c96cf209a056afddf09efb44dff3bcd97896ebe7b22,INCLUDED
+docs/TEST_REPORTS/screenshots/18_monthly_summary_market.png,.png,82198,7e9b0063492d1085dfce62db756a27d900756883061b772914d3cfbacc864179,INCLUDED
+docs/TEST_REPORTS/screenshots/18_monthly_summary_market.png.import,.import,1008,c45c9265d2308e94f8d3df4871b490a49d29b83ef199614688808a76bad0ad31,INCLUDED
+docs/TEST_REPORTS/screenshots/19_town_view_dynamic_routine.png,.png,149766,d7d48a23ade4e80057a92366a1ee3af773d391cd63f5cfab3e96efbe0c5ecafa,INCLUDED
+docs/TEST_REPORTS/screenshots/19_town_view_dynamic_routine.png.import,.import,1018,15043ae05b410c37435ff02899d860b698743e207c0f04401902c1922b1398d8,INCLUDED
+docs/TEST_REPORTS/screenshots/20_alchemy_modal_crafting.png,.png,162793,ac6373a28e9593b69028645c3f77e70a7ecef3b912c689cd3a09cf7b37f7e55e,INCLUDED
+docs/TEST_REPORTS/screenshots/20_alchemy_modal_crafting.png.import,.import,1009,6326afb39e3c6f0ad97361764809245f0790e93bbeeddb668b699857581e7874,INCLUDED
+docs/TEST_REPORTS/screenshots/21_player_stall_escrow.png,.png,151875,fcaae1fd99103d03d8532f4d71e25d5de9da0b73e42180d1e52ee3b1582e3a3a,INCLUDED
+docs/TEST_REPORTS/screenshots/21_player_stall_escrow.png.import,.import,1000,133c980c9705532f3b63bb4ff747616bbdef05f88481a2b6f363f8bd8db442e5,INCLUDED
+docs/TEST_REPORTS/screenshots/22_combat_boss_hac_linh_xa_vuong.png,.png,36242,d23676fcef349f34534f357862937ce07fe7565f67dad3b7890ad37df7a3bee5,INCLUDED
+docs/TEST_REPORTS/screenshots/22_combat_boss_hac_linh_xa_vuong.png.import,.import,1030,cd1268633821bafad033eaec29aec99959cfdab16426fdb63da6697e92526dd4,INCLUDED
+docs/TEST_REPORTS/screenshots/23_combat_boss_co_kiem_linh.png,.png,34058,110b1a1cf40fc91f22b547a7fa6b05984033b43a172f18c690916206ffe84920,INCLUDED
+docs/TEST_REPORTS/screenshots/23_combat_boss_co_kiem_linh.png.import,.import,1015,a26a9d187130dcb0883ab81f831d4dca5ad2e3d4d1e124a049ccb8b85fb241e4,INCLUDED
+docs/TEST_REPORTS/screenshots/25_living_town_real_map.png,.png,85427,faca3a51225cd7256c81dd9878930afb7fbeb594a4338c9c75a85738e6366fce,INCLUDED
+docs/TEST_REPORTS/screenshots/25_living_town_real_map.png.import,.import,1003,c2f4354a9ed14e66bd59df90feb85ce788c783120707b6f004166bd694b9ac65,INCLUDED
+docs/TEST_REPORTS/screenshots/26_procedural_npc_dialogue_depth.png,.png,162167,f6a1125637773bed1c800aea221d16ae6f071f57349815057f339bad19ed5a9a,INCLUDED
+docs/TEST_REPORTS/screenshots/26_procedural_npc_dialogue_depth.png.import,.import,1030,c4c33b859695e45edc6509dac1be3fc41edb9ce8e588d45c5668e1eadd8aa8a0,INCLUDED
+docs/TEST_REPORTS/screenshots/27_town_night_lanterns.png,.png,82491,0f6067f3ab78e789ba5311daab60f2cccc6f89f9a069e7fc9f1bf87257a2b7d7,INCLUDED
+docs/TEST_REPORTS/screenshots/27_town_night_lanterns.png.import,.import,999,616cca4f069342c380a20491a9f5d0342c68eab100e135e03d8d56a81a27b299,INCLUDED
+docs/TEST_REPORTS/screenshots/28_bamboo_forest_biome.png,.png,44530,7dcbec55f5188d2fb1e64485422173f73be975bd7cdbc723925791f000659a85,INCLUDED
+docs/TEST_REPORTS/screenshots/28_bamboo_forest_biome.png.import,.import,1000,b0f6f18623b2732e688b447d2e8b8016342cdcd15d7fc835e312e7f39a14141e,INCLUDED
+docs/TEST_REPORTS/screenshots/29_snake_swamp_biome.png,.png,34516,239d0909aaf0538f4569d715da42d0f9bf62226f4fe2f0ea375eece4dfe6f1eb,INCLUDED
+docs/TEST_REPORTS/screenshots/29_snake_swamp_biome.png.import,.import,994,c6380e106d3001b755629ca65e1a9738821afe4bea0af9181f088af6441b30fa,INCLUDED
+docs/TEST_REPORTS/screenshots/30_sword_grave_biome.png,.png,34626,e1031e97ea975c81e47b9a664f0309bebba91cab2f6758884671e65846c18681,INCLUDED
+docs/TEST_REPORTS/screenshots/30_sword_grave_biome.png.import,.import,994,a17adec3378d11d49b6cd42ebfb979d79d56deffd9f6a230a7adaf9719dd83b8,INCLUDED
+docs/TEST_REPORTS/screenshots/31_sect_hall_thanh_vi.png,.png,34854,179ed17c92e07b215b2ccea2a3bd8690cfaa7b38469ea1d4a8d5bcea54e7f42c,INCLUDED
+docs/TEST_REPORTS/screenshots/31_sect_hall_thanh_vi.png.import,.import,996,8df1966256455538c5627d885270d8ac59d01f213bedaefd4de00609b56760be,INCLUDED
+docs/TEST_REPORTS/screenshots/32_tang_kinh_cac_skills.png,.png,71840,88ebf7e9d48dcb932c671b3d1886627477d960f567bfc96e6250ba191925b1b6,INCLUDED
+docs/TEST_REPORTS/screenshots/32_tang_kinh_cac_skills.png.import,.import,1003,06b4eb4bc2f60b7739547eef9da3d78e3a0dcb4e6bfcb3d269706f57d33f7a0c,INCLUDED
+docs/TEST_REPORTS/screenshots/33_tribulation_lightning.png,.png,31398,6eb8dec3dead6dfd3f8c9165d9ae6f0c5e0535aa8d03c629f5590b520056055f,INCLUDED
+docs/TEST_REPORTS/screenshots/33_tribulation_lightning.png.import,.import,1006,f0f676d42491a538747aa911befd55c220340435748e3450eac5300eea5c2663,INCLUDED
+docs/TEST_REPORTS/screenshots/34_sect_rank_promotion.png,.png,59700,b355081c401dae6277826507c8ba13cb82e3939bce794bedb4ba4c886cfcfb17,INCLUDED
+docs/TEST_REPORTS/screenshots/34_sect_rank_promotion.png.import,.import,999,ba33259331427f9156b4a817b0a978342db2164d2a64c3caf16622b97e597475,INCLUDED
+docs/TEST_REPORTS/screenshots/35_vfx_sword_slash_combat.png,.png,6063,c5f4183cc77d4a0b218b876f3ad4981b24c894566cd04b50d54dbf640c70adf6,INCLUDED
+docs/TEST_REPORTS/screenshots/35_vfx_sword_slash_combat.png.import,.import,1009,ce4485202f707619595db196afc27d5046df8b5fba0f02cd65ea5deb3010a291,INCLUDED
+docs/TEST_REPORTS/screenshots/36_vfx_cultivation_aura_breakthrough.png,.png,6345,a25a21f566420d02c7700b73189de72749fc36c32c859f99dfedfe7b14c5a38f,INCLUDED
+docs/TEST_REPORTS/screenshots/36_vfx_cultivation_aura_breakthrough.png.import,.import,1042,0da7465b4aef193955666ac2bb4b1f0fa89d21242f011bd07b092a9f1176a211,INCLUDED
+docs/TEST_REPORTS/screenshots/37_vfx_bamboo_leaves_ambience.png,.png,33942,4cda2fdd33ec975e53c0f615c48de2db547053bde480851ed96981539b525d7b,INCLUDED
+docs/TEST_REPORTS/screenshots/37_vfx_bamboo_leaves_ambience.png.import,.import,1020,83128ec9e8a5a7f2cc41e835bdc325e9e8b008d3c3e8a1d4cfd70db32e54c063,INCLUDED
+docs/TEST_REPORTS/screenshots/38_vfx_tribulation_lightning_impact.png,.png,29211,cec068d3e93f040a7e1a660ffcabe78bab74f9d566a590b5dd76a45ee5db3764,INCLUDED
+docs/TEST_REPORTS/screenshots/38_vfx_tribulation_lightning_impact.png.import,.import,1039,6b3a1eb55c19523c441a363b06d7bb07846e296a6f802eb17868e91148526c9c,INCLUDED
+docs/TEST_REPORTS/screenshots/39_dialogue_branching_choices.png,.png,202899,711d2a672715014eb6c43e2b5826ee6807582811e57cb368b009b38e589c56f2,INCLUDED
+docs/TEST_REPORTS/screenshots/39_dialogue_branching_choices.png.import,.import,1021,4ff0fae140e8ec657fa155fc47b9b8a1d45d9c166971f96a07b7a536d226be42,INCLUDED
+docs/TEST_REPORTS/screenshots/40_dialogue_world_shaping_consequence.png,.png,187879,cf9709a852908fa8dc1a398a4bbddd9f4ff263bb51cb77893973f6c36d0a5799,INCLUDED
+docs/TEST_REPORTS/screenshots/40_dialogue_world_shaping_consequence.png.import,.import,1044,66ea56fd4f02791df85916efd01f2d4578295b5b6ba569b07ed2b9fada52bb20,INCLUDED
+docs/TEST_REPORTS/screenshots/41_procedural_npc_branching_dilemma.png,.png,190219,fb3d65306964cbf55737e9f4b461532342bf86d1af2d48bf223c53133386d775,INCLUDED
+docs/TEST_REPORTS/screenshots/41_procedural_npc_branching_dilemma.png.import,.import,1039,4732d16afb17a827443f166871a002cb9ea73140e5201bdc7e3b94c9fcd4b810,INCLUDED
+docs/WORLD_MAP_DESIGN.md,.md,7458,c5cec4616eb12525e862b8adef27c1ffbf97336f9c21ea358a35ae7cdbefa7e3,INCLUDED
+FEATURE_STATUS.md,.md,15242,44653a6db11a316660155a065e40f9ca2d937511158b235f4ddb77ad81337fdf,INCLUDED
+IMPLEMENTATION_PLAN.md,.md,4149,7ff3c173a8d73ae8db2f06c56af43d13507ad9f371bdab3e65bad3807f1b59e4,INCLUDED
+project.godot,.godot,4505,183552d6889f8e73964ed528e16728c7b537fa882af95b43629f1d255d92ca17,INCLUDED
+PROJECT_AUDIT_INFO.md,.md,13712,351dd4a43836d1676c6080e90312281016ae0b926eddd2c6d79589686dd68f73,INCLUDED
+prompts/00_MASTER_PROMPT.md,.md,3533,ae6a517b45521a92895843d2ed19a5e274febf929be64bd8e66d06ca97ed2ccb,INCLUDED
+prompts/01_PHASE0_SETUP.md,.md,581,81b25fc4f29fc23d51c8ca635b734c2f2350f60c9962bdbe6b3ff0fd605e1125,INCLUDED
+prompts/02_PHASE1_VERTICAL_SLICE.md,.md,828,563173501d4e9bf712c275b6a0e4bbb3d1bf5ae358898b7216eaeaa31e0a41e9,INCLUDED
+prompts/03_PHASE2_LIVING_WORLD.md,.md,611,35fe93993492d40733983388d5a9011c246edcab2d26fc23c0dcbcefea204a59,INCLUDED
+prompts/04_PHASE3_CONTENT.md,.md,474,a5df032585b9d16036065e481444930a8fbaf40772db4e0a6675997b0a8213f4,INCLUDED
+README_START_HERE.md,.md,4055,63568bdcc4ec6f832b5931ecfef995a9055ac919190ca6fdcfc4c62a06b4d996,INCLUDED
+scenes/biomes/bamboo_forest.gd,.gd,7976,25a8dc2638adfe8d99c678a995f261ec010722f2ea3443d222257bfb8129e3ed,INCLUDED
+scenes/biomes/bamboo_forest.gd.uid,.uid,20,c097a972cf223cd0e7c56c1d5bceab1a21e17866945b37c052a02a38edc31b49,INCLUDED
+scenes/biomes/bamboo_forest.tscn,.tscn,8991,9463ace76f88e165634205fec433cb26dd3d769f1ed4472e787707ca0313aa0e,INCLUDED
+scenes/biomes/snake_swamp.gd,.gd,6897,25edbcecfdb7996b9e4543f9afdec2ed48761dc8b20e10d89a28f6f5c0d799b6,INCLUDED
+scenes/biomes/snake_swamp.gd.uid,.uid,20,727228d357f6551774c04f09e6342d503800667c9d378e26f9031bd9d63362cd,INCLUDED
+scenes/biomes/snake_swamp.tscn,.tscn,7240,de6de54d2440fa4c18f20298803b7dac8b03b6c4ac289c5596f3d02986efc516,INCLUDED
+scenes/biomes/sword_grave.gd,.gd,6885,0c2a75292d1583d08cd23915b5d726f2c761c4363d5833b38b00e4e0ddba1292,INCLUDED
+scenes/biomes/sword_grave.gd.uid,.uid,20,161e3aba88869822cd2c7c5b72668e0fca10453f4cf33f18551de66f373347d9,INCLUDED
+scenes/biomes/sword_grave.tscn,.tscn,7356,2d1480b8fba52ab7800d9732227fa98dfe176c11a739e2fa1672ea48e61210d4,INCLUDED
+scenes/bootstrap/bootstrap.gd,.gd,856,efbb9a67a4d6d961716e6203453a347f4d5c1624448d8d796be290670b8cfae4,INCLUDED
+scenes/bootstrap/bootstrap.gd.uid,.uid,20,be4c531d7b5ff9105ece12e254fc7a84d12916e658e122f810581f53eb20e39d,INCLUDED
+scenes/bootstrap/bootstrap.tscn,.tscn,1867,d8a98ff5ba43b66132fb4fa60e63b63e069231ce91d07472b77abf7b12bd6891,INCLUDED
+scenes/combat/combat_arena.gd,.gd,34639,6a77ed89ccfd179339d7a2c5de57bcf8901c2f2fd04cecc79cdb772ce7883af8,INCLUDED
+scenes/combat/combat_arena.gd.uid,.uid,20,6786e184166a1aa09c797cf9833e45c673cba0280840061ea6e293be30229045,INCLUDED
+scenes/combat/combat_arena.tscn,.tscn,9291,e3439965b53bebbd4e2c24622cb333fc172e8f157e29d4ee963555578536defe,INCLUDED
+scenes/cultivation/tribulation_arena.gd,.gd,6667,866d028a24a6833221c5b6643f95af7ad99b30a5a039360a5a0032b02457f3d8,INCLUDED
+scenes/cultivation/tribulation_arena.gd.uid,.uid,20,7a210fec76d57aabc94354cf5e3aad35fcfe14204a2b5070752f95f833ab480b,INCLUDED
+scenes/cultivation/tribulation_arena.tscn,.tscn,2596,ed87483d743755c8e72791ebbad1d4db305375c59f11d0ae570caaec7e6360c1,INCLUDED
+scenes/menu/main_menu.gd,.gd,1653,a4ca9853949c829631c2c6675c5542bb9547126ded8d556479592403ddfc5f97,INCLUDED
+scenes/menu/main_menu.gd.uid,.uid,20,c40033447619b54ff1c12ac91195299bcce653afb8127896dff728ca3ef9dedd,INCLUDED
+scenes/menu/main_menu.tscn,.tscn,3953,18ce5c95b989acc8f06646a95f8630ec3335f2208791807e05f6a602467f6a38,INCLUDED
+scenes/menu/new_game_modal.gd,.gd,1650,6eca86159dd6e766af8191a20263898329ace10b1ce442c411cfe46dbf10e2e4,INCLUDED
+scenes/menu/new_game_modal.gd.uid,.uid,20,da1337239cab7d284a0fb3bb7ebb6b7f55e199ba72430448d9a2577249e4980c,INCLUDED
+scenes/menu/new_game_modal.tscn,.tscn,3701,28291d153b8ab5aac733c284ecddda20da4389e5a9c877e4448a034e82e62129,INCLUDED
+scenes/menu/settings_modal.gd,.gd,2966,aeb2d2443a84b112267715e13568d9a0226cf7a8b40473bf2fa3e247df0defff,INCLUDED
+scenes/menu/settings_modal.gd.uid,.uid,19,8e94ce62372106803fa85dee4a959633727c7b1054ab75a7f214a33680775182,INCLUDED
+scenes/menu/settings_modal.tscn,.tscn,3243,07cd16d30d553e34cb61fa17a97dd538a66eecbd90f8bdd68271da4e692f851b,INCLUDED
+scenes/sects/sect_hall.gd,.gd,7616,8c560d151ddff99a61a8421e8d21a74f55002a71c843b8721fca37bb1b28c09e,INCLUDED
+scenes/sects/sect_hall.gd.uid,.uid,19,f9b27c0718da6e4f2aaea2dfa92b9636fa57eef7d23da0c4418b45a28ea9fc2e,INCLUDED
+scenes/sects/sect_hall.tscn,.tscn,8036,8ae1da3faf1a05aefa2b036cb1237d9c51c9caab676efc22837834877619d372,INCLUDED
+scenes/towns/npc_character.gd,.gd,5001,97392fb9d4672e32bee0284446690f0ab2b26b7d5bbcc1665acb9caedb76cf43,INCLUDED
+scenes/towns/npc_character.gd.uid,.uid,20,a85e0b0c6a444aa4a0a7b215fef3b6bcd9d7c0e69697e66d0bf967203edccf79,INCLUDED
+scenes/towns/npc_character.tscn,.tscn,3790,d3eaae3d6228bc8c7ae35bcd6726752b4aaeaeba1335ca62091426a109794993,INCLUDED
+scenes/towns/town_map_real.gd,.gd,15813,87e876c2c6fcee949f77a621567bf45b89a64940bfdbfa63f40f2db61e4e0e07,INCLUDED
+scenes/towns/town_map_real.gd.uid,.uid,20,55fa5b31b209c1a7b222bdd494b1348f294412def3171d47a2778764f57fbab1,INCLUDED
+scenes/towns/town_map_real.tscn,.tscn,14644,034c71c61e85173d287ce31c65d083da640f71a5e248506b1e2fcdb39f652147,INCLUDED
+scenes/towns/town_view.gd,.gd,6618,e5adf9198909995b7ff1a4dc58246b37321bd3a4d7cd7cda3b4f587e646d674e,INCLUDED
+scenes/towns/town_view.gd.uid,.uid,19,0ad9dd9821632542ab6936a832c56dac548a37f36fec4e34a6b5b70344a93464,INCLUDED
+scenes/towns/town_view.tscn,.tscn,16138,5c0f751e4495d846710fcaa991a0c5cafffc346a36d6a39e1336b4a852e87f66,INCLUDED
+scenes/ui/alchemy_modal.gd,.gd,6081,41d1f43eebf3d4bc605c56a646e71b7f53e73f812d21cad76423bf772f1cdb44,INCLUDED
+scenes/ui/alchemy_modal.gd.uid,.uid,19,5e8e929a5225667a0fc5fa833de4b53f727b569453edfef75af051f953f0d930,INCLUDED
+scenes/ui/alchemy_modal.tscn,.tscn,4301,934068fa4d07b12a7a21b79b5d79ff6d9a2ab4dd2860489c7a011ca2df88c3d6,INCLUDED
+scenes/ui/character_panel.gd,.gd,7593,874f2e2b88e5857fad9e020bd9eab1195dc6a024d86ae862da0a66e9bc2216ae,INCLUDED
+scenes/ui/character_panel.gd.uid,.uid,20,d36016454ca15516fc16c8baf71628f746cc1f43124d8a2aae55a33193ddd29f,INCLUDED
+scenes/ui/character_panel.tscn,.tscn,9169,37f74b04aad67d88a88a4df4b9937b21bfa5455a837d7a59d3bfc068ba8587c8,INCLUDED
+scenes/ui/coop_menu_modal.gd,.gd,4852,e430b5f9a9dc51bd20c5c7fbb1c66ea6f8b7af628b0d7a9646692014d88d9f57,INCLUDED
+scenes/ui/coop_menu_modal.gd.uid,.uid,20,86e85045e46026871214e4c153064be34ec10cc16edf6b52b83305dc2355ad2f,INCLUDED
+scenes/ui/coop_menu_modal.tscn,.tscn,5567,3aa5bb4744cd97b44e4b3cfebfcce607d2c822906432bd3bcd11e879e9e9762a,INCLUDED
+scenes/ui/dialogue_modal.gd,.gd,23937,95327947d45bf346b24123c21adcbcd96aa5b34f5f4ef71cffcfa2daa2ade6e2,INCLUDED
+scenes/ui/dialogue_modal.gd.uid,.uid,19,e69fe151edef1bf8a93f8ee41c177ec9b5e9218fd213dd2627c4ab4131fe5239,INCLUDED
+scenes/ui/dialogue_modal.tscn,.tscn,4078,288df31024a258bc8a1180c965b15fdd9e7f93398b9b53764b52e5dcdf280ded,INCLUDED
+scenes/ui/inventory_panel.gd,.gd,5425,e6c48819bb097d5714b7a7adaf417f19eb20f0349512cd384f485533de0d9b40,INCLUDED
+scenes/ui/inventory_panel.gd.uid,.uid,20,74459d7300506f4d91ad15ab814ebe747868c80ef8070e7cb375d4adbabece3e,INCLUDED
+scenes/ui/inventory_panel.tscn,.tscn,5304,06d15a2b679f8f330f1ea92bb8d8fe7d9b3afd1600e47a5d73e98b51710f8e01,INCLUDED
+scenes/ui/minimap.gd,.gd,8411,3ba88d3508b0ae4a2a76c95c509e5e908231aa42e70adb8d10de95d55826234f,INCLUDED
+scenes/ui/minimap.tscn,.tscn,2755,b455ef185944b5f27ddb73f39ed123510350f2665fcb3608b1a7930dbeee1e13,INCLUDED
+scenes/ui/monthly_summary_modal.gd,.gd,4358,a35677f48874705f15d90afef79ca8a8f5ae65205b39f700602db5f2667230ea,INCLUDED
+scenes/ui/monthly_summary_modal.gd.uid,.uid,20,76f45cfe8f36866e55914cf4a6780fac6b085e8b110b943aa2eb93b05762519f,INCLUDED
+scenes/ui/monthly_summary_modal.tscn,.tscn,6489,b4d4cc02050d8786acb59bd48bee649bc4aaaba5382c34cbb8fe18996a480259,INCLUDED
+scenes/ui/player_shop_modal.gd,.gd,7284,95ce18689bfb294b99e38c19c83aed62b4e556ce9b03f0ad7a3c285ca4b422d7,INCLUDED
+scenes/ui/player_shop_modal.gd.uid,.uid,20,1aefe718eb0140c62ea60a81339413bff9d52dc87b7f30fa52813915fb321b4e,INCLUDED
+scenes/ui/player_shop_modal.tscn,.tscn,5345,73e5cddbbc1bf9eb2b7b5b5e69d3d9bbe0d976d14df5aa63203337cd7c4f27f2,INCLUDED
+scenes/ui/sect_panel.gd,.gd,5752,ec0a8208c6b172860be8128021e32461e50f6cd9b603cce8bcc148951b30d391,INCLUDED
+scenes/ui/sect_panel.gd.uid,.uid,19,88fac98b635bdeadda7b528ff9ad4ae04ebda0febed03148489fcb8ef78a712e,INCLUDED
+scenes/ui/sect_panel.tscn,.tscn,4171,50e53db71c22945281ffb4b86c0e87675626be93e782fd252acea8580cd67031,INCLUDED
+scenes/ui/social_panel.gd,.gd,7288,7ff5167d6e0b4adb4c90c9a92472e204b53e9f44222d97ab58e31bd98844b0ac,INCLUDED
+scenes/ui/social_panel.gd.uid,.uid,19,c9cae0bcd0749c7610acb3b26ca897de5439c9b56940fba4a0c221768c2a797b,INCLUDED
+scenes/ui/social_panel.tscn,.tscn,11722,d6ca3225e60b15a1b1e425f2ff8c28484c80d8b215cf38ea13641e9d21b0ca44,INCLUDED
+scenes/ui/world_map_modal.gd,.gd,15848,69070cdfcb557cae6bb68540d05ebcd104442efd4487ae153f3fa67af19b8d58,INCLUDED
+scenes/ui/world_map_modal.tscn,.tscn,5563,20e881d3b6ea525773fb74f4f0724cdca7e3df131199542cfd747447c75511bd,INCLUDED
+scenes/vfx/vfx_alchemy_glow.gd,.gd,633,284c2d448d3a842a2b66e46e45fc502ddfe10639ade91bb2eaa91fa005e366d7,INCLUDED
+scenes/vfx/vfx_alchemy_glow.gd.uid,.uid,20,2b1cf61822394bd4e01708999258aa0c26d047f360917c24d7574b0a0682295c,INCLUDED
+scenes/vfx/vfx_alchemy_glow.tscn,.tscn,876,3b8175b5b55d7675268054f94df27b375ca3a88ccc5ea78c5593981d7b08abfd,INCLUDED
+scenes/vfx/vfx_bamboo_leaves.gd,.gd,474,693ab5be2759ac5734922495796c689110a6ff7a855717da06fd55da6d4d6208,INCLUDED
+scenes/vfx/vfx_bamboo_leaves.gd.uid,.uid,20,807fc808ef75c0f69d196c481ac85187d032f90b40815c3d9077287df01b7d8d,INCLUDED
+scenes/vfx/vfx_bamboo_leaves.tscn,.tscn,1026,c620c33c45ccb4f2c08e964d1978bb39c313f085dd13a8def14b3dfd3dea8f73,INCLUDED
+scenes/vfx/vfx_cultivation_aura.gd,.gd,2049,6d23bd4581e36f7ea59e5296780216d84cf3f995d740273f7ed603777d19ba7a,INCLUDED
+scenes/vfx/vfx_cultivation_aura.gd.uid,.uid,19,9142971ad009e853f68b64fa8a1d3f62f714e3b0f8dd78f1c5a10b2818be3100,INCLUDED
+scenes/vfx/vfx_cultivation_aura.tscn,.tscn,879,88ff96eec43ccc565fb8a8a7708a9785291900cd21296e233d129503c2911916,INCLUDED
+scenes/vfx/vfx_lightning_impact.gd,.gd,1172,a145f17d9408d2f74bbf78d4a2062aa5e42d14b43a78983f0816f197e267fee0,INCLUDED
+scenes/vfx/vfx_lightning_impact.gd.uid,.uid,20,61d9c25be08ff1c422b50a937deba8a0e5ce17787ab2325c8ba10bf1213e74fe,INCLUDED
+scenes/vfx/vfx_lightning_impact.tscn,.tscn,945,3fe8f5fc2ba75c0639ebc28b6997ed2046f6007bfa91be5c143287cadf181db8,INCLUDED
+scenes/vfx/vfx_sword_slash.gd,.gd,1876,89251749a6f797100fbffe11a5a664c58681c95c6feda4c6467ae10bef4ea237,INCLUDED
+scenes/vfx/vfx_sword_slash.gd.uid,.uid,20,33a1e4a9525a3e6356221695d0c84f9dede578471f41261991352d1520fee19a,INCLUDED
+scenes/vfx/vfx_sword_slash.tscn,.tscn,579,562feac39f62c60890cfa7b2a7ab50f4fcc461b3ccee94ed789a0235be369d55,INCLUDED
+scenes/world/hud.gd,.gd,6585,623ad228ba23e0b9327037248d7b45718241d54973cabc3c7c4d6fa3e6ee4355,INCLUDED
+scenes/world/hud.gd.uid,.uid,20,f97b35d43038be252904ec1bded8ca246f8290a43531fbc67135be1fdf598f3c,INCLUDED
+scenes/world/hud.tscn,.tscn,7273,8b61347e373f3b9f7c31ddb994bcfea824308a0c715a83dcdae91f08bfaafee1,INCLUDED
+scenes/world/pause_menu.gd,.gd,1595,ce4cfd392c7cc61b840d9f9d372166918f51e82859665ef46174baf27c9bed68,INCLUDED
+scenes/world/pause_menu.gd.uid,.uid,20,fd91ce0777aeb3cd07a0a53178e7c73b9ec899b3bac3b1b405f2a4708bbed63f,INCLUDED
+scenes/world/pause_menu.tscn,.tscn,2355,75e955687ab43099e4e32a3b8b1b50acc3b963011ffd93f23fa9e421168b61cf,INCLUDED
+scenes/world/player.gd,.gd,6873,479ea7c51bd6d4d1014faf8e573155cbaa9c9440e873f55c6bf380b195abe6f3,INCLUDED
+scenes/world/player.gd.uid,.uid,19,053e31e1eadba00cb418fb3105bd21f7bd2a5bb7dd454e8cfa3553a2f85d4568,INCLUDED
+scenes/world/player.tscn,.tscn,753,f0febea54466c8d286f1d915718a56cfa1f6efe04f9c0095aa2b27207ae8ebaf,INCLUDED
+scenes/world/province_world.gd,.gd,16693,be6a077c03099fc8a3e52fe6cc4836fb6f5b2b8c9546fd434e87760f5a4fcff5,INCLUDED
+scenes/world/province_world.tscn,.tscn,7657,8beb3fa3b92fbcf8fa80472db59b77ccd46cd581c4f69dee41a00e1150841bf5,INCLUDED
+scenes/world/world_map.gd,.gd,13233,6fc4e51490f50d986e6e8afdf2b4ecc19a537e0857504f324f76539fbcc36c46,INCLUDED
+scenes/world/world_map.gd.uid,.uid,20,39ca204677141d1b0ebcdb41972f5de6b4b43cfe55f0f0c8a3644cced1a944ae,INCLUDED
+scenes/world/world_map.tscn,.tscn,772,2f06471ab1c7ac2978d8de594eb4064347ccc754f77e0627d862a61e55de3210,INCLUDED
+scripts/core/audio_service.gd,.gd,16029,a77f0af4ce7ada36d6844124da0d51624a9c66a12edb06219ee440090156940b,INCLUDED
+scripts/core/audio_service.gd.uid,.uid,19,73d46d1d80be5986651afb820abb3e9b2f84cd5f56d45f18396cd0af72bbdab4,INCLUDED
+scripts/core/content_registry.gd,.gd,7542,0ce2767c521695f8fa0b78f9d26e9bf571aea41ceed189d0176b171c50e1740e,INCLUDED
+scripts/core/content_registry.gd.uid,.uid,20,8a8fcf5a9f1636e99bbde738f78b8c0b7e69794066c3db26ad1c3ea21807060e,INCLUDED
+scripts/core/event_bus.gd,.gd,1261,9d9c22c31dfc4baca74358a3404681e33d40c8f92d0d08bb93b56f4b05f77aed,INCLUDED
+scripts/core/event_bus.gd.uid,.uid,20,b089376b6d74a27f79ce283b87537e7760576c752ab77bc1285b35d438d46f2b,INCLUDED
+scripts/core/game_clock.gd,.gd,8232,304700afbde6e45082a66266784e47e6f14f80cbce27207bfd77abed4dd9282b,INCLUDED
+scripts/core/game_clock.gd.uid,.uid,20,02eb87dd3d9642ab50e0de2df2311a9dc1959ef2e7999aef608fd87b2b317a10,INCLUDED
+scripts/core/game_session.gd,.gd,28770,a94be7f73ce438f4a50fe5f3848ec6645841d82ed055a5b46676886f9819f22a,INCLUDED
+scripts/core/game_session.gd.uid,.uid,20,f85d2dd5d21f404a48db9f18d117a37be014be2a3138354b0a76525eec902307,INCLUDED
+scripts/core/rng_service.gd,.gd,890,15a0ca06f5d3ab3c9500942c8745f64a6bcd090bb819d3f48c8aeba30c08bb3e,INCLUDED
+scripts/core/rng_service.gd.uid,.uid,20,7999f63b54741de1b06a1f377f56811b1817092c3e0984e2a2c6775ce35967df,INCLUDED
+scripts/domain/alchemy_service.gd,.gd,4159,5c1b81adfca1299d1b4e1883580df7643cdf106ad2df3feba6305d4e9222930a,INCLUDED
+scripts/domain/alchemy_service.gd.uid,.uid,20,a7d9782f71dda9afa0e4763bb6cc489bfc24d1c0418fcb0a0904e0bcb8d14fa0,INCLUDED
+scripts/domain/dialogue_scenario_service.gd,.gd,55153,82761a02f64d95a0e66117198050a05edd043e47374ae8c708a3835c532b5a06,INCLUDED
+scripts/domain/dialogue_scenario_service.gd.uid,.uid,19,d34e741c3901abaebcff3dd4fdd1dbdfc9db1824fd82836d4fa15cee831345ee,INCLUDED
+scripts/domain/life_generator.gd,.gd,9150,6e7d905585354306856a17965797ed0ea8c62419a99403eab0228fd99968c3cc,INCLUDED
+scripts/domain/life_generator.gd.uid,.uid,20,ad6671d95e0dec1b42a2ff69515e4cdf81266ae8efadf80514a719359cb3645b,INCLUDED
+scripts/domain/monthly_simulation_service.gd,.gd,14524,20e44ee30319a517c40ec0dc8684815537648652437525e4cc04a3770d2b9e8c,INCLUDED
+scripts/domain/monthly_simulation_service.gd.uid,.uid,20,2510684c84edd62a6dd2318e128d03f1d1e8815982f2fc6a38c4fafa52a0d208,INCLUDED
+scripts/domain/sect_service.gd,.gd,10419,6fbb30fe660f571c16c885fb3c5f8aed4b72a8907a37f07c45fb7c5cd561c5c3,INCLUDED
+scripts/domain/sect_service.gd.uid,.uid,20,ddc966955946602c654cbbf7c569ae7face52eb04214bae0c5249398e7631884,INCLUDED
+scripts/domain/shop_service.gd,.gd,12230,dce27deacc68c83f50c0127ec90d88eb813ea9ff98b90fbd2c44d3dc719f2118,INCLUDED
+scripts/domain/shop_service.gd.uid,.uid,20,f677effde7fa99642c9ae742b692fd3b6d74503462b0296a46f92362fefc46ae,INCLUDED
+scripts/network/clock_replication.gd,.gd,4680,c0a4934f907b70a46cbacd6ea88c22e0fda1142625cee9978a0d71ae8733a60b,INCLUDED
+scripts/network/clock_replication.gd.uid,.uid,20,f86acdcc0f82c35fdd39858e32b1279d6f63cf0026dc0136ea809c6a3c5f41dc,INCLUDED
+scripts/network/coop_world_sync.gd,.gd,29076,986fae05b7972dc304ea1e241fec9312722397ffec93425b7e2f7898bb2d12ad,INCLUDED
+scripts/network/coop_world_sync.gd.uid,.uid,20,985d6c013575f36a7d988db70e11f9f1287a2af83712946779466ee9c995666b,INCLUDED
+scripts/network/session_authority.gd,.gd,4206,d6da2d84f9217ea8cc9da1913848b09145692a72abbda2efd8fb1c7d784d61c3,INCLUDED
+scripts/network/session_authority.gd.uid,.uid,20,4aa5b25369b7146fc2dc457e0f85f9383f357077983263e6eaa6a2eaaa8984ba,INCLUDED
+scripts/persistence/save_service.gd,.gd,5840,33d8744b0a5ca7e8b6e7979ded30288a59f40aa8d37e6670ffcc5b871724f7d6,INCLUDED
+scripts/persistence/save_service.gd.uid,.uid,19,355ac4c1128aef6bddd8f478e3b75249707ea82c612b9bc6e92c9b2335fd3177,INCLUDED
+scripts/politics/court_manager.gd,.gd,4159,432029728966219103ff7ed87c8a6fdecc6249a4571de8c691585b5fda383653,INCLUDED
+scripts/world/chunk_streamer.gd,.gd,15064,09389f32cb0b3b0538ac997f2731ae0a0971257141a397da2e6013181a05602c,INCLUDED
+scripts/world/world_registry.gd,.gd,5045,fd1df251d556cdf7c422780e9507b4845ac73d6b39157226ee5a0d65729013ab,INCLUDED
+tests/capture_branching_dialogue_screenshots.gd,.gd,3436,ae5e75a339d86b3e3eb5bcaff3a0f83f8723218b73293b77cc8ed218823cfb43,INCLUDED
+tests/capture_branching_dialogue_screenshots.gd.uid,.uid,20,6ee888314818a9dd28a26d56d6319b305b1b6bb8ba9675d87d63ad339db6febd,INCLUDED
+tests/capture_branching_dialogue_screenshots.tscn,.tscn,257,685efbe0d392f4ff3de84cf3e85909d2e20713feea6dd28b682463ffb097ceda,INCLUDED
+tests/capture_phase0_screenshots.gd,.gd,2589,9ac17aae361b2f5b474be4eaccdcd184ec763efeee78e33f009828868a03021a,INCLUDED
+tests/capture_phase0_screenshots.gd.uid,.uid,20,a37766cc9537d4c257c41999ce3a475a6860a476b0dd44af581a439a3ff6abbe,INCLUDED
+tests/capture_phase0_screenshots.tscn,.tscn,229,a38f7eac3cfb2a6ace2ff7d618d3e6a4d8a21297dcf7d6b29c74630728a9013d,INCLUDED
+tests/capture_phase1_screenshots.gd,.gd,3184,93e04db517b5382d8e83e114ab0b9434c278756f86e9da6badfc6a2c23c788db,INCLUDED
+tests/capture_phase1_screenshots.gd.uid,.uid,19,c0b28cd429f9fb6bb7cb1505094897963a67f81061f1e44108ff9c4014c6cd9e,INCLUDED
+tests/capture_phase1_screenshots.tscn,.tscn,223,499d83d5201d630cb4dd47b61e12a2a59e0dac9ac2ba40dbd7688629066b269b,INCLUDED
+tests/capture_phase2_biomes_screenshots.gd,.gd,3127,f7c0a1b0c72da378040771ec8c7f6fbbcd7793a21c10dbf7ec89d3ecf28b6884,INCLUDED
+tests/capture_phase2_biomes_screenshots.gd.uid,.uid,20,3eb0d19be34061b14b36ca902e377a768b57117e584e819d3a111a1c416eb15c,INCLUDED
+tests/capture_phase2_biomes_screenshots.tscn,.tscn,220,57ed881ec574f29792b133d6e4ccafc70385eccba684b03f915449ec3c08b14e,INCLUDED
+tests/capture_phase2_screenshots.gd,.gd,3192,cb8f2587c6f061d54c83a121d8b2945dd481675439f11d9fcf787918902701c9,INCLUDED
+tests/capture_phase2_screenshots.gd.uid,.uid,19,5385496adcd7dc82b97264167eb47d59e00980f5391b08abf7bcac350ede0263,INCLUDED
+tests/capture_phase2_screenshots.tscn,.tscn,228,baf28c6af267a88989655a5865fea792fab0853a35895fa951bfe015eeb96526,INCLUDED
+tests/capture_phase3_screenshots.gd,.gd,4566,380ae3c5b38583b7f53b0fdcc69a745adba6d5efdb67eedd0460e4bf24393157,INCLUDED
+tests/capture_phase3_screenshots.gd.uid,.uid,20,2a5752dc9126122cf2f9c5d6625fabc90d1716f0f719758e4c2541744b023196,INCLUDED
+tests/capture_phase3_screenshots.tscn,.tscn,225,db00111bfe26c5df0947e160d9672c3d69bbf9a67d7af5120759934650d74b35,INCLUDED
+tests/capture_phase3_sects_screenshots.gd,.gd,3719,f124973141ddc1303c7f22c24a1373ace193746d4a4f91ddda406b7326e5bae6,INCLUDED
+tests/capture_phase3_sects_screenshots.gd.uid,.uid,20,472ea7e660108c8c06c209524ee4fca1a3f82e4b4307df411c63a8c0d88db577,INCLUDED
+tests/capture_phase3_sects_screenshots.tscn,.tscn,216,5016fdb743213a9550e392d46719c1cbc9fe9eb0c4831375d8c04de7dafe90be,INCLUDED
+tests/capture_phase4_screenshots.gd,.gd,2742,f5088eabae2d459b3856de6ba9ddf8687c6282aa7aad1b4aa11a6ac880d27f87,INCLUDED
+tests/capture_phase4_screenshots.gd.uid,.uid,20,dcff8ec808a2fd996b4b34c6feb9a074d11f7aceb3f2c5b6e7eaf8fd44c8e914,INCLUDED
+tests/capture_phase4_screenshots.tscn,.tscn,207,af9788be08e30f175910705cd424c38d2115ccc9971e544160c735258b3a683e,INCLUDED
+tests/capture_phase4_vfx_screenshots.gd,.gd,3205,d58fea3dccb655e7bb3d75e589805f85b47a39caf39af7d089e81e8fe18c8bcc,INCLUDED
+tests/capture_phase4_vfx_screenshots.gd.uid,.uid,20,5fb3aae0665a2af3bb6149187feb653fe668b320d0c53bfea912c2fbfbc70516,INCLUDED
+tests/capture_phase4_vfx_screenshots.tscn,.tscn,220,602e4ca537e07028eaf53c820165a8f9a6673f7ab27e1bc20216245c46028355,INCLUDED
+tests/check_input.gd,.gd,447,35b64c98c2050d10a5aceff4cac73ed091bf2696aa39960b2685997016c026da,INCLUDED
+tests/check_input.gd.uid,.uid,19,bacc00bcfdd0455a1164167ed43e3397ce4fc1d549a27a885ad851aa321f7aea,INCLUDED
+tests/integration/coop_multi_client_live.gd,.gd,9133,0fbe90588568b4c925dbbbbd4a148253d246869e090c44b676b540c8c11af261,INCLUDED
+tests/integration/coop_multi_client_live.gd.uid,.uid,20,1e60d10406d7bd13b41f8675eff7fd7384053b7844e15554c5d48b749a2d5c85,INCLUDED
+tests/integration/coop_multi_client_live.tscn,.tscn,235,e0b0050d74a2dcdff36dd6e47ea54c21bf280346d25525ee7f05b1dd91aff069,INCLUDED
+tests/integration/coop_two_peers_runner.gd,.gd,12402,3c79bc76077258d6b558518e1a1cbfcbbe68e31a39f381940b7c386d651c597b,INCLUDED
+tests/integration/coop_two_peers_runner.gd.uid,.uid,20,0380643a83c6264a7e80b866817ec13628be349343d5dd8227d1edd91512d92b,INCLUDED
+tests/integration/coop_two_peers_runner.tscn,.tscn,232,9b29a59b57726f7d9efc859d5b06f4effbff185c42dd0856c47847d43875a7c6,INCLUDED
+tests/runner.gd,.gd,1495,b5209d827b1875061e515b1e6ca4f1bae457b07bfda415953f211b05bb44ce1e,INCLUDED
+tests/runner.gd.uid,.uid,20,3d7079c882e662fcdb5142eb50f1ac4360d9a406bbd0e9f49a64ff48a739a211,INCLUDED
+tests/test_runner.gd,.gd,5716,fe1f33ef91972dbe644d09642f0e6837571bbcef80dc1856610c6c0e992599ed,INCLUDED
+tests/test_runner.gd.uid,.uid,19,b3603df7f6992aacadd120c8c7f1d1ac1374fb1c22c832eb860d9c5ca1b55706,INCLUDED
+tests/test_runner.tscn,.tscn,203,10eb43ae21575d37708c366381ac0074b524887ea818334fa4a886065d90d198,INCLUDED
+tests/unit/test_branching_dialogue_and_world_shaping.gd,.gd,11561,525c35e139dda2d7b004a0827a2c3bfab515052a6c9dff9056e4e87bbc50aef2,INCLUDED
+tests/unit/test_branching_dialogue_and_world_shaping.gd.uid,.uid,19,0cb01e6ee8e8862c88227a0f467825f10e03a03705b51cbdfa5960361c25b0bb,INCLUDED
+tests/unit/test_coop_clock_sync.gd,.gd,3704,78778b7da7abbfbe8269e4a3bdb9ef118331d9d1c5aecdbc44c49e33bc3f5e57,INCLUDED
+tests/unit/test_coop_clock_sync.gd.uid,.uid,20,96271745aa968763d9c94029d5066f466a7c4ab2979c963cd2620d15c5a350b4,INCLUDED
+tests/unit/test_deterministic_seed.gd,.gd,2161,9eebc98b311804f2191e85e3607b1a734b38058e05a85ad4eaf7d54fd1bdc451,INCLUDED
+tests/unit/test_deterministic_seed.gd.uid,.uid,19,a093b036a6d49af273c7aa5eee8ac1e0b3dec7a6d7d37ff9cbd8818079a5e1b4,INCLUDED
+tests/unit/test_game_clock.gd,.gd,2431,df0b61bd1b94b39edbd278c1c429684d31cf81fd19382944d2927913864d37ea,INCLUDED
+tests/unit/test_game_clock.gd.uid,.uid,20,1cb17b1c5c0b3c05738c13c86e40ff205a2990b9b0bfb84b7763d274074f7907,INCLUDED
+tests/unit/test_game_clock_realtime.gd,.gd,3461,1c4b7a07799b881c9cd90de8f2e4a58a8f3b0818e6ac14d81db4a3be0a6290b8,INCLUDED
+tests/unit/test_game_clock_realtime.gd.uid,.uid,20,d443b90d32f58176b021593ac2468c36ab19405a6cc5f62b06c41b705cc87ebf,INCLUDED
+tests/unit/test_living_town_and_procedural_npc.gd,.gd,8216,0dfba3076c6048a571eeafcd3fbe83c01fb6811d2a739fdaa92aea76f23aeca8,INCLUDED
+tests/unit/test_living_town_and_procedural_npc.gd.uid,.uid,19,9da8025af9c16cc015d5efc47f2e18505aab9f8e1b7877d03342581a786c69ac,INCLUDED
+tests/unit/test_p0_v2_regression.gd,.gd,9523,a1c3c84bbfcdec44c340f431302100402288f9ccd90731d622fc903adba4ff3d,INCLUDED
+tests/unit/test_p0_v2_regression.gd.uid,.uid,19,a8b4a4ae8d9c37771cca15c7fe37b6b719323d5440d10548c9af6b3cde59ca9e,INCLUDED
+tests/unit/test_p0_v3_authoritative_economy.gd,.gd,11173,2cbfddc981ebcbec5104bb050fdc7ed78e5e25c929ad7ae7abd8fb2400d75b06,INCLUDED
+tests/unit/test_p0_v3_authoritative_economy.gd.uid,.uid,20,e39565bb45882e16581f36fc38bc38339e65b4f1e10906144cb1e9d5ae4cc66e,INCLUDED
+tests/unit/test_phase1_breakthrough.gd,.gd,3213,501bc4c4b71060d88536b75b55b1689ff142a513f4fceb8f2d3ab78ec7912caa,INCLUDED
+tests/unit/test_phase1_breakthrough.gd.uid,.uid,20,63b053f5591b13bb51e53b0c195e520b78a272c85854bcd27b3d19e718926327,INCLUDED
+tests/unit/test_phase1_inventory.gd,.gd,3272,8724b5b598f3195a80da7296f4f2a469ca465ba9556e457c602b3b4347864172,INCLUDED
+tests/unit/test_phase1_inventory.gd.uid,.uid,20,a724e2d8f1c006c2b650c68ae857fcae136f6c27fad3b6e703a138e02feea4e7,INCLUDED
+tests/unit/test_phase1_npc_affinity.gd,.gd,2492,d979e2e75994830940345d2e5b337e6ced4367a8189722f55d9d14b69ec2a6b0,INCLUDED
+tests/unit/test_phase1_npc_affinity.gd.uid,.uid,19,896e8e7add57aa60399a09115650978a62341f40a930baa51e10caceb1431052,INCLUDED
+tests/unit/test_phase1_quest_flow.gd,.gd,3285,58c2ea4200b1529b1442ee9e6f443fd86ee08252ee5d2caeccfef89bdfe1f883,INCLUDED
+tests/unit/test_phase1_quest_flow.gd.uid,.uid,20,ff8f1f37ce4c92675622a9322bca592e719b835a2efa67a56b242a08b9671f8d,INCLUDED
+tests/unit/test_phase2_biomes_and_dungeons.gd,.gd,8540,a74824d1dbe858aaab25f5ae1caea6de137216484053dcc37d081998153354d6,INCLUDED
+tests/unit/test_phase2_biomes_and_dungeons.gd.uid,.uid,20,37130802a94fae4f633ce04168492958ef7363ffa13bb1b347f0dc5062752fac,INCLUDED
+tests/unit/test_phase2_deterministic_simulation.gd,.gd,3263,dfab73e8cf18e419992fdb9408586cb409e6843012b8a1b790dd025c39c7a4e6,INCLUDED
+tests/unit/test_phase2_deterministic_simulation.gd.uid,.uid,20,c9a9e9fdb1b13f8e7e34c1f1ae0b0a09b6b75ba9a0b467e1cfe6118518421bb0,INCLUDED
+tests/unit/test_phase2_headless_stress.gd,.gd,2072,33f34a5d4d127cb9c1a8d9ca55479d3135cd3bf74a8a11ab3be7a926af91e49c,INCLUDED
+tests/unit/test_phase2_headless_stress.gd.uid,.uid,19,e99de9587d3bcbe0232c1a0271370878c40722d3bd4fc96fc84103bc1095a13b,INCLUDED
+tests/unit/test_phase2_npc_lifecycle.gd,.gd,3765,736d48fb484efd824f6486e5313f5ad417c5893c3fd60a9a490a4d76d6979718,INCLUDED
+tests/unit/test_phase2_npc_lifecycle.gd.uid,.uid,19,17dadeced8e935afaa6afc04a990be18a7f83d5d753fdf11e51fc594c6a97f38,INCLUDED
+tests/unit/test_phase2_npc_social_graph.gd,.gd,3380,0cf97f02832f9c9167563f2baa626e1324e4da11903fcfdf643e0b99107edfb2,INCLUDED
+tests/unit/test_phase2_npc_social_graph.gd.uid,.uid,19,433efe3e6787e8a00922c3325927b8074fe3c25fc45d035c3b46e0ff8bce13d3,INCLUDED
+tests/unit/test_phase3_alchemy.gd,.gd,3734,9b104cb1f191940c1a57e31386ed6af9f7d4fb1a8fd08eb4328f060831474a67,INCLUDED
+tests/unit/test_phase3_alchemy.gd.uid,.uid,20,7c39d048a62e016f266e3fd9272abd6174efca43d6bc3419a7c1f9f6ce61a359,INCLUDED
+tests/unit/test_phase3_bosses.gd,.gd,5150,5c138dd9490c4c23edc1849dd7b44faa6d843d777939da8acdfc198c8598d8a3,INCLUDED
+tests/unit/test_phase3_bosses.gd.uid,.uid,20,d58b7861e6e32904079bcfebfbf351287828ace9bab17273b17809f4aa658a5b,INCLUDED
+tests/unit/test_phase3_sects_and_tribulation.gd,.gd,17231,dfbae389be340ef3c4a813e96da3837ce64d894cb922171f661497c358f24b45,INCLUDED
+tests/unit/test_phase3_sects_and_tribulation.gd.uid,.uid,20,a57d9387f26f1800ab9b8732c2a37a6eb95ae4fb2e7bc535fe6d1a6da688db03,INCLUDED
+tests/unit/test_phase3_shop.gd,.gd,5013,5d9e46d6385441d9f345679ba522ff6c8bb697035878af90f47d73a5f07aa30f,INCLUDED
+tests/unit/test_phase3_shop.gd.uid,.uid,20,9f795e680021f4015355c632e1220ae282dac0157e44e69c6321aba6b6c44739,INCLUDED
+tests/unit/test_phase4_audio_and_vfx.gd,.gd,8853,8cf8bfba8e3ff42db7e92cfe91c1bb10c4f5c57de92370da093800b554f77808,INCLUDED
+tests/unit/test_phase4_audio_and_vfx.gd.uid,.uid,20,a5100442c7468b525de89fb95a906243754aac43e540c39bf8e27a6331a6a9d1,INCLUDED
+tests/unit/test_s0_stability_regression.gd,.gd,13992,41a871d36fbc50e9f68b9bf3737c19717be9b2b25886c8305586e48328125afd,INCLUDED
+tests/unit/test_s0_stability_regression.gd.uid,.uid,19,805e8092715715ee1763efafb827e7c4929bbea409fdcaf79815db2788edd9e0,INCLUDED
+tests/unit/test_save_roundtrip.gd,.gd,3669,37323810dabbb2a1b0e3f7c194cea2cc365447119615e9dc7882b152a0d0212c,INCLUDED
+tests/unit/test_save_roundtrip.gd.uid,.uid,19,010b465d3aa76b157d7e1d1556796e26d120a6e749c4ce9ad9b236e959db8afb,INCLUDED
+tests/unit/test_thap_nhi_tinh_m1.gd,.gd,5878,811a34c28647bc4aabb376423901cbb7ef3257727061a1f0fe2e47f58e34f4a7,INCLUDED
+tests/unit/test_thap_nhi_tinh_m2.gd,.gd,10972,06691f71b4a30d1b9799ac59abfd7ad9ec4c3229c296e1b343d7a46428903be4,INCLUDED
+tests/unit/test_thap_nhi_tinh_m3.gd,.gd,8234,08c38647e1b0aad51eb7d0bb25840f2602fa5842ff6943f2ede0bd111154f0b1,INCLUDED
+tests/unit/test_thap_nhi_tinh_m4.gd,.gd,8105,d79301be670668e76542600c2cfb0bc8a6ff97e791ac75887a777c25d7262e4c,INCLUDED
+tests/unit/test_thap_nhi_tinh_m5.gd,.gd,8190,033a0c10f41d87b9db42d86db673100001c3f9449e020440883b6ec4c6eb9a15,INCLUDED
+tests/unit/test_ui_world_map.gd,.gd,8115,a9f7e55a9d0a068c5f251f10ccd894838ca224031879beae65e6b5c8fb059203,INCLUDED
+tools/capture_graphics_after.gd,.gd,6906,2ac4295c4b0c72915c926e5e0864cd762cf6442136399d886303df01016d7baf,INCLUDED
+tools/export_audit_zip.py,.py,9057,581b85a8477cd55421fc98722334bab80c2f122cb8ec0783d2fb0a1205878179,INCLUDED
+tools/fetch_free_assets.py,.py,1792,61505634c4cfe3aaae8806d086e1bc0d9732f6535269c21225b9d93c7cd10e44,INCLUDED
+tools/find_chunk_items.py,.py,955,86cee10d373611c71781b82e9ee48c01da92db044e15a7a692b038242bf484b6,INCLUDED
+tools/generate_building_scenes.py,.py,4258,cbe1ba5fbe4e72aaefdb7993eb60bd8b929df2fa6cba0823fe0bd09da494b2c8,INCLUDED
+tools/generate_provinces_metadata.py,.py,2276,733a8871a384e3b0911d107119d3c3627da57e7644d28cffe773b399791ec108,INCLUDED
+tools/generate_wuxia_graphics.py,.py,38443,221bfdfa795f444678492b12966a36ee1a537301b70fffe059b96dc34c0a0049,INCLUDED
+tools/run_tests_capture_raw.py,.py,3882,541458a82c95d8471b2fe5daba2bab00b7bee7123580e0668eec26b07ceb70f8,INCLUDED
+tools/test_coop_gameplay_live.py,.py,7063,d831c1fee8b59d31f46876a54b9e9b60e40d798deecb64b97445f93890a88b5c,INCLUDED
+tools/test_coop_two_peers.py,.py,6886,417b0088cba628e745bf6fec7ca29c72bf64171c02d67990ece03f9ef724e3d1,INCLUDED
+wuxia/32/buildings/alchemy_hall.png,.png,1813,374a3a9c43b8ec169524463e962970fe051806c3b7defa0a40deb0a493772c0d,INCLUDED
+wuxia/32/buildings/alchemy_hall.png.import,.import,959,1d8c6f6cf5bfacd06b79164b496f9998f16c187f84a05b14202918d6a1d59b88,INCLUDED
+wuxia/32/buildings/alchemy_hall.tscn,.tscn,611,b4b1d0bb2c532d8e83ea35c8e69442182c3fe03324ef0ad258315c2167cf1272,INCLUDED
+wuxia/32/buildings/blacksmith_forge.png,.png,1742,e383bc866d9cf9b60c378127b91ca7a11794015b5c7cc7911172e09e9927cf44,INCLUDED
+wuxia/32/buildings/blacksmith_forge.png.import,.import,971,7db44e238577a4bd38e4d25eac28a1bc1b19cf247fd7c1ed8f82969c4470f40a,INCLUDED
+wuxia/32/buildings/blacksmith_forge.tscn,.tscn,619,9fb4aaafde7fd9cd5e9b694d9135b53d88127bfce2e35039f65c3fc615b36c2b,INCLUDED
+wuxia/32/buildings/courtyard_house.png,.png,1236,0f54bd7cae01730b4d46f77df27b9686a0b5196d1cbbe29940ccc50563e041a4,INCLUDED
+wuxia/32/buildings/courtyard_house.png.import,.import,968,673f67a7ed486dbfc67e1eef1633d7d1f212fb075bc3632cb55ed5a4646eec72,INCLUDED
+wuxia/32/buildings/courtyard_house.tscn,.tscn,616,ecb7a1de656346e2a01eaed7671d42052af512a75d9f2d5ea601ef1a8a99ab69,INCLUDED
+wuxia/32/buildings/gate_tam_quan.png,.png,2356,871d02c532ced10aaf22c524a9e4edd4585fc8319e015f47a6473264697c0431,INCLUDED
+wuxia/32/buildings/gate_tam_quan.png.import,.import,962,37da2e00a9211d6fba66d018988a73bd84899f536788e7ee8f2d7462d28ebcd7,INCLUDED
+wuxia/32/buildings/gate_tam_quan.tscn,.tscn,762,0fae42ebede6b257e95c522c1ded5d0ae4a2d14a3af62cfa92ee26e32a57ec51,INCLUDED
+wuxia/32/buildings/market_pavilion.png,.png,1776,039dd1e8440cea82a66cf69b4bcf4118d599e98a8ad959fff0dd2e95e129b301,INCLUDED
+wuxia/32/buildings/market_pavilion.png.import,.import,968,c610bb1dd4a85a8ecac81ddcc6bd2c9758f3325e4581fc9320b5ab91857da911,INCLUDED
+wuxia/32/buildings/market_pavilion.tscn,.tscn,617,c2feceadfc1e4880c89b07de4a240123e7b1f40c0a3b96df446333db788c5725,INCLUDED
+wuxia/32/buildings/moonlight_pavilion.png,.png,1125,7754b3a9e2c835b1609224fe4535c869f5ce78ca7856ac6b87d92bfdcdd2cb9b,INCLUDED
+wuxia/32/buildings/moonlight_pavilion.png.import,.import,977,1482e6f61e39e023814c496ad2fa2da4696664fe8edf117fd338977b4199afb6,INCLUDED
+wuxia/32/buildings/moonlight_pavilion.tscn,.tscn,621,8fddb225f11b2dcfea816489d1c2d6554f4315b3d8631d78c51be1d5ed8e1e18,INCLUDED
+wuxia/32/buildings/sect_palace_hall.png,.png,2857,0f6c77c6290bee1f57f229669acb53d39eda6317255824630eaedb3538a7a960,INCLUDED
+wuxia/32/buildings/sect_palace_hall.png.import,.import,971,93170060f24c43646c462326c8730cc1e804c0b092c0d4360b873752af0f0152,INCLUDED
+wuxia/32/buildings/sect_palace_hall.tscn,.tscn,619,9b0fa14d25d34bb5359db0b0fe4ffd0bd117779acc38ec44c3df3de20b170ce9,INCLUDED
+wuxia/32/buildings/tavern_inn.png,.png,2532,076190c84089200986d45ba2fc027a4b593825c9bbaeb31b55fd887b495c0248,INCLUDED
+wuxia/32/buildings/tavern_inn.png.import,.import,952,adb272d945a93e56f25de42100fc7b0862cd53f7f056a10ca871946b3b04744f,INCLUDED
+wuxia/32/buildings/tavern_inn.tscn,.tscn,607,4b2c4883ce453a39961aa3223d49db4f4dad4e6cb39b47bb5c15fc55d7be2af8,INCLUDED
+wuxia/32/enemies/bandit/attack_sheet.png,.png,30336,601c6cb84e04445d7edd891192ffd0540bd8e5c1d40998b50a14cc406078533d,INCLUDED
+wuxia/32/enemies/bandit/attack_sheet.png.import,.import,964,510ef86b61d6d9a97b504d33662210a4affc98ac3344a17acffd2c0e8974a9ba,INCLUDED
+wuxia/32/enemies/bandit/bandit.tscn,.tscn,352,ffb76c61563fe0ed7fc6e523f2ceea5b6b32fe5e409ee65d1a13240c0946035a,INCLUDED
+wuxia/32/enemies/bandit/bandit_frames.tres,.tres,39907,b89bb2ddb791fab05854bc7a55fda4f6fe7b6e4e166681ee6c21a6e4aa418890,INCLUDED
+wuxia/32/enemies/bandit/idle_sheet.png,.png,15507,3b79b486df507d224f4eddc89f409eb9674974e9cf16b68ca2d94300852050fa,INCLUDED
+wuxia/32/enemies/bandit/idle_sheet.png.import,.import,958,037c1807d7783281750245542b8877acf5a24968aa9e4526473e3ace7f11be39,INCLUDED
+wuxia/32/enemies/bandit/walk_sheet.png,.png,22814,309df876a3ffdd096c8973ddf2f065da6411c06b125aebbf638071b59b19e009,INCLUDED
+wuxia/32/enemies/bandit/walk_sheet.png.import,.import,958,0b59dbf12189cefe14d4b7ee25f36206a99c7e1d4206f1de2334bb2ec5cd1826,INCLUDED
+wuxia/32/heroes/swordsman/attack_sheet.png,.png,43057,b98f3da035151cb47cb13be89dd0348d919f807b7590e8f717fad689fad08d5b,INCLUDED
+wuxia/32/heroes/swordsman/attack_sheet.png.import,.import,966,a43114fa8de4be856dba0f09164958638ef8c58f6c9968a4d6289dc1edf2494f,INCLUDED
+wuxia/32/heroes/swordsman/combo_sheet.png,.png,67838,adea3dacd792d05632e3df364e2c2143fddd04366fde3cf3b574b7c3940e4fa2,INCLUDED
+wuxia/32/heroes/swordsman/combo_sheet.png.import,.import,963,19d7e66c50919df9a5457c06b945ae4c64a56f35cc8309a6fcf3004ec5f9e864,INCLUDED
+wuxia/32/heroes/swordsman/death_sheet.png,.png,35616,737d33dcb4e77d87861c70f814e9297440153eff15283e7f9e07295b9a85363c,INCLUDED
+wuxia/32/heroes/swordsman/death_sheet.png.import,.import,963,753826dad45e5c0263238df0fb18268416a7aabfc761977b750d53ac29179a30,INCLUDED
+wuxia/32/heroes/swordsman/hurt_sheet.png,.png,24576,aa67eb4a3b85555d16ce8351084d212f47612b6654c57203e92453919f895df8,INCLUDED
+wuxia/32/heroes/swordsman/hurt_sheet.png.import,.import,960,212fd0673d3ea61c96cd641c9986942bc90b5d473e7755ced0b10e0807156842,INCLUDED
+wuxia/32/heroes/swordsman/idle_sheet.png,.png,19462,2eb6af053a9d9a2e67b3f60c0a173a9f05753b4fa9477e53d49672d673919adb,INCLUDED
+wuxia/32/heroes/swordsman/idle_sheet.png.import,.import,959,20503ba7fb41d857009d15b764b005b98978223cb9a810319bc0fd990a4ba34e,INCLUDED
+wuxia/32/heroes/swordsman/qinggong_sheet.png,.png,68946,374c8748a2abc7e68b6e1870232b784c2bc0edb116dc8ebed5acd70c3ad21a07,INCLUDED
+wuxia/32/heroes/swordsman/qinggong_sheet.png.import,.import,972,39a2c2b0056a8a87186b9629bc26faa684dc6c48bad5213be7818caea31dda02,INCLUDED
+wuxia/32/heroes/swordsman/swordsman.tscn,.tscn,366,39173a752c98f6106472408af8eaef8b30816e49324dd4d0fd3ac80e927d4f0f,INCLUDED
+wuxia/32/heroes/swordsman/swordsman_frames.tres,.tres,126489,ff12ef3159a6b61ee24a07de0e705179a46444dff43badd0fe2cdd76f859521a,INCLUDED
+wuxia/32/heroes/swordsman/walk_sheet.png,.png,26134,26b9b1aede8851adba8da964b64421a752487ec46d3daa0395eeef43726f746f,INCLUDED
+wuxia/32/heroes/swordsman/walk_sheet.png.import,.import,960,669cafb88641f389fc3161a11d5bf1a224b15b9d42e22b3322b56cbbc0e83305,INCLUDED
+wuxia/32/landmarks/wm_bamboo_forest.png,.png,263,7b6ecd38b66af070d26db79fc9fec1d74f49c13e1e4c37eb8006840a18595367,INCLUDED
+wuxia/32/landmarks/wm_bamboo_forest.png.import,.import,971,5c6848a010636b0b117c1e3349588cc8a67b5ef6de3dd17391b7214f3ea2f056,INCLUDED
+wuxia/32/landmarks/wm_combat_peak.png,.png,400,9dae6eb4f460af8550ba1025c203b84b06d954763f10e6b1b9b00060bc2aec70,INCLUDED
+wuxia/32/landmarks/wm_combat_peak.png.import,.import,964,d4e389f97f66917225be7b17cedc5e18dd486a2304fc022d400dd8ed2bfd69d3,INCLUDED
+wuxia/32/landmarks/wm_snake_swamp.png,.png,305,6d348ec53c3c692723e651761c0787882a8a2f31ab0f1533897ba230221ab3fe,INCLUDED
+wuxia/32/landmarks/wm_snake_swamp.png.import,.import,964,f6be8fc05898d88d7da151b4c33703f4dac586fd71c2587e44de026d48215951,INCLUDED
+wuxia/32/landmarks/wm_sword_grave.png,.png,325,a2ddc088af4bb32ca62b9eea231b41c19f2583a8f55c3f6f94bc0923df071a13,INCLUDED
+wuxia/32/landmarks/wm_sword_grave.png.import,.import,965,0e59b336b8d1698b53f0c88027b875ef7ab65edc292098bd6c7304df78087a84,INCLUDED
+wuxia/32/landmarks/wm_thanh_tri_tran.png,.png,424,cc2953d4580c30e3d7b24c2950865aa40604725d02b435b4c573155bc0922f3c,INCLUDED
+wuxia/32/landmarks/wm_thanh_tri_tran.png.import,.import,974,cfc218b4e9f4e0f1b3c9f4402678451f4c778ba138e8e01afbe22e2aacd70e5f,INCLUDED
+wuxia/32/lights/light_l.png,.png,5296,e8ee518c3ef8134c78e403e9067ee9fccb6b0a3465dfa8fbe209a3f2cc48b4b4,INCLUDED
+wuxia/32/lights/light_l.png.import,.import,940,2b95e732ec1bac48590fa9403f0f9c883f35725a040063d0820790e5835560c7,INCLUDED
+wuxia/32/lights/light_m.png,.png,2527,e2a1be8582b9f8359b9fdda1d478488e49f6ed263040654ce78d2ff197e17c92,INCLUDED
+wuxia/32/lights/light_m.png.import,.import,941,916ca66305cd403f4cc6a5b0cfc71a98b81125f0f16e2abcb292261a966cbeae,INCLUDED
+wuxia/32/lights/light_s.png,.png,1254,c8e3606d705edf937e676ad35bc715281fbe244f48a5a290699d2285e2934d0f,INCLUDED
+wuxia/32/lights/light_s.png.import,.import,941,5c415559d061409d99a9a9afed715b4f28483316e2a2d6567ca9a8c54c854818,INCLUDED
+wuxia/32/nature/ancient_pine.png,.png,1259,1fe0483d44e690de7ad0a757afdc245bf8c24aab5b848d27ab9e2899c5e9e5a6,INCLUDED
+wuxia/32/nature/ancient_pine.png.import,.import,953,ec19cf49954021dd36e9431c836cc94194caa37597e47776df5cf6d860e2c282,INCLUDED
+wuxia/32/nature/ancient_pine.tscn,.tscn,607,b45be566babdb7018ae4dd8c925925321580ac3ff71c05c758e6ba1c5497e433,INCLUDED
+wuxia/32/nature/bamboo_cluster.png,.png,1403,b8b67c3b671705823fb6522628ce28f405b15d2ab91050e7534710e5f4d26e2d,INCLUDED
+wuxia/32/nature/bamboo_cluster.png.import,.import,962,da0fc8af66f79c178bfcd7e75dae2e0943d11d91c16cc25a62fe0b165f940b29,INCLUDED
+wuxia/32/nature/bamboo_cluster.tscn,.tscn,609,a8ee357e17b3b247b88f0ff47beeaf14f02f9bf215c5d0df94cc3695f718d88b,INCLUDED
+wuxia/32/nature/cavern_entrance.png,.png,770,62a7970a2403777fefc91b0af8d029d8fdaf58f20fc9211c466d98f3bb3b3c45,INCLUDED
+wuxia/32/nature/cavern_entrance.png.import,.import,964,b0138f1f37122ce6473122bee37dc5bcb9839fea1aa7e4d3e6e23f875cdb1645,INCLUDED
+wuxia/32/nature/cavern_entrance.tscn,.tscn,612,2f187a382a2c3142a37c1e7a50aa4de5211a1a090d5d14316c4c5f658465c8e4,INCLUDED
+wuxia/32/nature/swamp_shrine.png,.png,467,0104131952c4966061a11930f31f9dfd3cc6696f74e309c8eb38ba4cf6c88a69,INCLUDED
+wuxia/32/nature/swamp_shrine.png.import,.import,956,2a41caa37111579fcdcdff2eb5d8384550b430374baa7f190e67973ac447cdd6,INCLUDED
+wuxia/32/nature/swamp_shrine.tscn,.tscn,606,97b09a0f3485f38fd612f68b33887eca28f3d116eb7e7c24f10a36e9c46a4afa,INCLUDED
+wuxia/32/nature/sword_monolith.png,.png,648,e910289a0774264a4ffe2929983877c22b8e5f0ef7d87b859baf0fb819f76d45,INCLUDED
+wuxia/32/nature/sword_monolith.png.import,.import,962,9ce2c66c6ec585c4ff336cbd28f33b335d39724776f7715df9564fa08595590c,INCLUDED
+wuxia/32/nature/sword_monolith.tscn,.tscn,610,7c2ae88f524fd494a6ef3bdb6c2eb025b33ea76cf50be22c562e326ee91e1545,INCLUDED
+wuxia/32/props/town/barrel.png,.png,477,ddee0872540f3d4275775389b09e131c354acb221590926694ce20f273868503,INCLUDED
+wuxia/32/props/town/barrel.png.import,.import,941,8ff245eacfb7524895f62aae043112c04943c4f00da8497c068ec480ce323f29,INCLUDED
+wuxia/32/props/town/barrel.tscn,.tscn,259,9f523c909356c018e4be0c8c95610c7f77131f7ea38739d78b89c351b958aa6f,INCLUDED
+wuxia/32/props/town/baskets.png,.png,1031,3f230fb577020ab8468a3541aedc90cc29fa48e37ff04da8e93f63d8ffd87f55,INCLUDED
+wuxia/32/props/town/baskets.png.import,.import,945,f51357ade69afb96d3678d595ea66c3583c1be1ccfa41ca1a60455c7112fed56,INCLUDED
+wuxia/32/props/town/baskets.tscn,.tscn,263,0c7fb7adbad5dcc29d47be485f6a8d4621446423363521b440fc4ebfd6409659,INCLUDED
+wuxia/32/props/town/bench.png,.png,346,dc1a3096c76b64c4d2f4c9a76d55692b821093a4d0d8e9a35907a26ac1b0a010,INCLUDED
+wuxia/32/props/town/bench.png.import,.import,939,ef0fce124fad1a223011089079352689b4f908739081b9716ef1dd724348b586,INCLUDED
+wuxia/32/props/town/bench.tscn,.tscn,255,160f7f43a1150b8fdd9efc1ac821775d72cfe18dc5e5447041f7d33987044933,INCLUDED
+wuxia/32/props/town/chest_closed.png,.png,381,4d8568d7583d9035e28f831f81f5e1a53979d69e21b17fd09594362b03cafd33,INCLUDED
+wuxia/32/props/town/chest_closed.png.import,.import,960,96ad1f69b968dc190d8b316eb17cf9d86b2dc32ccbdf0879402414ba410aa918,INCLUDED
+wuxia/32/props/town/chest_closed.tscn,.tscn,283,a753b2e98d3879c25a8ba21ee0be9299c68f70b1e534237bc29836114568b7a3,INCLUDED
+wuxia/32/props/town/jar_large.png,.png,403,78d817de67ceeaa11246168beb3d27e502b388db5991dc54df00cf5df7273610,INCLUDED
+wuxia/32/props/town/jar_large.png.import,.import,950,63c6a2ed514aceeda82944816df5443b917f9f3939be282b9a696516036ba655,INCLUDED
+wuxia/32/props/town/jar_large.tscn,.tscn,271,f07b65927a57751bf07715b3289185562258aea72f0416875b4c507846c362b4,INCLUDED
+wuxia/32/props/town/jar_small.png,.png,335,2963da11decc6168372149edae140432ebb6ae882e67cf372ae4fc5c578e9917,INCLUDED
+wuxia/32/props/town/jar_small.png.import,.import,951,a9865936f120209d2b253052fa49884fa3af9bce9d539f3d46b72fbe7169ab94,INCLUDED
+wuxia/32/props/town/jar_small.tscn,.tscn,270,901d8a37feb370dca39c1cddd30962f21c0ef06eb03943db0d0d90de662b2305,INCLUDED
+wuxia/32/props/town/market_stall.png,.png,1337,bdd2ffea1ae2054003f6e03d9b8d8e5de888e4911c84f0a6428ac37d3c66e410,INCLUDED
+wuxia/32/props/town/market_stall.png.import,.import,960,cafdd217b39e275ee0acb656467834d460fd06a2dd28deb3b3414ed0eec9eb2d,INCLUDED
+wuxia/32/props/town/market_stall.tscn,.tscn,283,1d39ca6dc8b1a9855ab6464903ae542b402be7b5710ef27debec119e7f8e0fa5,INCLUDED
+wuxia/32/props/town/pole_lantern.png,.png,789,ff1aa62ffc44444e6dfe60f672efbf8447edbdd915c60ed964f2617a7d888cc3,INCLUDED
+wuxia/32/props/town/pole_lantern.png.import,.import,960,598c68acd7dc2165457fcac8b823bff0bffd82f9db17888a513159f812b38ed9,INCLUDED
+wuxia/32/props/town/pole_lantern.tscn,.tscn,520,810f1dc8bb124a11e3a2dd3bdffef52d6dbdc03be2f25293365335d5fc01a0cb,INCLUDED
+wuxia/32/props/town/rice_sacks.png,.png,819,e30a86c545f74b67030f130a103d1081d84334a9ad6ffc98cf3009cd06233666,INCLUDED
+wuxia/32/props/town/rice_sacks.png.import,.import,954,bba666727f7b9ccdd3d089d59110c51ba987ab4947ff5bd3c59e1292c0a8db49,INCLUDED
+wuxia/32/props/town/rice_sacks.tscn,.tscn,275,31afa5c2abed646ec87989ae6959617787c1a2cad7f8a5e4f2d4b4e998c8095d,INCLUDED
+wuxia/32/props/town/stone_lantern.png,.png,1066,4edb94d5175a25666dec632352d6dfd51cca76f6edd04357ba4d1060ba74268a,INCLUDED
+wuxia/32/props/town/stone_lantern.png.import,.import,963,89a1773e692abbe88ce5ef7c7460c49c13c6af7bc986312c687c8065783630a0,INCLUDED
+wuxia/32/props/town/stone_lantern.tscn,.tscn,524,b128a58cc8ceb8ef83d72a05e7558d33eed8ab4b11329c8d673c2a1b9e766c91,INCLUDED
+wuxia/32/props/town/water_jar.png,.png,673,7af48c4e7c3450fc1bf7768c2097f4c0fbc4c5d4ae75fe5d775f8540e4d95751,INCLUDED
+wuxia/32/props/town/water_jar.png.import,.import,950,99805887e4145ff0bf3f080ec04d594ddce0366b19887570482a3d225f8503f0,INCLUDED
+wuxia/32/props/town/water_jar.tscn,.tscn,271,e48dbba8bc2dc28eced3722e2f1a0196325326c496d33cef94b067240fec6718,INCLUDED
+wuxia/32/props/town/well.png,.png,1885,5a69d17f1a454eccaa880a43c55da73b382da17a5de1b8a3f782ce824047c61b,INCLUDED
+wuxia/32/props/town/well.png.import,.import,936,03780fa1f18977b821ef303e0a49033e2c2209329b04feb6b576b1b0292ffd6c,INCLUDED
+wuxia/32/props/town/well.tscn,.tscn,251,8c26fe116576ba9c27bac332be87c9cfafac396819a33612017854115d1a819e,INCLUDED
+wuxia/32/tiles/terrain.png,.png,8011,fa235d0e9341a66e68ba48cd96933359030c9b7e6a907ca6a07962c8ac8a3222,INCLUDED
+wuxia/32/tiles/terrain.png.import,.import,940,d1f5ab0491ac38ce6723ef31d291ca2425f9be74f3c7410acf0205352c09be7a,INCLUDED
+wuxia/32/tileset.tres,.tres,14670,6aeded78998844bc5f8575cd6bbe4b8f70c9705349df3464e81a212203be070a,INCLUDED
+wuxia/demo/canal_corner.tscn,.tscn,12788,db31f0542938825a9ff1d69335254810d25e71349f7cced0d06950026e7c13e5,INCLUDED
+wuxia/demo/capture_demo.gd,.gd,429,060f0ba4030332dd2a52bf531547f2af71309e81e8edffedc18081f8b8be257a,INCLUDED
+wuxia/demo/capture_demo.gd.uid,.uid,20,93e0476996ba11281f77cfde3beedf9caffeba5f9c53193693fde55048065623,INCLUDED
+wuxia/demo/capture_demo.tscn,.tscn,183,39ec8415a995f0217e3bc12ae0753ed26abb6d49609e1683dacc8e676e62c10d,INCLUDED
+audit/FILE_MANIFEST.csv,.csv,114046,797cde428a0ac0945be9b3032c845ee8f7f8b0d718f0ac9059841c318fe6f6e9,INCLUDED

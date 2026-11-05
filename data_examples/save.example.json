@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "game_version": "0.0.1-prealpha",
+  "world_seed": 421337,
+  "clock": {
+    "year": 1,
+    "month": 1,
+    "day": 1
+  },
+  "player": {
+    "id": "player_001",
+    "name": "Tán Tu",
+    "region_id": "reg_thanh_tri",
+    "position": {
+      "x": 120,
+      "y": 240
+    },
+    "realm_tier": 0,
+    "realm_stage": "early",
+    "hp": 100,
+    "mp": 60,
+    "inventory": []
+  },
+  "npc_states": {},
+  "faction_states": {},
+  "quest_states": {},
+  "region_states": {},
+  "event_log": [],
+  "rng_counters": {}
+}

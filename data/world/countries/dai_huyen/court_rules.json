@@ -1,0 +1,37 @@
+{
+  "decrees": [
+    {
+      "id": "decree_market_tax",
+      "title": "Chiếu Chỉ Điều Tiết Thuế Thị Trường",
+      "ministry": "ho_bo",
+      "description": "Hộ bộ ban bố sắc lệnh điều chỉnh thuế suất giao dịch tại các sạp hàng và chợ lớn nhằm cân đối quốc khố.",
+      "effects": {
+        "stall_lease_multiplier": 1.1,
+        "market_item_tax_rate": 0.08,
+        "treasury_delta": 50000
+      }
+    },
+    {
+      "id": "decree_bounty_monsters",
+      "title": "Bố Cáo Huyền Thưởng Trảm Yêu",
+      "ministry": "binh_bo",
+      "description": "Binh bộ ra lệnh treo thưởng cho các tán tu và thợ săn dẹp trừ yêu thú ngoại ô, tăng mạnh điểm cống hiến và phần thưởng chiến đấu.",
+      "effects": {
+        "monster_bounty_multiplier": 1.25,
+        "hunter_reward_boost": 20,
+        "local_security_boost": 15
+      }
+    },
+    {
+      "id": "decree_grain_subsidy",
+      "title": "Chiếu Chỉ Bình Ổn Giá Lương Thực & Linh Dược",
+      "ministry": "ho_bo",
+      "description": "Mở kho lương cứu trợ phàm nhân và hỗ trợ đan sư thảo dược, hạ giá thành thuốc men và đan dược hồi phục.",
+      "effects": {
+        "medicine_price_discount": 0.15,
+        "peasant_stability": 25,
+        "treasury_delta": -30000
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdlgcap001"]
+
+[ext_resource type="Script" path="res://tests/capture_branching_dialogue_screenshots.gd" id="1_dlgcap"]
+
+[node name="CaptureBranchingDialogueScreenshots" type="Node"]
+script = ExtResource("1_dlgcap")

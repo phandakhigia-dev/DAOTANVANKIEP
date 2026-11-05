@@ -1,0 +1,181 @@
+{
+ "tile": 32,
+ "palette": "../../../palette.hex",
+ "note": "every icon centred on a transparent square canvas; status icons are framed (buff = jade rim, debuff = cinnabar rim)",
+ "categories": {
+  "weapons": {
+   "count": 2,
+   "cell": 32
+  },
+  "armour": {
+   "count": 1,
+   "cell": 32
+  },
+  "elixirs": {
+   "count": 2,
+   "cell": 32
+  },
+  "manuals": {
+   "count": 1,
+   "cell": 32
+  },
+  "talismans": {
+   "count": 1,
+   "cell": 32
+  },
+  "food": {
+   "count": 1,
+   "cell": 32
+  },
+  "materials": {
+   "count": 1,
+   "cell": 32
+  },
+  "status": {
+   "count": 1,
+   "cell": 32
+  }
+ },
+ "icons": [
+  {
+   "name": "jian_plain",
+   "category": "weapons",
+   "tags": [
+    "sword",
+    "jian",
+    "blade",
+    "melee"
+   ],
+   "file": "weapons/jian_plain.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "dao_broad",
+   "category": "weapons",
+   "tags": [
+    "saber",
+    "dao",
+    "blade",
+    "melee"
+   ],
+   "file": "weapons/dao_broad.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "robe_white",
+   "category": "armour",
+   "tags": [
+    "robe",
+    "body",
+    "light"
+   ],
+   "file": "armour/robe_white.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "pill_red",
+   "category": "elixirs",
+   "tags": [
+    "pill",
+    "elixir",
+    "health"
+   ],
+   "file": "elixirs/pill_red.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "gourd_wine",
+   "category": "elixirs",
+   "tags": [
+    "gourd",
+    "drink",
+    "container"
+   ],
+   "file": "elixirs/gourd_wine.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "manual_blue",
+   "category": "manuals",
+   "tags": [
+    "book",
+    "manual",
+    "skill"
+   ],
+   "file": "manuals/manual_blue.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "talisman_yellow",
+   "category": "talismans",
+   "tags": [
+    "talisman",
+    "paper",
+    "charm"
+   ],
+   "file": "talismans/talisman_yellow.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "steamed_bun",
+   "category": "food",
+   "tags": [
+    "food",
+    "bread"
+   ],
+   "file": "food/steamed_bun.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "copper_coin",
+   "category": "materials",
+   "tags": [
+    "coin",
+    "currency"
+   ],
+   "file": "materials/copper_coin.png",
+   "size": [
+    32,
+    32
+   ]
+  },
+  {
+   "name": "poison",
+   "category": "status",
+   "tags": [
+    "status",
+    "debuff",
+    "damage"
+   ],
+   "file": "status/poison.png",
+   "size": [
+    32,
+    32
+   ]
+  }
+ ]
+}

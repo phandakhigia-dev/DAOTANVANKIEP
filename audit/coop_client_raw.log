@@ -1,0 +1,39 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+
+=======================================================
+  CO-OP INTEGRATION TEST (2 TIẾN TRÌNH ĐỘC LẬP)
+  Vai Trò: CLIENT | Port: 8899 | TimeScale Khóa Cứng: 1.0
+=======================================================
+
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Đang kết nối tới host 127.0.0.1:8899 (Cố định time_scale = 1.0)...
+[SessionAuthority] Kết nối thành công tới Server!
+[SessionAuthority] Peer kết nối: 1
+✓ [PASS] T-CLIENT-01: Client kết nối thành công tới Server localhost:8899 (Peer ID: 1809052106)
+✓ [PASS] T-CLIENT-02: Client time_scale được khóa cứng 1.0 chuẩn xác
+[CoopWorldSync] Đã tiếp nhận và áp dụng Full World State (kèm NPCs & Revision) từ Host.
+✓ [PASS] T-CLIENT-03: Client nhận được tín hiệu Boss bị tiêu diệt và loot đồng bộ từ Host
+[CoopEconomy] Client đã đồng bộ kho sạp hàng mới nhất từ Server.
+✓ [PASS] T-CLIENT-04: Client mua thành công món hàng cuối từ sạp (-30 LT, nhận 1x Hồi Xuân Đan)
+[CoopEconomy] Bỏ qua phản hồi trùng lặp/cũ (Rev 2 <= Local 2). Không cấp item lặp!
+✓ [PASS] T-CLIENT-05: Giao dịch khi kho hết hàng bị Host từ chối an toàn (Chống nhân bản đồ)
+[CoopWorldSync] Client tiếp nhận snapshot mô phỏng thế giới Tháng 2 Năm 1 từ Host (Rev 1, 36 NPCs).
+✓ [PASS] T-CLIENT-06: Client tiếp nhận snapshot mô phỏng thế giới Tháng 2 Năm 1 từ Host
+✓ [PASS] T-CLIENT-07: Client chủ động ngắt kết nối (Disconnect) để kiểm tra Reconnect
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Đang kết nối tới host 127.0.0.1:8899 (Cố định time_scale = 1.0)...
+[SessionAuthority] Kết nối thành công tới Server!
+[SessionAuthority] Peer kết nối: 1
+✓ [PASS] T-CLIENT-08: Client kết nối lại (Reconnect) thành công tới Host
+[CoopWorldSync] Đã tiếp nhận và áp dụng Full World State (kèm NPCs & Revision) từ Host.
+[SessionAuthority] Peer ngắt kết nối: 1
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 1 (Giữ nguyên authoritative ledger)
+[SessionAuthority] Server đã đóng hoặc mất kết nối.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+
+-------------------------------------------------------
+TỔNG KẾT [CLIENT]: 8 ĐẠT (PASS) | 0 THẤT BẠI (FAIL)
+=======================================================
+

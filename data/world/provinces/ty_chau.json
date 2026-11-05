@@ -1,0 +1,18 @@
+{
+  "province_id": "ty_chau",
+  "display_name": "Tý Châu",
+  "country_id": "dai_huyen",
+  "theme": "Sông ngòi, cảng biển, mậu dịch thủy",
+  "status": "metadata_only",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "neighbor_provinces": [
+    "thin_chau",
+    "suu_chau",
+    "hoi_chau"
+  ]
+}

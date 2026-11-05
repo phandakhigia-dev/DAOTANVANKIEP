@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcooprun001"]
+
+[ext_resource type="Script" path="res://tests/integration/coop_two_peers_runner.gd" id="1_coop"]
+
+[node name="CoopTwoPeersRunner" type="Node"]
+script = ExtResource("1_coop")

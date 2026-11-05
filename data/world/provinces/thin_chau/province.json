@@ -1,0 +1,107 @@
+{
+  "province_id": "thin_chau",
+  "display_name": "Thìn Châu",
+  "country_id": "dai_huyen",
+  "element": "Lôi / Thổ / Long Mạch",
+  "status": "playable_in_progress",
+  "size_tiles": [4096, 4096],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "total_chunks_per_axis": 64,
+  "generation_revision": 1,
+  "capital_city_id": "settlement_long_kinh",
+  "governor": {
+    "npc_id": "npc_thin_governor",
+    "name": "Trần Bá Nhai",
+    "title": "Thìn Châu Tiết Độ Sứ",
+    "loyalty": 88
+  },
+  "settlements": [
+    {
+      "id": "settlement_long_kinh",
+      "name": "Kinh Đô Long Kinh",
+      "type": "capital_city",
+      "chunk_x": 20,
+      "chunk_y": 20,
+      "tile_x": 1280,
+      "tile_y": 1280,
+      "facilities": ["hoang_cung", "luc_bo_nha_mon", "dai_thi_truong", "dau_gia_cac"],
+      "description": "Kinh đô Đại Huyền, nơi ngự trị của Huyền Thiên Đế, hào lũy trùng điệp, vạn thương hội tụ."
+    },
+    {
+      "id": "settlement_thanh_tri",
+      "name": "Huyện Thành Thanh Trì",
+      "type": "county_town",
+      "chunk_x": 32,
+      "chunk_y": 32,
+      "tile_x": 2048,
+      "tile_y": 2048,
+      "facilities": ["player_stalls", "alchemy_furnace", "blacksmith_forge", "tavern", "sect_branch_hall", "ancient_well"],
+      "description": "Huyện thành phồn hoa vùng trung nguyên Thìn Châu, nơi giao thoa giữa phàm nhân và giới tán tu."
+    },
+    {
+      "id": "settlement_dong_noi",
+      "name": "Thôn Đồng Nội",
+      "type": "village",
+      "chunk_x": 30,
+      "chunk_y": 34,
+      "tile_x": 1920,
+      "tile_y": 2176,
+      "facilities": ["rice_paddies", "herb_gardens"],
+      "description": "Làng quê bình dị, bạt ngàn ruộng lúa phì nhiêu và các gia đình phàm nhân cần lao."
+    },
+    {
+      "id": "settlement_tay_son",
+      "name": "Trấn Khai Khoáng Tây Sơn",
+      "type": "mining_town",
+      "chunk_x": 16,
+      "chunk_y": 32,
+      "tile_x": 1024,
+      "tile_y": 2048,
+      "facilities": ["iron_mine", "smelting_furnace"],
+      "description": "Thị trấn thợ mỏ dưới chân rặng núi Tây Sơn, sản sinh khoáng thạch và huyền thiết."
+    },
+    {
+      "id": "settlement_bac_lam",
+      "name": "Lâm Trấn Bắc Lâm",
+      "type": "forestry_village",
+      "chunk_x": 32,
+      "chunk_y": 20,
+      "tile_x": 2048,
+      "tile_y": 1280,
+      "facilities": ["timber_yard", "hunter_guild"],
+      "description": "Thôn thợ săn nép mình bên bìa rừng cổ thụ Bắc Lâm, nơi tiếp giáp lãnh địa yêu thú."
+    }
+  ],
+  "biomes": [
+    {
+      "id": "biome_central_plains",
+      "name": "Đồng Bằng Thanh Trì - Long Kinh",
+      "center_chunk": [32, 32],
+      "radius_chunks": 8,
+      "primary_terrain": "grassland_and_roads"
+    },
+    {
+      "id": "biome_bamboo_forest",
+      "name": "Bí Cảnh Rừng Trúc Vạn Lĩnh",
+      "center_chunk": [32, 28],
+      "radius_chunks": 4,
+      "primary_terrain": "dense_bamboo_and_grotto"
+    },
+    {
+      "id": "biome_snake_swamp",
+      "name": "Độc Trạch Hắc Xà",
+      "center_chunk": [28, 36],
+      "radius_chunks": 4,
+      "primary_terrain": "toxic_bog_and_shrine"
+    },
+    {
+      "id": "biome_sword_grave",
+      "name": "Cổ Kiếm Trũng",
+      "center_chunk": [36, 32],
+      "radius_chunks": 4,
+      "primary_terrain": "craggy_waste_and_sword_ruins"
+    }
+  ],
+  "neighbor_provinces": ["ty_chau", "dan_chau", "ngo_chau", "mao_chau"]
+}

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://wuxia/32/props/town/pole_lantern.png" id="1_pole_lantern"]
+[ext_resource type="Texture2D" path="res://wuxia/32/lights/light_l.png" id="2_light_l"]
+
+[node name="pole_lantern" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_pole_lantern")
+centered = false
+offset = Vector2(-16, -63)
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(0, -42)
+texture = ExtResource("2_light_l")
+texture_filter = 1
+visible = false

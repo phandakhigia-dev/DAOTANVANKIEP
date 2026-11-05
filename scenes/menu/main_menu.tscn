@@ -1,0 +1,130 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmainmenu001"]
+
+[ext_resource type="Script" path="res://scenes/menu/main_menu.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://bnewgame0001" path="res://scenes/menu/new_game_modal.tscn" id="2_newm"]
+[ext_resource type="PackedScene" uid="uid://bsetting0001" path="res://scenes/menu/settings_modal.tscn" id="3_setm"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.105882, 0.129412, 1)
+
+[node name="InkMistDeco" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.18, 0.22, 0.35)
+
+[node name="VBoxCenter" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -280.0
+offset_right = 260.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="HeaderBox" type="VBoxContainer" parent="VBoxCenter"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelTitle" type="Label" parent="VBoxCenter/HeaderBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 48
+text = "ĐẠO TÀN: VẠN KIẾP"
+horizontal_alignment = 1
+
+[node name="LabelSubtitle" type="Label" parent="VBoxCenter/HeaderBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45098, 0.611765, 0.541176, 1)
+theme_override_font_sizes/font_size = 18
+text = "2D Xianxia Sandbox • Cửu Hoang Giới"
+horizontal_alignment = 1
+
+[node name="VBoxButtons" type="VBoxContainer" parent="VBoxCenter"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 14
+
+[node name="ButtonNewGame" type="Button" parent="VBoxCenter/VBoxButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Khởi Đầu Mới"
+
+[node name="ButtonContinue" type="Button" parent="VBoxCenter/VBoxButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Tiếp Tục Tu Hành"
+
+[node name="LabelContinueMeta" type="Label" parent="VBoxCenter/VBoxButtons"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.776471, 0.65098, 0.4, 1)
+theme_override_font_sizes/font_size = 13
+text = "• Lâm Phong (Phàm Nhân)"
+horizontal_alignment = 1
+
+[node name="ButtonSettings" type="Button" parent="VBoxCenter/VBoxButtons"]
+custom_minimum_size = Vector2(280, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Thiết Lập"
+
+[node name="ButtonQuit" type="Button" parent="VBoxCenter/VBoxButtons"]
+custom_minimum_size = Vector2(280, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Thoát Khỏi Hồng Trần"
+
+[node name="FooterBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -36.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="LabelVersion" type="Label" parent="FooterBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45, 0.45, 0.45, 1)
+theme_override_font_sizes/font_size = 13
+text = "Phiên bản v0.0.1 (Phase 0 Foundation) • Godot 4.7.2 GDScript"
+
+[node name="NewGameModal" parent="." instance=ExtResource("2_newm")]
+visible = false
+layout_mode = 1
+
+[node name="SettingsModal" parent="." instance=ExtResource("3_setm")]
+visible = false
+layout_mode = 1

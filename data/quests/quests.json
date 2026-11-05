@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "quests": [
+    {
+      "id": "q_first_spirit_vein",
+      "title": "Dị Khí Bên Hồ: Trảm Thứu Đoạt Phiến",
+      "giver_npc_id": "npc_mac_tu_vien",
+      "description": "Mạc Tư Viễn nhờ bạn điều tra dị tượng linh khí tại rìa núi Vân Lĩnh, tiêu diệt hung thú Xích Kiếm Ma Thứu và tìm kiếm cơ duyên đột phá Luyện Khí.",
+      "steps": [
+        {
+          "index": 0,
+          "id": "step_receive",
+          "description": "Nhận nhiệm vụ từ Mạc Tư Viễn tại Quán Trọ Thanh Trì Trấn.",
+          "target": "npc_mac_tu_vien"
+        },
+        {
+          "index": 1,
+          "id": "step_travel",
+          "description": "Di chuyển về phía Đông Bắc đến Vân Lĩnh Rìa (Cấm Địa).",
+          "target": "poi_van_linh_bien"
+        },
+        {
+          "index": 2,
+          "id": "step_boss",
+          "description": "Tiến vào Đấu Trường Bí Cảnh, hạ sát Xích Kiếm Ma Thứu thu hồi Cổ Kiếm Tàn Phiến.",
+          "target": "boss_xich_kiem_ma_thuu"
+        },
+        {
+          "index": 3,
+          "id": "step_breakthrough",
+          "description": "Sử dụng Tụ Khí Đan tiến hành bế quan đột phá Luyện Khí Tầng 1.",
+          "target": "realm_luyen_khi_1"
+        },
+        {
+          "index": 4,
+          "id": "step_complete",
+          "description": "Quay về Quán Trọ Thanh Trì Trấn báo cáo Mạc Tư Viễn và nhận thưởng.",
+          "target": "npc_mac_tu_vien"
+        }
+      ],
+      "reward": {
+        "money": 100,
+        "items": [
+          { "item_id": "item_tu_khi_dan", "id": "item_tu_khi_dan", "quantity": 2, "count": 2 }
+        ],
+        "affinity_boost": { "npc_id": "npc_mac_tu_vien", "value": 25 }
+      }
+    }
+  ]
+}

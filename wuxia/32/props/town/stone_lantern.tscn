@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://wuxia/32/props/town/stone_lantern.png" id="1_stone_lantern"]
+[ext_resource type="Texture2D" path="res://wuxia/32/lights/light_m.png" id="2_light_m"]
+
+[node name="stone_lantern" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_stone_lantern")
+centered = false
+offset = Vector2(-16, -47)
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(0, -30)
+texture = ExtResource("2_light_m")
+texture_filter = 1
+visible = false

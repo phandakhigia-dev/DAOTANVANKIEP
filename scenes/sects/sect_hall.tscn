@@ -1,0 +1,231 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://scenes/sects/sect_hall.gd" id="1_sect_hall"]
+[ext_resource type="PackedScene" path="res://scenes/world/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/stone_lantern.tscn" id="3_lantern"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/bench.tscn" id="4_bench"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/chest_closed.tscn" id="5_chest"]
+[ext_resource type="PackedScene" path="res://scenes/ui/sect_panel.tscn" id="6_sect_panel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(240, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_stone"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_library"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_quest"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_elder"]
+radius = 64.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud_top"]
+bg_color = Color(0.08, 0.06, 0.12, 0.9)
+border_width_bottom = 2
+border_color = Color(0.65, 0.75, 0.95, 0.8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.12, 0.10, 0.18, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.50, 0.70, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prompt"]
+bg_color = Color(0.10, 0.08, 0.16, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.8, 1.0, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SectHall" type="Node2D"]
+texture_filter = 1
+y_sort_enabled = true
+script = ExtResource("1_sect_hall")
+
+[node name="InteractiveAreas" type="Node2D" parent="."]
+
+[node name="ExitGate" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(500, 640)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/ExitGate"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="SectStone" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(300, 360)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/SectStone"]
+shape = SubResource("CircleShape2D_stone")
+
+[node name="LibraryPortal" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(700, 360)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/LibraryPortal"]
+shape = SubResource("CircleShape2D_library")
+
+[node name="QuestBoard" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(300, 200)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/QuestBoard"]
+shape = SubResource("CircleShape2D_quest")
+
+[node name="ElderArea" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(500, 200)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/ElderArea"]
+shape = SubResource("CircleShape2D_elder")
+
+[node name="YEntities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="LanternLeft" parent="YEntities" instance=ExtResource("3_lantern")]
+position = Vector2(380, 580)
+
+[node name="LanternRight" parent="YEntities" instance=ExtResource("3_lantern")]
+position = Vector2(620, 580)
+
+[node name="LanternHall1" parent="YEntities" instance=ExtResource("3_lantern")]
+position = Vector2(240, 240)
+
+[node name="LanternHall2" parent="YEntities" instance=ExtResource("3_lantern")]
+position = Vector2(760, 240)
+
+[node name="BenchLeft" parent="YEntities" instance=ExtResource("4_bench")]
+position = Vector2(300, 460)
+
+[node name="BenchRight" parent="YEntities" instance=ExtResource("4_bench")]
+position = Vector2(700, 460)
+
+[node name="ChestScripture" parent="YEntities" instance=ExtResource("5_chest")]
+position = Vector2(700, 340)
+
+[node name="Player" parent="YEntities" instance=ExtResource("2_player")]
+position = Vector2(500, 560)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TopBar" type="PanelContainer" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud_top")
+
+[node name="Margin" type="MarginContainer" parent="HUD/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 8
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PanelZone" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelZone"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+
+[node name="LabelZoneName" type="Label" parent="HUD/TopBar/Margin/HBox/PanelZone/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "❖ THANH VI KIẾM TÔNG • PHÂN ĐIỆN ❖"
+
+[node name="PanelClock" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelClock"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+
+[node name="LabelClock" type="Label" parent="HUD/TopBar/Margin/HBox/PanelClock/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Giờ Thìn (07:00) • Phân Điện Môn Phái"
+
+[node name="PanelPlayer" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelPlayer"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/separation = 16
+
+[node name="LabelPlayer" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 15
+text = "Đạo Hữu • Luyện Khí [Tán Tu]"
+
+[node name="LabelContrib" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Cống Hiến: 0 | Linh Thạch: 100"
+
+[node name="PromptBanner" type="PanelContainer" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_prompt")
+
+[node name="Margin" type="MarginContainer" parent="HUD/PromptBanner"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="LabelPrompt" type="Label" parent="HUD/PromptBanner/Margin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.9, 1.0, 1)
+theme_override_font_sizes/font_size = 17
+text = "[E / Enter: Tương tác...]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SectPanel" parent="HUD" instance=ExtResource("6_sect_panel")]
+visible = false

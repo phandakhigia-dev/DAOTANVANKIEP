@@ -1,0 +1,312 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+
+=======================================================
+  ĐẠO TÀN: VẠN KIẾP — BỘ KIỂM THỬ TỰ ĐỘNG (PHASE 0 & 1)
+  Môi trường: Godot 4.7.2 Headless Engine (Full Autoloads)
+=======================================================
+
+[CoopWorldSync] Đã khôi phục hoàn chỉnh Co-op state từ Save (0 peer ledgers, 0 transactions).
+ERROR: [SaveService] Thiếu hoặc sai schema_version trong save
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] validate_save_data (res://scripts/persistence/save_service.gd:147)
+       [1] run_all_tests (res://tests/unit/test_save_roundtrip.gd:73)
+       [2] _ready (res://tests/test_runner.gd:65)
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[ClockReplication] Time-skip bị khóa nghiêm ngặt trong Sprint S1 cho tới khi Sprint S5 được duyệt.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[CoopWorldSync] Đã khôi phục hoàn chỉnh Co-op state từ Save (0 peer ledgers, 0 transactions).
+[CoopWorldSync] Đã khôi phục hoàn chỉnh Co-op state từ Save (0 peer ledgers, 0 transactions).
+ERROR: [SaveService] Phiên bản schema save (999) không tương thích với phiên bản hiện tại (2)
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] validate_save_data (res://scripts/persistence/save_service.gd:150)
+       [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:116)
+       [2] _ready (res://tests/test_runner.gd:65)
+WARNING: [SaveService] File chính hỏng hoặc thiếu, thử tải file backup...
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] load_game (res://scripts/persistence/save_service.gd:100)
+       [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:142)
+       [2] _ready (res://tests/test_runner.gd:65)
+WARNING: [SaveService] Đã khôi phục thành công file save chính từ backup!
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] load_game (res://scripts/persistence/save_service.gd:105)
+       [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:142)
+       [2] _ready (res://tests/test_runner.gd:65)
+[CoopWorldSync] Đã khôi phục hoàn chỉnh Co-op state từ Save (0 peer ledgers, 0 transactions).
+WARNING: [ClockReplication] Co-op: Host từ chối time_scale 20.0. Khóa cứng 1x trong phòng nhiều người.
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] request_time_scale_change (res://scripts/network/clock_replication.gd:91)
+       [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:164)
+       [2] _ready (res://tests/test_runner.gd:65)
+[ClockReplication] Host chấp thuận đổi time_scale = 20.0
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Host Server khởi chạy thành công trên port 8899 (Cố định time_scale = 1.0, 720s thực/ngày)
+WARNING: [GameClock] Co-op: Khóa cứng time_scale = 1.0. Từ chối đổi sang 10.0
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] set_time_scale (res://scripts/core/game_clock.gd:72)
+       [1] run_all_tests (res://tests/unit/test_p0_v2_regression.gd:30)
+       [2] _ready (res://tests/test_runner.gd:65)
+WARNING: [GameClock] Co-op: Từ chối thủ công advance_days(3). Giữ nhịp 720s thực tế / ngày.
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] advance_days (res://scripts/core/game_clock.gd:129)
+       [1] run_all_tests (res://tests/unit/test_p0_v2_regression.gd:31)
+       [2] _ready (res://tests/test_runner.gd:65)
+WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s thực tế / ngày.
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] advance_hours (res://scripts/core/game_clock.gd:117)
+       [1] run_all_tests (res://tests/unit/test_p0_v2_regression.gd:32)
+       [2] _ready (res://tests/test_runner.gd:65)
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[CoopEconomy] Host cam kết thành công cho Peer 2: -30 LT, +1x item_hoi_xuan_dan (Rev: 2, Req: REQ_IDEMP_001)
+[CoopEconomy] Bỏ qua request_id trùng lặp: REQ_IDEMP_001 (Peer 2)
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[CoopEconomy] Bỏ qua phản hồi trùng lặp/cũ (Rev 2 <= Local 2). Không cấp item lặp!
+[CoopEconomy] Bỏ qua phản hồi trùng lặp/cũ (Rev 2 <= Local 2). Không cấp item lặp!
+[CoopEconomy] Host cam kết thành công cho Peer 10: -50 LT, +1x item_tay_tuy_dan (Rev: 2, Req: REQ_RETRY_001)
+[CoopEconomy] Bỏ qua request_id trùng lặp: REQ_RETRY_001 (Peer 10)
+[CoopEconomy] Bỏ qua request_id trùng lặp: REQ_RETRY_001 (Peer 10)
+[CoopEconomy] Host cam kết thành công cho Peer 21: -150 LT, +1x item_tay_tuy_dan (Rev: 2, Req: REQ_RACE_A)
+[CoopEconomy] Host cam kết thành công cho Peer 33: -40 LT, +2x item_hoi_xuan_dan (Rev: 2, Req: REQ_DISC_001)
+[CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 33 (Giữ nguyên authoritative ledger)
+--- Bộ test: GameClock ---
+  ✓ [Pass] Khởi tạo đồng hồ mặc định (Năm 1, Tháng 1, Ngày 1)
+  ✓ [Pass] Tiến 15 ngày hợp lệ -> Ngày 16
+  ✓ [Pass] Tiến tiếp 15 ngày -> Chuyển đúng sang Tháng 2 Ngày 1
+  ✓ [Pass] Tiến 330 ngày -> Chuyển đúng sang Năm 2 Tháng 1 Ngày 1
+  ✓ [Pass] GameClock to_dict / from_dict khôi phục nguyên vẹn
+
+--- Bộ test: GameClock Realtime Co-op ---
+  ✓ [Pass] Khởi đầu ngày lúc 06:00 sáng (Giờ Mão • Ban Ngày)
+  ✓ [Pass] Tiến đúng 30 giây thực tế -> Đạt chính xác 07:00 (Giờ Thìn)
+  ✓ [Pass] Tiến 360 giây thực -> 19:00 (Giờ Tuất • Ban Đêm âm khí thịnh)
+  ✓ [Pass] Đủ 720 giây thực (12 phút) -> Chuyển sang Ngày 2 lúc 06:00 sáng
+  ✓ [Pass] Tĩnh tọa gia tốc x20: 1.5 giây thực tế lướt qua đúng 1 giờ in-game
+  ✓ [Pass] Lưu/Tải khôi phục chính xác thời khắc trong ngày (Ngày 2, 07:00)
+
+--- Bộ test: DeterministicSeed ---
+  ✓ [Pass] Cùng seed (987654) cho chuỗi số ngẫu nhiên hoàn toàn giống nhau 100%
+  ✓ [Pass] Khác seed sinh ra hai thế giới hoàn toàn khác nhau
+  ✓ [Pass] Phân bố địa hình bản đồ sandbox theo seed đảm bảo tái lặp tuyệt đối
+
+--- Bộ test: SaveRoundtrip ---
+  ✓ [Pass] Lưu thành công game vào slot 99 (Atomic Write)
+  ✓ [Pass] Metadata slot 99 ghi nhận chính xác tên và seed
+  ✓ [Pass] Gọi SaveService.load_game(99) thành công
+  ✓ [Pass] Dữ liệu roundtrip khớp 100%: Tên, Seed, HP, Vị trí (X, Y), Ngày/Tháng
+  ✓ [Pass] Bộ thẩm định Schema Validation từ chối payload không hợp lệ
+
+--- Bộ test: Phase 1 - InventorySystem ---
+  ✓ [Pass] Thêm 50 viên Linh Thạch vào túi thành công
+  ✓ [Pass] Cơ chế cộng dồn (Stacking) hoạt động chính xác (75 Linh Thạch)
+  ✓ [Pass] Trừ 30 Linh Thạch thành công, còn lại 45 viên
+  ✓ [Pass] Giao dịch an toàn: Từ chối trừ khi số lượng không đủ
+  ✓ [Pass] Sử dụng Tụ Khí Đan: Tiêu hao 1 đan và tăng chính xác +25 Tu Vi (10 -> 35)
+  ✓ [Pass] Sử dụng Hồi Xuân Đan: Hồi phục +50 HP (40 -> 90) và tiêu thụ đan dược
+
+--- Bộ test: Phase 1 - BreakthroughEngine ---
+  ✓ [Pass] Từ chối đột phá khi Tu Vi chưa chạm đỉnh (20 / 100)
+  ✓ [Pass] Từ chối đột phá khi thiếu dược đan trợ lực (Tụ Khí Đan = 0)
+  ✓ [Pass] Đủ điều kiện đột phá: 100 Tu Vi + 1x Tụ Khí Đan hợp lệ
+  ✓ [Pass] Đột phá thành công chuyển từ Phàm Nhân lên Luyện Khí Tầng 1
+  ✓ [Pass] Giao dịch nguyên tử: Đã tiêu hao chính xác 1 viên Tụ Khí Đan
+  ✓ [Pass] Thuộc tính tăng trưởng chính xác theo data: HP(160), MP(50), Công(18), Thủ(10), Thân pháp(190)
+
+--- Bộ test: Phase 1 - QuestFlow ---
+  ✓ [Pass] Nhiệm vụ ban đầu ở trạng thái chưa kích hoạt (not_started)
+  ✓ [Pass] Kích hoạt nhiệm vụ thành công: Chuyển sang active và bước 1 (Tiến về Vân Lĩnh)
+  ✓ [Pass] Tiến trình nhiệm vụ ghi nhận chính xác đến bước 3 (Đã hạ Ma Thứu)
+  ✓ [Pass] Báo cáo nhiệm vụ thành công: Nhận đúng 100 Linh Thạch, 2x Tụ Khí Đan, Hảo cảm Mạc Tư Viễn +25
+  ✓ [Pass] Chống trục lợi: Từ chối hoàn thành trùng lặp nhiệm vụ đã hoàn tất
+
+--- Bộ test: Phase 1 - NPCAffinity & Sect ---
+  ✓ [Pass] Đăng ký đầy đủ 6 NPC thị trấn Thanh Trì trong ContentRegistry
+  ✓ [Pass] Hảo cảm khởi điểm với NPC bằng 0 (Trung Lập)
+  ✓ [Pass] Tăng hảo cảm với Thư Nguyệt (+15) thành công
+  ✓ [Pass] Ghi nhận hảo cảm âm (-10) với Kỷ Hoàn chính xác
+  ✓ [Pass] Thanh Vi Tông được định nghĩa đầy đủ với các dịch vụ cúng dường & tiếp dẫn
+
+--- Bộ test: Phase 2 - DeterministicSimulation ---
+  ✓ [Pass] Cùng seed (778899) mô phỏng 12 tháng cho kết quả sự kiện thế giới trùng khớp 100%
+  ✓ [Pass] Trạng thái toàn bộ NPC (Tu vi, Tiền bạc, Cảnh giới, Vị trí) trùng khớp tuyệt đối 100%
+  ✓ [Pass] Khác seed kiểm tra hoàn tất
+
+--- Bộ test: Phase 2 - NPCSocialGraph ---
+  ✓ [Pass] Khởi tạo quan hệ rỗng trả về cấu trúc chuẩn (Affinity=0, Trust=0, Debt=0, Grudge=0)
+  ✓ [Pass] Cứu giúp NPC: Ghi nhận Ơn Nghĩa (Debt=50) và Lòng Tin (Trust=40) chính xác
+  ✓ [Pass] Ghi nhật ký MemoryEvent chuẩn xác: Có 2 nhân chứng chứng kiến tại Rừng Trúc
+  ✓ [Pass] Hệ thống Cừu Hận (Grudge=75) ghi nhận chính xác khi phát sinh xung đột môn phái
+  ✓ [Pass] Ranh giới an toàn (Clamping): Affinity kẹp chuẩn [-100..100], Trust/Grudge kẹp [0..100]
+
+--- Bộ test: Phase 2 - NPCLifecycle ---
+  ✓ [Pass] Khởi tạo dữ liệu vòng đời hợp lệ: Tuổi 16200 ngày, Thọ nguyên 43200 ngày
+  ✓ [Pass] Thọ nguyên cạn kiệt: NPC tọa hóa chính xác (alive = false) và ghi vào cáo phó
+  ✓ [Pass] Tính toàn vẹn: NPC đã chết không thực hiện thêm hành động, không làm gián đoạn game
+  ✓ [Pass] Đột phá Trúc Cơ thành công: Thọ nguyên được gia tăng thêm 130 năm (Trúc Cơ Sơ Kỳ)
+
+--- Bộ test: Phase 2 - HeadlessStressTest ---
+  ✓ [Pass] Stress test 500 NPC x 12 tháng: Trung bình 6.98 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)
+  ✓ [Pass] Stress test cực đại 1,000 NPC x 3 tháng: Đạt 16.30 ms/tháng (Vượt qua thử thách quy mô lớn)
+  ✓ [Pass] Toàn vẹn kinh tế: Ngân khố các môn phái luôn dương (No negative treasury)
+
+--- Bộ test: Co-op Authoritative Clock Sync (S1) ---
+  ✓ [Pass] [T-01/T-02] Tỷ lệ thời gian chuẩn xác: 720s thực = 24h game (1:120, 30s thực = 1h game)
+  ✓ [Pass] [T-03] Chế độ Standalone mặc định có quyền Authoritative Server
+  ✓ [Pass] [T-03] Client bị tước quyền Authoritative (không được tự sửa giờ thế giới)
+  ✓ [Pass] [T-04] Client nhận snapshot Server và đồng bộ chính xác: Năm 2, Tháng 03, Ngày 15 — 14:00
+  ✓ [Pass] [T-05] Hiệu chỉnh mềm (Soft Reconciliation) thành công, khử giật hình khi lệch mạng nhỏ
+  ✓ [Pass] [T-06] Tính năng Time-skip bị khóa nghiêm ngặt theo đúng đặc tả Sprint S1
+
+--- Bộ test: Phase 3 - AlchemySystem ---
+  ✓ [Pass] Nạp thành công 5 đan phương từ recipes.json
+  ✓ [Pass] can_craft từ chối chính xác khi túi đồ rỗng (Thiếu linh thảo & linh thạch)
+  ✓ [Pass] can_craft chặn phàm nhân luyện chế đan dược Luyện Khí (Thanh Tâm Đan)
+  ✓ [Pass] Giao dịch nguyên tử hoàn hảo: Trừ đúng 2x Linh Thảo, 10x Linh Thạch -> Tạo 1x Tụ Khí Đan
+  ✓ [Pass] Tu sĩ Luyện Khí khai lò thành công luyện chế Thanh Tâm Đan
+
+--- Bộ test: Phase 3 - Bosses & Telegraphs ---
+  ✓ [Pass] Đăng ký đầy đủ 5 Boss Đạo Tàn: Ma Thứu, Xà Vương, Khôi Lỗi, Chu Hoàng, Cổ Kiếm Linh
+  ✓ [Pass] Hình mẫu Telegraph chuẩn hóa chính xác: Xà Vương(Cone), Khôi Lỗi(Line), Chu Hoàng(Circle), Kiếm Linh(Cross)
+  ✓ [Pass] Toán hình học Quạt Độc (Cone): Nhận diện chuẩn trước mặt và loại trừ sau lưng/ngoài góc
+  ✓ [Pass] Toán hình học Kiếm Trận Thập Tự (Cross): Trúng luồng tia thẳng, né được ở góc chéo
+  ✓ [Pass] Loot Table Cổ Kiếm Linh chuẩn xác: Rơi Tẩy Tủy Đan cực phẩm và Cổ Kiếm Tàn Phiến
+
+--- Bộ test: Phase 3 & S2/S3 - PlayerStallSystem ---
+  ✓ [Pass] Từ chối thuê sạp khi thiếu linh thạch (30/50 LT)
+  ✓ [Pass] Thuê sạp 3 ngày thành công: Trừ 50 LT (còn 80 LT) và kích hoạt sạp hàng
+  ✓ [Pass] Ký gửi kho sạp (Escrow): Trừ 3 đan trong túi (còn 2), lưu 3 đan vào kho với giá 25 LT
+  ✓ [Pass] Rút vật phẩm từ sạp: Túi đồ tăng lên 3, kho sạp giảm còn 2
+  ✓ [Pass] Giao dịch nguyên tử sạp hàng: Bán sạch 2 đan, doanh thu sạp ghi nhận chính xác +50 LT
+  ✓ [Pass] Quyết toán doanh thu: Rút trọn 50 LT về túi đồ, reset doanh thu sạp về 0
+  ✓ [Pass] Khôi phục trạng thái sạp hàng (to_dict / from_dict) nguyên vẹn 100%
+
+--- Bộ test: Phase 4 - LivingTown & ProceduralNPC (Thành Trì Nhập Vai & Chiều Sâu Nhân Sinh) ---
+  ✓ [Pass] LifeGenerator: Sinh thành công các danh xưng cổ phong độc nhất (Thẩm Mộng Trúc vs Bạch Bá Hằng)
+  ✓ [Pass] LifeGenerator: Thọ nguyên phân hóa theo kiếp người thật (99 tuổi vs 106 tuổi)
+  ✓ [Pass] LifeGenerator: Đầy đủ chiều sâu nhân sinh (Chí hướng: Thương Lộ Thiên Hạ, Bí mật: Nửa Khối Ngọc Bội Định Tình, 3 mốc sự kiện)
+  ✓ [Pass] NPCCharacter: Thực thể vật lý hiển thị danh xưng 'Thẩm Mộng Trúc' chuẩn xác
+  ✓ [Pass] TownMapReal: Khởi tạo scene thành công, không lỗi tài nguyên
+  ✓ [Pass] TownMapReal: Đầy đủ 8 NPC vật lý đi lại trong thành (5 Cốt truyện + 3 Thủ tục)
+  ✓ [Pass] Smart Object: Múc nước giếng cổ phục hồi sinh lực (50 HP -> 80 HP)
+  ✓ [Pass] Smart Object: Tọa thiền ghế trà uống nước đẩy lùi thời gian +1 giờ
+  ✓ [Pass] DialogueModal: Mở thành công khung đàm đạo riêng cho NPC 'Thẩm Mộng Trúc'
+  ✓ [Pass] DialogueModal: Khai mở tâm sự chí hướng: "Không có linh thạch lót đường, thiê"
+  ✓ [Pass] DialogueModal: Thăm dò phát hiện bí mật ẩn tàng: [Nửa Khối Ngọc Bội Định Tình]
+  ✓ [Pass] DialogueModal: Tặng 10 Linh Thạch kết giao thành công (Trừ đúng 10 LT)
+  ✓ [Pass] Kinh Tế Thị Trấn: Tích hợp ShopService vào nhịp sống thị trấn thành công (Doanh thu sạp: 55 LT)
+
+--- Bộ test: Phase 2: Mở Rộng Đa Phân Vùng & Hang Động Bí Cảnh ---
+  ✓ [Pass] Region POIs: Đầy đủ 3 địa danh phân vùng mới trong reg_thanh_tri (Rừng Trúc, Đầm Lầy, Kiếm Trũng)
+  ✓ [Pass] Biomes Scenes: Khởi tạo thành công 3 Scene Node (BambooForest, SnakeSwamp, SwordGrave)
+  ✓ [Pass] BambooForest: Thu hái 2x Dạ Hương Thảo, 4x Linh Thảo; Rương Thạch Động trao 80 Linh Thạch + 2 Tụ Khí Đan chuẩn xác
+  ✓ [Pass] SnakeSwamp: Thu hoạch 3x Bách Thảo Diệp; Tế Đàn Xà Cốt hiến tế 15 LT đổi 2x Kim Sang Dược thành công
+  ✓ [Pass] SwordGrave: Tàn Kiếm Bia đốn ngộ +50 Tu Vi; Kiếm Trận Thạch Đài trao 2x Cổ Kiếm Tàn Phiến & 100 Linh Thạch
+  ✓ [Pass] Boss Routing: Thiết lập chính xác Boss Target và Return Scene cho cả 3 phân vùng
+  ✓ [Pass] CombatArena: Tự động kế thừa Boss Target từ GameSession (boss_hac_linh_xa_vuong)
+
+--- Bộ test: Phase 3 — Tông Môn, Tàng Kinh Các & Đột Phá Trúc Cơ Sơ Kỳ ---
+  ✓ [T-01] SectService: Tải thành công 2 tông môn (Thanh Vi Kiếm Tông + Bách Thảo Môn)
+  ✓ [T-02] SectService.get_sect: Dữ liệu tên tông môn chính xác
+  ✓ [T-03] can_join_sect: Từ chối đúng khi realm Phàm Nhân (tier=0 < yêu cầu 1)
+  ✓ [T-04] can_join_sect: Từ chối khi thiện cảm npc_doan_vinh chỉ 5/20
+  ✓ [T-05] can_join_sect: Từ chối khi thiếu Cổ Kiếm Tàn Phiến
+  ✓ [T-06] join_sect: Gia nhập Thanh Vi Kiếm Tông thành công, cấp Ngoại Môn
+  ✓ [T-07] can_join_sect: Từ chối gia nhập tông môn thứ 2 (Không phụng sự hai chủ)
+  ✓ [T-08] complete_contribution_quest(cq_gather_herbs): +20 Cống Hiến, tiêu 5x Linh Thảo
+  ✓ [T-09] cq_slay_swamp_boss: Từ chối đúng khi boss_hac_linh_xa_vuong chưa hạ
+  ✓ [T-10] cq_slay_swamp_boss: +80 Cống Hiến sau khi hạ Hắc Linh Xà Vương
+  ✓ [T-11] _refresh_rank: Tự thăng Nội Môn Đệ Tử khi Cống Hiến ≥ 300 (Hiện tại: 319)
+  ✓ [T-12] can_learn_skill: Từ chối khi chưa gia nhập tông môn
+  ✓ [T-13] learn_library_skill(lib_thanh_vi_jian_fa): Học thành, trừ 50 Cống Hiến, +8 ATK, +40 Tầm Đánh
+  ✓ [T-14] can_learn_skill: Từ chối học lần 2 kinh sách đã học
+  ✓ [T-15] can_learn_skill(lib_vun_linh_jue): Từ chối đúng khi rank Ngoại Môn (cần Nội Môn)
+  ✓ [T-16] learn_library_skill(lib_kiep_lei_jue): Áp dụng tribulation_resist_bonus = 0.25 chính xác
+  ✓ [T-17] can_breakthrough_to_truc_co: Từ chối đúng khi không phải realm_luyen_khi_9
+  ✓ [T-18] can_breakthrough_to_truc_co: Từ chối khi chưa gia nhập tông môn
+  ✓ [T-19] can_breakthrough_to_truc_co: Từ chối khi thiếu Tẩy Tủy Đan
+  ✓ [T-20] can_breakthrough_to_truc_co: Xác nhận đủ điều kiện (realm_luyen_khi_9 + sect + XP viên mãn + Tẩy Tủy Đan)
+  ✓ [T-21] begin_truc_co_tribulation: Tiêu Tẩy Tủy Đan, bật pending_tribulation = true
+  ✓ [T-22] complete_truc_co_tribulation(true): Trúc Cơ Sơ Kỳ! max_xp=1000, thọ nguyên=250 năm
+  ✓ [T-23] complete_truc_co_tribulation(false): Giữ nguyên Luyện Khí 9, tắt pending_tribulation
+  ✓ [T-24] Save/Load roundtrip: Toàn bộ sect fields serialize đúng vào save dict
+  ✓ [T-25] import_save_dict: Khôi phục sect state thành công sau tải lưu
+
+--- Bộ test: Phase 4 — Tinh Chỉnh Hiệu Ứng Hình Ảnh & Âm Thanh Võ Hiệp (VFX & Audio Polish) ---
+  ✓ [T-01] AudioService: Autoload đăng ký và khởi tạo thành công trên SceneTree
+  ✓ [T-02] AudioService: Giá trị âm lượng mặc định chuẩn (Master: 0.8, BGM: 0.7, SFX: 0.8)
+  ✓ [T-03] set_master_volume: Cập nhật âm lượng tuyến tính chính xác (0.5)
+  ✓ [T-04] Procedural Synthesis: Tổng hợp thành công đầy đủ 8 mẫu SFX võ hiệp (16-bit PCM)
+  ✓ [T-05] Procedural BGM: Tạo thành công 3 khúc nhạc cổ phong lặp tuần hoàn (Cổ Cầm & Sáo Trúc)
+  ✓ [T-06] play_sfx: Lấy thành công player từ pool và gán AudioStream (SFXPlayer_0)
+  ✓ [T-07] play_bgm: Chuyển nhạc nền sang 'bgm_peaceful_town' thành công
+  ✓ [T-08] VFXSwordSlash: Khởi tạo thành công vòng cung kiếm quang & tia lửa kiếm ý
+  ✓ [T-09] VFXCultivationAura: Khởi tạo linh khí đan điền & chế độ Hoàng Kim Đột Phá
+  ✓ [T-10] VFXLightningImpact: Sóng xung kích lôi điện & hạt nổ điện trường hoàn chỉnh
+  ✓ [T-11] VFXBambooLeaves: Khởi tạo thành công hạt lá trúc rơi & phấn hoa mộc linh
+  ✓ [T-12] VFXAlchemyGlow: Đan khí tím tía bốc cao & tia sáng kim đan xuất lô
+  ✓ [T-13] Tích Hợp GameSession: Nuốt đan dược tự động kích hoạt 'sfx_pill_swallow' (Lịch sử SFX: ["sfx_pill_swallow", "sfx_herb_pickup"])
+
+--- Bộ test: Phase 4 - Branching Dialogue & World Shaping System (3-5 Lựa Chọn & Kiến Tạo Thế Giới) ---
+  ✓ [Pass] T-01: Sinh kịch bản vấn đạo cho Mạc Tư Viễn thành công đầy đủ tiêu đề và bối cảnh
+  ✓ [Pass] T-02: Tiêu chuẩn 3 tới 5 câu trả lời đạt 100% cho mọi NPC cốt truyện và tán tu dã ngoại
+  ✓ [Pass] T-03: Đầy đủ 5 triết lý tu chân: Chính Đạo, Ma Đạo, Thương Lộ, Đạo Duyên, Bình Thản
+  ✓ [Pass] T-04: Nhánh [Chính Đạo] tăng 30 Hảo cảm, 25 Tín nhiệm, trừ 20 Linh Thạch và ghi nhận Ký ức thế giới
+  ✓ [Pass] T-05: Nhánh [Ma Đạo] cướp 40 Linh Thạch, giảm 30 Hảo cảm, tăng 35 Thù hận và 30 Kính sợ
+  ✓ [Pass] T-06: Quyết định đối thoại trực tiếp điều tiết kinh tế trấn (Giá thuốc: 40 LT -> 65 LT)
+  ✓ [Pass] T-07: Chỉ điểm đạo duyên kích phát NPC đột phá từ Luyện Khí Tầng 1 lên Tầng 2 ngay trong đối thoại
+  ✓ [Pass] T-08: Cơ chế khóa lựa chọn an toàn từ chối thực hiện khi túi đồ thiếu tài nguyên
+  ✓ [Pass] T-09: DialogueModal kết nối trơn tru, hiển thị 5 nhánh lựa chọn tự nhiên bí mật, không hé lộ trước được/mất
+  ✓ [Pass] T-10: Giao diện phản hồi sinh động: Lời thoại NPC kèm Bảng Tóm Tắt Biến Động Thế Giới hoàn chỉnh
+
+--- Bộ test: Sprint S0 — Stability & Save Regression ---
+  ✓ [Pass] T-01: ShopService.buy_from_stall từ chối tuyệt đối count <= 0 và buyer_wallet âm
+  ✓ [Pass] T-02: deposit_item và withdraw_item thẩm tra chặt chẽ: từ chối ID rỗng và count <= 0
+  ✓ [Pass] T-03: player_buy_from_stall giao dịch nguyên tử 2 chiều thành công (Trừ tiền, cấp đồ, trừ kho sạp, ghi nhận doanh thu)
+  ✓ [Pass] T-04: GameSession.town_position serialize chính xác vào export_save_dict (495.0, 155.0)
+  ✓ [Pass] T-05: Save/Load roundtrip khôi phục nguyên vẹn 100% sạp hàng (Escrow, Doanh thu, Hạn thuê, Tên sạp) và town_position
+  ✓ [Pass] T-06: Schema version thống nhất phiên bản 2, từ chối schema không tương thích trong tương lai
+  ✓ [Pass] T-07: Cơ chế an toàn phục hồi thành công từ file backup (.bak.json) khi file chính bị mất!
+  ✓ [Pass] T-08: wuxia/demo/capture_demo.tscn nạp thành công, không còn tham chiếu gãy res://demo/...
+  ✓ [Pass] T-09: ClockReplication khóa cứng 1x trong Co-op, từ chối time_scale 20x để bảo đảm đồng bộ 720s/ngày
+  ✓ [Pass] T-10: Quyền mô phỏng hàng tháng (MonthlySimulationService) được bảo vệ: Client bị chặn, Host/Standalone hợp lệ
+  ✓ [Pass] T-11: CombatArena tích hợp đầy đủ Swordsman sprite hoạt ảnh và các cảnh VFX chiến đấu (Slash, Lightning)
+  ✓ [Pass] T-12: Nhân vật sở hữu thuộc tính Khinh Công lướt gió (sprint_speed = 520 > move_speed = 360, có cooldown quản lý)
+  ✓ [Pass] T-13: Hệ thống sát thương bay (Floating Combat Text) vận hành chuẩn xác: sinh chữ, bay lên và tự dọn bộ nhớ
+  ✓ [Pass] T-14: WorldMap tích hợp hàm chuyển sắc thái ánh sáng ngày đêm (_update_day_night_lighting) đồng bộ nhịp 720s/ngày
+
+--- Bộ test: P0V2RegressionSuite ---
+  ✓ [Pass] T-V2-01: Mở phòng Host cưỡng chế time_scale về 1.0 ngay lập tức (xóa bỏ x20 từ solo)
+  ✓ [Pass] T-V2-02: Client bị từ chối mọi yêu cầu đổi time_scale, advance_days, advance_hours
+  ✓ [Pass] T-V2-03: Bấm Space 100 lần trên WorldMap không làm nhảy ngày/giờ (Triệt tiêu bug P0)
+  ✓ [Pass] T-V2-04: Khinh công có vận tốc 780 px/s chuẩn hóa chuẩn xác hướng đi chéo
+  ✓ [Pass] T-V2-05: Ranh giới 23:59 -> 00:00 chuyển mượt sang Ngày 11 Giờ 0 Phút 0
+  ✓ [Pass] T-V2-06: Ranh giới Ngày 30 Tháng 5 chuyển sang Ngày 1 Tháng 6 chuẩn xác
+  ✓ [Pass] T-V2-07: Ranh giới Năm 1 Tháng 12 chuyển sang Năm 2 Tháng 1 Ngày 1 chuẩn xác
+  ✓ [Pass] T-V2-08: Giao dịch sạp Idempotent: Gửi lại request_id cũ không trừ tiền lần hai
+  ✓ [Pass] T-V2-09: Khách thứ 2 mua món hàng đã hết bị từ chối ngay lập tức, kho và ví an toàn
+  ✓ [Pass] T-V2-10: Tính năng P2P Trade được khai báo minh bạch NOT_IMPLEMENTED (Không giả mạo DONE)
+  ✓ [Pass] T-V2-11: CombatArena hỗ trợ tham số is_crit chuẩn xác cho đòn đánh bạo kích
+
+--- Bộ test: P0 V3 Authoritative Economy & Anti-Duping Suite ---
+  ✓ [Pass] T-V3-01: Phản hồi lặp 3 lần không gây duping: Vật phẩm giữ nguyên x1, ví giữ nguyên 170 LT
+  ✓ [Pass] T-V3-02: RPC Retry 3 lần an toàn: Chỉ trừ 50 LT một lần (còn 250 LT), kho còn 4 món, doanh thu 50 LT
+  ✓ [Pass] T-V3-03: Chống gian lận ví: Khách chỉ có 30 LT authoritative, mua món 80 LT bị Host từ chối an toàn
+  ✓ [Pass] T-V3-04: Race Condition 2 client: Đúng 1 client mua được món cuối, client kia nhận lỗi an toàn, kho cạn sạch không âm
+  ✓ [Pass] T-V3-05: Disconnect sau khi mua và Reconnect: Sổ cái Authoritative trên Host bảo lưu 60 LT và 2 Đan Dược
+  ✓ [Pass] T-V3-06: Rollback an toàn: Mua item không có trong sạp bị từ chối, doanh thu không đổi
+  ✓ [Pass] T-V3-07: Boundary Checks: Chặn toàn bộ tham số dị thường (âm, 0, tràn số, rỗng)
+
+-------------------------------------------------------
+TỔNG KẾT: 179 ĐẠT (PASS) | 0 THẤT BẠI (FAIL)
+=======================================================
+
+[SUCCESS] Tất cả các tiêu chí nghiệm thu Phase 0 và Phase 1 đã vượt qua 100%!
+WARNING: 19 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

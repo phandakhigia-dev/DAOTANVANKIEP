@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "sects": [
+    {
+      "id": "sect_thanh_vi",
+      "name": "Thanh Vi Kiếm Tông",
+      "short_name": "Thanh Vi Tông",
+      "alignment": "righteous",
+      "join_requirements": {
+        "min_realm_tier": 1,
+        "min_realm_name": "Luyện Khí Tầng 1",
+        "min_affinity_npc": "npc_doan_vinh",
+        "min_affinity_value": 20,
+        "tribute_items": [
+          { "item_id": "item_co_kiem_tan_phien", "qty": 1, "desc": "1x Cổ Kiếm Tàn Phiến (Chứng minh thực lực trảm Ma Thứu)" }
+        ]
+      },
+      "join_quest_id": "q_join_thanh_vi",
+      "contribution_cap": 10000,
+      "ranks": [
+        { "id": "rank_ngoai_mon", "name": "Ngoại Môn Đệ Tử", "min_contribution": 0, "max_contribution": 299 },
+        { "id": "rank_noi_mon", "name": "Nội Môn Đệ Tử", "min_contribution": 300, "max_contribution": 999 },
+        { "id": "rank_truc_cot", "name": "Trụ Cốt Đệ Tử", "min_contribution": 1000, "max_contribution": 2999 },
+        { "id": "rank_truong_lao", "name": "Chấp Sự Trưởng Lão", "min_contribution": 3000, "max_contribution": 9999 }
+      ],
+      "contribution_quests": [
+        {
+          "id": "cq_patrol_van_linh",
+          "name": "Tuần Tra Vân Lĩnh",
+          "desc": "Tiêu diệt yêu thú đe dọa lãnh địa Thanh Vi Tông",
+          "reward_contribution": 25,
+          "reward_linh_thach": 30
+        },
+        {
+          "id": "cq_gather_herbs",
+          "name": "Thu Hái Linh Dược",
+          "desc": "Nộp 5x Linh Thảo cho Dược Nông",
+          "cost_items": [{ "item_id": "item_linh_thao", "qty": 5 }],
+          "reward_contribution": 20,
+          "reward_linh_thach": 15
+        },
+        {
+          "id": "cq_slay_swamp_boss",
+          "name": "Thanh Trừ Hắc Linh Xà Vương",
+          "desc": "Thay mặt Thanh Vi Tông trừ hại Đầm Lầy Hắc Xà",
+          "req_boss_defeated": "boss_hac_linh_xa_vuong",
+          "reward_contribution": 80,
+          "reward_linh_thach": 120
+        }
+      ],
+      "library_skills": [
+        {
+          "id": "lib_thanh_vi_jian_fa",
+          "name": "Thanh Vi Kiếm Pháp",
+          "type": "combat_technique",
+          "tier": 1,
+          "cost_contribution": 50,
+          "effect": { "atk_bonus": 8, "range_bonus": 40 },
+          "desc": "Căn bản kiếm pháp của Thanh Vi Tông, tăng sức chém và tầm đánh."
+        },
+        {
+          "id": "lib_vun_linh_jue",
+          "name": "Vân Lĩnh Tụ Linh Quyết",
+          "type": "cultivation_method",
+          "tier": 2,
+          "cost_contribution": 150,
+          "req_rank": "rank_noi_mon",
+          "effect": { "xp_per_day_bonus": 10 },
+          "desc": "Pháp môn hô hấp đặc truyền của Thanh Vi, tăng tốc thu linh khí."
+        },
+        {
+          "id": "lib_kiep_lei_jue",
+          "name": "Thiên Kiếp Lôi Quyết",
+          "type": "tribulation_aid",
+          "tier": 3,
+          "cost_contribution": 500,
+          "req_rank": "rank_truc_cot",
+          "effect": { "tribulation_resist_bonus": 0.25 },
+          "desc": "Bí quyết tối thượng giúp đệ tử vượt Thiên Kiếp Lôi Đình an toàn hơn."
+        }
+      ]
+    },
+    {
+      "id": "sect_bach_thao",
+      "name": "Bách Thảo Môn",
+      "short_name": "Bách Thảo Môn",
+      "alignment": "neutral",
+      "join_requirements": {
+        "min_realm_tier": 1,
+        "min_realm_name": "Luyện Khí Tầng 1",
+        "min_affinity_npc": "npc_moc_lao",
+        "min_affinity_value": 15,
+        "tribute_items": [
+          { "item_id": "item_bach_thao_diep", "qty": 5, "desc": "5x Bách Thảo Diệp (Lòng thành hái dược)" },
+          { "item_id": "item_kim_sang_duoc", "qty": 2, "desc": "2x Kim Sàng Dược (Hiểu biết dược lý)" }
+        ]
+      },
+      "join_quest_id": "q_join_bach_thao",
+      "contribution_cap": 10000,
+      "ranks": [
+        { "id": "rank_ngoai_mon", "name": "Dược Đồng Học Đồ", "min_contribution": 0, "max_contribution": 299 },
+        { "id": "rank_noi_mon", "name": "Dược Môn Đệ Tử", "min_contribution": 300, "max_contribution": 999 },
+        { "id": "rank_truc_cot", "name": "Dược Sư Môn Sinh", "min_contribution": 1000, "max_contribution": 2999 },
+        { "id": "rank_truong_lao", "name": "Trưởng Lão Đan Đạo", "min_contribution": 3000, "max_contribution": 9999 }
+      ],
+      "contribution_quests": [
+        {
+          "id": "cq_gather_dan_cao",
+          "name": "Nộp Linh Thảo Cho Dược Điền",
+          "desc": "Nộp 3x Linh Thảo giúp bổ sung dược điền Bách Thảo Môn",
+          "cost_items": [{ "item_id": "item_linh_thao", "qty": 3 }],
+          "reward_contribution": 18,
+          "reward_linh_thach": 10
+        },
+        {
+          "id": "cq_slay_swamp_boss_bmt",
+          "name": "Thu Hái Xà Thất Thốn",
+          "desc": "Hạ Hắc Linh Xà Vương thu dược liệu thượng hạng",
+          "req_boss_defeated": "boss_hac_linh_xa_vuong",
+          "reward_contribution": 60,
+          "reward_linh_thach": 80
+        }
+      ],
+      "library_skills": [
+        {
+          "id": "lib_bai_cao_jue",
+          "name": "Bách Thảo Hô Hấp Quyết",
+          "type": "cultivation_method",
+          "tier": 1,
+          "cost_contribution": 40,
+          "effect": { "hp_regen_bonus": 5, "xp_per_day_bonus": 6 },
+          "desc": "Pháp môn dược đạo nâng cao sức phục hồi và tốc độ hấp thu linh khí."
+        },
+        {
+          "id": "lib_dan_lu_mi_jue",
+          "name": "Đan Lư Bí Quyết",
+          "type": "crafting_boost",
+          "tier": 2,
+          "cost_contribution": 120,
+          "req_rank": "rank_noi_mon",
+          "effect": { "alchemy_quality_bonus": 0.2 },
+          "desc": "Bí quyết luyện đan của Bách Thảo Môn, tăng 20% phẩm cấp đan luyện thành."
+        }
+      ]
+    }
+  ]
+}

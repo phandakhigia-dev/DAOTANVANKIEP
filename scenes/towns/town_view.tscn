@@ -1,0 +1,423 @@
+[gd_scene load_steps=7 format=3 uid="uid://btown0001"]
+
+[ext_resource type="Script" path="res://scenes/towns/town_view.gd" id="1_town"]
+[ext_resource type="PackedScene" uid="uid://binv0001" path="res://scenes/ui/inventory_panel.tscn" id="2_inv"]
+[ext_resource type="PackedScene" uid="uid://bchar0001" path="res://scenes/ui/character_panel.tscn" id="3_char"]
+[ext_resource type="PackedScene" uid="uid://bdlg0001" path="res://scenes/ui/dialogue_modal.tscn" id="4_dlg"]
+[ext_resource type="PackedScene" uid="uid://alc0001" path="res://scenes/ui/alchemy_modal.tscn" id="5_alc"]
+[ext_resource type="PackedScene" uid="uid://shp0001" path="res://scenes/ui/player_shop_modal.tscn" id="6_shp"]
+
+[node name="TownView" type="Node2D"]
+script = ExtResource("1_town")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1, 0.12, 0.14, 1)
+
+[node name="AtmosphereOverlay" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.04, 0.08, 0.06, 0.4)
+
+[node name="BuildingsContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 120.0
+offset_top = 130.0
+offset_right = 1800.0
+offset_bottom = 950.0
+
+[node name="BuildingInn" type="PanelContainer" parent="BuildingsContainer"]
+custom_minimum_size = Vector2(480, 240)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 520.0
+offset_bottom = 280.0
+
+[node name="Margin" type="MarginContainer" parent="BuildingsContainer/BuildingInn"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="BuildingsContainer/BuildingInn/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LabelTitle" type="Label" parent="BuildingsContainer/BuildingInn/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 20
+text = "QUÁN TRỌ THANH TRÌ"
+
+[node name="LabelNPC" type="Label" parent="BuildingsContainer/BuildingInn/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.776471, 0.65098, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Chưởng Quỹ: Mạc Tư Viễn (Tán Tu Lão Niên)"
+
+[node name="LabelDesc" type="Label" parent="BuildingsContainer/BuildingInn/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "Nơi dừng chân trao đổi tin tức của tu sĩ vãng lai. Mạc chưởng quỹ có nhiều đầu mối về linh mạch Vân Lĩnh."
+autowrap_mode = 3
+
+[node name="BtnInteract" type="Button" parent="BuildingsContainer/BuildingInn"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 15
+text = "Gặp Mạc Tư Viễn [Nhiệm Vụ]"
+
+[node name="BuildingAlchemy" type="PanelContainer" parent="BuildingsContainer"]
+custom_minimum_size = Vector2(480, 240)
+layout_mode = 0
+offset_left = 600.0
+offset_top = 40.0
+offset_right = 1080.0
+offset_bottom = 280.0
+
+[node name="Margin" type="MarginContainer" parent="BuildingsContainer/BuildingAlchemy"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="BuildingsContainer/BuildingAlchemy/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LabelTitle" type="Label" parent="BuildingsContainer/BuildingAlchemy/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 20
+text = "DƯỢC PHẨM CÁC"
+
+[node name="LabelNPC" type="Label" parent="BuildingsContainer/BuildingAlchemy/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45, 0.8, 0.65, 1)
+theme_override_font_sizes/font_size = 15
+text = "Dược Sư: Thư Nguyệt"
+
+[node name="LabelDesc" type="Label" parent="BuildingsContainer/BuildingAlchemy/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "Cửa tiệm luyện đan nức tiếng trấn. Cung cấp Tụ Khí Đan hỗ trợ đột phá và Hồi Xuân Đan trị thương."
+autowrap_mode = 3
+
+[node name="AlchemyHBox" type="HBoxContainer" parent="BuildingsContainer/BuildingAlchemy"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 12
+
+[node name="BtnInteract" type="Button" parent="BuildingsContainer/BuildingAlchemy/AlchemyHBox"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Gặp Thư Nguyệt"
+
+[node name="BtnCraft" type="Button" parent="BuildingsContainer/BuildingAlchemy/AlchemyHBox"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.4, 0.9, 0.6, 1)
+theme_override_font_sizes/font_size = 15
+text = "[K] Khai Lò Luyện Đan"
+
+[node name="BuildingMarket" type="PanelContainer" parent="BuildingsContainer"]
+custom_minimum_size = Vector2(480, 240)
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 40.0
+offset_right = 1640.0
+offset_bottom = 280.0
+
+[node name="Margin" type="MarginContainer" parent="BuildingsContainer/BuildingMarket"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="BuildingsContainer/BuildingMarket/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LabelTitle" type="Label" parent="BuildingsContainer/BuildingMarket/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 20
+text = "CHỢ TÁN TU THANH TRÌ"
+
+[node name="LabelNPC" type="Label" parent="BuildingsContainer/BuildingMarket/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.7, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Thương Nhân: Kỷ Hoàn (Tán Tu Liên Hội)"
+
+[node name="LabelDesc" type="Label" parent="BuildingsContainer/BuildingMarket/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "Sạp hàng tự do của giới tán tu. Thu mua thảo dược, bán tài liệu dã ngoại và chia sẻ đồn đãi giang hồ."
+autowrap_mode = 3
+
+[node name="MarketHBox" type="HBoxContainer" parent="BuildingsContainer/BuildingMarket"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 12
+
+[node name="BtnInteract" type="Button" parent="BuildingsContainer/BuildingMarket/MarketHBox"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Gặp Kỷ Hoàn"
+
+[node name="BtnStall" type="Button" parent="BuildingsContainer/BuildingMarket/MarketHBox"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 15
+text = "[M] Sạp Hàng Ký Gửi"
+
+[node name="BuildingSect" type="PanelContainer" parent="BuildingsContainer"]
+custom_minimum_size = Vector2(760, 260)
+layout_mode = 0
+offset_left = 80.0
+offset_top = 340.0
+offset_right = 840.0
+offset_bottom = 600.0
+
+[node name="Margin" type="MarginContainer" parent="BuildingsContainer/BuildingSect"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="VBox" type="VBoxContainer" parent="BuildingsContainer/BuildingSect/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelTitle" type="Label" parent="BuildingsContainer/BuildingSect/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "THANH VI TÔNG PHÂN ĐIỆN"
+
+[node name="LabelNPC" type="Label" parent="BuildingsContainer/BuildingSect/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.776471, 0.65098, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Trấn Thủ: Chấp Sự Đoàn Vĩnh  •  Đệ Tử Tiếp Dẫn: Lâm Du"
+
+[node name="LabelDesc" type="Label" parent="BuildingsContainer/BuildingSect/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Cơ quan đại diện chính tông tại Thanh Trì Trấn. Quản lý linh mạch vùng lân cận, thu nhận cúng dường và chỉ điểm cho tu sĩ có chí hướng gia nhập tông môn."
+autowrap_mode = 3
+
+[node name="HBox" type="HBoxContainer" parent="BuildingsContainer/BuildingSect"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 16
+
+[node name="BtnElder" type="Button" parent="BuildingsContainer/BuildingSect/HBox"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Gặp Chấp Sự Đoàn Vĩnh (Cúng Dường / Tông Môn)"
+
+[node name="BtnDisciple" type="Button" parent="BuildingsContainer/BuildingSect/HBox"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Gặp Đệ Tử Lâm Du (Hỏi Kiếm Pháp)"
+
+[node name="BuildingGate" type="PanelContainer" parent="BuildingsContainer"]
+custom_minimum_size = Vector2(760, 260)
+layout_mode = 0
+offset_left = 880.0
+offset_top = 340.0
+offset_right = 1640.0
+offset_bottom = 600.0
+
+[node name="Margin" type="MarginContainer" parent="BuildingsContainer/BuildingGate"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="VBox" type="VBoxContainer" parent="BuildingsContainer/BuildingGate/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelTitle" type="Label" parent="BuildingsContainer/BuildingGate/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 22
+text = "CỔNG HƯỚNG RỪNG TRÚC & VÂN LĨNH"
+
+[node name="LabelNPC" type="Label" parent="BuildingsContainer/BuildingGate/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.5, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Thợ Săn Yêu Thú: Bạch San"
+
+[node name="LabelDesc" type="Label" parent="BuildingsContainer/BuildingGate/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Cổng trấn phía Bắc thông ra Rừng Trúc và Vân Lĩnh sơn mạch. Bạch San thợ săn thường xuyên theo dõi tập tính của bầy Linh Hồ, Bạch Xuyên Thú và loài hung ma Xích Kiếm Ma Thứu."
+autowrap_mode = 3
+
+[node name="BtnInteract" type="Button" parent="BuildingsContainer/BuildingGate"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 15
+text = "Gặp Thợ Săn Bạch San (Dò Hỏi Yêu Thú Vân Lĩnh)"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUDTop" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="PanelTown" type="PanelContainer" parent="CanvasLayer/HUDTop"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBox" type="HBoxContainer" parent="CanvasLayer/HUDTop/PanelTown"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="LabelTownName" type="Label" parent="CanvasLayer/HUDTop/PanelTown/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 20
+text = "THANH TRÌ TRẤN — Linh Mạch Khởi Nguyên"
+
+[node name="PanelClock" type="PanelContainer" parent="CanvasLayer/HUDTop"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HBox" type="HBoxContainer" parent="CanvasLayer/HUDTop/PanelClock"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="LabelClock" type="Label" parent="CanvasLayer/HUDTop/PanelClock/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.35, 1)
+theme_override_font_sizes/font_size = 15
+text = "Giờ Thìn (07:00) • 18 Tán Tu Vãng Lai"
+
+[node name="PanelPlayer" type="PanelContainer" parent="CanvasLayer/HUDTop"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBox" type="HBoxContainer" parent="CanvasLayer/HUDTop/PanelPlayer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="LabelPlayer" type="Label" parent="CanvasLayer/HUDTop/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45, 0.8, 0.65, 1)
+theme_override_font_sizes/font_size = 16
+text = "Lâm Phong • Phàm Nhân"
+
+[node name="LabelStones" type="Label" parent="CanvasLayer/HUDTop/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.776471, 0.65098, 0.4, 1)
+theme_override_font_sizes/font_size = 16
+text = "Linh Thạch: 50"
+
+[node name="HUDBottom" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="HBox" type="HBoxContainer" parent="CanvasLayer/HUDBottom"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 20
+
+[node name="BtnCharacter" type="Button" parent="CanvasLayer/HUDBottom/HBox"]
+custom_minimum_size = Vector2(180, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "[C] Nhân Vật"
+
+[node name="BtnInventory" type="Button" parent="CanvasLayer/HUDBottom/HBox"]
+custom_minimum_size = Vector2(170, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "[I] Túi Đồ"
+
+[node name="BtnAlchemy" type="Button" parent="CanvasLayer/HUDBottom/HBox"]
+custom_minimum_size = Vector2(180, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9, 0.6, 1)
+theme_override_font_sizes/font_size = 15
+text = "[K] Luyện Đan"
+
+[node name="BtnShop" type="Button" parent="CanvasLayer/HUDBottom/HBox"]
+custom_minimum_size = Vector2(180, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 15
+text = "[M] Sạp Hàng"
+
+[node name="BtnLeaveTown" type="Button" parent="CanvasLayer/HUDBottom/HBox"]
+custom_minimum_size = Vector2(210, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.7, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+text = "Ra Bản Đồ [Esc]"
+
+[node name="DialogueModal" parent="CanvasLayer" instance=ExtResource("4_dlg")]
+visible = false
+
+[node name="InventoryPanel" parent="CanvasLayer" instance=ExtResource("2_inv")]
+visible = false
+
+[node name="CharacterPanel" parent="CanvasLayer" instance=ExtResource("3_char")]
+visible = false
+
+[node name="AlchemyModal" parent="CanvasLayer" instance=ExtResource("5_alc")]
+visible = false
+
+[node name="PlayerShopModal" parent="CanvasLayer" instance=ExtResource("6_shp")]
+visible = false

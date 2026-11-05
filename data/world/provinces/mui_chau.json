@@ -1,0 +1,18 @@
+{
+  "province_id": "mui_chau",
+  "display_name": "Mùi Châu",
+  "country_id": "dai_huyen",
+  "theme": "Cao nguyên gió lộng, mục trường, thổ phỉ",
+  "status": "metadata_only",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "neighbor_provinces": [
+    "ngo_chau",
+    "thin_chau",
+    "than_chau"
+  ]
+}

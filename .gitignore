@@ -1,0 +1,26 @@
+# Godot 4.x .gitignore
+.godot/
+*.translation
+*.tmp
+*.bak
+
+# Builds
+build/
+bin/
+release/
+
+# User saves during local testing (unless committing test fixtures)
+saves/
+user_saves/
+
+# Archives & exports
+audit_exports/
+*.zip
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.orig
+.vscode/
+.idea/

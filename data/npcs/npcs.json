@@ -1,0 +1,970 @@
+{
+  "schema_version": 2,
+  "npcs": [
+    {
+      "id": "npc_mac_tu_vien",
+      "name": "Mạc Tư Viễn",
+      "role": "Chưởng Quỹ",
+      "title": "Chủ Quán Trọ Thanh Trì",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Quán Trọ Thanh Trì",
+      "realm_name": "Luyện Khí Tầng 3",
+      "realm_tier": 1,
+      "realm_stage": 3,
+      "age_years": 45,
+      "lifespan_years": 120,
+      "money": 350,
+      "affinity": 0,
+      "traits": { "caution": 70, "greed": 50, "mercy": 60, "ambition": 30, "honor": 65 },
+      "relationships": {
+        "npc_thu_nguyet": { "affinity": 40, "trust": 60, "fear": 0, "debt": 10, "grudge": 0 },
+        "npc_ky_hoan": { "affinity": 20, "trust": 30, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Đạo hữu phương nào đến? Dạo gần đây hồ Thanh Trì xuất hiện dị tượng, sương mờ dâng cao, yêu thú dưới chân Vân Lĩnh rục rịch. Muốn nghỉ chân hay tìm tin tức thì tìm ta là đúng chỗ rồi đấy.",
+        "gossip": "Nghe đồn nơi Vân Lĩnh Rìa có một con Xích Kiếm Ma Thứu chiếm giữ một mảnh tàn kiếm cổ xưa. Nếu trảm được nó, thu hồi bảo vật, chắc chắn sẽ kết thành thiện duyên to lớn.",
+        "quest_offer": "Bên bờ hồ và rìa núi Vân Lĩnh có bầy Ma Thứu cướp giật khoáng thạch. Đạo hữu nếu có lòng trừ hại mang Cổ Kiếm Tàn Phiến về, ta sẽ trọng thưởng Linh Thạch và giúp người tiếp cận đan dược đột phá!",
+        "quest_completed": "Thật không ngờ đạo hữu lại chém hạ được Xích Kiếm Ma Thứu! Đây là Linh Thạch và đan dược như đã hứa. Đạo hữu đã cảm ứng thiên địa, mau chóng bế quan đột phá Luyện Khí đi!",
+        "chat": "Tu tiên một bước một gian nan. Đừng tưởng người của các đại tông môn đều là thần tiên từ bi, lợi ích đụng chạm thì thủ đoạn còn độc hơn ma đạo."
+      },
+      "quest_giver_ids": ["q_first_spirit_vein"]
+    },
+    {
+      "id": "npc_lam_du",
+      "name": "Lâm Du",
+      "role": "Đệ Tử Tiếp Dẫn",
+      "title": "Đệ Tử Thanh Vi Tông",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Thanh Vi Tông Phân Điện",
+      "realm_name": "Luyện Khí Tầng 4",
+      "realm_tier": 1,
+      "realm_stage": 4,
+      "age_years": 24,
+      "lifespan_years": 120,
+      "money": 180,
+      "affinity": 0,
+      "traits": { "caution": 50, "greed": 30, "mercy": 55, "ambition": 70, "honor": 75 },
+      "relationships": {
+        "npc_doan_vinh": { "affinity": 60, "trust": 80, "fear": 20, "debt": 0, "grudge": 0 },
+        "npc_co_kiem_dong": { "affinity": 70, "trust": 75, "fear": 10, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Tại hạ Lâm Du, phụng mệnh tông môn tuần sát bờ cõi Thanh Trì. Đạo hữu khí tức ổn định, tựa hồ đang tìm kiếm cơ duyên bước vào tiên lộ?",
+        "gossip": "Thanh Vi Kiếm Pháp chú trọng ý tại kiếm tiên, ngưng khí hóa nhận. Khi lâm trận hãy giữ khoảng cách, xuất kiếm khi địch chưa kịp áp sát.",
+        "chat": "Chỉ cần tích đủ công đức hoặc cúng dường linh tài, chưởng môn nhân sẽ để mắt đến các tán tu có tiềm năng."
+      }
+    },
+    {
+      "id": "npc_thu_nguyet",
+      "name": "Thư Nguyệt",
+      "role": "Dược Sư",
+      "title": "Dược Sư Thanh Trì",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Dược Phẩm Các",
+      "realm_name": "Luyện Khí Tầng 2",
+      "realm_tier": 1,
+      "realm_stage": 2,
+      "age_years": 28,
+      "lifespan_years": 120,
+      "money": 520,
+      "affinity": 0,
+      "traits": { "caution": 80, "greed": 40, "mercy": 85, "ambition": 25, "honor": 80 },
+      "relationships": {
+        "npc_mac_tu_vien": { "affinity": 50, "trust": 70, "fear": 0, "debt": 0, "grudge": 0 },
+        "npc_moc_lao": { "affinity": 65, "trust": 85, "fear": 0, "debt": 25, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Thuốc đắng dã tật, linh đan cứu mạng. Chỗ ta có sẵn Tụ Khí Đan và Hồi Xuân Đan luyện từ sớm, đạo hữu có cần bổ sung đan dược hộ thân không?",
+        "gossip": "Đột phá Luyện Khí cần một viên Tụ Khí Đan thuần khiết để khai thông kinh mạch. Nếu thiếu đan dược mà cưỡng cầu, kinh mạch nứt vỡ thì hối hận không kịp đâu.",
+        "chat": "Thảo dược núi Vân Lĩnh vốn rất tốt, chỉ tiếc dạo gần đây ma thú chiếm cứ làm giá linh thảo tăng vọt."
+      },
+      "shop_inventory": ["item_tu_khi_dan", "item_hoi_xuan_dan", "item_thanh_tri_linh_thao"]
+    },
+    {
+      "id": "npc_ky_hoan",
+      "name": "Kỷ Hoàn",
+      "role": "Thương Nhân",
+      "title": "Tán Tu Du Phương",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Chợ Tán Tu",
+      "realm_name": "Luyện Khí Tầng 5",
+      "realm_tier": 1,
+      "realm_stage": 5,
+      "age_years": 52,
+      "lifespan_years": 120,
+      "money": 880,
+      "affinity": 0,
+      "traits": { "caution": 65, "greed": 85, "mercy": 30, "ambition": 55, "honor": 40 },
+      "relationships": {
+        "npc_mac_tu_vien": { "affinity": 25, "trust": 40, "fear": 0, "debt": 0, "grudge": 0 },
+        "npc_duong_quy": { "affinity": 50, "trust": 50, "fear": 0, "debt": 30, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Hắc hắc, người quen mới gặp. Ta đi khắp Vân Lĩnh thu thập không ít bảo bối và bí văn, chỉ cần có đủ linh thạch, chuyện gì ta cũng nói được.",
+        "gossip": "Ngươi có biết vì sao linh khí Thanh Trì bỗng nhiên dâng trào không? Dưới đáy hồ kia không chừng là một mảnh vỡ của Cổ Trận thời Đại Tĩnh Mạch đấy.",
+        "chat": "Lũ yêu thú ngoài kia hung hãn lắm, đừng tiếc vài viên linh thạch mua phù chú đan dược hộ thân."
+      },
+      "shop_inventory": ["item_thanh_tri_linh_thao", "item_hoi_xuan_dan"]
+    },
+    {
+      "id": "npc_bach_san",
+      "name": "Bạch San",
+      "role": "Thợ Săn Yêu Thú",
+      "title": "Người Gác Cổng Rừng Trúc",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_rung_truc",
+      "location_name": "Cổng Rừng Trúc",
+      "realm_name": "Luyện Khí Tầng 2",
+      "realm_tier": 1,
+      "realm_stage": 2,
+      "age_years": 31,
+      "lifespan_years": 120,
+      "money": 120,
+      "affinity": 0,
+      "traits": { "caution": 45, "greed": 35, "mercy": 60, "ambition": 40, "honor": 80 },
+      "relationships": {
+        "npc_trieu_phu": { "affinity": 50, "trust": 65, "fear": 0, "debt": 0, "grudge": 0 },
+        "npc_so_ngoc": { "affinity": 35, "trust": 45, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Rừng trúc này thanh tịnh nhưng sâu bên trong là địa bàn của Hắc Linh Xà. Người phàm vào đây không cẩn thận sẽ nhiễm độc khí bỏ mạng.",
+        "gossip": "Muốn lên Vân Lĩnh, ngươi phải đi vòng qua lối mòn phía Đông Bắc. Cẩn thận lũ Linh Hồ ranh mãnh, chúng luôn vồ mồi theo bầy.",
+        "chat": "Cây cung này của ta đã bắn hạ mười mấy con yêu hồ, nhưng con ma thứu ở đỉnh Vân Lĩnh thì da dày tên bắn không thủng."
+      }
+    },
+    {
+      "id": "npc_doan_vinh",
+      "name": "Đoàn Vĩnh",
+      "role": "Chấp Sự Trấn Thủ",
+      "title": "Trưởng Lão Thanh Vi Tông",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Thanh Vi Tông Phân Điện",
+      "realm_name": "Trúc Cơ Sơ Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 1,
+      "age_years": 110,
+      "lifespan_years": 250,
+      "money": 1500,
+      "affinity": 0,
+      "traits": { "caution": 60, "greed": 25, "mercy": 45, "ambition": 65, "honor": 90 },
+      "relationships": {
+        "npc_thanh_vi_chan_nhan": { "affinity": 85, "trust": 95, "fear": 30, "debt": 0, "grudge": 0 },
+        "npc_lam_du": { "affinity": 50, "trust": 60, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Thanh Vi Tông trấn giữ linh mạch ngàn năm, há để phường ma đạo quấy nhiễu. Ngươi nếu có chí hướng chính đạo, hãy chứng minh bằng hành động.",
+        "gossip": "Ma giáo U Minh cốc gần đây rục rịch điều động nhân lực. Có tin đồn bọn chúng tìm thấy tàn cốt của một cổ ma thời thượng cổ.",
+        "chat": "Trúc Cơ là bước ngoặt cải thiên hoán cốt, linh dịch ngưng tụ đan điền. Phàm nhân muốn thành đạo thì tâm tính phải vững như bàn thạch."
+      }
+    },
+    {
+      "id": "npc_trieu_phu",
+      "name": "Triệu Phú",
+      "role": "Tiều Phu",
+      "title": "Người Đốn Củi Rừng Trúc",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_rung_truc",
+      "location_name": "Rìa Rừng Trúc",
+      "realm_name": "Phàm Nhân",
+      "realm_tier": 0,
+      "realm_stage": 0,
+      "age_years": 58,
+      "lifespan_years": 80,
+      "money": 45,
+      "affinity": 0,
+      "traits": { "caution": 85, "greed": 20, "mercy": 70, "ambition": 10, "honor": 75 },
+      "relationships": {
+        "npc_bach_san": { "affinity": 60, "trust": 75, "fear": 0, "debt": 15, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Lão già này chỉ biết đốn củi kiếm chút cháo qua ngày. Tiên nhân đi rừng cẩn thận cành khô bẫy rập."
+      }
+    },
+    {
+      "id": "npc_ha_lien",
+      "name": "Hạ Liên",
+      "role": "Hái Sen",
+      "title": "Thiếu Nữ Thanh Trì",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Bến Thuyền Hồ Thanh Trì",
+      "realm_name": "Phàm Nhân",
+      "realm_tier": 0,
+      "realm_stage": 0,
+      "age_years": 19,
+      "lifespan_years": 80,
+      "money": 60,
+      "affinity": 0,
+      "traits": { "caution": 55, "greed": 15, "mercy": 90, "ambition": 20, "honor": 80 },
+      "relationships": {
+        "npc_thu_nguyet": { "affinity": 60, "trust": 70, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Hoa sen hồ Thanh Trì nở quanh năm nhờ linh khí dưới đáy hồ đó đạo hữu."
+      }
+    },
+    {
+      "id": "npc_uong_thiet",
+      "name": "Uông Thiết",
+      "role": "Thợ Rèn",
+      "title": "Đúc Kiếm Sư Thanh Trì",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Lò Rèn Uông Gia",
+      "realm_name": "Luyện Khí Tầng 1",
+      "realm_tier": 1,
+      "realm_stage": 1,
+      "age_years": 42,
+      "lifespan_years": 100,
+      "money": 420,
+      "affinity": 0,
+      "traits": { "caution": 40, "greed": 60, "mercy": 45, "ambition": 50, "honor": 65 },
+      "relationships": {
+        "npc_ky_hoan": { "affinity": 35, "trust": 40, "fear": 0, "debt": 10, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Kiếm tốt cần huyền thiết hảo hạng. Đạo hữu tìm được khoáng thạch cứ mang qua đây."
+      }
+    },
+    {
+      "id": "npc_bach_vo_nhai",
+      "name": "Bạch Vô Nhai",
+      "role": "Minh Chủ",
+      "title": "Thủ Lĩnh Tán Tu Liên Hội",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Nghị Sự Đường Tán Tu",
+      "realm_name": "Trúc Cơ Trung Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 2,
+      "age_years": 140,
+      "lifespan_years": 250,
+      "money": 3200,
+      "affinity": 0,
+      "traits": { "caution": 60, "greed": 45, "mercy": 65, "ambition": 75, "honor": 70 },
+      "relationships": {
+        "npc_thanh_vi_chan_nhan": { "affinity": 15, "trust": 30, "fear": 20, "debt": 0, "grudge": 0 },
+        "npc_u_minh_lao_to": { "affinity": -40, "trust": 0, "fear": 50, "debt": 0, "grudge": 20 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Tán tu chúng ta không có đại tông môn che chở, muốn sống sót phải đoàn kết bảo vệ nhau."
+      }
+    },
+    {
+      "id": "npc_so_ngoc",
+      "name": "Sở Ngọc",
+      "role": "Du Hiệp",
+      "title": "Bạch Y Kiếm Khách",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_rung_truc",
+      "location_name": "Rìa Rừng Trúc",
+      "realm_name": "Luyện Khí Tầng 6",
+      "realm_tier": 1,
+      "realm_stage": 6,
+      "age_years": 26,
+      "lifespan_years": 120,
+      "money": 290,
+      "affinity": 0,
+      "traits": { "caution": 30, "greed": 20, "mercy": 75, "ambition": 60, "honor": 95 },
+      "relationships": {
+        "npc_bach_san": { "affinity": 45, "trust": 60, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Một bầu rượu, một thanh kiếm, đi khắp Cửu Hoang trừ bạo an dân."
+      }
+    },
+    {
+      "id": "npc_ly_tien",
+      "name": "Lý Tiên",
+      "role": "Bói Quẻ",
+      "title": "Thiên Cơ Đạo Sĩ",
+      "sect_id": "faction_tan_tu",
+      "faction_id": "faction_tan_tu",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Quán Trà Thanh Trì",
+      "realm_name": "Luyện Khí Tầng 3",
+      "realm_tier": 1,
+      "realm_stage": 3,
+      "age_years": 67,
+      "lifespan_years": 120,
+      "money": 210,
+      "affinity": 0,
+      "traits": { "caution": 90, "greed": 40, "mercy": 50, "ambition": 30, "honor": 50 },
+      "relationships": {
+        "npc_mac_tu_vien": { "affinity": 30, "trust": 40, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Thiên đạo huyền ảo, hung cát khó lường. Đạo hữu có muốn gieo một quẻ vấn tiền đồ không?"
+      }
+    },
+    {
+      "id": "npc_thanh_vi_chan_nhan",
+      "name": "Thanh Vi Chân Nhân",
+      "role": "Chưởng Môn",
+      "title": "Chưởng Môn Thanh Vi Tông",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Đại Điện Thanh Vi Tông",
+      "realm_name": "Kim Đan Hậu Kỳ",
+      "realm_tier": 3,
+      "realm_stage": 3,
+      "age_years": 380,
+      "lifespan_years": 600,
+      "money": 12000,
+      "affinity": 0,
+      "traits": { "caution": 75, "greed": 30, "mercy": 50, "ambition": 80, "honor": 85 },
+      "relationships": {
+        "npc_doan_vinh": { "affinity": 75, "trust": 90, "fear": 0, "debt": 0, "grudge": 0 },
+        "npc_u_minh_lao_to": { "affinity": -90, "trust": 0, "fear": 10, "debt": 0, "grudge": 80 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Thanh Vi nhất mạch lấy kiếm nhập đạo, lấy chính tâm làm gốc. Ngươi tới cầu đạo hay muốn tiếp nhận khảo nghiệm?"
+      }
+    },
+    {
+      "id": "npc_co_kiem_dong",
+      "name": "Cố Kiếm Đồng",
+      "role": "Đại Sư Huynh",
+      "title": "Kiếm Thủ Nội Môn",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Diễn Võ Trường Thanh Vi",
+      "realm_name": "Trúc Cơ Viên Mãn",
+      "realm_tier": 2,
+      "realm_stage": 4,
+      "age_years": 48,
+      "lifespan_years": 250,
+      "money": 1800,
+      "affinity": 0,
+      "traits": { "caution": 40, "greed": 25, "mercy": 50, "ambition": 85, "honor": 90 },
+      "relationships": {
+        "npc_lam_du": { "affinity": 60, "trust": 70, "fear": 0, "debt": 0, "grudge": 0 },
+        "npc_nhuoc_lan": { "affinity": 70, "trust": 80, "fear": 0, "debt": 15, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Kiếm trong tay không sắc, tâm trong ngực không yên. Chỉ có khổ luyện mới vững bước trên tiên lộ."
+      }
+    },
+    {
+      "id": "npc_nhuoc_lan",
+      "name": "Nhược Lan",
+      "role": "Trận Pháp Sư",
+      "title": "Kiếm Trận Tiên Tử",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Trận Đạo Các",
+      "realm_name": "Trúc Cơ Sơ Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 1,
+      "age_years": 36,
+      "lifespan_years": 250,
+      "money": 950,
+      "affinity": 0,
+      "traits": { "caution": 70, "greed": 30, "mercy": 70, "ambition": 60, "honor": 80 },
+      "relationships": {
+        "npc_co_kiem_dong": { "affinity": 65, "trust": 75, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Phù trận chi đạo mượn uy lực thiên địa. Một nét vẽ sai, linh khí cắn trả khôn lường."
+      }
+    },
+    {
+      "id": "npc_nguyen_hao",
+      "name": "Nguyên Hạo",
+      "role": "Chấp Pháp Sứ",
+      "title": "Chấp Pháp Đệ Tử",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Chấp Pháp Đường",
+      "realm_name": "Luyện Khí Tầng 8",
+      "realm_tier": 1,
+      "realm_stage": 8,
+      "age_years": 32,
+      "lifespan_years": 120,
+      "money": 450,
+      "affinity": 0,
+      "traits": { "caution": 50, "greed": 10, "mercy": 20, "ambition": 70, "honor": 95 },
+      "relationships": {
+        "npc_thanh_vi_chan_nhan": { "affinity": 80, "trust": 90, "fear": 20, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Phàm kẻ nào phạm môn quy, cấu kết ma đạo, chấp pháp kiếm dưới tay ta quyết không dung thứ!"
+      }
+    },
+    {
+      "id": "npc_luc_truc",
+      "name": "Lục Trúc",
+      "role": "Dược Nông",
+      "title": "Chăm Sóc Dược Điền",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Linh Thảo Viên",
+      "realm_name": "Luyện Khí Tầng 3",
+      "realm_tier": 1,
+      "realm_stage": 3,
+      "age_years": 22,
+      "lifespan_years": 120,
+      "money": 160,
+      "affinity": 0,
+      "traits": { "caution": 75, "greed": 25, "mercy": 85, "ambition": 30, "honor": 70 },
+      "relationships": {
+        "npc_lam_du": { "affinity": 55, "trust": 65, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Linh thảo Thanh Vi tưới bằng tuyền thủy Vân Lĩnh, trăm năm mới nở một đóa."
+      }
+    },
+    {
+      "id": "npc_pham_truong_lao",
+      "name": "Phạm Trưởng Lão",
+      "role": "Tàng Kinh Các Lão",
+      "title": "Trưởng Lão Điển Tịch",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Tàng Kinh Các",
+      "realm_name": "Kim Đan Sơ Kỳ",
+      "realm_tier": 3,
+      "realm_stage": 1,
+      "age_years": 290,
+      "lifespan_years": 500,
+      "money": 4500,
+      "affinity": 0,
+      "traits": { "caution": 85, "greed": 20, "mercy": 60, "ambition": 40, "honor": 85 },
+      "relationships": {
+        "npc_thanh_vi_chan_nhan": { "affinity": 80, "trust": 85, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Vạn quyển công pháp đều là dấu chân của tiền nhân. Không ngộ ra đạo của mình thì chỉ là chiếc giá đựng sách."
+      }
+    },
+    {
+      "id": "npc_khong_tinh",
+      "name": "Không Tinh",
+      "role": "Kiếm Si",
+      "title": "Ẩn Kiếm Phong Chủ",
+      "sect_id": "sect_thanh_vi",
+      "faction_id": "sect_thanh_vi",
+      "location": "loc_van_linh",
+      "location_name": "Kiếm Trủng Vân Lĩnh",
+      "realm_name": "Kim Đan Trung Kỳ",
+      "realm_tier": 3,
+      "realm_stage": 2,
+      "age_years": 310,
+      "lifespan_years": 500,
+      "money": 2100,
+      "affinity": 0,
+      "traits": { "caution": 30, "greed": 10, "mercy": 40, "ambition": 75, "honor": 80 },
+      "relationships": {
+        "npc_co_kiem_dong": { "affinity": 60, "trust": 70, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Kiếm ý bất toái, nhân sinh bất diệt. Ngươi tới đây muốn thử một kiếm của ta sao?"
+      }
+    },
+    {
+      "id": "npc_u_minh_lao_to",
+      "name": "U Minh Lão Tổ",
+      "role": "Giáo Chủ",
+      "title": "Giáo Chủ U Minh Ma Giáo",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Huyết Ma Cung",
+      "realm_name": "Kim Đan Viên Mãn",
+      "realm_tier": 3,
+      "realm_stage": 4,
+      "age_years": 420,
+      "lifespan_years": 600,
+      "money": 18000,
+      "affinity": 0,
+      "traits": { "caution": 65, "greed": 90, "mercy": 10, "ambition": 95, "honor": 20 },
+      "relationships": {
+        "npc_thanh_vi_chan_nhan": { "affinity": -90, "trust": 0, "fear": 20, "debt": 0, "grudge": 85 },
+        "npc_huyet_sat": { "affinity": 70, "trust": 60, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Thiên đạo bất nhân dĩ vạn vật vi sô cẩu! Kẻ mạnh đoạt tài nguyên, kẻ yếu chịu xẻ thịt, đó mới là chân lý của thiên địa!"
+      }
+    },
+    {
+      "id": "npc_huyet_sat",
+      "name": "Huyết Sát Ma Quân",
+      "role": "Hộ Pháp",
+      "title": "Tả Hộ Pháp U Minh",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Huyết Trì U Minh",
+      "realm_name": "Trúc Cơ Viên Mãn",
+      "realm_tier": 2,
+      "realm_stage": 4,
+      "age_years": 85,
+      "lifespan_years": 250,
+      "money": 3400,
+      "affinity": 0,
+      "traits": { "caution": 35, "greed": 80, "mercy": 5, "ambition": 85, "honor": 30 },
+      "relationships": {
+        "npc_u_minh_lao_to": { "affinity": 60, "trust": 50, "fear": 60, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Mùi máu tươi của lũ danh môn chính phái luôn là thứ mỹ vị nhất trên đời."
+      }
+    },
+    {
+      "id": "npc_quy_ba",
+      "name": "Quỷ Bà Bà",
+      "role": "Độc Sư",
+      "title": "Bách Độc Trưởng Lão",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Độc Chu Động",
+      "realm_name": "Trúc Cơ Trung Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 2,
+      "age_years": 160,
+      "lifespan_years": 250,
+      "money": 2100,
+      "affinity": 0,
+      "traits": { "caution": 80, "greed": 65, "mercy": 10, "ambition": 60, "honor": 25 },
+      "relationships": {
+        "npc_diep_duoc_ton": { "affinity": -60, "trust": 0, "fear": 30, "debt": 0, "grudge": 70 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Hắc hắc, đám linh đan của Bách Thảo Môn chỉ là trò con nít. Độc dược của lão thân mới khiến Nguyên Anh cũng phải nát thịt tan xương."
+      }
+    },
+    {
+      "id": "npc_da_xoa",
+      "name": "Dạ Xoa",
+      "role": "Sát Thủ",
+      "title": "Huyết Ảnh Ám Vệ",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Hắc Phong Lâm",
+      "realm_name": "Luyện Khí Tầng 9",
+      "realm_tier": 1,
+      "realm_stage": 9,
+      "age_years": 27,
+      "lifespan_years": 120,
+      "money": 680,
+      "affinity": 0,
+      "traits": { "caution": 60, "greed": 70, "mercy": 15, "ambition": 75, "honor": 40 },
+      "relationships": {
+        "npc_huyet_sat": { "affinity": 55, "trust": 50, "fear": 40, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Người nhận tiền, ta đoạt mạng. Khi lưỡi đao kề cổ thì hối hận cũng đã muộn."
+      }
+    },
+    {
+      "id": "npc_u_huyen",
+      "name": "U Huyền",
+      "role": "Ma Tu",
+      "title": "Đoạt Xá Tán Nhân",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Thi Hài Cốc",
+      "realm_name": "Trúc Cơ Sơ Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 1,
+      "age_years": 95,
+      "lifespan_years": 250,
+      "money": 1200,
+      "affinity": 0,
+      "traits": { "caution": 70, "greed": 80, "mercy": 10, "ambition": 80, "honor": 20 },
+      "relationships": {
+        "npc_u_minh_lao_to": { "affinity": 45, "trust": 30, "fear": 50, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Thể xác này cũng sắp mục nát rồi... Nhục thân của ngươi xem ra tư chất không tồi đâu."
+      }
+    },
+    {
+      "id": "npc_hac_tam",
+      "name": "Hắc Tâm Tán Nhân",
+      "role": "Thương Buôn Chợ Đen",
+      "title": "Kẻ Buôn Huyết Thạch",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "U Minh Quỷ Thị",
+      "realm_name": "Luyện Khí Tầng 7",
+      "realm_tier": 1,
+      "realm_stage": 7,
+      "age_years": 49,
+      "lifespan_years": 120,
+      "money": 2400,
+      "affinity": 0,
+      "traits": { "caution": 65, "greed": 95, "mercy": 10, "ambition": 60, "honor": 15 },
+      "relationships": {
+        "npc_ky_hoan": { "affinity": 20, "trust": 20, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Ở Quỷ Thị này cái gì cũng mua được, từ đan dược cấm đến hồn phách tu sĩ."
+      }
+    },
+    {
+      "id": "npc_co_thi",
+      "name": "Cổ Thi Yêu",
+      "role": "Thi Khôi",
+      "title": "Hắc Thiết Thi Khôi",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Luyện Thi Đường",
+      "realm_name": "Trúc Cơ Sơ Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 1,
+      "age_years": 200,
+      "lifespan_years": 500,
+      "money": 0,
+      "affinity": 0,
+      "traits": { "caution": 10, "greed": 10, "mercy": 0, "ambition": 0, "honor": 100 },
+      "relationships": {
+        "npc_u_minh_lao_to": { "affinity": 100, "trust": 100, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "...Gừ... Tuân lệnh... Chủ nhân..."
+      }
+    },
+    {
+      "id": "npc_bach_cot",
+      "name": "Bạch Cốt Đạo Nhân",
+      "role": "Trận Pháp Sư Ma Đạo",
+      "title": "Vạn Cốt Trận Chủ",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Bạch Cốt Sơn",
+      "realm_name": "Trúc Cơ Trung Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 2,
+      "age_years": 120,
+      "lifespan_years": 250,
+      "money": 1600,
+      "affinity": 0,
+      "traits": { "caution": 70, "greed": 60, "mercy": 10, "ambition": 75, "honor": 30 },
+      "relationships": {
+        "npc_nhuoc_lan": { "affinity": -40, "trust": 0, "fear": 0, "debt": 0, "grudge": 50 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Lấy xương người làm trận nhãn, mười vạn oan hồn gào thét thì đại trận mới phát huy tối đa uy lực."
+      }
+    },
+    {
+      "id": "npc_u_linh_nhi",
+      "name": "U Linh Nhi",
+      "role": "Đệ Tử",
+      "title": "Tiểu Ma Nữ",
+      "sect_id": "sect_u_minh",
+      "faction_id": "sect_u_minh",
+      "location": "loc_u_minh_coc",
+      "location_name": "Huyết Ma Cung",
+      "realm_name": "Luyện Khí Tầng 5",
+      "realm_tier": 1,
+      "realm_stage": 5,
+      "age_years": 18,
+      "lifespan_years": 120,
+      "money": 380,
+      "affinity": 0,
+      "traits": { "caution": 45, "greed": 50, "mercy": 40, "ambition": 70, "honor": 40 },
+      "relationships": {
+        "npc_u_minh_lao_to": { "affinity": 65, "trust": 60, "fear": 30, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Hi hi, ngươi nhìn cái gì? Muốn thử thuật mị hoặc của ta không?"
+      }
+    },
+    {
+      "id": "npc_diep_duoc_ton",
+      "name": "Diệp Dược Tôn",
+      "role": "Môn Chủ",
+      "title": "Môn Chủ Bách Thảo Môn",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Thần Thảo Các",
+      "realm_name": "Kim Đan Hậu Kỳ",
+      "realm_tier": 3,
+      "realm_stage": 3,
+      "age_years": 450,
+      "lifespan_years": 600,
+      "money": 35000,
+      "affinity": 0,
+      "traits": { "caution": 80, "greed": 25, "mercy": 85, "ambition": 50, "honor": 90 },
+      "relationships": {
+        "npc_thanh_vi_chan_nhan": { "affinity": 60, "trust": 75, "fear": 0, "debt": 20, "grudge": 0 },
+        "npc_quy_ba": { "affinity": -70, "trust": 0, "fear": 0, "debt": 0, "grudge": 70 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Dược đạo thông thần, chữa người cũng là cứu đời. Bách Thảo Môn ta không màng tranh đấu thế tục, chỉ cầu bách thảo nở hoa."
+      }
+    },
+    {
+      "id": "npc_moc_lao",
+      "name": "Mộc Lão",
+      "role": "Đan Đạo Đại Sư",
+      "title": "Trưởng Lão Luyện Đan",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Cửu Chuyển Đan Phòng",
+      "realm_name": "Trúc Cơ Viên Mãn",
+      "realm_tier": 2,
+      "realm_stage": 4,
+      "age_years": 210,
+      "lifespan_years": 250,
+      "money": 8200,
+      "affinity": 0,
+      "traits": { "caution": 70, "greed": 30, "mercy": 75, "ambition": 40, "honor": 85 },
+      "relationships": {
+        "npc_thu_nguyet": { "affinity": 70, "trust": 85, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Hỏa hầu luyện đan thiếu một khắc là thành tro, thừa một khắc là hóa phế phẩm. Ngươi muốn học nghệ hay muốn cầu đan?"
+      }
+    },
+    {
+      "id": "npc_thao_nhi",
+      "name": "Thảo Nhi",
+      "role": "Dược Đồng",
+      "title": "Tiểu Dược Đồng",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Linh Thảo Sơn Trang",
+      "realm_name": "Luyện Khí Tầng 2",
+      "realm_tier": 1,
+      "realm_stage": 2,
+      "age_years": 16,
+      "lifespan_years": 120,
+      "money": 90,
+      "affinity": 0,
+      "traits": { "caution": 65, "greed": 20, "mercy": 90, "ambition": 30, "honor": 80 },
+      "relationships": {
+        "npc_diep_duoc_ton": { "affinity": 85, "trust": 95, "fear": 10, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Sư phụ bảo thảo dược cũng có linh tính, lúc hái phải nhẹ nhàng niệm kinh thì dược tính mới vẹn nguyên."
+      }
+    },
+    {
+      "id": "npc_van_duoc",
+      "name": "Vân Dược Tiên Tử",
+      "role": "Y Tu",
+      "title": "Thánh Thủ Y Tiên",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Hồi Xuân Điện",
+      "realm_name": "Trúc Cơ Trung Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 2,
+      "age_years": 62,
+      "lifespan_years": 250,
+      "money": 4100,
+      "affinity": 0,
+      "traits": { "caution": 60, "greed": 20, "mercy": 95, "ambition": 35, "honor": 90 },
+      "relationships": {
+        "npc_diep_duoc_ton": { "affinity": 80, "trust": 90, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Nếu kinh mạch bị tổn thương do tẩu hỏa nhập ma, hãy uống một thang Thanh Tâm Linh Nhụy sương."
+      }
+    },
+    {
+      "id": "npc_thanh_lo",
+      "name": "Thanh Lô",
+      "role": "Chấp Sự",
+      "title": "Trưởng Quản Lò Luyện",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Đan Lô Viện",
+      "realm_name": "Luyện Khí Tầng 6",
+      "realm_tier": 1,
+      "realm_stage": 6,
+      "age_years": 38,
+      "lifespan_years": 120,
+      "money": 1100,
+      "affinity": 0,
+      "traits": { "caution": 50, "greed": 45, "mercy": 60, "ambition": 55, "honor": 75 },
+      "relationships": {
+        "npc_moc_lao": { "affinity": 65, "trust": 75, "fear": 20, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Mỗi ngày Đan Lô Viện xuất lò ba ngàn viên hạ phẩm linh đan, phân phối cho khắp các phường thị."
+      }
+    },
+    {
+      "id": "npc_tinh_thao",
+      "name": "Tĩnh Thảo Chân Nhân",
+      "role": "Dược Trưởng Lão",
+      "title": "Trưởng Lão Dược Khố",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Thần Thảo Các",
+      "realm_name": "Trúc Cơ Hậu Kỳ",
+      "realm_tier": 2,
+      "realm_stage": 3,
+      "age_years": 175,
+      "lifespan_years": 250,
+      "money": 6500,
+      "affinity": 0,
+      "traits": { "caution": 85, "greed": 30, "mercy": 70, "ambition": 40, "honor": 85 },
+      "relationships": {
+        "npc_diep_duoc_ton": { "affinity": 85, "trust": 90, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Dược liệu quý ngàn năm có hạn, chỉ tặng cho người có duyên hoặc lập đại công."
+      }
+    },
+    {
+      "id": "npc_ha_thu",
+      "name": "Hà Thủ Sinh",
+      "role": "Hái Thuốc",
+      "title": "Dược Nông Bách Thảo",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "loc_bach_thao_linh",
+      "location_name": "Dược Điền Ngoại Vi",
+      "realm_name": "Luyện Khí Tầng 4",
+      "realm_tier": 1,
+      "realm_stage": 4,
+      "age_years": 29,
+      "lifespan_years": 120,
+      "money": 320,
+      "affinity": 0,
+      "traits": { "caution": 70, "greed": 35, "mercy": 80, "ambition": 45, "honor": 75 },
+      "relationships": {
+        "npc_thao_nhi": { "affinity": 60, "trust": 70, "fear": 0, "debt": 0, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Gần đây sương mù dày đặc, trên núi xuất hiện bầy Độc Tích Cạp cắn phá rễ linh dược."
+      }
+    },
+    {
+      "id": "npc_duong_quy",
+      "name": "Đường Quý",
+      "role": "Lái Buôn",
+      "title": "Chưởng Sự Dược Phường",
+      "sect_id": "sect_bach_thao",
+      "faction_id": "sect_bach_thao",
+      "location": "poi_thanh_tri_tran",
+      "location_name": "Dược Phẩm Các",
+      "realm_name": "Luyện Khí Tầng 5",
+      "realm_tier": 1,
+      "realm_stage": 5,
+      "age_years": 47,
+      "lifespan_years": 120,
+      "money": 3900,
+      "affinity": 0,
+      "traits": { "caution": 60, "greed": 75, "mercy": 50, "ambition": 60, "honor": 65 },
+      "relationships": {
+        "npc_thu_nguyet": { "affinity": 55, "trust": 65, "fear": 0, "debt": 0, "grudge": 0 },
+        "npc_ky_hoan": { "affinity": 45, "trust": 50, "fear": 0, "debt": 20, "grudge": 0 }
+      },
+      "memories": [],
+      "alive": true,
+      "dialogues": {
+        "greeting": "Ta vận chuyển linh dược từ Bách Thảo Lĩnh sang Thanh Trì, đổi lấy khoáng thạch tinh hoa về luyện đan lô."
+      }
+    }
+  ]
+}

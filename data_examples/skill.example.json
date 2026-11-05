@@ -1,0 +1,22 @@
+{
+  "id": "skill_kiem_khi_co_ban",
+  "name": "Kiếm Khí Sơ Khởi",
+  "school": "sword",
+  "element": "metal",
+  "slot": "primary",
+  "cost_mp": 8,
+  "cooldown_seconds": 1.5,
+  "cast_time_seconds": 0.15,
+  "range_units": 350,
+  "effects": [
+    {
+      "type": "damage",
+      "base_power": 12,
+      "damage_kind": "spirit"
+    }
+  ],
+  "tags": [
+    "projectile",
+    "single_target"
+  ]
+}

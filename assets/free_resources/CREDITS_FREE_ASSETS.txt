@@ -1,0 +1,27 @@
+# DANH MỤC TÀI NGUYÊN MIỄN PHÍ ĐÃ THU THẬP (FREE OPEN-SOURCE ASSETS CATALOG)
+Dự án: ĐẠO TÀN: VẠN KIẾP
+
+1. Oriental Roof Tiles
+   - Tác giả: Clint Bellanger (OpenGameArt)
+   - Giấy phép: CC0 / Public Domain
+   - Sử dụng: Tham chiếu kết cấu ngói cong kiến trúc Đông Á / Võ hiệp.
+
+2. Japanese / Oriental Strategy Buildings Mockup
+   - Tác giả: Jetrel (OpenGameArt)
+   - Giấy phép: CC0 / Public Domain
+   - Sử dụng: Tham chiếu cấu trúc thành quách, lầu các và cổng thành.
+
+3. Pastoral Overworld 32x32 Tileset
+   - Tác giả: pebonius (OpenGameArt)
+   - Giấy phép: CC0 / Public Domain
+   - Sử dụng: Địa hình thế giới mở, lối mòn và nhà cửa.
+
+4. 2D Outdoor 32x32 Tileset
+   - Tác giả: aeren108 (OpenGameArt)
+   - Giấy phép: CC0 / Public Domain
+   - Sử dụng: Cảnh quan ngoại cảnh, cỏ cây, bờ đá.
+
+5. Home Objects & Props
+   - Tác giả: Janna (Lilius) (OpenGameArt)
+   - Giấy phép: CC0 / Public Domain
+   - Sử dụng: Đồ vật nội ngoại thất truyền thống.

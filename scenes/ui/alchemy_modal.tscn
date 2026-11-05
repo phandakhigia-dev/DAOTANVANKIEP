@@ -1,0 +1,134 @@
+[gd_scene load_steps=2 format=3 uid="uid://alc0001"]
+
+[ext_resource type="Script" path="res://scenes/ui/alchemy_modal.gd" id="1_alc"]
+
+[node name="AlchemyModal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_alc")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(920, 580)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -290.0
+offset_right = 460.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeftPane" type="VBoxContainer" parent="PanelContainer/Margin/HBox"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelHeader" type="Label" parent="PanelContainer/Margin/HBox/LeftPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "DANH MỤC ĐAN PHƯƠNG"
+
+[node name="LabelPlayerStones" type="Label" parent="PanelContainer/Margin/HBox/LeftPane"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.3, 1)
+text = "Linh Thạch Hiện Có: 0"
+
+[node name="Scroll" type="ScrollContainer" parent="PanelContainer/Margin/HBox/LeftPane"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RecipeList" type="VBoxContainer" parent="PanelContainer/Margin/HBox/LeftPane/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="RightPane" type="VBoxContainer" parent="PanelContainer/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="Header" type="HBoxContainer" parent="PanelContainer/Margin/HBox/RightPane"]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="PanelContainer/Margin/HBox/RightPane/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Tụ Khí Đan"
+
+[node name="LabelDesc" type="Label" parent="PanelContainer/Margin/HBox/RightPane"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+autowrap_mode = 2
+text = "Mô tả đan phương..."
+
+[node name="ReqBox" type="VBoxContainer" parent="PanelContainer/Margin/HBox/RightPane"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelRealm" type="Label" parent="PanelContainer/Margin/HBox/RightPane/ReqBox"]
+layout_mode = 2
+text = "Yêu Cầu Cảnh Giới: Phàm Nhân"
+
+[node name="LabelStones" type="Label" parent="PanelContainer/Margin/HBox/RightPane/ReqBox"]
+layout_mode = 2
+text = "Tiêu Hao Linh Thạch: 10"
+
+[node name="LabelRate" type="Label" parent="PanelContainer/Margin/HBox/RightPane/ReqBox"]
+layout_mode = 2
+text = "Tỉ Lệ Thành Đan: 100%"
+
+[node name="MaterialsContainer" type="PanelContainer" parent="PanelContainer/Margin/HBox/RightPane"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/Margin/HBox/RightPane/MaterialsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelStatus" type="Label" parent="PanelContainer/Margin/HBox/RightPane"]
+layout_mode = 2
+text = "Trạng thái sẵn sàng."
+
+[node name="BottomBox" type="HBoxContainer" parent="PanelContainer/Margin/HBox/RightPane"]
+layout_mode = 2
+alignment = 2
+theme_override_constants/separation = 16
+
+[node name="BtnCraft" type="Button" parent="PanelContainer/Margin/HBox/RightPane/BottomBox"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+text = "Khai Lò Luyện Đan"
+
+[node name="BtnClose" type="Button" parent="PanelContainer/Margin/HBox/RightPane/BottomBox"]
+custom_minimum_size = Vector2(100, 42)
+layout_mode = 2
+text = "Đóng [Esc]"

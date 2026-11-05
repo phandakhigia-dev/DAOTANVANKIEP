@@ -1,0 +1,28 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 581.80 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+
+=======================================================
+  CO-OP 3-PROCESS LIVE GAMEPLAY TEST
+  Tiến Trình: HOST | Port: 8899 | Time: 2026-11-05T10:31:10
+=======================================================
+
+[HOST] Đã nạp thành công WorldMap scene.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Host Server khởi chạy thành công trên port 8899 (Cố định time_scale = 1.0, 720s thực/ngày)
+[HOST] Host Server đang lắng nghe trên port 8899 (Cố định 720s thực/ngày)...
+[SessionAuthority] Peer kết nối: 1325536472
+[CoopWorldSync] Đã gửi Full World Snapshot & Authoritative Inventory cho Peer 1325536472.
+[HOST] Peer tham gia: 1325536472 (Đạo Hữu #1325536472)
+[WorldMap] Đã spawn Remote Avatar cho Peer 1325536472 tại (665.0975, 459.5754)
+[SessionAuthority] Peer kết nối: 739426922
+[CoopWorldSync] Đã gửi Full World Snapshot & Authoritative Inventory cho Peer 739426922.
+[HOST] Peer tham gia: 739426922 (Đạo Hữu #739426922)
+[HOST] Cả 2 Client đã kết nối thành công! Peers: [1, 1325536472, 739426922]
+[WorldMap] Đã spawn Remote Avatar cho Peer 739426922 tại (684.6901, 460.0349)
+[HOST] Đã nhận và đồng bộ chuyển động của cả 2 Client trên WorldMap.
+[CoopEconomy] Host cam kết thành công cho Peer 1325536472: -150 LT, +1x item_tay_tuy_dan (Rev: 2, Req: REQ_RACE_CLI1)
+[HOST] ★ Race Condition Test Thành Công: Kho sạp cạn về 0, Doanh thu +150 LT, không bị âm!
+[HOST] Lưu screenshot res://audit/graphics_after/coop_host_window.png (Kích thước: (1280, 720), Mã lỗi: 0)
+[HOST] Đã chụp ảnh cửa sổ Host thật: coop_host_window.png
+[HOST] Toàn bộ quy trình Host hoàn tất 100%!

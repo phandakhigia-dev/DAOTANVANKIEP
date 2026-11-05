@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/vfx/vfx_alchemy_glow.gd" id="1_alc"]
+
+[node name="VFXAlchemyGlow" type="Node2D"]
+script = ExtResource("1_alc")
+
+[node name="CauldronSmoke" type="CPUParticles2D" parent="."]
+amount = 24
+lifetime = 1.8
+emission_shape = 1
+emission_sphere_radius = 16.0
+direction = Vector2(0, -1)
+spread = 25.0
+gravity = Vector2(0, -35)
+initial_velocity_min = 30.0
+initial_velocity_max = 60.0
+scale_amount_min = 3.0
+scale_amount_max = 7.0
+color = Color(0.7, 0.45, 0.9, 0.75)
+
+[node name="GoldenSparks" type="CPUParticles2D" parent="."]
+amount = 20
+lifetime = 1.0
+emission_shape = 2
+emission_sphere_radius = 20.0
+direction = Vector2(0, -1)
+spread = 60.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 40.0
+initial_velocity_max = 90.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+color = Color(1, 0.88, 0.35, 0.95)

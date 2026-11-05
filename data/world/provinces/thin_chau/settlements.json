@@ -1,0 +1,89 @@
+{
+  "province_id": "thin_chau",
+  "settlements": [
+    {
+      "id": "settlement_long_kinh",
+      "name": "Kinh Đô Long Kinh",
+      "type": "imperial_capital",
+      "chunk_coord": [32, 16],
+      "world_pixel_center": [66560, 33792],
+      "governor_or_magistrate": "Đại Huyền Hoàng Đế • Càn Ninh Đế",
+      "security_level": "high",
+      "tax_rate": 0.08,
+      "facilities": ["imperial_palace", "six_ministries", "grand_bazaar", "imperial_guard_barracks", "royal_auction"],
+      "description": "Trung tâm quyền lực tối cao của Đại Huyền Quốc. Tường thành nguy nga, nha môn trang nghiêm, cấm quân canh phòng cẩn mật."
+    },
+    {
+      "id": "settlement_thanh_tri",
+      "name": "Huyện Thành Thanh Trì",
+      "type": "county_town",
+      "chunk_coord": [32, 32],
+      "world_pixel_center": [66560, 66560],
+      "governor_or_magistrate": "Huyện Quan Thẩm Kế An",
+      "security_level": "medium",
+      "tax_rate": 0.05,
+      "facilities": ["tam_quan_gate", "sect_hall", "alchemy_hall", "market_pavilion", "tavern_inn", "blacksmith_forge", "courtyard_house", "moonlight_pavilion", "ancient_well"],
+      "description": "Huyện thành trù phú, điểm nút giao thương quan lộ Bắc Nam và Đông Tây, nơi tụ hội đông đảo tán tu và khách thương."
+    },
+    {
+      "id": "settlement_dong_noi",
+      "name": "Thôn Đồng Nội",
+      "type": "mortal_village",
+      "chunk_coord": [31, 34],
+      "world_pixel_center": [64512, 70656],
+      "governor_or_magistrate": "Thôn Trưởng Lão Trương",
+      "security_level": "low",
+      "tax_rate": 0.03,
+      "facilities": ["paddy_farms", "peasant_huts", "village_well", "watermill"],
+      "description": "Làng quê thanh bình của phàm nhân, chuyên trồng lúa nước và nuôi tằm, có thể là điểm xuất thân của tá điền lang bạt."
+    },
+    {
+      "id": "settlement_tay_son",
+      "name": "Trại Khoáng Mỏ Tây Sơn",
+      "type": "mining_settlement",
+      "chunk_coord": [20, 32],
+      "world_pixel_center": [41984, 66560],
+      "governor_or_magistrate": "Sơn Đầu Ngô Bá",
+      "security_level": "low",
+      "tax_rate": 0.04,
+      "facilities": ["quarry_mine", "ore_smelter", "hunter_lodge", "stone_monolith"],
+      "description": "Vùng núi đá hiểm trở, nơi khai thác linh thạch và huyền thiết thô. Thường xuyên có yêu thú quấy phá."
+    },
+    {
+      "id": "settlement_bac_lam",
+      "name": "Bắc Lâm Trang",
+      "type": "gathering_village",
+      "chunk_coord": [32, 26],
+      "world_pixel_center": [66560, 54272],
+      "governor_or_magistrate": "Trang Chủ Bạch Hạc Lão Nhân",
+      "security_level": "medium",
+      "tax_rate": 0.04,
+      "facilities": ["herb_gardens", "bamboo_carpenters", "tea_pavilion", "cavern_checkpoint"],
+      "description": "Ngôi làng cổ kính nép mình bên Rừng Trúc Vạn Lĩnh, nơi các dược đồng và thợ săn dã thảo tập trung trao đổi sản vật."
+    },
+    {
+      "id": "sect_thanh_vi",
+      "name": "Thanh Vi Kiếm Tông",
+      "type": "autonomous_sect",
+      "chunk_coord": [48, 28],
+      "world_pixel_center": [99328, 58368],
+      "governor_or_magistrate": "Chưởng Môn Thanh Tố Kiếm Quân",
+      "security_level": "independent",
+      "tax_rate": 0.0,
+      "facilities": ["mountain_gate", "sword_trials_ground", "scripture_library", "elder_peaks", "disciple_lodges"],
+      "description": "Chính đạo kiếm phái uy danh ngút trời, tọa lạc trên đỉnh mây mù phương Đông. Không chịu sự cai trị của quan phủ."
+    },
+    {
+      "id": "sect_bach_thao",
+      "name": "Bách Thảo Đan Môn",
+      "type": "autonomous_sect",
+      "chunk_coord": [16, 40],
+      "world_pixel_center": [33792, 82944],
+      "governor_or_magistrate": "Môn Chủ Linh Đan Tử",
+      "security_level": "independent",
+      "tax_rate": 0.0,
+      "facilities": ["alchemy_palace", "thousand_herb_valley", "medicinal_spring", "pill_market"],
+      "description": "Môn phái y đạo và luyện đan ẩn cư tại vùng thung lũng sương mù phương Tây Nam, quan hệ giao hảo với phàm giới và triều đình."
+    }
+  ]
+}

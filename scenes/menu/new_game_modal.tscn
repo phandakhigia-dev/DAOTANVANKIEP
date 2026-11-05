@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnewgame0001"]
+
+[ext_resource type="Script" path="res://scenes/menu/new_game_modal.gd" id="1_new"]
+
+[node name="NewGameModal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_new")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(560, 420)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -210.0
+offset_right = 280.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="LabelTitle" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+theme_override_font_sizes/font_size = 26
+text = "KHỞI TẠO BƯỚC ĐẦU TU TIÊN"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 18
+columns = 2
+
+[node name="LabelName" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Đạo Hiệu / Danh Tánh:"
+
+[node name="EditName" type="LineEdit" parent="PanelContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(260, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lâm Phong"
+placeholder_text = "Nhập tên..."
+
+[node name="LabelSeed" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Hạt Giống Thế Giới (Seed):"
+
+[node name="HBoxSeed" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="SpinBoxSeed" type="SpinBox" parent="PanelContainer/VBoxContainer/GridContainer/HBoxSeed"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 9999999.0
+value = 1337.0
+
+[node name="ButtonRandomSeed" type="Button" parent="PanelContainer/VBoxContainer/GridContainer/HBoxSeed"]
+layout_mode = 2
+text = "Ngẫu Nhiên"
+
+[node name="LabelOrigin" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Xuất Thân Khởi Đầu:"
+
+[node name="OptionOrigin" type="OptionButton" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Hàn Môn Thiếu Niên"
+popup/item_0/id = 0
+popup/item_1/text = "Kẻ Tha Hương Cầu Đạo"
+popup/item_1/id = 1
+popup/item_2/text = "Thư Sinh Ngộ Đạo"
+popup/item_2/id = 2
+
+[node name="HBoxButtons" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ButtonStart" type="Button" parent="PanelContainer/VBoxContainer/HBoxButtons"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.854902, 0.764706, 1)
+text = "Bắt Đầu Tu Hành"
+
+[node name="ButtonCancel" type="Button" parent="PanelContainer/VBoxContainer/HBoxButtons"]
+custom_minimum_size = Vector2(130, 42)
+layout_mode = 2
+text = "Hủy Bỏ"

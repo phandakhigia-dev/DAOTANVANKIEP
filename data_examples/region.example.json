@@ -1,0 +1,13 @@
+{
+  "id": "reg_thanh_tri",
+  "display_name": "Thanh Trì Bình Nguyên",
+  "biome": "plains",
+  "tier_min": 0,
+  "tier_max": 2,
+  "starting_region": true,
+  "poi_ids": [
+    "poi_thanh_tri_town",
+    "poi_cloud_ridge_gate"
+  ],
+  "unlock_conditions": []
+}

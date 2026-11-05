@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://bxp3sectpanel1" load_steps=2 header_name="SectPanel"]
+
+[ext_resource type="Script" path="res://scenes/ui/sect_panel.gd" id="1_sect"]
+
+[node name="SectPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+script = ExtResource("1_sect")
+
+[node name="PanelRoot" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -280.0
+offset_right = 440.0
+offset_bottom = 280.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelRoot"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBox" type="HBoxContainer" parent="PanelRoot/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LeftPane" type="VBoxContainer" parent="PanelRoot/MarginContainer/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 0)
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="LabelTitle" type="Label" parent="PanelRoot/MarginContainer/HBox/LeftPane"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.0, 0.85, 0.3, 1.0)
+theme_override_font_sizes/font_size = 16
+text = "✦ TÔNG MÔN ✦"
+horizontal_alignment = 1
+
+[node name="LabelSectName" type="Label" parent="PanelRoot/MarginContainer/HBox/LeftPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Tán Tu"
+
+[node name="LabelRank" type="Label" parent="PanelRoot/MarginContainer/HBox/LeftPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.7, 1.0, 0.8, 1.0)
+text = "Cấp bậc: Chưa gia nhập"
+
+[node name="LabelContrib" type="Label" parent="PanelRoot/MarginContainer/HBox/LeftPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Cống hiến: 0"
+
+[node name="ProgressContrib" type="ProgressBar" parent="PanelRoot/MarginContainer/HBox/LeftPane"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 20)
+
+[node name="LabelJoinHint" type="Label" parent="PanelRoot/MarginContainer/HBox/LeftPane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.8, 0.8, 0.6, 1.0)
+text = ""
+autowrap_mode = 3
+
+[node name="MiddlePane" type="VBoxContainer" parent="PanelRoot/MarginContainer/HBox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_constants/separation = 6
+
+[node name="LabelQuestHeader" type="Label" parent="PanelRoot/MarginContainer/HBox/MiddlePane"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.0, 0.7, 0.3, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "📋 Nhiệm Vụ Cống Hiến"
+
+[node name="LabelNoSect" type="Label" parent="PanelRoot/MarginContainer/HBox/MiddlePane"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1.0)
+text = "Chưa gia nhập tông môn..."
+visible = true
+
+[node name="ScrollQuests" type="ScrollContainer" parent="PanelRoot/MarginContainer/HBox/MiddlePane"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="QuestList" type="VBoxContainer" parent="PanelRoot/MarginContainer/HBox/MiddlePane/ScrollQuests"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_constants/separation = 6
+
+[node name="RightPane" type="VBoxContainer" parent="PanelRoot/MarginContainer/HBox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_constants/separation = 6
+
+[node name="LabelLibHeader" type="Label" parent="PanelRoot/MarginContainer/HBox/RightPane"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.9, 1.0, 1.0)
+theme_override_font_sizes/font_size = 14
+text = "📚 Tàng Kinh Các"
+
+[node name="ScrollLibrary" type="ScrollContainer" parent="PanelRoot/MarginContainer/HBox/RightPane"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="LibraryList" type="VBoxContainer" parent="PanelRoot/MarginContainer/HBox/RightPane/ScrollLibrary"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_constants/separation = 6

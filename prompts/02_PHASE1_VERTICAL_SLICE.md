@@ -1,0 +1,3 @@
+# PHASE 1 — Prompt riêng (chỉ dùng sau Phase 0 đạt nghiệm thu)
+
+Đọc tất cả docs và báo cáo Phase 0. **Không refactor phá hệ thống đang chạy**; migration giữ tương thích save. Dựng vertical slice playable từ New Game -> Thanh Trì trấn -> NPC Mạc Tư Viễn giao quest -> ra vùng Vân Lĩnh -> vào battle arena -> đánh 3 loại quái và boss -> loot -> trở lại trấn -> luyện khí/đột phá -> báo quest -> save/load. Phải có UI inventory, basic character, 3 skill Kiếm/Lôi/Mộc, cooldown, telegraph. Tối thiểu 6 NPC có trò chuyện/quan hệ, tông Thanh Vi Tông có basic service. Thực hiện integration tests và thao tác GUI; lập `docs/TEST_REPORTS/PHASE_01.md`. Không tạo feature hoành tráng ngoài scope. Khi xong dừng để user review.

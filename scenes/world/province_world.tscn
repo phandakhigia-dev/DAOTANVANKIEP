@@ -1,0 +1,209 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://scenes/world/province_world.gd" id="1_world"]
+[ext_resource type="Script" path="res://scripts/world/chunk_streamer.gd" id="2_streamer"]
+[ext_resource type="PackedScene" path="res://scenes/world/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dialogue_modal.tscn" id="4_dlg"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory_panel.tscn" id="5_inv"]
+[ext_resource type="PackedScene" path="res://scenes/ui/character_panel.tscn" id="6_char"]
+[ext_resource type="PackedScene" path="res://scenes/ui/alchemy_modal.tscn" id="7_alc"]
+[ext_resource type="PackedScene" path="res://scenes/ui/player_shop_modal.tscn" id="8_shp"]
+[ext_resource type="PackedScene" path="res://scenes/ui/sect_panel.tscn" id="9_sct"]
+[ext_resource type="PackedScene" path="res://scenes/ui/coop_menu_modal.tscn" id="10_coop"]
+[ext_resource type="PackedScene" path="res://scenes/world/pause_menu.tscn" id="11_pause"]
+[ext_resource type="PackedScene" path="res://scenes/ui/minimap.tscn" id="12_minimap"]
+[ext_resource type="PackedScene" path="res://scenes/ui/world_map_modal.tscn" id="13_worldmap"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud_top"]
+bg_color = Color(0.06, 0.08, 0.1, 0.9)
+border_width_bottom = 2
+border_color = Color(0.78, 0.65, 0.4, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.12, 0.15, 0.18, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.42, 0.28, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prompt"]
+bg_color = Color(0.08, 0.12, 0.15, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.7, 0.35, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ProvinceWorld" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_world")
+
+[node name="ChunkStreamer" type="Node2D" parent="."]
+y_sort_enabled = true
+script = ExtResource("2_streamer")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(66560, 66660)
+position_smoothing_enabled = false
+
+[node name="YEntities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="YEntities" instance=ExtResource("3_player")]
+position = Vector2(66560, 66660)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 25
+
+[node name="TopBar" type="PanelContainer" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud_top")
+
+[node name="Margin" type="MarginContainer" parent="HUD/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 8
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PanelProvince" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelProvince"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+
+[node name="LabelProvince" type="Label" parent="HUD/TopBar/Margin/HBox/PanelProvince/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 16
+text = "★ THÌN CHÂU • ĐẠI HUYỀN ★"
+
+[node name="PanelLocation" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelLocation"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+
+[node name="LabelLocation" type="Label" parent="HUD/TopBar/Margin/HBox/PanelLocation/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 15
+text = "Huyện Thành Thanh Trì • Chợ Tán Tu"
+
+[node name="PanelClock" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelClock"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+
+[node name="LabelClock" type="Label" parent="HUD/TopBar/Margin/HBox/PanelClock/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.85, 0.75, 1)
+theme_override_font_sizes/font_size = 14
+text = "Giờ Thìn (07:00) • Ngày 1"
+
+[node name="PanelPlayer" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelPlayer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/separation = 14
+
+[node name="LabelPlayer" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 14
+text = "Đạo Hữu • Luyện Khí Tầng 1"
+
+[node name="LabelStones" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Linh Thạch: 100"
+
+[node name="PromptBanner" type="PanelContainer" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -110.0
+offset_right = 320.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_prompt")
+
+[node name="Margin" type="MarginContainer" parent="HUD/PromptBanner"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 8
+
+[node name="LabelPrompt" type="Label" parent="HUD/PromptBanner/Margin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.92, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "[E / Enter: Tương tác...]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogueModal" parent="HUD" instance=ExtResource("4_dlg")]
+visible = false
+
+[node name="InventoryPanel" parent="HUD" instance=ExtResource("5_inv")]
+visible = false
+
+[node name="CharacterPanel" parent="HUD" instance=ExtResource("6_char")]
+visible = false
+
+[node name="AlchemyModal" parent="HUD" instance=ExtResource("7_alc")]
+visible = false
+
+[node name="PlayerShopModal" parent="HUD" instance=ExtResource("8_shp")]
+visible = false
+
+[node name="SectPanel" parent="HUD" instance=ExtResource("9_sct")]
+visible = false
+
+[node name="CoopMenuModal" parent="HUD" instance=ExtResource("10_coop")]
+visible = false
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("11_pause")]
+visible = false
+
+[node name="MiniMap" parent="HUD" instance=ExtResource("12_minimap")]
+
+[node name="WorldMapModal" parent="HUD" instance=ExtResource("13_worldmap")]
+visible = false

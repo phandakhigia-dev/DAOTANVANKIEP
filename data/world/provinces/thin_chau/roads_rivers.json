@@ -1,0 +1,44 @@
+{
+  "province_id": "thin_chau",
+  "highways": [
+    {
+      "id": "highway_north_south",
+      "name": "Bắc Nam Đại Quan Lộ",
+      "type": "stone_paved",
+      "width_tiles": 4,
+      "width_px": 128,
+      "axis": "vertical",
+      "fixed_coord_x": 32,
+      "from_chunk_y": 10,
+      "to_chunk_y": 55,
+      "connects": ["settlement_long_kinh", "settlement_bac_lam", "settlement_thanh_tri", "settlement_dong_noi", "poi_nam_giang_port"]
+    },
+    {
+      "id": "highway_east_west",
+      "name": "Đông Tây Thiên Lý Lộ",
+      "type": "stone_paved",
+      "width_tiles": 4,
+      "width_px": 128,
+      "axis": "horizontal",
+      "fixed_coord_y": 32,
+      "from_chunk_x": 16,
+      "to_chunk_x": 52,
+      "connects": ["settlement_tay_son", "settlement_thanh_tri", "poi_sword_grave", "sect_thanh_vi"]
+    }
+  ],
+  "rivers": [
+    {
+      "id": "river_nam_giang",
+      "name": "Nam Giang Trường Lưu",
+      "type": "water",
+      "width_tiles": 8,
+      "width_px": 256,
+      "source_chunk": [14, 28],
+      "mouth_chunk": [55, 48],
+      "crossings": [
+        { "id": "cau_thanh_tri", "name": "Cầu Đá Nam Trì", "chunk": [32, 36], "type": "stone_bridge" },
+        { "id": "cau_dong_noi", "name": "Cầu Gỗ Đồng Nội", "chunk": [31, 35], "type": "wooden_bridge" }
+      ]
+    }
+  ]
+}

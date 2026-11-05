@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/vfx/vfx_lightning_impact.gd" id="1_light"]
+
+[node name="VFXLightningImpact" type="Node2D"]
+script = ExtResource("1_light")
+
+[node name="Sparks" type="CPUParticles2D" parent="."]
+amount = 36
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.9
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 160.0
+initial_velocity_max = 320.0
+scale_amount_min = 2.0
+scale_amount_max = 4.5
+color = Color(0.7, 0.9, 1, 0.95)
+
+[node name="Shockwave" type="CPUParticles2D" parent="."]
+amount = 20
+lifetime = 0.45
+one_shot = true
+explosiveness = 0.8
+emission_shape = 2
+emission_sphere_radius = 16.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 80.0
+initial_velocity_max = 140.0
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+color = Color(0.5, 0.7, 1, 0.7)

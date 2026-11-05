@@ -1,0 +1,26 @@
+{
+  "world_id": "dao_tan_world_01",
+  "world_name": "Đạo Tàn Giới",
+  "continent_id": "mortal_continent_01",
+  "continent_name": "Huyền Thiên Đại Lục",
+  "country_id": "dai_huyen",
+  "country_display_name": "Đại Huyền Quốc",
+  "country_capital_province_id": "thin_chau",
+  "playable_province_id": "thin_chau",
+  "server_clock_real_seconds_per_day": 720,
+  "world_seed": 1337,
+  "provinces": [
+    { "id": "ty_chau", "name": "Tý Châu", "theme": "Sông ngòi, cảng biển, mậu dịch thủy", "status": "metadata_only" },
+    { "id": "suu_chau", "name": "Sửu Châu", "theme": "Đồng bằng phì nhiêu, nông nghiệp, kho lương", "status": "metadata_only" },
+    { "id": "dan_chau", "name": "Dần Châu", "theme": "Sơn lâm hiểm trở, săn thú, khoáng mạch", "status": "metadata_only" },
+    { "id": "mao_chau", "name": "Mão Châu", "theme": "Trúc lâm thanh tịnh, y dược, học viện", "status": "metadata_only" },
+    { "id": "thin_chau", "name": "Thìn Châu", "theme": "Kinh đô Long Kinh, hoàng mạch, linh sơn, đại lộ giao thương", "status": "playable_in_progress" },
+    { "id": "ty_ran_chau", "name": "Tỵ Châu", "theme": "Đầm lầy độc chướng, độc thảo, đan dược hắc thị", "status": "metadata_only" },
+    { "id": "ngo_chau", "name": "Ngọ Châu", "theme": "Thảo nguyên bao la, tuấn mã, thương đội thảo nguyên", "status": "metadata_only" },
+    { "id": "mui_chau", "name": "Mùi Châu", "theme": "Cao nguyên gió lộng, mục trường, thổ phỉ", "status": "metadata_only" },
+    { "id": "than_chau", "name": "Thân Châu", "theme": "Vạn trùng sơn sâu thẳm, cơ quan thuật, phế tích cổ", "status": "metadata_only" },
+    { "id": "dau_chau", "name": "Dậu Châu", "theme": "Phường thủ công, lò rèn pháp bảo, thương hội đấu giá", "status": "metadata_only" },
+    { "id": "tuat_chau", "name": "Tuất Châu", "theme": "Biên ải hùng quan, đồn trú quân doanh, phòng tuyến ma đạo", "status": "metadata_only" },
+    { "id": "hoi_chau", "name": "Hợi Châu", "theme": "Vạn khoảnh đại hồ, ngư nghiệp, thủy quái và linh tuyền", "status": "metadata_only" }
+  ]
+}

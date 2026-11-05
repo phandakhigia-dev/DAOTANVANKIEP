@@ -1,0 +1,253 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://scenes/biomes/bamboo_forest.gd" id="1_bamboo"]
+[ext_resource type="PackedScene" path="res://scenes/world/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/chest_closed.tscn" id="3_chest"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/stone_lantern.tscn" id="4_lantern"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/bench.tscn" id="5_bench"]
+[ext_resource type="PackedScene" path="res://wuxia/32/props/town/well.tscn" id="6_well"]
+[ext_resource type="PackedScene" path="res://wuxia/32/nature/bamboo_cluster.tscn" id="7_bamboo"]
+[ext_resource type="PackedScene" path="res://wuxia/32/nature/ancient_pine.tscn" id="8_pine"]
+[ext_resource type="PackedScene" path="res://wuxia/32/nature/cavern_entrance.tscn" id="9_cavern"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(240, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cavern"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boss"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_herb"]
+radius = 48.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud_top"]
+bg_color = Color(0.06, 0.12, 0.08, 0.88)
+border_width_bottom = 2
+border_color = Color(0.35, 0.75, 0.45, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.10, 0.18, 0.12, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.65, 0.40, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prompt"]
+bg_color = Color(0.06, 0.15, 0.09, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.9, 0.5, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="BambooForest" type="Node2D"]
+texture_filter = 1
+y_sort_enabled = true
+script = ExtResource("1_bamboo")
+
+[node name="InteractiveAreas" type="Node2D" parent="."]
+
+[node name="SouthExit" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(480, 660)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/SouthExit"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="DungeonCavern" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(240, 180)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/DungeonCavern"]
+shape = SubResource("CircleShape2D_cavern")
+
+[node name="BossLair" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(700, 200)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/BossLair"]
+shape = SubResource("CircleShape2D_boss")
+
+[node name="HerbPatch1" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(360, 260)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/HerbPatch1"]
+shape = SubResource("CircleShape2D_herb")
+
+[node name="HerbPatch2" type="Area2D" parent="InteractiveAreas"]
+position = Vector2(620, 420)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveAreas/HerbPatch2"]
+shape = SubResource("CircleShape2D_herb")
+
+[node name="YEntities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="CavernEntrance" parent="YEntities" instance=ExtResource("9_cavern")]
+position = Vector2(240, 170)
+
+[node name="ChestClosed" parent="YEntities" instance=ExtResource("3_chest")]
+position = Vector2(240, 190)
+
+[node name="AncientPineNorth" parent="YEntities" instance=ExtResource("8_pine")]
+position = Vector2(700, 180)
+
+[node name="AncientPineWest" parent="YEntities" instance=ExtResource("8_pine")]
+position = Vector2(100, 320)
+
+[node name="BambooCluster1" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(140, 200)
+
+[node name="BambooCluster2" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(340, 160)
+
+[node name="BambooCluster3" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(580, 170)
+
+[node name="BambooCluster4" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(820, 210)
+
+[node name="BambooCluster5" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(160, 460)
+
+[node name="BambooCluster6" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(780, 440)
+
+[node name="BambooCluster7" parent="YEntities" instance=ExtResource("7_bamboo")]
+position = Vector2(620, 360)
+
+[node name="Player" parent="YEntities" instance=ExtResource("2_player")]
+position = Vector2(480, 560)
+
+[node name="StoneLanternSouth" parent="YEntities" instance=ExtResource("4_lantern")]
+position = Vector2(420, 540)
+
+[node name="StoneLanternNorth" parent="YEntities" instance=ExtResource("4_lantern")]
+position = Vector2(480, 140)
+
+[node name="Bench" parent="YEntities" instance=ExtResource("5_bench")]
+position = Vector2(540, 360)
+
+[node name="Well" parent="YEntities" instance=ExtResource("6_well")]
+position = Vector2(420, 360)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 25
+
+[node name="TopBar" type="PanelContainer" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud_top")
+
+[node name="Margin" type="MarginContainer" parent="HUD/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 10
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PanelZone" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelZone"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+
+[node name="LabelZoneName" type="Label" parent="HUD/TopBar/Margin/HBox/PanelZone/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 18
+text = "★ RỪNG TRÚC VẠN LĨNH ★"
+
+[node name="PanelClock" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelClock"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+
+[node name="LabelClock" type="Label" parent="HUD/TopBar/Margin/HBox/PanelClock/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9, 0.5, 1)
+theme_override_font_sizes/font_size = 15
+text = "Bí Cảnh Mộc Hệ • Thạch Động Cổ"
+
+[node name="PanelPlayer" type="PanelContainer" parent="HUD/TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBox" type="HBoxContainer" parent="HUD/TopBar/Margin/HBox/PanelPlayer"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/separation = 16
+
+[node name="LabelPlayer" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.89, 0.85, 0.76, 1)
+theme_override_font_sizes/font_size = 15
+text = "Đạo Hữu"
+
+[node name="LabelStones" type="Label" parent="HUD/TopBar/Margin/HBox/PanelPlayer/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Linh Thạch: 100"
+
+[node name="PromptBanner" type="PanelContainer" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_prompt")
+
+[node name="Margin" type="MarginContainer" parent="HUD/PromptBanner"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="LabelPrompt" type="Label" parent="HUD/PromptBanner/Margin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 17
+text = "[E / Enter: Tương tác...]"
+horizontal_alignment = 1
+vertical_alignment = 1
