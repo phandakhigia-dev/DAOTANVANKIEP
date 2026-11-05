@@ -27,6 +27,19 @@ var _current_scenario: Dictionary = {}
 func _ready() -> void:
 	visible = false
 
+func open_dialogue(param: Variant = null) -> void:
+	if param is String:
+		open_for_npc(param)
+	elif param is Dictionary:
+		var nid = param.get("id", "")
+		if nid != "" and ContentRegistry and ContentRegistry.get_npc(nid).size() > 0:
+			open_for_npc(nid)
+		else:
+			open_for_custom_npc(param)
+	else:
+		visible = true
+		_refresh_display()
+
 func open_for_npc(npc_id: String) -> void:
 	_custom_npc_data = {}
 	_current_npc_id = npc_id
@@ -108,6 +121,14 @@ func _refresh_display() -> void:
 	_rebuild_action_buttons()
 
 func _rebuild_action_buttons() -> void:
+	if not actions_container:
+		actions_container = (
+			get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/ScrollActions/ActionsContainer")
+			if has_node("PanelContainer/MarginContainer/VBoxContainer/ScrollActions/ActionsContainer")
+			else get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/ActionsContainer")
+		)
+	if not actions_container:
+		return
 	# Xóa nút cũ
 	for child in actions_container.get_children():
 		child.queue_free()
@@ -299,6 +320,14 @@ func _on_sect_service_pressed() -> void:
 # --- CÁC HÀNH ĐỘNG DÀNH CHO NPC THỦ TỤC DÃ NGOẠI / VÃNG LAI (PROCEDURAL NPCS) ---
 
 func _rebuild_custom_npc_actions() -> void:
+	if not actions_container:
+		actions_container = (
+			get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/ScrollActions/ActionsContainer")
+			if has_node("PanelContainer/MarginContainer/VBoxContainer/ScrollActions/ActionsContainer")
+			else get_node_or_null("PanelContainer/MarginContainer/VBoxContainer/ActionsContainer")
+		)
+	if not actions_container:
+		return
 	for child in actions_container.get_children():
 		child.queue_free()
 	

@@ -236,6 +236,15 @@ func _populate_bamboo_forest_biome(parent: Node2D) -> void:
 	_spawn_instance(AncientPineScene, parent, Vector2(880, 780))
 	_spawn_instance(AncientPineScene, parent, Vector2(1160, 780))
 	
+	# Sào Huyệt Boss Xích Kiếm Ma Thứu (Đông Bắc)
+	_spawn_instance(SwordMonolithScene, parent, Vector2(1464, 736))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1400, 750))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1520, 750))
+	
+	# Bãi Quái Rừng Trúc (Linh Hồ & Bạch Xuyên Thú - Nam)
+	_spawn_instance(StoneLanternScene, parent, Vector2(1024, 1336))
+	_spawn_instance(AncientPineScene, parent, Vector2(960, 1336))
+	
 	# Rừng trúc bạt ngàn
 	var bamboo_spots = [
 		Vector2(400, 400), Vector2(700, 350), Vector2(1400, 450), Vector2(1700, 380),
@@ -246,16 +255,35 @@ func _populate_bamboo_forest_biome(parent: Node2D) -> void:
 		_spawn_instance(BambooClusterScene, parent, p)
 
 func _populate_snake_swamp_biome(parent: Node2D) -> void:
-	# Tế Đàn Độc Xà
+	# Tế Đàn Độc Xà (Trung tâm)
 	_spawn_instance(SwampShrineScene, parent, Vector2(1024, 1024))
 	_spawn_instance(AncientPineScene, parent, Vector2(850, 980))
 	_spawn_instance(AncientPineScene, parent, Vector2(1200, 980))
+	
+	# Sào Huyệt Boss Hắc Linh Xà Vương (Bắc)
+	_spawn_instance(SwampShrineScene, parent, Vector2(1024, 616))
+	_spawn_instance(StoneLanternScene, parent, Vector2(940, 640))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1100, 640))
+	
+	# Ổ Quái Hắc Linh Xà (Tây)
+	_spawn_instance(StoneLanternScene, parent, Vector2(612, 1024))
+	_spawn_instance(AncientPineScene, parent, Vector2(580, 1000))
 
 func _populate_sword_grave_biome(parent: Node2D) -> void:
-	# Cổ Kiếm Tàn Đài
+	# Cổ Kiếm Tàn Đài (Trung tâm)
 	_spawn_instance(SwordMonolithScene, parent, Vector2(1024, 1024))
-	_spawn_instance(SwordMonolithScene, parent, Vector2(600, 800))
-	_spawn_instance(SwordMonolithScene, parent, Vector2(1450, 1200))
+	
+	# Sào Huyệt Boss Cổ Kiếm Linh (Bắc)
+	_spawn_instance(SwordMonolithScene, parent, Vector2(1024, 564))
+	_spawn_instance(StoneLanternScene, parent, Vector2(960, 580))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1088, 580))
+	
+	# Bãi Quái Kiếm Nô Tàn Linh (Tây)
+	_spawn_instance(SwordMonolithScene, parent, Vector2(616, 1024))
+	
+	# Tàn Kiếm Bia Lĩnh Ngộ Kiếm Ý (Đông Nam)
+	_spawn_instance(SwordMonolithScene, parent, Vector2(1416, 1264))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1360, 1264))
 
 func _populate_dong_noi_village(parent: Node2D) -> void:
 	# Cụm nhà dân thôn Đồng Nội

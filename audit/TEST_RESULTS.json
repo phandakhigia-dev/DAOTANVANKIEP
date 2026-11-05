@@ -1,12 +1,12 @@
 {
   "project": "ĐẠO TÀN: VẠN KIẾP",
   "engine": "Godot Engine v4.7.2.stable.official.ed1daf0bf",
-  "execution_date": "2026-11-05T20:39:05.501058",
-  "duration_seconds": 4.867936,
+  "execution_date": "2026-11-05T21:10:46.787337",
+  "duration_seconds": 2.98917,
   "exit_code": 0,
-  "total_suites": 30,
-  "total_tests": 211,
-  "total_passed": 211,
+  "total_suites": 31,
+  "total_tests": 216,
+  "total_passed": 216,
   "total_failed": 0,
   "pass_rate_percent": 100.0,
   "suites": [
@@ -306,11 +306,11 @@
       "test_cases": [
         {
           "status": "PASS",
-          "description": "Stress test 500 NPC x 12 tháng: Trung bình 7.94 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
+          "description": "Stress test 500 NPC x 12 tháng: Trung bình 8.20 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
         },
         {
           "status": "PASS",
-          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 19.67 ms/tháng (Vượt qua thử thách quy mô lớn)"
+          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.70 ms/tháng (Vượt qua thử thách quy mô lớn)"
         },
         {
           "status": "PASS",
@@ -929,6 +929,33 @@
       "tests_passed": 0,
       "tests_failed": 0,
       "test_cases": []
+    },
+    {
+      "suite_name": "OpenWorld: NPCs, City Gates & Monster Camps",
+      "tests_passed": 5,
+      "tests_failed": 0,
+      "test_cases": [
+        {
+          "status": "PASS",
+          "description": "T-OW-01: DialogueModal.open_dialogue() vận hành hoàn hảo với cả chuỗi ID và dữ liệu Dictionary"
+        },
+        {
+          "status": "PASS",
+          "description": "T-OW-02: NPCCharacter tự động nạp danh tính, vai trò và dữ liệu hội thoại ngay khi gán npc_id"
+        },
+        {
+          "status": "PASS",
+          "description": "T-OW-03: Cổng Nam Thành Trì, Cổng Bắc Thanh Trì và Cổng Hoàng Thành Long Kinh hỗ trợ tương tác xuất/nhập thành"
+        },
+        {
+          "status": "PASS",
+          "description": "T-OW-04: Cả 3 Sào Huyệt Boss (Xích Kiếm Ma Thứu, Hắc Linh Xà Vương, Cổ Kiếm Linh) và bãi quái ngoại ô đều liên kết chuẩn xác tới CombatArena"
+        },
+        {
+          "status": "PASS",
+          "description": "T-OW-05: Điểm cơ duyên thế giới (Thạch Động Cổ, Tế Đàn Xà Cốt, Tàn Kiếm Bia) đồng bộ dữ liệu và thu hoạch tài nguyên chính xác"
+        }
+      ]
     }
   ]
 }

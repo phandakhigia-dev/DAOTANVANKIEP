@@ -8,7 +8,11 @@ signal interacted(npc_data: Dictionary)
 const LifeGenerator = preload("res://scripts/domain/life_generator.gd")
 
 @export var move_speed: float = 120.0
-@export var npc_id: String = ""
+@export var npc_id: String = "":
+	set(val):
+		npc_id = val
+		_load_npc_data()
+		_update_labels()
 @export var is_procedural: bool = false
 @export var sprite_type: String = "swordsman" # "swordsman" hoặc "bandit"
 
@@ -44,15 +48,26 @@ func setup_data(data: Dictionary) -> void:
 	_update_labels()
 
 func _load_npc_data() -> void:
+	if npc_id == "":
+		return
 	var def: Dictionary = {}
-	var cr = get_node_or_null("/root/ContentRegistry")
+	var cr = null
+	if Engine.get_main_loop() and Engine.get_main_loop().root and Engine.get_main_loop().root.has_node("ContentRegistry"):
+		cr = Engine.get_main_loop().root.get_node("ContentRegistry")
+	elif is_inside_tree():
+		cr = get_node_or_null("/root/ContentRegistry")
 	if cr and cr.has_method("get_npc"):
 		def = cr.get_npc(npc_id)
 	if not def.is_empty():
 		npc_data = def
 	elif is_procedural:
-		var gs = get_node_or_null("/root/GameSession")
-		var seed_val: int = gs.world_seed if (gs and "world_seed" in gs) else 1337
+		var seed_val: int = 1337
+		if Engine.get_main_loop() and Engine.get_main_loop().root and Engine.get_main_loop().root.has_node("GameSession"):
+			seed_val = Engine.get_main_loop().root.get_node("GameSession").world_seed
+		elif is_inside_tree():
+			var gs = get_node_or_null("/root/GameSession")
+			if gs and "world_seed" in gs:
+				seed_val = gs.world_seed
 		npc_data = LifeGenerator.generate_character(seed_val, npc_id.hash())
 
 func _update_labels() -> void:
