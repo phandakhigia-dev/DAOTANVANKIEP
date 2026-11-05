@@ -1,12 +1,12 @@
 {
   "project": "ĐẠO TÀN: VẠN KIẾP",
   "engine": "Godot Engine v4.7.2.stable.official.ed1daf0bf",
-  "execution_date": "2026-11-05T21:45:03.197893",
-  "duration_seconds": 3.163611,
+  "execution_date": "2026-11-05T22:16:28.078596",
+  "duration_seconds": 3.134222,
   "exit_code": 0,
-  "total_suites": 32,
-  "total_tests": 221,
-  "total_passed": 221,
+  "total_suites": 33,
+  "total_tests": 226,
+  "total_passed": 226,
   "total_failed": 0,
   "pass_rate_percent": 100.0,
   "suites": [
@@ -306,11 +306,11 @@
       "test_cases": [
         {
           "status": "PASS",
-          "description": "Stress test 500 NPC x 12 tháng: Trung bình 7.33 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
+          "description": "Stress test 500 NPC x 12 tháng: Trung bình 7.67 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
         },
         {
           "status": "PASS",
-          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.54 ms/tháng (Vượt qua thử thách quy mô lớn)"
+          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.31 ms/tháng (Vượt qua thử thách quy mô lớn)"
         },
         {
           "status": "PASS",
@@ -981,6 +981,33 @@
         {
           "status": "PASS",
           "description": "T-S0-05: Pause Menu Invariant: Solo dừng scene tree, Co-op mở UI nhưng KHÔNG dừng scene tree (Giữ kết nối & 720s/ngày)"
+        }
+      ]
+    },
+    {
+      "suite_name": "Sprint Gate S1 — Fun-to-move & Interact",
+      "tests_passed": 5,
+      "tests_failed": 0,
+      "test_cases": [
+        {
+          "status": "PASS",
+          "description": "T-S1-01: Di chuyển 8 hướng chuẩn hóa vector độ dài 1.0, Khinh công kích hoạt xung lực tức thì và khóa edge-trigger chống spam"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S1-02: Lõi 16 Chunk Thanh Trì (256x256 Tile) sinh hoàn chỉnh, phủ kín 6 tiểu vùng đặc thù không có chunk rỗng"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S1-03: Đặt 4 Biển chỉ đường (Signpost) tại 4 ngã ba quan lộ trọng yếu, chỉ dẫn đầy đủ cự ly và phương vị"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S1-04: Tương tác 3 tiểu vùng mới vận hành mượt mà (Tĩnh tọa +25 Tu Vi, Đào quặng sắt, Thu hoạch lúa Đồng Nội)"
+        },
+        {
+          "status": "PASS",
+          "description": "T-S1-05: Mạng lưới quan lộ nối 6 tiểu vùng thông suốt, pacing di chuyển hợp lý (15s-40s), không có bẫy collision kẹt chân"
         }
       ]
     }

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwalkthru0001"]
+
+[ext_resource type="Script" path="res://tests/integration/gate_s1_walkthrough.gd" id="1_walk"]
+
+[node name="GateS1Walkthrough" type="Node"]
+script = ExtResource("1_walk")

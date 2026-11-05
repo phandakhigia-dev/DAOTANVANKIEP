@@ -12,7 +12,7 @@ ERROR: [SaveService] Thiếu hoặc sai schema_version trong save
    GDScript backtrace (most recent call first):
        [0] validate_save_data (res://scripts/persistence/save_service.gd:147)
        [1] run_all_tests (res://tests/unit/test_save_roundtrip.gd:73)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 [SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
 [ClockReplication] Time-skip bị khóa nghiêm ngặt trong Sprint S1 cho tới khi Sprint S5 được duyệt.
 [SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
@@ -23,26 +23,26 @@ ERROR: [SaveService] Phiên bản schema save (999) không tương thích với 
    GDScript backtrace (most recent call first):
        [0] validate_save_data (res://scripts/persistence/save_service.gd:150)
        [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:116)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 WARNING: [SaveService] File chính hỏng hoặc thiếu, thử tải file backup...
    at: push_warning (core/variant/variant_utility.cpp:1033)
    GDScript backtrace (most recent call first):
        [0] load_game (res://scripts/persistence/save_service.gd:100)
        [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:142)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 WARNING: [SaveService] Đã khôi phục thành công file save chính từ backup!
    at: push_warning (core/variant/variant_utility.cpp:1033)
    GDScript backtrace (most recent call first):
        [0] load_game (res://scripts/persistence/save_service.gd:105)
        [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:142)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 [CoopWorldSync] Đã khôi phục hoàn chỉnh Co-op state từ Save (0 peer ledgers, 0 transactions).
 WARNING: [ClockReplication] Co-op: Host từ chối time_scale 20.0. Khóa cứng 1x trong phòng nhiều người.
    at: push_warning (core/variant/variant_utility.cpp:1033)
    GDScript backtrace (most recent call first):
        [0] request_time_scale_change (res://scripts/network/clock_replication.gd:91)
        [1] run_all_tests (res://tests/unit/test_s0_stability_regression.gd:164)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 [ClockReplication] Host chấp thuận đổi time_scale = 20.0
 [SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
 [SessionAuthority] Host Server khởi chạy thành công trên port 8899 (Cố định time_scale = 1.0, 720s thực/ngày)
@@ -51,19 +51,19 @@ WARNING: [GameClock] Co-op: Khóa cứng time_scale = 1.0. Từ chối đổi sa
    GDScript backtrace (most recent call first):
        [0] set_time_scale (res://scripts/core/game_clock.gd:72)
        [1] run_all_tests (res://tests/unit/test_p0_v2_regression.gd:30)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 WARNING: [GameClock] Co-op: Từ chối thủ công advance_days(3). Giữ nhịp 720s thực tế / ngày.
    at: push_warning (core/variant/variant_utility.cpp:1033)
    GDScript backtrace (most recent call first):
        [0] advance_days (res://scripts/core/game_clock.gd:129)
        [1] run_all_tests (res://tests/unit/test_p0_v2_regression.gd:31)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s thực tế / ngày.
    at: push_warning (core/variant/variant_utility.cpp:1033)
    GDScript backtrace (most recent call first):
        [0] advance_hours (res://scripts/core/game_clock.gd:117)
        [1] run_all_tests (res://tests/unit/test_p0_v2_regression.gd:32)
-       [2] _ready (res://tests/test_runner.gd:85)
+       [2] _ready (res://tests/test_runner.gd:86)
 [SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
 [CoopEconomy] Host cam kết thành công cho Peer 2: -30 LT, +1x item_hoi_xuan_dan (Rev: 2, Req: REQ_IDEMP_001)
 [CoopEconomy] Bỏ qua request_id trùng lặp: REQ_IDEMP_001 (Peer 2)
@@ -92,6 +92,8 @@ WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s th�
 [CoopWorldSync] Đã dọn dẹp dữ liệu người chơi ngắt kết nối: 1 (Giữ nguyên authoritative ledger)
 [CoopWorldSync] Peer 1 tái kết nối với GUID 'guid_tieu_viem_01'. Khôi phục ví: 450 LT, 2 vật phẩm.
 [CoopWorldSync] Đã khôi phục hoàn chỉnh Co-op state từ Save (4 peer ledgers, 0 transactions).
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
+[SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
 [SessionAuthority] Đã ngắt kết nối session, trở về chế độ Standalone.
 --- Bộ test: GameClock ---
   ✓ [Pass] Khởi tạo đồng hồ mặc định (Năm 1, Tháng 1, Ngày 1)
@@ -169,8 +171,8 @@ WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s th�
   ✓ [Pass] Đột phá Trúc Cơ thành công: Thọ nguyên được gia tăng thêm 130 năm (Trúc Cơ Sơ Kỳ)
 
 --- Bộ test: Phase 2 - HeadlessStressTest ---
-  ✓ [Pass] Stress test 500 NPC x 12 tháng: Trung bình 7.33 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)
-  ✓ [Pass] Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.54 ms/tháng (Vượt qua thử thách quy mô lớn)
+  ✓ [Pass] Stress test 500 NPC x 12 tháng: Trung bình 7.67 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)
+  ✓ [Pass] Stress test cực đại 1,000 NPC x 3 tháng: Đạt 18.31 ms/tháng (Vượt qua thử thách quy mô lớn)
   ✓ [Pass] Toàn vẹn kinh tế: Ngân khố các môn phái luôn dương (No negative treasury)
 
 --- Bộ test: Co-op Authoritative Clock Sync (S1) ---
@@ -354,7 +356,7 @@ WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s th�
   ✓ [T-M5-01] Đồng bộ thời gian thế giới 720s/ngày đồng nhất tuyệt đối dù 2 người chơi ở 2 huyện khác nhau.
   ✓ [T-M5-02] Chống race condition & duping hoàn hảo: Đúng 1 client thu hoạch tài nguyên, client sau bị từ chối.
   ✓ [T-M5-03] Ngắt kết nối và kết nối lại bảo toàn 100% trạng thái vi sai thế giới và túi đồ.
-  ✓ [T-M5-04] Telemetry đo đạc xuất sắc: Duy trì ổn định 9 active chunks (~111 nodes), RAM < 180MB, đạt chuẩn 60 FPS.
+  ✓ [T-M5-04] Telemetry đo đạc xuất sắc: Duy trì ổn định 9 active chunks (~117 nodes), RAM < 180MB, đạt chuẩn 60 FPS.
   ✓ [T-M5-05] Khám phá thế giới mở phi tuyến tính hoàn toàn tự do: Không ép buộc làm bất kỳ nhiệm vụ nào.
 
 --- Bộ test: UI: MiniMap & WorldMapModal (Bản đồ Thìn Châu) ---
@@ -378,12 +380,19 @@ WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s th�
   ✓ [Pass] T-S0-04: Reconnect Identity: Tái kết nối với GUID khác peer_id bảo tồn 100% ví (450 LT) và vật phẩm, khôi phục hoàn hảo qua Save/Load
   ✓ [Pass] T-S0-05: Pause Menu Invariant: Solo dừng scene tree, Co-op mở UI nhưng KHÔNG dừng scene tree (Giữ kết nối & 720s/ngày)
 
+--- Bộ test: Sprint Gate S1 — Fun-to-move & Interact ---
+  ✓ [Pass] T-S1-01: Di chuyển 8 hướng chuẩn hóa vector độ dài 1.0, Khinh công kích hoạt xung lực tức thì và khóa edge-trigger chống spam
+  ✓ [Pass] T-S1-02: Lõi 16 Chunk Thanh Trì (256x256 Tile) sinh hoàn chỉnh, phủ kín 6 tiểu vùng đặc thù không có chunk rỗng
+  ✓ [Pass] T-S1-03: Đặt 4 Biển chỉ đường (Signpost) tại 4 ngã ba quan lộ trọng yếu, chỉ dẫn đầy đủ cự ly và phương vị
+  ✓ [Pass] T-S1-04: Tương tác 3 tiểu vùng mới vận hành mượt mà (Tĩnh tọa +25 Tu Vi, Đào quặng sắt, Thu hoạch lúa Đồng Nội)
+  ✓ [Pass] T-S1-05: Mạng lưới quan lộ nối 6 tiểu vùng thông suốt, pacing di chuyển hợp lý (15s-40s), không có bẫy collision kẹt chân
+
 -------------------------------------------------------
-TỔNG KẾT: 221 ĐẠT (PASS) | 0 THẤT BẠI (FAIL)
+TỔNG KẾT: 226 ĐẠT (PASS) | 0 THẤT BẠI (FAIL)
 =======================================================
 
 [SUCCESS] Tất cả các tiêu chí nghiệm thu Phase 0 và Phase 1 đã vượt qua 100%!
-WARNING: 19 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+WARNING: 23 ObjectDB instances were leaked at exit (run with `--verbose` for details).
    at: cleanup (core/object/object.cpp:2536)
 ERROR: 2 resources still in use at exit (run with --verbose for details).
    at: clear (core/io/resource.cpp:822)

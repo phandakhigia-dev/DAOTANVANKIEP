@@ -38,6 +38,7 @@ const SwampShrineScene = preload("res://wuxia/32/nature/swamp_shrine.tscn")
 const WellScene = preload("res://wuxia/32/props/town/well.tscn")
 const MarketStallScene = preload("res://wuxia/32/props/town/market_stall.tscn")
 const StoneLanternScene = preload("res://wuxia/32/props/town/stone_lantern.tscn")
+const SignpostScene = preload("res://wuxia/32/props/town/signpost.tscn")
 
 signal chunk_loaded(chunk_coord: Vector2i)
 signal chunk_unloaded(chunk_coord: Vector2i)
@@ -113,33 +114,45 @@ func _build_chunk_content(chunk_node: Node2D, coord: Vector2i) -> void:
 	entities_layer.y_sort_enabled = true
 	chunk_node.add_child(entities_layer)
 	
-	# === LÕI ĐỊA HÌNH 512x512 TILE & CÁC TRỌNG TRẤN QUAN TRỌNG ===
+	# === LÕI ĐỊA HÌNH 256x256 TILE THANH TRÌ (16 CHUNKS) & 6 TIỂU VÙNG CỐT LÕI ===
 	if coord.x == 32 and coord.y == 32:
-		# CHUNK (32, 32): HUYỆN THÀNH THANH TRÌ — TRUNG TÂM GIAO THƯƠNG
+		# TIỂU VÙNG 1: HUYỆN THÀNH THANH TRÌ — PHỐ CHỢ, DƯỢC QUÁN, LÒ RÈN, QUÁN TRỌ
 		_populate_thanh_tri_settlement(entities_layer)
-	elif coord.x == 32 and coord.y == 16:
-		# CHUNK (32, 16): KINH ĐÔ LONG KINH — HOÀNG CUNG & LỤC BỘ
-		_populate_long_kinh_capital(entities_layer)
-	elif coord.x == 20 and coord.y == 32:
-		# CHUNK (20, 32): TRẠI KHOÁNG MỎ TÂY SƠN & THỢ KHAI ĐÁ
-		_populate_tay_son_mining(entities_layer)
 	elif coord.x == 32 and coord.y == 31:
-		# CHUNK (32, 31): KHU BẮC MÔN VÀ LÂM ĐẠO
+		# BẮC QUAN LỘ & CỔNG BẮC THANH TRÌ
 		_populate_north_gate_and_road(entities_layer)
 	elif coord.x == 32 and coord.y == 30:
-		# CHUNK (32, 30): BÍ CẢNH RỪNG TRÚC VẠN LĨNH & THẠCH ĐỘNG
+		# TIỂU VÙNG 3 & 6: RỪNG TRÚC VẠN LĨNH & CỔ ĐỘNG (THẠCH ĐỘNG)
 		_populate_bamboo_forest_biome(entities_layer)
-	elif coord.x == 31 and coord.y == 33:
-		# CHUNK (31, 33): ĐỘC TRẠCH HẮC XÀ & TẾ ĐÀN
-		_populate_snake_swamp_biome(entities_layer)
+	elif coord.x == 30 and coord.y == 32:
+		# TIỂU VÙNG 4: MỎ TÂY HỐC — TRẠI KHAI KHOÁNG & LÁN THỢ MỎ (TRONG BÁN KÍNH 35S)
+		_populate_tay_hoc_mining_core(entities_layer)
+	elif coord.x == 31 and coord.y == 32:
+		# TÂY QUAN LỘ & CẦU GỖ NGOẠI Ô (NỐI THANH TRÌ VÀI MỎ TÂY HỐC)
+		_populate_west_road_and_bridge(entities_layer)
+	elif coord.x == 33 and coord.y == 31:
+		# TIỂU VÙNG 5: CỔ ĐẠO QUÁN — THANH HƯ ĐẠO QUÁN & NƠI TĨNH TỌA NGỘ ĐẠO
+		_populate_daoist_shrine_biome(entities_layer)
 	elif coord.x == 33 and coord.y == 32:
-		# CHUNK (33, 32): CỔ KIẾM TRŨNG & CỰ KIẾM TÀN ĐÀI
+		# CỔ KIẾM TRŨNG & CỰ KIẾM TÀN ĐÀI
 		_populate_sword_grave_biome(entities_layer)
+	elif coord.x == 31 and coord.y == 33:
+		# ĐỘC TRẠCH HẮC XÀ & TẾ ĐÀN
+		_populate_snake_swamp_biome(entities_layer)
+	elif coord.x == 32 and coord.y == 33:
+		# CỔNG NAM & LỐI VÀO NAM THÔN ĐỒNG NỘI
+		_populate_south_gate_dong_noi_approach(entities_layer)
 	elif coord.x == 31 and coord.y == 34:
-		# CHUNK (31, 34): THÔN ĐỒNG NỘI — RUỘNG LÚA & NHÀ TRANH
+		# TIỂU VÙNG 2: THÔN ĐỒNG NỘI — NÔNG TRANG, RUỘNG LÚA & NHÀ TRANH
 		_populate_dong_noi_village(entities_layer)
+	elif coord.x == 32 and coord.y == 16:
+		# KINH ĐÔ LONG KINH
+		_populate_long_kinh_capital(entities_layer)
+	elif coord.x == 20 and coord.y == 32:
+		# TÂY SƠN XA
+		_populate_tay_son_mining(entities_layer)
 	else:
-		# CÁC CHUNK TỰ NHIÊN NGOẠI VI (SINH THỦ TỤC DỰA TRÊN SEED)
+		# CÁC CHUNK TỰ NHIÊN NGOẠI VI TRONG LÕI 256x256 (KHÔNG ĐỂ TRỐNG)
 		_populate_wilderness_chunk(entities_layer, coord)
 
 func _create_chunk_ground(coord: Vector2i) -> Node2D:
@@ -216,12 +229,14 @@ func _populate_thanh_tri_settlement(parent: Node2D) -> void:
 	# Quảng Trường Giếng Cổ & Đèn Lồng
 	_spawn_instance(WellScene, parent, Vector2(1024, 1024))
 	_spawn_instance(StoneLanternScene, parent, Vector2(1024, 1100))
+	_spawn_instance(SignpostScene, parent, Vector2(1024, 1160))
 	_spawn_instance(StoneLanternScene, parent, Vector2(960, 1560))
 	_spawn_instance(StoneLanternScene, parent, Vector2(1088, 1560))
 
 func _populate_north_gate_and_road(parent: Node2D) -> void:
 	# Cổng Bắc Thanh Trì Trấn
 	_spawn_instance(GateTamQuanScene, parent, Vector2(1024, 1800))
+	_spawn_instance(SignpostScene, parent, Vector2(1024, 1200))
 	_spawn_instance(AncientPineScene, parent, Vector2(880, 1780))
 	_spawn_instance(AncientPineScene, parent, Vector2(1160, 1780))
 	
@@ -233,6 +248,7 @@ func _populate_north_gate_and_road(parent: Node2D) -> void:
 func _populate_bamboo_forest_biome(parent: Node2D) -> void:
 	# Thạch Động Cổ Bí Cảnh
 	_spawn_instance(CavernEntranceScene, parent, Vector2(1024, 800))
+	_spawn_instance(SignpostScene, parent, Vector2(1024, 950))
 	_spawn_instance(AncientPineScene, parent, Vector2(880, 780))
 	_spawn_instance(AncientPineScene, parent, Vector2(1160, 780))
 	
@@ -291,6 +307,55 @@ func _populate_dong_noi_village(parent: Node2D) -> void:
 	_spawn_instance(CourtyardHouseScene, parent, Vector2(1200, 800))
 	_spawn_instance(WellScene, parent, Vector2(1024, 900))
 	_spawn_instance(AncientPineScene, parent, Vector2(1024, 700))
+
+
+func _populate_tay_hoc_mining_core(parent: Node2D) -> void:
+	# Cự Thạch Khai Khoáng Mỏ Tây Hốc
+	_spawn_instance(SwordMonolithScene, parent, Vector2(1024, 900))
+	_spawn_instance(SignpostScene, parent, Vector2(1100, 1024))
+	
+	# Thiết Tượng Phác Lò Rèn Dã Chiến
+	_spawn_instance(BlacksmithScene, parent, Vector2(1280, 1100))
+	
+	# Lán Trại Thợ Mỏ
+	_spawn_instance(CourtyardHouseScene, parent, Vector2(750, 1100))
+	_spawn_instance(CourtyardHouseScene, parent, Vector2(750, 1340))
+	
+	# Đèn đá và tùng cổ thụ vách đá
+	_spawn_instance(StoneLanternScene, parent, Vector2(1024, 1100))
+	_spawn_instance(AncientPineScene, parent, Vector2(600, 800))
+	_spawn_instance(AncientPineScene, parent, Vector2(1400, 800))
+
+func _populate_west_road_and_bridge(parent: Node2D) -> void:
+	# Cây tùng bên đường
+	_spawn_instance(AncientPineScene, parent, Vector2(850, 850))
+	_spawn_instance(AncientPineScene, parent, Vector2(1200, 1200))
+	_spawn_instance(SignpostScene, parent, Vector2(1024, 960))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1024, 1088))
+
+func _populate_daoist_shrine_biome(parent: Node2D) -> void:
+	# Thanh Hư Đạo Quán (Điện thờ Đạo Giáo)
+	_spawn_instance(SectPalaceScene, parent, Vector2(1024, 750))
+	_spawn_instance(SignpostScene, parent, Vector2(1024, 1150))
+	_spawn_instance(MoonlightPavilionScene, parent, Vector2(1380, 1024))
+	
+	# Tùng bách vây quanh đạo quán thanh tịnh
+	_spawn_instance(AncientPineScene, parent, Vector2(850, 720))
+	_spawn_instance(AncientPineScene, parent, Vector2(1200, 720))
+	_spawn_instance(AncientPineScene, parent, Vector2(700, 1100))
+	_spawn_instance(AncientPineScene, parent, Vector2(1340, 1250))
+	
+	# Đèn đá trang nghiêm trước đạo quán
+	_spawn_instance(StoneLanternScene, parent, Vector2(960, 1100))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1088, 1100))
+
+func _populate_south_gate_dong_noi_approach(parent: Node2D) -> void:
+	# Cổng Tam Quan Ngoại Thành
+	_spawn_instance(GateTamQuanScene, parent, Vector2(1024, 400))
+	_spawn_instance(SignpostScene, parent, Vector2(1024, 700))
+	_spawn_instance(AncientPineScene, parent, Vector2(850, 420))
+	_spawn_instance(AncientPineScene, parent, Vector2(1200, 420))
+	_spawn_instance(StoneLanternScene, parent, Vector2(1024, 760))
 
 func _populate_wilderness_chunk(parent: Node2D, coord: Vector2i) -> void:
 	# Sinh thủ tục cây cối ngẫu nhiên dựa trên hash tọa độ chunk và seed
@@ -388,3 +453,36 @@ func mark_entity_harvested(chunk_coord: Vector2i, entity_id: String) -> void:
 	if not entity_id in harvested:
 		harvested.append(entity_id)
 		GameSession.chunk_diffs[key]["harvested_entities"] = harvested
+
+
+func _build_single_chunk(cx: int, cy: int) -> Node2D:
+	var chunk_node = Node2D.new()
+	chunk_node.name = 'Chunk_%d_%d' % [cx, cy]
+	chunk_node.position = chunk_to_world_pos(Vector2i(cx, cy))
+	_build_chunk_content(chunk_node, Vector2i(cx, cy))
+	return chunk_node
+
+func get_subzone_name(cx: int, cy: int) -> String:
+	if cx == 32 and cy == 32:
+		return 'Huyện Thành Thanh Trì'
+	elif cx == 32 and cy == 31:
+		return 'Bắc Quan Lộ'
+	elif cx == 32 and cy == 30:
+		return 'Rừng Trúc Vạn Lĩnh'
+	elif cx == 30 and cy == 32:
+		return 'Mỏ Tây Hốc'
+	elif cx == 31 and cy == 32:
+		return 'Tây Quan Lộ'
+	elif cx == 33 and cy == 31:
+		return 'Thanh Hư Đạo Quán'
+	elif cx == 33 and cy == 32:
+		return 'Cổ Kiếm Trũng'
+	elif cx == 31 and cy == 33:
+		return 'Độc Trạch Hắc Xà'
+	elif cx == 32 and cy == 33:
+		return 'Cổng Nam Quan Lộ'
+	elif cx == 31 and cy == 34:
+		return 'Thôn Đồng Nội'
+	elif cx == 32 and cy == 16:
+		return 'Kinh Đô Long Kinh'
+	return 'Ngoại Ô'

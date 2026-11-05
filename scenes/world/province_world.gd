@@ -46,12 +46,15 @@ var target_camera_zoom: float = 1.0
 const MIN_CAMERA_ZOOM: float = 0.55
 const MAX_CAMERA_ZOOM: float = 1.85
 
-# Vị trí trung tâm các phân vùng trọng điểm trong Thìn Châu:
-const THANH_TRI_CENTER = Vector2(66560, 66560) # Chunk (32, 32)
-const THANH_TRI_SPAWN = Vector2(66560, 66660)  # Quảng trường lộ thiên Nam Giếng Cổ (Tránh đè giếng & NPC)
-const LONG_KINH_CENTER = Vector2(66560, 33792) # Chunk (32, 16)
-const TAY_SON_CENTER = Vector2(41984, 66560)   # Chunk (20, 32)
-const DONG_NOI_CENTER = Vector2(64512, 70656)  # Chunk (31, 34)
+# Vị trí trung tâm 6 phân vùng trọng điểm trong Thanh Trì Huyện (256x256 tile slice):
+const THANH_TRI_CENTER = Vector2(66560, 66560) # Chunk (32, 32) — Phố Chợ & Thị Tứ
+const THANH_TRI_SPAWN = Vector2(66560, 66660)  # Quảng trường Nam Giếng Cổ
+const TAY_HOC_CENTER = Vector2(62464, 66560)   # Chunk (30, 32) — Mỏ Tây Hốc (Cận Tây, 35s di chuyển)
+const TAY_SON_CENTER = TAY_HOC_CENTER           # Alias tương thích backward test suites
+const DAO_QUAN_CENTER = Vector2(68608, 64512)  # Chunk (33, 31) — Thanh Hư Đạo Quán (Đông Bắc)
+const BAMBOO_CAVERN_CENTER = Vector2(66560, 62200) # Chunk (32, 30) — Rừng Trúc & Cổ Động (Bắc)
+const DONG_NOI_CENTER = Vector2(64512, 70656)  # Chunk (31, 34) — Thôn Đồng Nội (Nam)
+const LONG_KINH_CENTER = Vector2(66560, 33792) # Chunk (32, 16) — Kinh Đô Xa
 
 func _ready() -> void:
 	day_night_modulate = CanvasModulate.new()
@@ -86,9 +89,11 @@ func _ready() -> void:
 		streamer.update_streamer_position(player.global_position)
 		
 	if CoopWorldSync:
-		CoopWorldSync.remote_player_updated.connect(_on_remote_player_updated)
-		CoopWorldSync.remote_player_removed.connect(_on_remote_player_removed)
-		if CoopWorldSync.has_signal("entity_harvested_synced"):
+		if not CoopWorldSync.remote_player_updated.is_connected(_on_remote_player_updated):
+			CoopWorldSync.remote_player_updated.connect(_on_remote_player_updated)
+		if not CoopWorldSync.remote_player_removed.is_connected(_on_remote_player_removed):
+			CoopWorldSync.remote_player_removed.connect(_on_remote_player_removed)
+		if CoopWorldSync.has_signal("entity_harvested_synced") and not CoopWorldSync.entity_harvested_synced.is_connected(_on_entity_harvested_synced):
 			CoopWorldSync.entity_harvested_synced.connect(_on_entity_harvested_synced)
 	_spawn_core_settlement_npcs()
 	_connect_hud_signals()
@@ -157,15 +162,17 @@ func _check_poi_and_settlement_proximity() -> void:
 	
 	# Xác định phân vùng địa hạt hiển thị trên HUD
 	if dist_to_thanh_tri < 900.0:
-		label_location.text = "Huyện Thành Thanh Trì • Chợ Tán Tu"
+		label_location.text = "Huyện Thành Thanh Trì • Chợ Tán Tu & Nha Môn"
+	elif p_pos.distance_to(DAO_QUAN_CENTER) < 800.0:
+		label_location.text = "Thanh Hư Đạo Quán • Nơi Tu Hành Tĩnh Tọa"
+	elif p_pos.distance_to(TAY_HOC_CENTER) < 900.0:
+		label_location.text = "Tây Hốc • Trại Khai Khoáng & Thợ Mỏ"
+	elif dist_to_dong_noi < 800.0 or p_pos.distance_to(Vector2(66560, 68600)) < 700.0:
+		label_location.text = "Đồng Nội • Nông Trang & Ruộng Lúa Phàm Nhân"
 	elif dist_to_long_kinh < 1200.0:
 		label_location.text = "Kinh Đô Long Kinh • Hoàng Cung & Lục Bộ"
-	elif dist_to_tay_son < 1000.0:
-		label_location.text = "Tây Sơn • Trại Khai Khoáng & Thợ Mỏ"
-	elif dist_to_dong_noi < 800.0:
-		label_location.text = "Đồng Nội • Nông Trang Phàm Nhân"
-	elif p_pos.y < THANH_TRI_CENTER.y - 1200.0:
-		label_location.text = "Bắc Lâm • Bí Cảnh Rừng Trúc Vạn Lĩnh"
+	elif p_pos.distance_to(BAMBOO_CAVERN_CENTER) < 900.0:
+		label_location.text = "Bắc Lâm • Rừng Trúc Vạn Lĩnh & Thạch Động Cổ"
 	elif p_pos.x < THANH_TRI_CENTER.x - 1200.0 and p_pos.y > THANH_TRI_CENTER.y + 600.0:
 		label_location.text = "Nam Đầm • Độc Trạch Hắc Xà"
 	elif p_pos.x > THANH_TRI_CENTER.x + 1200.0:
@@ -186,6 +193,47 @@ func _check_poi_and_settlement_proximity() -> void:
 				nearby_action = "npc_" + npc.npc_id
 				prompt_text = "[E: Đàm Đạo Với %s (%s)]" % [n_name, n_role]
 				break
+
+
+	# === 1.5. BIỂN CHỈ ĐƯỜNG & MỐC ĐỊA HÌNH QUAN LỘ ===
+	# Biển Chỉ Dẫn Trung Tâm Thanh Trì
+	var sp_center_pos = THANH_TRI_CENTER + Vector2(0, 100)
+	if nearby_action == "" and p_pos.distance_to(sp_center_pos) < 90.0:
+		nearby_action = "signpost_center"
+		prompt_text = "[E: Biển Chỉ Dẫn • ↑ Bắc: Rừng Trúc | ← Tây: Mỏ Tây Hốc | → Đông: Đạo Quán | ↓ Nam: Đồng Nội]"
+
+	# Biển Chỉ Dẫn Bắc Quan Lộ
+	var sp_north_pos = Vector2(66560, 64736)
+	if nearby_action == "" and p_pos.distance_to(sp_north_pos) < 90.0:
+		nearby_action = "signpost_north"
+		prompt_text = "[E: Biển Chỉ Dẫn • ↑ Rừng Trúc Vạn Lĩnh (15s) | → Đông Bắc: Cổ Đạo Quán (20s) | ↓ Thanh Trì]"
+
+	# Biển Chỉ Dẫn Mỏ Tây Hốc
+	var sp_west_pos = Vector2(62540, 66560)
+	if nearby_action == "" and p_pos.distance_to(sp_west_pos) < 90.0:
+		nearby_action = "signpost_west"
+		prompt_text = "[E: Biển Chỉ Dẫn • ← Trại Mỏ Tây Hốc (Khai Khoáng) | → Trở Về Thanh Trì Huyện (35s)]"
+
+	# Biển Chỉ Dẫn Cổ Đạo Quán
+	var sp_dao_pos = DAO_QUAN_CENTER + Vector2(0, 120)
+	if nearby_action == "" and p_pos.distance_to(sp_dao_pos) < 90.0:
+		nearby_action = "signpost_daoist"
+		prompt_text = "[E: Biển Chỉ Dẫn • Cổ Đạo Quán Thanh Hư • Nơi Tu Hành Tĩnh Tọa & Vấn Đạo]"
+
+	# Điểm Tĩnh Tọa Cổ Đạo Quán
+	if nearby_action == "" and p_pos.distance_to(DAO_QUAN_CENTER) < 90.0:
+		nearby_action = "daoist_meditation"
+		prompt_text = "[E: Bồ Đoàn Tĩnh Tọa • Vận Khí Chu Thiên Tĩnh Tâm (+15 Khí Huyết, +25 Tu Vi)]"
+
+	# Điểm Khai Thác Mỏ Tây Hốc (Lõi 256x256)
+	if nearby_action == "" and p_pos.distance_to(TAY_HOC_CENTER) < 100.0:
+		nearby_action = "mine_tay_hoc"
+		prompt_text = "[E: Mỏ Khoáng Tây Hốc • Khai Thác Khoáng Thạch & Sắt Thép (+Nguyên Liệu)]"
+
+	# Điểm Chăm Sóc Ruộng Lúa Đồng Nội
+	if nearby_action == "" and p_pos.distance_to(DONG_NOI_CENTER) < 100.0:
+		nearby_action = "farm_dong_noi"
+		prompt_text = "[E: Nông Trang Đồng Nội • Kiểm Tra Mùa Vụ Lúa Nước & Thu Hoạch Lương Thực]"
 
 	# === 2. CỔNG THÀNH TRÌ & TRẠM GÁC LIÊN THÔNG ===
 	# Cổng Nam Thanh Trì (world pos ~ Vector2(66560, 67136))
@@ -442,6 +490,38 @@ func _execute_action(action: String) -> void:
 				if EventBus:
 					EventBus.notification_requested.emit("Uống nước giếng cổ thanh khiết, hồi phục 30 Khí Huyết!", "success")
 					
+
+		# --- BIỂN CHỈ ĐƯỜNG & TIỂU VÙNG vertical slice ---
+		"signpost_center":
+			if EventBus:
+				EventBus.notification_requested.emit("Biển Chỉ Dẫn: ↑ Bắc (Rừng Trúc 25s) | ← Tây (Mỏ Tây Hốc 35s) | → Đông (Cổ Đạo Quán 30s) | ↓ Nam (Đồng Nội 20s)", "info")
+		"signpost_north":
+			if EventBus:
+				EventBus.notification_requested.emit("Mốc Bắc Quan Lộ: ↑ Rừng Trúc Vạn Lĩnh & Thạch Động | → Lối rẽ Cổ Đạo Quán Thanh Hư", "info")
+		"signpost_west":
+			if EventBus:
+				EventBus.notification_requested.emit("Mốc Tây Quan Lộ: ← Trại Mỏ Tây Hốc (Lò rèn, khoáng sản) | → Trở về Huyện Thành Thanh Trì", "info")
+		"signpost_daoist":
+			if EventBus:
+				EventBus.notification_requested.emit("Thanh Hư Cổ Quán: Đạo pháp tự nhiên, bồ đoàn tĩnh tọa ngộ đạo, tiếp cận đan đạo sơ khởi.", "info")
+		"daoist_meditation":
+			if GameSession:
+				GameSession.heal_player(15)
+				GameSession.add_cultivation(25)
+				if EventBus:
+					EventBus.notification_requested.emit("Tĩnh tọa trước Cổ Đạo Quán: Tâm thần thanh tịnh, +15 Khí Huyết, +25 Tu Vi!", "success")
+		"mine_tay_hoc":
+			if GameSession:
+				GameSession.add_item("item_linh_thach", 20)
+				GameSession.add_cultivation(15)
+				if EventBus:
+					EventBus.notification_requested.emit("Khai khoáng Tây Hốc: Đào được 20 Linh Thạch và quặng khoáng sản!", "success")
+		"farm_dong_noi":
+			if GameSession:
+				GameSession.add_cultivation(10)
+				if EventBus:
+					EventBus.notification_requested.emit("Chăm sóc đồng nội: Thóc lúa xanh tốt, nhận +10 Tu Vi thể nghiệm hồng trần!", "success")
+
 		# --- CỔNG THÀNH TRÌ ---
 		"gate_thanh_tri_south":
 			if player:
@@ -712,3 +792,42 @@ func _connect_hud_signals() -> void:
 		EventBus.player_realm_changed.connect(func(_r): _update_header())
 	if world_map_modal and world_map_modal.has_signal("map_fast_travel_requested"):
 		world_map_modal.map_fast_travel_requested.connect(func(action): _execute_action(action))
+
+
+func get_signpost_guide(signpost_id: String) -> String:
+	match signpost_id:
+		"signpost_center":
+			return "Biển Chỉ Dẫn: ↑ Bắc (Rừng Trúc 25s) | ← Tây (Mỏ Tây Hốc 35s) | → Đông (Cổ Đạo Quán 30s) | ↓ Nam (Đồng Nội 20s)"
+		"signpost_north":
+			return "Mốc Bắc Quan Lộ: ↑ Bắc: Rừng Trúc Vạn Lĩnh và Thạch Động | → Đông: Lối rẽ Cổ Đạo Quán Thanh Hư | ↓ Nam: Về Thanh Trì Huyện"
+		"signpost_west":
+			return "Mốc Tây Quan Lộ: ← Tây: Trại Mỏ Tây Hốc (Lò rèn, khoáng sản) | → Đông: Trở về Huyện Thành Thanh Trì"
+		"signpost_east":
+			return "Mốc Đông Quan Lộ: → Đông: Cổ Kiếm Trũng (Tàn Kiếm Bia) | ↑ Bắc: Cổ Đạo Quán | ← Tây: Về Thanh Trì"
+		"signpost_south":
+			return "Mốc Nam Quan Lộ: ↓ Nam: Thôn Đồng Nội và Độc Trạch Hắc Xà | ↑ Bắc: Về Thanh Trì Huyện"
+		"signpost_daoist":
+			return "Thanh Hư Cổ Quán: Đạo pháp tự nhiên, bồ đoàn tĩnh tọa ngộ đạo, tiếp cận đan đạo sơ khởi."
+	return ""
+
+func _execute_subzone_action(action_id: String) -> void:
+	match action_id:
+		"meditation_cushion", "daoist_meditation":
+			if GameSession:
+				GameSession.heal_player(15)
+				GameSession.add_cultivation(25)
+				if EventBus:
+					EventBus.notification_requested.emit("Tĩnh tọa bồ đoàn Cổ Đạo Quán: Khí hải ngưng tụ, +15 Khí Huyết, +25 Tu Vi!", "success")
+		"mine_iron_ore", "mine_tay_hoc":
+			if GameSession:
+				GameSession.add_item("iron_ore", 2)
+				GameSession.add_item("item_linh_thach", 20)
+				GameSession.add_cultivation(15)
+				if EventBus:
+					EventBus.notification_requested.emit("Khai khoáng Tây Hốc: Đào được 2 Quặng Sắt và 20 Linh Thạch!", "success")
+		"harvest_rice", "farm_dong_noi":
+			if GameSession:
+				GameSession.add_item("rice_grain", 3)
+				GameSession.add_cultivation(10)
+				if EventBus:
+					EventBus.notification_requested.emit("Thu hoạch lúa Đồng Nội: Gặt được 3 Bó Lúa và +10 Tu Vi thể nghiệm hồng trần!", "success")

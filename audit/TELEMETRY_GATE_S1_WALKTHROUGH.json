@@ -1,0 +1,135 @@
+[
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      66560.0,
+      66660.0
+    ],
+    "collision_trap": false,
+    "fps": 1.0,
+    "hud_location": "Huyện Thành Thanh Trì • Chợ Tán Tu & Nha Môn",
+    "prompt_text": "[E: Biển Chỉ Dẫn • ↑ Bắc: Rừng Trúc | ← Tây: Mỏ Tây Hốc | → Đông: Đạo Quán | ↓ Nam: Đồng Nội]",
+    "prompt_visible": true,
+    "ram_mb": 67.2,
+    "step": 1,
+    "target_pos": [
+      66560.0,
+      66660.0
+    ],
+    "waypoint_name": "Thanh Trì Trấn Trung Tâm"
+  },
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      66560.0,
+      64736.0
+    ],
+    "collision_trap": false,
+    "fps": 1.0,
+    "hud_location": "Quan Lộ Thìn Châu • Ngoại Ô",
+    "prompt_text": "[E: Biển Chỉ Dẫn • ↑ Rừng Trúc Vạn Lĩnh (15s) | → Đông Bắc: Cổ Đạo Quán (20s) | ↓ Thanh Trì]",
+    "prompt_visible": true,
+    "ram_mb": 67.4,
+    "step": 2,
+    "target_pos": [
+      66560.0,
+      64736.0
+    ],
+    "waypoint_name": "Ngã Ba Quan Lộ & Biển Chỉ Đường"
+  },
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      68608.0,
+      64512.0
+    ],
+    "collision_trap": false,
+    "fps": 61.0,
+    "hud_location": "Thanh Hư Đạo Quán • Nơi Tu Hành Tĩnh Tọa",
+    "prompt_text": "[E: Bồ Đoàn Tĩnh Tọa • Vận Khí Chu Thiên Tĩnh Tâm (+15 Khí Huyết, +25 Tu Vi)]",
+    "prompt_visible": true,
+    "ram_mb": 67.4,
+    "step": 3,
+    "target_pos": [
+      68608.0,
+      64512.0
+    ],
+    "waypoint_name": "Thanh Hư Cổ Đạo Quán"
+  },
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      68608.0,
+      66560.0
+    ],
+    "collision_trap": false,
+    "fps": 61.0,
+    "hud_location": "Đông Cốc • Cổ Kiếm Trũng",
+    "prompt_text": "Không có prompt",
+    "prompt_visible": false,
+    "ram_mb": 67.3,
+    "step": 4,
+    "target_pos": [
+      68608.0,
+      66560.0
+    ],
+    "waypoint_name": "Cổ Kiếm Trũng"
+  },
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      64512.0,
+      70656.0
+    ],
+    "collision_trap": false,
+    "fps": 73.0,
+    "hud_location": "Đồng Nội • Nông Trang & Ruộng Lúa Phàm Nhân",
+    "prompt_text": "[E: Nông Trang Đồng Nội • Kiểm Tra Mùa Vụ Lúa Nước & Thu Hoạch Lương Thực]",
+    "prompt_visible": true,
+    "ram_mb": 67.1,
+    "step": 5,
+    "target_pos": [
+      64512.0,
+      70656.0
+    ],
+    "waypoint_name": "Thôn Đồng Nội (Nông Trang)"
+  },
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      62464.0,
+      66560.0
+    ],
+    "collision_trap": false,
+    "fps": 73.0,
+    "hud_location": "Tây Hốc • Trại Khai Khoáng & Thợ Mỏ",
+    "prompt_text": "[E: Biển Chỉ Dẫn • ← Trại Mỏ Tây Hốc (Khai Khoáng) | → Trở Về Thanh Trì Huyện (35s)]",
+    "prompt_visible": true,
+    "ram_mb": 67.1,
+    "step": 6,
+    "target_pos": [
+      62464.0,
+      66560.0
+    ],
+    "waypoint_name": "Mỏ Tây Hốc (Khai Khoáng)"
+  },
+  {
+    "active_chunks": 9,
+    "actual_pos": [
+      66560.0,
+      62200.0
+    ],
+    "collision_trap": false,
+    "fps": 73.0,
+    "hud_location": "Bắc Lâm • Rừng Trúc Vạn Lĩnh & Thạch Động Cổ",
+    "prompt_text": "[E: Thạch Động Cổ • Khám Phá Rương Báu Bí Cảnh]",
+    "prompt_visible": true,
+    "ram_mb": 67.3,
+    "step": 7,
+    "target_pos": [
+      66560.0,
+      62200.0
+    ],
+    "waypoint_name": "Rừng Trúc Vạn Lĩnh & Cổ Động"
+  }
+]

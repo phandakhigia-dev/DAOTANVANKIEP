@@ -20,6 +20,7 @@ var is_qinggong: bool = false
 var qinggong_timer: float = 0.0
 var qinggong_cd: float = 0.0
 var qinggong_dir: Vector2 = Vector2.DOWN
+var _space_was_down: bool = false
 
 @export var spawn_override: Vector2 = Vector2.ZERO
 
@@ -50,6 +51,17 @@ func _unhandled_input(event: InputEvent) -> void:
 			_target_pulse = 1.0
 			queue_redraw()
 
+func trigger_qinggong(dir: Vector2 = Vector2.ZERO) -> void:
+	if qinggong_cd <= 0.0:
+		is_qinggong = true
+		qinggong_timer = 0.22
+		qinggong_cd = 0.9
+		var raw_dir = dir if dir != Vector2.ZERO else (velocity.normalized() if velocity != Vector2.ZERO else facing_dir)
+		qinggong_dir = raw_dir.normalized() if raw_dir != Vector2.ZERO else Vector2.DOWN
+		velocity = qinggong_dir * QINGGONG_SPEED
+		if AudioService:
+			AudioService.play_sfx("sfx_sword_slash", 1.6)
+
 func _physics_process(delta: float) -> void:
 	var input_vec = Vector2.ZERO
 	
@@ -63,15 +75,25 @@ func _physics_process(delta: float) -> void:
 	if is_zero_approx(input_vec.y):
 		input_vec.y = Input.get_axis("ui_up", "ui_down")
 	
-	# 3. Quét phím vật lý thô (Physical Scancodes) — Miễn nhiễm 100% với Unikey/Telex/EVKey
+	# 3. Quét phím vật lý thô (Physical Scancodes) — Chỉ bù đắp nếu chưa nhận được trục
+	var raw_phys_x = 0.0
+	var raw_phys_y = 0.0
 	if Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT):
-		input_vec.x -= 1.0
+		raw_phys_x -= 1.0
 	if Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT):
-		input_vec.x += 1.0
+		raw_phys_x += 1.0
 	if Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP) or Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP):
-		input_vec.y -= 1.0
+		raw_phys_y -= 1.0
 	if Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN) or Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN):
-		input_vec.y += 1.0
+		raw_phys_y += 1.0
+		
+	if is_zero_approx(input_vec.x):
+		input_vec.x = raw_phys_x
+	if is_zero_approx(input_vec.y):
+		input_vec.y = raw_phys_y
+		
+	input_vec.x = clampf(input_vec.x, -1.0, 1.0)
+	input_vec.y = clampf(input_vec.y, -1.0, 1.0)
 
 	var cur_speed = move_speed
 	if Input.is_key_pressed(KEY_SHIFT) or Input.is_physical_key_pressed(KEY_SHIFT):
@@ -91,11 +113,11 @@ func _physics_process(delta: float) -> void:
 		if qinggong_timer <= 0.0:
 			is_qinggong = false
 	else:
-		var space_pressed = (
-			Input.is_action_just_pressed("qinggong") if InputMap.has_action("qinggong")
-			else (Input.is_physical_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_SPACE))
-		)
-		if space_pressed and qinggong_cd <= 0.0:
+		var space_is_down = Input.is_physical_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_SPACE) or (InputMap.has_action("qinggong") and Input.is_action_pressed("qinggong"))
+		var space_just_pressed = (InputMap.has_action("qinggong") and Input.is_action_just_pressed("qinggong")) or (space_is_down and not _space_was_down)
+		_space_was_down = space_is_down
+		
+		if space_just_pressed and qinggong_cd <= 0.0:
 			is_qinggong = true
 			qinggong_timer = 0.22
 			qinggong_cd = 0.9
