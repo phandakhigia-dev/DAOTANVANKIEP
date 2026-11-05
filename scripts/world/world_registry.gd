@@ -27,22 +27,20 @@ func load_all_world_data() -> void:
 	is_loaded = true
 
 func _load_detailed_province_data() -> void:
-	# Nạp dữ liệu mở rộng cho Thìn Châu
-	var r_data = _load_json_file("res://data/world/provinces/thin_chau/roads_rivers.json")
-	if r_data is Dictionary:
-		province_roads["thin_chau"] = r_data
-		
-	var s_data = _load_json_file("res://data/world/provinces/thin_chau/settlements.json")
-	if s_data is Dictionary:
-		province_settlements["thin_chau"] = s_data.get("settlements", [])
-		
-	var st_data = _load_json_file("res://data/world/provinces/thin_chau/fast_travel_stations.json")
-	if st_data is Dictionary:
-		province_stations["thin_chau"] = st_data.get("stations", [])
-		
-	var lm_data = _load_json_file("res://data/world/provinces/thin_chau/landmarks.json")
-	if lm_data is Dictionary:
-		province_landmarks["thin_chau"] = lm_data.get("landmarks", [])
+	var all_pids = ["thin_chau", "ty_chau", "suu_chau", "dan_chau", "mao_chau", "ty_ran_chau", "ngo_chau", "mui_chau", "than_chau", "dau_chau", "tuat_chau", "hoi_chau"]
+	for pid in all_pids:
+		var r_data = _load_json_file("res://data/world/provinces/%s/roads_rivers.json" % pid)
+		if r_data is Dictionary:
+			province_roads[pid] = r_data
+		var s_data = _load_json_file("res://data/world/provinces/%s/settlements.json" % pid)
+		if s_data is Dictionary:
+			province_settlements[pid] = s_data.get("settlements", [])
+		var st_data = _load_json_file("res://data/world/provinces/%s/fast_travel_stations.json" % pid)
+		if st_data is Dictionary:
+			province_stations[pid] = st_data.get("stations", [])
+		var lm_data = _load_json_file("res://data/world/provinces/%s/landmarks.json" % pid)
+		if lm_data is Dictionary:
+			province_landmarks[pid] = lm_data.get("landmarks", [])
 
 func _load_json_file(path: String) -> Variant:
 	if FileAccess.file_exists(path):
@@ -81,15 +79,11 @@ func _load_court_rules() -> void:
 
 func _load_provinces() -> void:
 	provinces_data.clear()
-	# Nạp tỉnh chính chơi được
-	var thin_data = _load_json_file("res://data/world/provinces/thin_chau/province.json")
-	if thin_data is Dictionary:
-		provinces_data["thin_chau"] = thin_data
-		
-	# Nạp 11 tỉnh metadata
-	var other_ids = ["ty_chau", "suu_chau", "dan_chau", "mao_chau", "ty_ran_chau", "ngo_chau", "mui_chau", "than_chau", "dau_chau", "tuat_chau", "hoi_chau"]
-	for pid in other_ids:
-		var p_data = _load_json_file("res://data/world/provinces/%s.json" % pid)
+	var all_ids = ["thin_chau", "ty_chau", "suu_chau", "dan_chau", "mao_chau", "ty_ran_chau", "ngo_chau", "mui_chau", "than_chau", "dau_chau", "tuat_chau", "hoi_chau"]
+	for pid in all_ids:
+		var p_data = _load_json_file("res://data/world/provinces/%s/province.json" % pid)
+		if not p_data is Dictionary:
+			p_data = _load_json_file("res://data/world/provinces/%s.json" % pid)
 		if p_data is Dictionary:
 			provinces_data[pid] = p_data
 

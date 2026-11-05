@@ -1,0 +1,32 @@
+{
+  "province_id": "mui_chau",
+  "display_name": "Mùi Châu",
+  "country_id": "dai_huyen",
+  "theme": "Cao nguyên đất đỏ, tuyết dương mục trường",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_lac_ha",
+  "governor_npc_id": "npc_mui_quan_01",
+  "sect_name": "Tuyết Sơn Các",
+  "neighbor_provinces": [
+    "thin_chau",
+    "ty_ran_chau",
+    "than_chau"
+  ],
+  "bg_color": [
+    0.24,
+    0.16,
+    0.12
+  ],
+  "water_color": [
+    0.2,
+    0.28,
+    0.38
+  ],
+  "persistent_world_diffs": true
+}

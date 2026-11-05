@@ -1,0 +1,31 @@
+{
+  "province_id": "ngo_chau",
+  "settlements": [
+    {
+      "id": "settlement_phong_ma",
+      "name": "Phong Mã Thành",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_thien_ma_trang",
+      "name": "Thiên Mã Trang",
+      "type": "town",
+      "chunk": [
+        22,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

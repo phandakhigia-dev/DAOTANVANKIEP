@@ -1,0 +1,14 @@
+{
+  "province_id": "dau_chau",
+  "landmarks": [
+    {
+      "id": "lm_van_kiem_lo",
+      "name": "Vạn Kiếm Lò Thần Hỏa",
+      "chunk": [
+        34,
+        34
+      ],
+      "type": "resource"
+    }
+  ]
+}

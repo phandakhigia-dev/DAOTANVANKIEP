@@ -1,0 +1,19 @@
+{
+  "province_id": "dau_chau",
+  "stations": [
+    {
+      "id": "st_van_giac",
+      "name": "Dịch Trạm Vạn Giác",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 20,
+      "target": "thin_chau"
+    }
+  ]
+}

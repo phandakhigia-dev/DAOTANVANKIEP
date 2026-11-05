@@ -1,0 +1,14 @@
+{
+  "province_id": "mao_chau",
+  "landmarks": [
+    {
+      "id": "lm_ngoc_truc_van_lam",
+      "name": "Ngọc Trúc Vạn Lâm Trận",
+      "chunk": [
+        30,
+        26
+      ],
+      "type": "sanctuary"
+    }
+  ]
+}

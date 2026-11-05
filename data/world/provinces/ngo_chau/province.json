@@ -1,0 +1,32 @@
+{
+  "province_id": "ngo_chau",
+  "display_name": "Ngọ Châu",
+  "country_id": "dai_huyen",
+  "theme": "Thảo nguyên mênh mông, ngựa chiến, thương đội",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_phong_ma",
+  "governor_npc_id": "npc_ngo_quan_01",
+  "sect_name": "Phi Yến Môn",
+  "neighbor_provinces": [
+    "thin_chau",
+    "mao_chau",
+    "ty_ran_chau"
+  ],
+  "bg_color": [
+    0.14,
+    0.28,
+    0.14
+  ],
+  "water_color": [
+    0.14,
+    0.32,
+    0.48
+  ],
+  "persistent_world_diffs": true
+}

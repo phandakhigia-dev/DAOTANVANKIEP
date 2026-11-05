@@ -1,0 +1,31 @@
+{
+  "province_id": "ty_ran_chau",
+  "settlements": [
+    {
+      "id": "settlement_u_hon",
+      "name": "U Hồn Trấn",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_doc_mon",
+      "name": "Độc Đan Các",
+      "type": "town",
+      "chunk": [
+        32,
+        42
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

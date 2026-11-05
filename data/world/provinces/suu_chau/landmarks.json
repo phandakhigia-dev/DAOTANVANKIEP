@@ -1,0 +1,14 @@
+{
+  "province_id": "suu_chau",
+  "landmarks": [
+    {
+      "id": "lm_thao_nguyen_linh_mach",
+      "name": "Linh Mạch Ruộng Lúa Vàng",
+      "chunk": [
+        30,
+        30
+      ],
+      "type": "resource"
+    }
+  ]
+}

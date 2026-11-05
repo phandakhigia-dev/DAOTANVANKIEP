@@ -1,0 +1,31 @@
+{
+  "province_id": "mao_chau",
+  "settlements": [
+    {
+      "id": "settlement_han_lam",
+      "name": "Hàn Lâm Thành",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_duoc_vuong",
+      "name": "Dược Vương Cốc Trấn",
+      "type": "town",
+      "chunk": [
+        32,
+        22
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

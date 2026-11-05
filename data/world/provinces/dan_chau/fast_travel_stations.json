@@ -1,0 +1,19 @@
+{
+  "province_id": "dan_chau",
+  "stations": [
+    {
+      "id": "st_ho_khieu",
+      "name": "Dịch Trạm Hổ Khiếu",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 20,
+      "target": "thin_chau"
+    }
+  ]
+}

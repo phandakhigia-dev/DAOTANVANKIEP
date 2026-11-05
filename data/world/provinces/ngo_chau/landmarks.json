@@ -1,0 +1,14 @@
+{
+  "province_id": "ngo_chau",
+  "landmarks": [
+    {
+      "id": "lm_thao_nguyen_dien_vo",
+      "name": "Thảo Nguyên Diễn Võ Đài",
+      "chunk": [
+        28,
+        28
+      ],
+      "type": "sanctuary"
+    }
+  ]
+}

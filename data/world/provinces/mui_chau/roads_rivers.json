@@ -1,0 +1,31 @@
+{
+  "province_id": "mui_chau",
+  "main_roads": [
+    {
+      "name": "Trục Quan Lộ Trung Tâm",
+      "axis": "x",
+      "chunk": 32,
+      "width_px": 128
+    },
+    {
+      "name": "Đại Đạo Liên Huyện",
+      "axis": "y",
+      "chunk": 32,
+      "width_px": 128
+    }
+  ],
+  "rivers": [
+    {
+      "name": "Thủy Lưu Liên Châu",
+      "start": [
+        0,
+        68000
+      ],
+      "end": [
+        131072,
+        69000
+      ],
+      "width_px": 220
+    }
+  ]
+}

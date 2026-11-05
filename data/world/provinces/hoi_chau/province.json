@@ -1,0 +1,32 @@
+{
+  "province_id": "hoi_chau",
+  "display_name": "Hợi Châu",
+  "country_id": "dai_huyen",
+  "theme": "Vùng hồ lớn mênh mông, đảo sen hồng, thủy sản",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_thuy_nguyet",
+  "governor_npc_id": "npc_hoi_quan_01",
+  "sect_name": "Bích Ba Đảo Tiên Cung",
+  "neighbor_provinces": [
+    "thin_chau",
+    "tuat_chau",
+    "ty_chau"
+  ],
+  "bg_color": [
+    0.1,
+    0.22,
+    0.26
+  ],
+  "water_color": [
+    0.12,
+    0.4,
+    0.58
+  ],
+  "persistent_world_diffs": true
+}

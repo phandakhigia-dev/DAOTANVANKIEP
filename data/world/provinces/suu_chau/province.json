@@ -1,0 +1,32 @@
+{
+  "province_id": "suu_chau",
+  "display_name": "Sửu Châu",
+  "country_id": "dai_huyen",
+  "theme": "Đồng bằng phì nhiêu, lương thực, chăn nuôi",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_phong_hoa",
+  "governor_npc_id": "npc_suu_quan_01",
+  "sect_name": "Bách Thảo Môn Phân Viện",
+  "neighbor_provinces": [
+    "thin_chau",
+    "ty_chau",
+    "dan_chau"
+  ],
+  "bg_color": [
+    0.22,
+    0.26,
+    0.14
+  ],
+  "water_color": [
+    0.18,
+    0.32,
+    0.4
+  ],
+  "persistent_world_diffs": true
+}

@@ -1,0 +1,32 @@
+{
+  "province_id": "dan_chau",
+  "display_name": "Dần Châu",
+  "country_id": "dai_huyen",
+  "theme": "Sơn lâm, săn bắn dã thú, quặng sắt",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_ho_khieu",
+  "governor_npc_id": "npc_dan_quan_01",
+  "sect_name": "Phách Đao Môn",
+  "neighbor_provinces": [
+    "thin_chau",
+    "suu_chau",
+    "mao_chau"
+  ],
+  "bg_color": [
+    0.18,
+    0.16,
+    0.12
+  ],
+  "water_color": [
+    0.15,
+    0.28,
+    0.35
+  ],
+  "persistent_world_diffs": true
+}

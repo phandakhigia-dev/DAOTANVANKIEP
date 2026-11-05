@@ -1,0 +1,31 @@
+{
+  "province_id": "hoi_chau",
+  "settlements": [
+    {
+      "id": "settlement_thuy_nguyet",
+      "name": "Thủy Nguyệt Thành",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_phong_lo",
+      "name": "Bến Phong Lộ",
+      "type": "town",
+      "chunk": [
+        32,
+        42
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

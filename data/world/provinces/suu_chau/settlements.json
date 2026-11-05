@@ -1,0 +1,44 @@
+{
+  "province_id": "suu_chau",
+  "settlements": [
+    {
+      "id": "settlement_phong_hoa",
+      "name": "Huyện Thành Phong Hòa",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_linh_nguu",
+      "name": "Trại Nuôi Linh Ngưu",
+      "type": "town",
+      "chunk": [
+        32,
+        40
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_dong_dien",
+      "name": "Thôn Đồng Điền",
+      "type": "village",
+      "chunk": [
+        26,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

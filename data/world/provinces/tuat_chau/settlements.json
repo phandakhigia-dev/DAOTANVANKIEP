@@ -1,0 +1,31 @@
+{
+  "province_id": "tuat_chau",
+  "settlements": [
+    {
+      "id": "settlement_nhan_mon",
+      "name": "Nhạn Môn Quan",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_tran_bien",
+      "name": "Trấn Biên Doanh",
+      "type": "town",
+      "chunk": [
+        24,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

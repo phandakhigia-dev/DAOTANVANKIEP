@@ -1,0 +1,14 @@
+{
+  "province_id": "ty_ran_chau",
+  "landmarks": [
+    {
+      "id": "lm_xa_than_co_mieu",
+      "name": "Miếu Xà Thần Cổ Tế Đàn",
+      "chunk": [
+        34,
+        30
+      ],
+      "type": "danger"
+    }
+  ]
+}

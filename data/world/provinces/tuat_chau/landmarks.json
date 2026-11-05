@@ -1,0 +1,14 @@
+{
+  "province_id": "tuat_chau",
+  "landmarks": [
+    {
+      "id": "lm_bach_lang_coc",
+      "name": "Bạch Lang Cốc Hung Hiểm",
+      "chunk": [
+        32,
+        18
+      ],
+      "type": "danger"
+    }
+  ]
+}

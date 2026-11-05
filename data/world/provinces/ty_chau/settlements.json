@@ -1,0 +1,44 @@
+{
+  "province_id": "ty_chau",
+  "settlements": [
+    {
+      "id": "settlement_thuy_kinh",
+      "name": "Cảng Thủy Kính",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_van_ngu",
+      "name": "Chợ Vạn Ngư",
+      "type": "town",
+      "chunk": [
+        24,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_hai_phong",
+      "name": "Huyện Hải Phong",
+      "type": "county",
+      "chunk": [
+        32,
+        20
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

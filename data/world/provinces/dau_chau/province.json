@@ -1,0 +1,32 @@
+{
+  "province_id": "dau_chau",
+  "display_name": "Dậu Châu",
+  "country_id": "dai_huyen",
+  "theme": "Đô thị phường thợ, tiệm rèn bách binh, chợ ngọc",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_van_giac",
+  "governor_npc_id": "npc_dau_quan_01",
+  "sect_name": "Luyện Khí Tông",
+  "neighbor_provinces": [
+    "thin_chau",
+    "than_chau",
+    "tuat_chau"
+  ],
+  "bg_color": [
+    0.22,
+    0.2,
+    0.16
+  ],
+  "water_color": [
+    0.18,
+    0.3,
+    0.42
+  ],
+  "persistent_world_diffs": true
+}

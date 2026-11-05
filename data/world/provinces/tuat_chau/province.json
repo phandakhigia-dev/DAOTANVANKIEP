@@ -1,0 +1,32 @@
+{
+  "province_id": "tuat_chau",
+  "display_name": "Tuất Châu",
+  "country_id": "dai_huyen",
+  "theme": "Sa mạc biên ải, quan ải chiến lũy, phòng tuyến quân doanh",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_nhan_mon",
+  "governor_npc_id": "npc_tuat_quan_01",
+  "sect_name": "Thiết Huyết Quân Doanh",
+  "neighbor_provinces": [
+    "thin_chau",
+    "dau_chau",
+    "hoi_chau"
+  ],
+  "bg_color": [
+    0.3,
+    0.25,
+    0.16
+  ],
+  "water_color": [
+    0.2,
+    0.28,
+    0.32
+  ],
+  "persistent_world_diffs": true
+}

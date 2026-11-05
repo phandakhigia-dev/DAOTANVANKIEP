@@ -1,0 +1,14 @@
+{
+  "province_id": "dan_chau",
+  "landmarks": [
+    {
+      "id": "lm_ho_khieu_nhai",
+      "name": "Hổ Khiếu Nhai Thần Vực",
+      "chunk": [
+        32,
+        24
+      ],
+      "type": "danger"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "province_id": "mui_chau",
+  "landmarks": [
+    {
+      "id": "lm_ngoc_son_dinh",
+      "name": "Ngọc Sơn Đỉnh Thần Điện",
+      "chunk": [
+        32,
+        20
+      ],
+      "type": "sanctuary"
+    }
+  ]
+}

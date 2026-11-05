@@ -1,0 +1,14 @@
+{
+  "province_id": "hoi_chau",
+  "landmarks": [
+    {
+      "id": "lm_thai_ho_dao",
+      "name": "Thái Hồ Liên Hoa Đảo",
+      "chunk": [
+        30,
+        30
+      ],
+      "type": "sanctuary"
+    }
+  ]
+}

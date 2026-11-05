@@ -1,8 +1,8 @@
 {
   "project": "ĐẠO TÀN: VẠN KIẾP",
   "engine": "Godot Engine v4.7.2.stable.official.ed1daf0bf",
-  "execution_date": "2026-11-05T19:53:15.542215",
-  "duration_seconds": 2.74748,
+  "execution_date": "2026-11-05T20:39:05.501058",
+  "duration_seconds": 4.867936,
   "exit_code": 0,
   "total_suites": 30,
   "total_tests": 211,
@@ -306,11 +306,11 @@
       "test_cases": [
         {
           "status": "PASS",
-          "description": "Stress test 500 NPC x 12 tháng: Trung bình 7.86 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
+          "description": "Stress test 500 NPC x 12 tháng: Trung bình 7.94 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)"
         },
         {
           "status": "PASS",
-          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 19.81 ms/tháng (Vượt qua thử thách quy mô lớn)"
+          "description": "Stress test cực đại 1,000 NPC x 3 tháng: Đạt 19.67 ms/tháng (Vượt qua thử thách quy mô lớn)"
         },
         {
           "status": "PASS",
@@ -666,7 +666,7 @@
         },
         {
           "status": "PASS",
-          "description": "play_sfx: Lấy thành công player từ pool và gán AudioStream (SFXPlayer_2)"
+          "description": "play_sfx: Lấy thành công player từ pool và gán AudioStream (SFXPlayer_10)"
         },
         {
           "status": "PASS",

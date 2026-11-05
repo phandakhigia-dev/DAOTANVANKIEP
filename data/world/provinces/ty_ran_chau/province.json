@@ -1,0 +1,32 @@
+{
+  "province_id": "ty_ran_chau",
+  "display_name": "Tỵ Châu",
+  "country_id": "dai_huyen",
+  "theme": "Vạn Độc Trạch, sương mù tím, ma đạo tà tu",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_u_hon",
+  "governor_npc_id": "npc_ty_ran_quan_01",
+  "sect_name": "Thiên Độc Môn",
+  "neighbor_provinces": [
+    "thin_chau",
+    "ngo_chau",
+    "mui_chau"
+  ],
+  "bg_color": [
+    0.16,
+    0.1,
+    0.2
+  ],
+  "water_color": [
+    0.25,
+    0.12,
+    0.35
+  ],
+  "persistent_world_diffs": true
+}

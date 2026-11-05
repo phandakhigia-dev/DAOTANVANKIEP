@@ -1,0 +1,14 @@
+{
+  "province_id": "than_chau",
+  "landmarks": [
+    {
+      "id": "lm_co_quan_tran_phue_tich",
+      "name": "Phế Tích Cổ Cơ Quan Trận",
+      "chunk": [
+        24,
+        32
+      ],
+      "type": "danger"
+    }
+  ]
+}

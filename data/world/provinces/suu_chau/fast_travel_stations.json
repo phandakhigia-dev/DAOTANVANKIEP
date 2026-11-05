@@ -1,0 +1,19 @@
+{
+  "province_id": "suu_chau",
+  "stations": [
+    {
+      "id": "st_phong_hoa",
+      "name": "Ngựa Trạm Phong Hòa",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 15,
+      "target": "thin_chau"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "province_id": "dau_chau",
+  "settlements": [
+    {
+      "id": "settlement_van_giac",
+      "name": "Vạn Giác Phủ",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_kim_tinh",
+      "name": "Kim Tinh Lâu Đô Thị",
+      "type": "town",
+      "chunk": [
+        32,
+        22
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

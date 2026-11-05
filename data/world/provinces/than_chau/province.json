@@ -1,0 +1,32 @@
+{
+  "province_id": "than_chau",
+  "display_name": "Thân Châu",
+  "country_id": "dai_huyen",
+  "theme": "Núi non mây phủ, tàn tích cơ quan, di chỉ cổ",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_thien_co",
+  "governor_npc_id": "npc_than_quan_01",
+  "sect_name": "Vô Cực Cơ Quan Các",
+  "neighbor_provinces": [
+    "thin_chau",
+    "mui_chau",
+    "dau_chau"
+  ],
+  "bg_color": [
+    0.18,
+    0.18,
+    0.22
+  ],
+  "water_color": [
+    0.16,
+    0.26,
+    0.4
+  ],
+  "persistent_world_diffs": true
+}

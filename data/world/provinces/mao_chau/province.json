@@ -1,0 +1,32 @@
+{
+  "province_id": "mao_chau",
+  "display_name": "Mão Châu",
+  "country_id": "dai_huyen",
+  "theme": "Rừng ngọc trúc, hàn lâm viện học thuật, đan dược",
+  "status": "playable",
+  "size_tiles": [
+    4096,
+    4096
+  ],
+  "tile_size_px": 32,
+  "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_han_lam",
+  "governor_npc_id": "npc_mao_quan_01",
+  "sect_name": "Đan Hà Tông",
+  "neighbor_provinces": [
+    "thin_chau",
+    "dan_chau",
+    "ngo_chau"
+  ],
+  "bg_color": [
+    0.08,
+    0.24,
+    0.12
+  ],
+  "water_color": [
+    0.12,
+    0.3,
+    0.45
+  ],
+  "persistent_world_diffs": true
+}

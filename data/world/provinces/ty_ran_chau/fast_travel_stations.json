@@ -1,0 +1,19 @@
+{
+  "province_id": "ty_ran_chau",
+  "stations": [
+    {
+      "id": "st_u_hon",
+      "name": "Dịch Trạm U Hồn",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 25,
+      "target": "thin_chau"
+    }
+  ]
+}

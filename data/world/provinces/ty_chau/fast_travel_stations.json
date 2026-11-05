@@ -1,0 +1,33 @@
+{
+  "province_id": "ty_chau",
+  "stations": [
+    {
+      "id": "st_thuy_kinh",
+      "name": "Bến Thuyền Thủy Kính",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 15,
+      "target": "thin_chau"
+    },
+    {
+      "id": "st_van_ngu",
+      "name": "Dịch Trạm Vạn Ngư",
+      "chunk": [
+        24,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 10,
+      "target": "ty_chau"
+    }
+  ]
+}

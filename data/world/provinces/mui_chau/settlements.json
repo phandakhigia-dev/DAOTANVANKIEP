@@ -1,0 +1,31 @@
+{
+  "province_id": "mui_chau",
+  "settlements": [
+    {
+      "id": "settlement_lac_ha",
+      "name": "Lạc Hà Trấn",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_bach_duong",
+      "name": "Bạch Dương Thôn",
+      "type": "village",
+      "chunk": [
+        40,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

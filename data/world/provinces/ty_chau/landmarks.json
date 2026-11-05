@@ -1,0 +1,23 @@
+{
+  "province_id": "ty_chau",
+  "landmarks": [
+    {
+      "id": "lm_thuy_ngoc_dao",
+      "name": "Thủy Ngọc Đảo Bí Cảnh",
+      "chunk": [
+        32,
+        28
+      ],
+      "type": "sanctuary"
+    },
+    {
+      "id": "lm_tram_tich_hai_vuc",
+      "name": "Trầm Tích Hải Vực",
+      "chunk": [
+        40,
+        32
+      ],
+      "type": "danger"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "province_id": "than_chau",
+  "stations": [
+    {
+      "id": "st_thien_co",
+      "name": "Dịch Trạm Thiên Cơ",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        900,
+        1100
+      ],
+      "cost": 25,
+      "target": "thin_chau"
+    }
+  ]
+}

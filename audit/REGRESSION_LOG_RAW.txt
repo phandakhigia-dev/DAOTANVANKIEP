@@ -159,8 +159,8 @@ WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s th�
   ✓ [Pass] Đột phá Trúc Cơ thành công: Thọ nguyên được gia tăng thêm 130 năm (Trúc Cơ Sơ Kỳ)
 
 --- Bộ test: Phase 2 - HeadlessStressTest ---
-  ✓ [Pass] Stress test 500 NPC x 12 tháng: Trung bình 7.86 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)
-  ✓ [Pass] Stress test cực đại 1,000 NPC x 3 tháng: Đạt 19.81 ms/tháng (Vượt qua thử thách quy mô lớn)
+  ✓ [Pass] Stress test 500 NPC x 12 tháng: Trung bình 7.94 ms/tháng (Mục tiêu < 100ms, Đột phá: 850, Tử vong: 48)
+  ✓ [Pass] Stress test cực đại 1,000 NPC x 3 tháng: Đạt 19.67 ms/tháng (Vượt qua thử thách quy mô lớn)
   ✓ [Pass] Toàn vẹn kinh tế: Ngân khố các môn phái luôn dương (No negative treasury)
 
 --- Bộ test: Co-op Authoritative Clock Sync (S1) ---
@@ -251,7 +251,7 @@ WARNING: [GameClock] Co-op: Từ chối advance_hours(5). Giữ nhịp 720s th�
   ✓ [T-03] set_master_volume: Cập nhật âm lượng tuyến tính chính xác (0.5)
   ✓ [T-04] Procedural Synthesis: Tổng hợp thành công đầy đủ 8 mẫu SFX võ hiệp (16-bit PCM)
   ✓ [T-05] Procedural BGM: Tạo thành công 3 khúc nhạc cổ phong lặp tuần hoàn (Cổ Cầm & Sáo Trúc)
-  ✓ [T-06] play_sfx: Lấy thành công player từ pool và gán AudioStream (SFXPlayer_2)
+  ✓ [T-06] play_sfx: Lấy thành công player từ pool và gán AudioStream (SFXPlayer_10)
   ✓ [T-07] play_bgm: Chuyển nhạc nền sang 'bgm_peaceful_town' thành công
   ✓ [T-08] VFXSwordSlash: Khởi tạo thành công vòng cung kiếm quang & tia lửa kiếm ý
   ✓ [T-09] VFXCultivationAura: Khởi tạo linh khí đan điền & chế độ Hoàng Kim Đột Phá
@@ -359,7 +359,7 @@ TỔNG KẾT: 211 ĐẠT (PASS) | 0 THẤT BẠI (FAIL)
 =======================================================
 
 [SUCCESS] Tất cả các tiêu chí nghiệm thu Phase 0 và Phase 1 đã vượt qua 100%!
-WARNING: 20 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).
    at: cleanup (core/object/object.cpp:2536)
 ERROR: 2 resources still in use at exit (run with --verbose for details).
    at: clear (core/io/resource.cpp:822)

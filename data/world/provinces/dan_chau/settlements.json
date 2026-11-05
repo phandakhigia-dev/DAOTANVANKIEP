@@ -1,0 +1,31 @@
+{
+  "province_id": "dan_chau",
+  "settlements": [
+    {
+      "id": "settlement_ho_khieu",
+      "name": "Sơn Trấn Hổ Khiếu",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_tho_san",
+      "name": "Trại Thợ Săn Lĩnh Nam",
+      "type": "village",
+      "chunk": [
+        22,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

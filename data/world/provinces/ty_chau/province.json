@@ -3,16 +3,30 @@
   "display_name": "Tý Châu",
   "country_id": "dai_huyen",
   "theme": "Sông ngòi, cảng biển, mậu dịch thủy",
-  "status": "metadata_only",
+  "status": "playable",
   "size_tiles": [
     4096,
     4096
   ],
   "tile_size_px": 32,
   "chunk_size_tiles": 64,
+  "capital_city_id": "settlement_thuy_kinh",
+  "governor_npc_id": "npc_ty_quan_01",
+  "sect_name": "Thủy Vân Tông",
   "neighbor_provinces": [
     "thin_chau",
     "suu_chau",
     "hoi_chau"
-  ]
+  ],
+  "bg_color": [
+    0.08,
+    0.22,
+    0.24
+  ],
+  "water_color": [
+    0.15,
+    0.35,
+    0.5
+  ],
+  "persistent_world_diffs": true
 }

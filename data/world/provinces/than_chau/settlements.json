@@ -1,0 +1,31 @@
+{
+  "province_id": "than_chau",
+  "settlements": [
+    {
+      "id": "settlement_thien_co",
+      "name": "Thiên Cơ Thành",
+      "type": "capital",
+      "chunk": [
+        32,
+        32
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "settlement_hau_vuong",
+      "name": "Hầu Vương Cốc",
+      "type": "town",
+      "chunk": [
+        32,
+        42
+      ],
+      "pos": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}
